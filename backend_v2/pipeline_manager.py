@@ -9,6 +9,13 @@ import logging
 import traceback
 import pathlib
 import time
+import concurrent.futures
+
+# Single-worker executor for debug JSON saves.
+# Keeps disk I/O off the OCR critical path without spawning extra threads per stage.
+_debug_executor = concurrent.futures.ThreadPoolExecutor(
+    max_workers=1, thread_name_prefix="debug_io"
+)
 
 logger = logging.getLogger(__name__)
 
@@ -27,6 +34,12 @@ class PipelineManager:
         }
         
     def save_debug(self, stage_name: str, data: any):
+        """Non-blocking: submits JSON write to background IO thread.
+        OCR pipeline continues without waiting for disk."""
+        _debug_executor.submit(self._write_debug_sync, stage_name, data)
+
+    def _write_debug_sync(self, stage_name: str, data: any):
+        """Actual disk write — runs in debug_io background thread."""
         try:
             path = DEBUG_DIR / f"{self.run_id}_{stage_name}.json"
             

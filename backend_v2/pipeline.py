@@ -53,6 +53,7 @@ def run_pipeline(
     start_time: float = None,
     max_seconds: float = 600,
     progress_cb=None,
+    preview_cb=None,
 ) -> dict:
     """progress_cb(msg: str) — called at each stage for frontend status updates.
     Never affects accuracy or output — purely informational."""
@@ -95,10 +96,21 @@ def run_pipeline(
             ph, pw = img.shape[:2]
             page_obj = Page(page_number=page_idx + 1, width=pw, height=ph)
 
-            # Save preview for every page
+            # Save preview for every page (runs BEFORE OCR so frontend gets
+            # the document image immediately without waiting for OCR to finish)
             prev_path = PREVIEW_DIR / f"{safe_id}_p{page_idx}.jpg"
             _save(img, prev_path)
-            preview_urls.append(f"http://127.0.0.1:8000/static/previews/{safe_id}_p{page_idx}.jpg")
+            preview_urls.append(f"http://127.0.0.1:8001/static/previews/{safe_id}_p{page_idx}.jpg")
+
+            # ── EARLY PREVIEW SIGNAL ─────────────────────────────────────────
+            # Fire the callback right now — before OCR starts for this page.
+            # The frontend poll loop picks this up and shows the preview
+            # while OCR is still running (~2s vs ~52s wait).
+            if preview_cb:
+                try:
+                    preview_cb(list(preview_urls))
+                except Exception:
+                    pass  # never let preview signaling block the pipeline
 
             # ── 2. OCR ────────────────────────────────────────────────────────
             def _ocr():

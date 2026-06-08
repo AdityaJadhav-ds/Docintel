@@ -87,6 +87,13 @@ def _pipeline_worker(file_bytes: bytes, filename: str, run_id: str) -> None:
 
     logger.info("START run=%s file=%s size=%d", run_id, filename, len(file_bytes))
 
+    # Fired by pipeline after each page's preview image is written to disk.
+    # Updates _RESULTS BEFORE OCR starts, so the frontend poll sees it immediately.
+    def _preview_cb(urls: list):
+        if run_id in _RESULTS:
+            _RESULTS[run_id]["preview_urls"] = urls
+            logger.info("PREVIEW_READY run=%s pages=%d", run_id, len(urls))
+
     try:
         # Cache hit: same file already processed this session
         if file_hash in _CACHE:
@@ -105,6 +112,7 @@ def _pipeline_worker(file_bytes: bytes, filename: str, run_id: str) -> None:
             start_time=start_time,
             max_seconds=MAX_RUN_SECONDS,
             progress_cb=progress_cb,
+            preview_cb=_preview_cb,
         )
 
         if result.get("success"):
@@ -181,6 +189,7 @@ async def pipeline_status(run_id: str):
         "overall_status": status,
         "ready": status != "running",
         "progress": res.get("progress", ""),
+        "preview_urls": res.get("preview_urls", []),  # available before OCR completes
     }
 
 

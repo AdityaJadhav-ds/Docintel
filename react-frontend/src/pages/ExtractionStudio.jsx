@@ -349,6 +349,7 @@ export default function ExtractionStudio() {
   const [processingTime, setProcessingTime] = useState(0);
   const [zoom,       setZoom]       = useState(100);
   const [pageIndex,  setPageIndex]  = useState(0);
+  const [pageImages, setPageImages] = useState([]);  // updated early from status poll
   const fileInputRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -361,10 +362,18 @@ export default function ExtractionStudio() {
 
   useEffect(() => { injectFont(); injectCSS(); }, []);
 
+  // Preview diagnostics — fires whenever pageImages or pageIndex changes
+  useEffect(() => {
+    console.log('[PREVIEW] pageImages:', pageImages);
+    console.log('[PREVIEW] pageIndex:', pageIndex);
+    console.log('[PREVIEW] currentImg:', pageImages[pageIndex] ?? null);
+  }, [pageImages, pageIndex]);
+
   const handleFile = e => {
     const f = e.target.files?.[0];
     if (!f) return;
-    setFile(f); setResult(null); setElapsed(0); setStatusMsg(''); setPageIndex(0);
+    setFile(f); setResult(null); setElapsed(0); setStatusMsg('');
+    setPageIndex(0); setPageImages([]);
   };
 
   const pollStatus = useCallback(async (runId, t0) => {
@@ -375,6 +384,16 @@ export default function ExtractionStudio() {
         if (!sr.ok) { console.warn('[DIAG] status non-ok', sr.status, runId); break; }
         const st = await sr.json();
         console.log('[DIAG] Polling:', runId, st);
+
+        // ── Early preview: show document image BEFORE OCR finishes ──────────
+        // Backend fires preview_cb after PDF render (~2s), long before OCR completes.
+        // This sets pageImages so the left panel shows the document immediately.
+        if (st.preview_urls && st.preview_urls.length > 0) {
+          setPageImages(prev =>
+            st.preview_urls.length >= prev.length ? st.preview_urls : prev
+          );
+          console.log('[PREVIEW] Early preview ready:', st.preview_urls);
+        }
 
         // Show real per-stage progress message from backend
         if (st.progress) setStatusMsg(st.progress);
@@ -387,6 +406,9 @@ export default function ExtractionStudio() {
             console.log('[DIAG] Final result raw:', JSON.stringify(d).slice(0, 500));
             console.log('[DIAG] d.result exists?', !!d.result, '  lines:', d.result?.lines?.length ?? d.lines?.length ?? 'NONE');
             console.log('[DIAG] from_cache:', d.result?.from_cache);
+            // Sync pageImages from final result (authoritative URLs)
+            const finalImgs = (d.result || d)?.images?.pages || [];
+            if (finalImgs.length > 0) setPageImages(finalImgs);
             setResult(d.result || d);
           } else {
             console.error('[DIAG] result fetch failed', rr.status);
@@ -422,12 +444,13 @@ export default function ExtractionStudio() {
   // Resolve
   const allLines   = result?.lines || [];
   const cleanText  = result?.clean_text || '';
-  const pageImages = result?.images?.pages || [];
+  // pageImages is React state — updated early from status poll (before OCR completes)
+  // and synced from final result. Do NOT derive from result here.
   const pageDims   = result?.page_dims || {};
   const wordCount  = result?.word_count || 0;
   const lineCount  = result?.metadata?.line_count || allLines.length;
   const pageCount  = result?.metadata?.page_count || Math.max(1, ...allLines.map(l => (l.page || 0) + 1), 1);
-  const currentImg = pageImages[pageIndex] || null;
+  const currentImg = pageImages[pageIndex] ?? null;
   const fromCache  = result?.from_cache === true;
   const ocrMs = result ? (result.processing_time_ms || result.elapsed_ms || 0) : 0;
   const ocrTimeStr = fromCache ? '< 1s ⚡' : result ? (ocrMs < 1000 ? `${ocrMs}ms` : `${(ocrMs / 1000).toFixed(1)}s`) : '';
@@ -512,7 +535,12 @@ export default function ExtractionStudio() {
                   Document Preview
                 </div>
                 <div className="thumb-wrap">
-                  <img src={currentImg} alt="Page Preview" />
+                  <img
+                    src={currentImg}
+                    alt="Page Preview"
+                    onLoad={() => console.log('[PREVIEW] ✓ Loaded:', currentImg)}
+                    onError={() => console.error('[PREVIEW] ✗ Failed:', currentImg)}
+                  />
                   <div className="page-badge">Page {pageIndex + 1} / {pageCount}</div>
                 </div>
                 {pageCount > 1 && (
