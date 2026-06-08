@@ -1,0 +1,1611 @@
+[
+  {
+    "line_id": 0,
+    "words": [
+      {
+        "text": "INDUSIND BANK LEGENDCREDIT CARD STATEMENT",
+        "x1": 57.0,
+        "y1": 63.0,
+        "x2": 627.0,
+        "y2": 88.0,
+        "cx": 342.0,
+        "cy": 75.5,
+        "width": 570.0,
+        "height": 25.0
+      },
+      {
+        "text": "InduslndBank",
+        "x1": 1168.0,
+        "y1": 37.0,
+        "x2": 1592.0,
+        "y2": 88.0,
+        "cx": 1380.0,
+        "cy": 62.5,
+        "width": 424.0,
+        "height": 51.0
+      },
+      {
+        "text": "Date",
+        "x1": 89.0,
+        "y1": 146.0,
+        "x2": 135.0,
+        "y2": 173.0,
+        "cx": 112.0,
+        "cy": 159.5,
+        "width": 46.0,
+        "height": 27.0
+      },
+      {
+        "text": "Transaction Details",
+        "x1": 315.0,
+        "y1": 149.0,
+        "x2": 492.0,
+        "y2": 173.0,
+        "cx": 403.5,
+        "cy": 161.0,
+        "width": 177.0,
+        "height": 24.0
+      },
+      {
+        "text": "Amount (in)",
+        "x1": 1033.0,
+        "y1": 149.0,
+        "x2": 1166.0,
+        "y2": 175.0,
+        "cx": 1099.5,
+        "cy": 162.0,
+        "width": 133.0,
+        "height": 26.0
+      },
+      {
+        "text": "EGYETR",
+        "x1": 1252.0,
+        "y1": 158.0,
+        "x2": 1346.0,
+        "y2": 185.0,
+        "cx": 1299.0,
+        "cy": 171.5,
+        "width": 94.0,
+        "height": 27.0
+      },
+      {
+        "text": "Indusind Bank",
+        "x1": 1414.0,
+        "y1": 158.0,
+        "x2": 1557.0,
+        "y2": 183.0,
+        "cx": 1485.5,
+        "cy": 170.5,
+        "width": 143.0,
+        "height": 25.0
+      }
+    ],
+    "text": "INDUSIND BANK LEGENDCREDIT CARD STATEMENT InduslndBank Date Transaction Details Amount (in) EGYETR Indusind Bank",
+    "x1": 57.0,
+    "y1": 37.0,
+    "x2": 1592.0,
+    "y2": 185.0,
+    "cy": 111.0,
+    "visual_lines": [
+      {
+        "line_id": 0,
+        "words": [
+          {
+            "text": "INDUSIND BANK LEGENDCREDIT CARD STATEMENT",
+            "x1": 57.0,
+            "y1": 63.0,
+            "x2": 627.0,
+            "y2": 88.0,
+            "cx": 342.0,
+            "cy": 75.5,
+            "width": 570.0,
+            "height": 25.0
+          },
+          {
+            "text": "InduslndBank",
+            "x1": 1168.0,
+            "y1": 37.0,
+            "x2": 1592.0,
+            "y2": 88.0,
+            "cx": 1380.0,
+            "cy": 62.5,
+            "width": 424.0,
+            "height": 51.0
+          }
+        ],
+        "text": "INDUSIND BANK LEGENDCREDIT CARD STATEMENT InduslndBank",
+        "x1": 57.0,
+        "y1": 37.0,
+        "x2": 1592.0,
+        "y2": 88.0,
+        "cy": 69.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 1,
+        "words": [
+          {
+            "text": "Date",
+            "x1": 89.0,
+            "y1": 146.0,
+            "x2": 135.0,
+            "y2": 173.0,
+            "cx": 112.0,
+            "cy": 159.5,
+            "width": 46.0,
+            "height": 27.0
+          },
+          {
+            "text": "Transaction Details",
+            "x1": 315.0,
+            "y1": 149.0,
+            "x2": 492.0,
+            "y2": 173.0,
+            "cx": 403.5,
+            "cy": 161.0,
+            "width": 177.0,
+            "height": 24.0
+          },
+          {
+            "text": "Amount (in)",
+            "x1": 1033.0,
+            "y1": 149.0,
+            "x2": 1166.0,
+            "y2": 175.0,
+            "cx": 1099.5,
+            "cy": 162.0,
+            "width": 133.0,
+            "height": 26.0
+          },
+          {
+            "text": "EGYETR",
+            "x1": 1252.0,
+            "y1": 158.0,
+            "x2": 1346.0,
+            "y2": 185.0,
+            "cx": 1299.0,
+            "cy": 171.5,
+            "width": 94.0,
+            "height": 27.0
+          },
+          {
+            "text": "Indusind Bank",
+            "x1": 1414.0,
+            "y1": 158.0,
+            "x2": 1557.0,
+            "y2": 183.0,
+            "cx": 1485.5,
+            "cy": 170.5,
+            "width": 143.0,
+            "height": 25.0
+          }
+        ],
+        "text": "Date Transaction Details Amount (in) EGYETR Indusind Bank",
+        "x1": 89.0,
+        "y1": 146.0,
+        "x2": 1557.0,
+        "y2": 185.0,
+        "cy": 164.9,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 1,
+    "words": [
+      {
+        "text": "29/07/2025",
+        "x1": 54.0,
+        "y1": 175.0,
+        "x2": 165.0,
+        "y2": 208.0,
+        "cx": 109.5,
+        "cy": 191.5,
+        "width": 111.0,
+        "height": 33.0
+      },
+      {
+        "text": "FOREIGN CURRENCY MARKUP FEE",
+        "x1": 160.0,
+        "y1": 180.0,
+        "x2": 480.0,
+        "y2": 205.0,
+        "cx": 320.0,
+        "cy": 192.5,
+        "width": 320.0,
+        "height": 25.0
+      },
+      {
+        "text": "0",
+        "x1": 925.0,
+        "y1": 181.0,
+        "x2": 946.0,
+        "y2": 204.0,
+        "cx": 935.5,
+        "cy": 192.5,
+        "width": 21.0,
+        "height": 23.0
+      },
+      {
+        "text": "0.87DR",
+        "x1": 1139.0,
+        "y1": 180.0,
+        "x2": 1218.0,
+        "y2": 207.0,
+        "cx": 1178.5,
+        "cy": 193.5,
+        "width": 79.0,
+        "height": 27.0
+      }
+    ],
+    "text": "29/07/2025 FOREIGN CURRENCY MARKUP FEE 0 0.87DR",
+    "x1": 54.0,
+    "y1": 175.0,
+    "x2": 1218.0,
+    "y2": 208.0,
+    "cy": 192.5,
+    "visual_lines": [
+      {
+        "line_id": 2,
+        "words": [
+          {
+            "text": "29/07/2025",
+            "x1": 54.0,
+            "y1": 175.0,
+            "x2": 165.0,
+            "y2": 208.0,
+            "cx": 109.5,
+            "cy": 191.5,
+            "width": 111.0,
+            "height": 33.0
+          },
+          {
+            "text": "FOREIGN CURRENCY MARKUP FEE",
+            "x1": 160.0,
+            "y1": 180.0,
+            "x2": 480.0,
+            "y2": 205.0,
+            "cx": 320.0,
+            "cy": 192.5,
+            "width": 320.0,
+            "height": 25.0
+          },
+          {
+            "text": "0",
+            "x1": 925.0,
+            "y1": 181.0,
+            "x2": 946.0,
+            "y2": 204.0,
+            "cx": 935.5,
+            "cy": 192.5,
+            "width": 21.0,
+            "height": 23.0
+          },
+          {
+            "text": "0.87DR",
+            "x1": 1139.0,
+            "y1": 180.0,
+            "x2": 1218.0,
+            "y2": 207.0,
+            "cx": 1178.5,
+            "cy": 193.5,
+            "width": 79.0,
+            "height": 27.0
+          }
+        ],
+        "text": "29/07/2025 FOREIGN CURRENCY MARKUP FEE 0 0.87DR",
+        "x1": 54.0,
+        "y1": 175.0,
+        "x2": 1218.0,
+        "y2": 208.0,
+        "cy": 192.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 2,
+    "words": [
+      {
+        "text": "29/07/2025",
+        "x1": 59.0,
+        "y1": 212.0,
+        "x2": 165.0,
+        "y2": 236.0,
+        "cx": 112.0,
+        "cy": 224.0,
+        "width": 106.0,
+        "height": 24.0
+      },
+      {
+        "text": "GST@18%",
+        "x1": 152.0,
+        "y1": 207.0,
+        "x2": 278.0,
+        "y2": 239.0,
+        "cx": 215.0,
+        "cy": 223.0,
+        "width": 126.0,
+        "height": 32.0
+      },
+      {
+        "text": "0",
+        "x1": 916.0,
+        "y1": 205.0,
+        "x2": 957.0,
+        "y2": 245.0,
+        "cx": 936.5,
+        "cy": 225.0,
+        "width": 41.0,
+        "height": 40.0
+      },
+      {
+        "text": "0.16DR",
+        "x1": 1133.0,
+        "y1": 204.0,
+        "x2": 1221.0,
+        "y2": 244.0,
+        "cx": 1177.0,
+        "cy": 224.0,
+        "width": 88.0,
+        "height": 40.0
+      }
+    ],
+    "text": "29/07/2025 GST@18% 0 0.16DR",
+    "x1": 59.0,
+    "y1": 204.0,
+    "x2": 1221.0,
+    "y2": 245.0,
+    "cy": 224.0,
+    "visual_lines": [
+      {
+        "line_id": 3,
+        "words": [
+          {
+            "text": "29/07/2025",
+            "x1": 59.0,
+            "y1": 212.0,
+            "x2": 165.0,
+            "y2": 236.0,
+            "cx": 112.0,
+            "cy": 224.0,
+            "width": 106.0,
+            "height": 24.0
+          },
+          {
+            "text": "GST@18%",
+            "x1": 152.0,
+            "y1": 207.0,
+            "x2": 278.0,
+            "y2": 239.0,
+            "cx": 215.0,
+            "cy": 223.0,
+            "width": 126.0,
+            "height": 32.0
+          },
+          {
+            "text": "0",
+            "x1": 916.0,
+            "y1": 205.0,
+            "x2": 957.0,
+            "y2": 245.0,
+            "cx": 936.5,
+            "cy": 225.0,
+            "width": 41.0,
+            "height": 40.0
+          },
+          {
+            "text": "0.16DR",
+            "x1": 1133.0,
+            "y1": 204.0,
+            "x2": 1221.0,
+            "y2": 244.0,
+            "cx": 1177.0,
+            "cy": 224.0,
+            "width": 88.0,
+            "height": 40.0
+          }
+        ],
+        "text": "29/07/2025 GST@18% 0 0.16DR",
+        "x1": 59.0,
+        "y1": 204.0,
+        "x2": 1221.0,
+        "y2": 245.0,
+        "cy": 224.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 3,
+    "words": [
+      {
+        "text": "01/08/2025",
+        "x1": 56.0,
+        "y1": 241.0,
+        "x2": 160.0,
+        "y2": 273.0,
+        "cx": 108.0,
+        "cy": 257.0,
+        "width": 104.0,
+        "height": 32.0
+      },
+      {
+        "text": "FOREIGN CURRENCY MARKUP FEE",
+        "x1": 170.0,
+        "y1": 246.0,
+        "x2": 480.0,
+        "y2": 270.0,
+        "cx": 325.0,
+        "cy": 258.0,
+        "width": 310.0,
+        "height": 24.0
+      },
+      {
+        "text": "33.07DR",
+        "x1": 1129.0,
+        "y1": 241.0,
+        "x2": 1220.0,
+        "y2": 275.0,
+        "cx": 1174.5,
+        "cy": 258.0,
+        "width": 91.0,
+        "height": 34.0
+      }
+    ],
+    "text": "01/08/2025 FOREIGN CURRENCY MARKUP FEE 33.07DR",
+    "x1": 56.0,
+    "y1": 241.0,
+    "x2": 1220.0,
+    "y2": 275.0,
+    "cy": 257.6666666666667,
+    "visual_lines": [
+      {
+        "line_id": 4,
+        "words": [
+          {
+            "text": "01/08/2025",
+            "x1": 56.0,
+            "y1": 241.0,
+            "x2": 160.0,
+            "y2": 273.0,
+            "cx": 108.0,
+            "cy": 257.0,
+            "width": 104.0,
+            "height": 32.0
+          },
+          {
+            "text": "FOREIGN CURRENCY MARKUP FEE",
+            "x1": 170.0,
+            "y1": 246.0,
+            "x2": 480.0,
+            "y2": 270.0,
+            "cx": 325.0,
+            "cy": 258.0,
+            "width": 310.0,
+            "height": 24.0
+          },
+          {
+            "text": "33.07DR",
+            "x1": 1129.0,
+            "y1": 241.0,
+            "x2": 1220.0,
+            "y2": 275.0,
+            "cx": 1174.5,
+            "cy": 258.0,
+            "width": 91.0,
+            "height": 34.0
+          }
+        ],
+        "text": "01/08/2025 FOREIGN CURRENCY MARKUP FEE 33.07DR",
+        "x1": 56.0,
+        "y1": 241.0,
+        "x2": 1220.0,
+        "y2": 275.0,
+        "cy": 257.6666666666667,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 4,
+    "words": [
+      {
+        "text": "01/08/2025",
+        "x1": 57.0,
+        "y1": 278.0,
+        "x2": 165.0,
+        "y2": 305.0,
+        "cx": 111.0,
+        "cy": 291.5,
+        "width": 108.0,
+        "height": 27.0
+      },
+      {
+        "text": "GST@18%",
+        "x1": 162.0,
+        "y1": 280.0,
+        "x2": 278.0,
+        "y2": 305.0,
+        "cx": 220.0,
+        "cy": 292.5,
+        "width": 116.0,
+        "height": 25.0
+      },
+      {
+        "text": "0",
+        "x1": 927.0,
+        "y1": 280.0,
+        "x2": 947.0,
+        "y2": 305.0,
+        "cx": 937.0,
+        "cy": 292.5,
+        "width": 20.0,
+        "height": 25.0
+      },
+      {
+        "text": "5.95DR",
+        "x1": 1138.0,
+        "y1": 270.0,
+        "x2": 1219.0,
+        "y2": 310.0,
+        "cx": 1178.5,
+        "cy": 290.0,
+        "width": 81.0,
+        "height": 40.0
+      }
+    ],
+    "text": "01/08/2025 GST@18% 0 5.95DR",
+    "x1": 57.0,
+    "y1": 270.0,
+    "x2": 1219.0,
+    "y2": 310.0,
+    "cy": 291.625,
+    "visual_lines": [
+      {
+        "line_id": 5,
+        "words": [
+          {
+            "text": "01/08/2025",
+            "x1": 57.0,
+            "y1": 278.0,
+            "x2": 165.0,
+            "y2": 305.0,
+            "cx": 111.0,
+            "cy": 291.5,
+            "width": 108.0,
+            "height": 27.0
+          },
+          {
+            "text": "GST@18%",
+            "x1": 162.0,
+            "y1": 280.0,
+            "x2": 278.0,
+            "y2": 305.0,
+            "cx": 220.0,
+            "cy": 292.5,
+            "width": 116.0,
+            "height": 25.0
+          },
+          {
+            "text": "0",
+            "x1": 927.0,
+            "y1": 280.0,
+            "x2": 947.0,
+            "y2": 305.0,
+            "cx": 937.0,
+            "cy": 292.5,
+            "width": 20.0,
+            "height": 25.0
+          },
+          {
+            "text": "5.95DR",
+            "x1": 1138.0,
+            "y1": 270.0,
+            "x2": 1219.0,
+            "y2": 310.0,
+            "cx": 1178.5,
+            "cy": 290.0,
+            "width": 81.0,
+            "height": 40.0
+          }
+        ],
+        "text": "01/08/2025 GST@18% 0 5.95DR",
+        "x1": 57.0,
+        "y1": 270.0,
+        "x2": 1219.0,
+        "y2": 310.0,
+        "cy": 291.625,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 5,
+    "words": [
+      {
+        "text": "Total",
+        "x1": 57.0,
+        "y1": 314.0,
+        "x2": 116.0,
+        "y2": 344.0,
+        "cx": 86.5,
+        "cy": 329.0,
+        "width": 59.0,
+        "height": 30.0
+      },
+      {
+        "text": "0",
+        "x1": 932.0,
+        "y1": 317.0,
+        "x2": 947.0,
+        "y2": 339.0,
+        "cx": 939.5,
+        "cy": 328.0,
+        "width": 15.0,
+        "height": 22.0
+      },
+      {
+        "text": "40.05",
+        "x1": 1122.0,
+        "y1": 312.0,
+        "x2": 1183.0,
+        "y2": 341.0,
+        "cx": 1152.5,
+        "cy": 326.5,
+        "width": 61.0,
+        "height": 29.0
+      },
+      {
+        "text": "ard points on your Legend credit card will be revised effective 15-DEC-24.Please visit",
+        "x1": 367.0,
+        "y1": 385.0,
+        "x2": 1117.0,
+        "y2": 409.0,
+        "cx": 742.0,
+        "cy": 397.0,
+        "width": 750.0,
+        "height": 24.0
+      },
+      {
+        "text": "DISCOVER",
+        "x1": 1284.0,
+        "y1": 385.0,
+        "x2": 1530.0,
+        "y2": 419.0,
+        "cx": 1407.0,
+        "cy": 402.0,
+        "width": 246.0,
+        "height": 34.0
+      },
+      {
+        "text": "IRRESISTIBLE",
+        "x1": 1250.0,
+        "y1": 468.0,
+        "x2": 1560.0,
+        "y2": 502.0,
+        "cx": 1405.0,
+        "cy": 485.0,
+        "width": 310.0,
+        "height": 34.0
+      }
+    ],
+    "text": "Total 0 40.05 ard points on your Legend credit card will be revised effective 15-DEC-24.Please visit DISCOVER IRRESISTIBLE",
+    "x1": 57.0,
+    "y1": 312.0,
+    "x2": 1560.0,
+    "y2": 502.0,
+    "cy": 407.0,
+    "visual_lines": [
+      {
+        "line_id": 6,
+        "words": [
+          {
+            "text": "Total",
+            "x1": 57.0,
+            "y1": 314.0,
+            "x2": 116.0,
+            "y2": 344.0,
+            "cx": 86.5,
+            "cy": 329.0,
+            "width": 59.0,
+            "height": 30.0
+          },
+          {
+            "text": "0",
+            "x1": 932.0,
+            "y1": 317.0,
+            "x2": 947.0,
+            "y2": 339.0,
+            "cx": 939.5,
+            "cy": 328.0,
+            "width": 15.0,
+            "height": 22.0
+          },
+          {
+            "text": "40.05",
+            "x1": 1122.0,
+            "y1": 312.0,
+            "x2": 1183.0,
+            "y2": 341.0,
+            "cx": 1152.5,
+            "cy": 326.5,
+            "width": 61.0,
+            "height": 29.0
+          }
+        ],
+        "text": "Total 0 40.05",
+        "x1": 57.0,
+        "y1": 312.0,
+        "x2": 1183.0,
+        "y2": 344.0,
+        "cy": 327.8333333333333,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 7,
+        "words": [
+          {
+            "text": "ard points on your Legend credit card will be revised effective 15-DEC-24.Please visit",
+            "x1": 367.0,
+            "y1": 385.0,
+            "x2": 1117.0,
+            "y2": 409.0,
+            "cx": 742.0,
+            "cy": 397.0,
+            "width": 750.0,
+            "height": 24.0
+          },
+          {
+            "text": "DISCOVER",
+            "x1": 1284.0,
+            "y1": 385.0,
+            "x2": 1530.0,
+            "y2": 419.0,
+            "cx": 1407.0,
+            "cy": 402.0,
+            "width": 246.0,
+            "height": 34.0
+          }
+        ],
+        "text": "ard points on your Legend credit card will be revised effective 15-DEC-24.Please visit DISCOVER",
+        "x1": 367.0,
+        "y1": 385.0,
+        "x2": 1530.0,
+        "y2": 419.0,
+        "cy": 399.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 8,
+        "words": [
+          {
+            "text": "IRRESISTIBLE",
+            "x1": 1250.0,
+            "y1": 468.0,
+            "x2": 1560.0,
+            "y2": 502.0,
+            "cx": 1405.0,
+            "cy": 485.0,
+            "width": 310.0,
+            "height": 34.0
+          }
+        ],
+        "text": "IRRESISTIBLE",
+        "x1": 1250.0,
+        "y1": 468.0,
+        "x2": 1560.0,
+        "y2": 502.0,
+        "cy": 485.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 6,
+    "words": [
+      {
+        "text": "Closest Induslnd Bank ATM Drop Box in your area",
+        "x1": 59.0,
+        "y1": 526.0,
+        "x2": 507.0,
+        "y2": 556.0,
+        "cx": 283.0,
+        "cy": 541.0,
+        "width": 448.0,
+        "height": 30.0
+      }
+    ],
+    "text": "Closest Induslnd Bank ATM Drop Box in your area",
+    "x1": 59.0,
+    "y1": 526.0,
+    "x2": 507.0,
+    "y2": 556.0,
+    "cy": 541.0,
+    "visual_lines": [
+      {
+        "line_id": 9,
+        "words": [
+          {
+            "text": "Closest Induslnd Bank ATM Drop Box in your area",
+            "x1": 59.0,
+            "y1": 526.0,
+            "x2": 507.0,
+            "y2": 556.0,
+            "cx": 283.0,
+            "cy": 541.0,
+            "width": 448.0,
+            "height": 30.0
+          }
+        ],
+        "text": "Closest Induslnd Bank ATM Drop Box in your area",
+        "x1": 59.0,
+        "y1": 526.0,
+        "x2": 507.0,
+        "y2": 556.0,
+        "cy": 541.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 7,
+    "words": [
+      {
+        "text": "Ground FloorShubham PlazaCS.No.150 151 B 1Opp.Big BazarSangli 416416",
+        "x1": 59.0,
+        "y1": 570.0,
+        "x2": 824.0,
+        "y2": 602.0,
+        "cx": 441.5,
+        "cy": 586.0,
+        "width": 765.0,
+        "height": 32.0
+      },
+      {
+        "text": "GIFTS",
+        "x1": 1316.0,
+        "y1": 548.0,
+        "x2": 1457.0,
+        "y2": 590.0,
+        "cx": 1386.5,
+        "cy": 569.0,
+        "width": 141.0,
+        "height": 42.0
+      },
+      {
+        "text": "JUST",
+        "x1": 1348.0,
+        "y1": 633.0,
+        "x2": 1466.0,
+        "y2": 670.0,
+        "cx": 1407.0,
+        "cy": 651.5,
+        "width": 118.0,
+        "height": 37.0
+      },
+      {
+        "text": "AT",
+        "x1": 1378.0,
+        "y1": 716.0,
+        "x2": 1437.0,
+        "y2": 755.0,
+        "cx": 1407.5,
+        "cy": 735.5,
+        "width": 59.0,
+        "height": 39.0
+      },
+      {
+        "text": "GYFTR!",
+        "x1": 1321.0,
+        "y1": 797.0,
+        "x2": 1493.0,
+        "y2": 831.0,
+        "cx": 1407.0,
+        "cy": 814.0,
+        "width": 172.0,
+        "height": 34.0
+      }
+    ],
+    "text": "Ground FloorShubham PlazaCS.No.150 151 B 1Opp.Big BazarSangli 416416 GIFTS JUST AT GYFTR!",
+    "x1": 59.0,
+    "y1": 548.0,
+    "x2": 1493.0,
+    "y2": 831.0,
+    "cy": 689.5,
+    "visual_lines": [
+      {
+        "line_id": 10,
+        "words": [
+          {
+            "text": "Ground FloorShubham PlazaCS.No.150 151 B 1Opp.Big BazarSangli 416416",
+            "x1": 59.0,
+            "y1": 570.0,
+            "x2": 824.0,
+            "y2": 602.0,
+            "cx": 441.5,
+            "cy": 586.0,
+            "width": 765.0,
+            "height": 32.0
+          },
+          {
+            "text": "GIFTS",
+            "x1": 1316.0,
+            "y1": 548.0,
+            "x2": 1457.0,
+            "y2": 590.0,
+            "cx": 1386.5,
+            "cy": 569.0,
+            "width": 141.0,
+            "height": 42.0
+          }
+        ],
+        "text": "Ground FloorShubham PlazaCS.No.150 151 B 1Opp.Big BazarSangli 416416 GIFTS",
+        "x1": 59.0,
+        "y1": 548.0,
+        "x2": 1457.0,
+        "y2": 602.0,
+        "cy": 577.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 11,
+        "words": [
+          {
+            "text": "JUST",
+            "x1": 1348.0,
+            "y1": 633.0,
+            "x2": 1466.0,
+            "y2": 670.0,
+            "cx": 1407.0,
+            "cy": 651.5,
+            "width": 118.0,
+            "height": 37.0
+          }
+        ],
+        "text": "JUST",
+        "x1": 1348.0,
+        "y1": 633.0,
+        "x2": 1466.0,
+        "y2": 670.0,
+        "cy": 651.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 12,
+        "words": [
+          {
+            "text": "AT",
+            "x1": 1378.0,
+            "y1": 716.0,
+            "x2": 1437.0,
+            "y2": 755.0,
+            "cx": 1407.5,
+            "cy": 735.5,
+            "width": 59.0,
+            "height": 39.0
+          }
+        ],
+        "text": "AT",
+        "x1": 1378.0,
+        "y1": 716.0,
+        "x2": 1437.0,
+        "y2": 755.0,
+        "cy": 735.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 13,
+        "words": [
+          {
+            "text": "GYFTR!",
+            "x1": 1321.0,
+            "y1": 797.0,
+            "x2": 1493.0,
+            "y2": 831.0,
+            "cx": 1407.0,
+            "cy": 814.0,
+            "width": 172.0,
+            "height": 34.0
+          }
+        ],
+        "text": "GYFTR!",
+        "x1": 1321.0,
+        "y1": 797.0,
+        "x2": 1493.0,
+        "y2": 831.0,
+        "cy": 814.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 8,
+    "words": [
+      {
+        "text": "Get discounts on GyFTR",
+        "x1": 1247.0,
+        "y1": 979.0,
+        "x2": 1525.0,
+        "y2": 1011.0,
+        "cx": 1386.0,
+        "cy": 995.0,
+        "width": 278.0,
+        "height": 32.0
+      },
+      {
+        "text": "vouchers using your",
+        "x1": 1252.0,
+        "y1": 1006.0,
+        "x2": 1481.0,
+        "y2": 1031.0,
+        "cx": 1366.5,
+        "cy": 1018.5,
+        "width": 229.0,
+        "height": 25.0
+      },
+      {
+        "text": "Induslnd Bank Credit Card*",
+        "x1": 1252.0,
+        "y1": 1028.0,
+        "x2": 1557.0,
+        "y2": 1053.0,
+        "cx": 1404.5,
+        "cy": 1040.5,
+        "width": 305.0,
+        "height": 25.0
+      },
+      {
+        "text": "Offer valid till30 Sep25",
+        "x1": 1249.0,
+        "y1": 1074.0,
+        "x2": 1486.0,
+        "y2": 1101.0,
+        "cx": 1367.5,
+        "cy": 1087.5,
+        "width": 237.0,
+        "height": 27.0
+      }
+    ],
+    "text": "Get discounts on GyFTR vouchers using your Induslnd Bank Credit Card* Offer valid till30 Sep25",
+    "x1": 1247.0,
+    "y1": 979.0,
+    "x2": 1557.0,
+    "y2": 1101.0,
+    "cy": 1040.0,
+    "visual_lines": [
+      {
+        "line_id": 14,
+        "words": [
+          {
+            "text": "Get discounts on GyFTR",
+            "x1": 1247.0,
+            "y1": 979.0,
+            "x2": 1525.0,
+            "y2": 1011.0,
+            "cx": 1386.0,
+            "cy": 995.0,
+            "width": 278.0,
+            "height": 32.0
+          }
+        ],
+        "text": "Get discounts on GyFTR",
+        "x1": 1247.0,
+        "y1": 979.0,
+        "x2": 1525.0,
+        "y2": 1011.0,
+        "cy": 995.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 15,
+        "words": [
+          {
+            "text": "vouchers using your",
+            "x1": 1252.0,
+            "y1": 1006.0,
+            "x2": 1481.0,
+            "y2": 1031.0,
+            "cx": 1366.5,
+            "cy": 1018.5,
+            "width": 229.0,
+            "height": 25.0
+          }
+        ],
+        "text": "vouchers using your",
+        "x1": 1252.0,
+        "y1": 1006.0,
+        "x2": 1481.0,
+        "y2": 1031.0,
+        "cy": 1018.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 16,
+        "words": [
+          {
+            "text": "Induslnd Bank Credit Card*",
+            "x1": 1252.0,
+            "y1": 1028.0,
+            "x2": 1557.0,
+            "y2": 1053.0,
+            "cx": 1404.5,
+            "cy": 1040.5,
+            "width": 305.0,
+            "height": 25.0
+          }
+        ],
+        "text": "Induslnd Bank Credit Card*",
+        "x1": 1252.0,
+        "y1": 1028.0,
+        "x2": 1557.0,
+        "y2": 1053.0,
+        "cy": 1040.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 17,
+        "words": [
+          {
+            "text": "Offer valid till30 Sep25",
+            "x1": 1249.0,
+            "y1": 1074.0,
+            "x2": 1486.0,
+            "y2": 1101.0,
+            "cx": 1367.5,
+            "cy": 1087.5,
+            "width": 237.0,
+            "height": 27.0
+          }
+        ],
+        "text": "Offer valid till30 Sep25",
+        "x1": 1249.0,
+        "y1": 1074.0,
+        "x2": 1486.0,
+        "y2": 1101.0,
+        "cy": 1087.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 9,
+    "words": [
+      {
+        "text": "Indusind Bank",
+        "x1": 1382.0,
+        "y1": 1291.0,
+        "x2": 1547.0,
+        "y2": 1325.0,
+        "cx": 1464.5,
+        "cy": 1308.0,
+        "width": 165.0,
+        "height": 34.0
+      },
+      {
+        "text": "NEVER",
+        "x1": 1247.0,
+        "y1": 1374.0,
+        "x2": 1382.0,
+        "y2": 1418.0,
+        "cx": 1314.5,
+        "cy": 1396.0,
+        "width": 135.0,
+        "height": 44.0
+      },
+      {
+        "text": "FALLFOR",
+        "x1": 1247.0,
+        "y1": 1423.0,
+        "x2": 1439.0,
+        "y2": 1467.0,
+        "cx": 1343.0,
+        "cy": 1445.0,
+        "width": 192.0,
+        "height": 44.0
+      },
+      {
+        "text": "FAKE THREATS!",
+        "x1": 1247.0,
+        "y1": 1474.0,
+        "x2": 1552.0,
+        "y2": 1515.0,
+        "cx": 1399.5,
+        "cy": 1494.5,
+        "width": 305.0,
+        "height": 41.0
+      },
+      {
+        "text": "er actascops&scareyou",
+        "x1": 1272.0,
+        "y1": 1547.0,
+        "x2": 1464.0,
+        "y2": 1584.0,
+        "cx": 1368.0,
+        "cy": 1565.5,
+        "width": 192.0,
+        "height": 37.0
+      },
+      {
+        "text": "ke egal lams to extrt money",
+        "x1": 1282.0,
+        "y1": 1581.0,
+        "x2": 1471.0,
+        "y2": 1606.0,
+        "cx": 1376.5,
+        "cy": 1593.5,
+        "width": 189.0,
+        "height": 25.0
+      }
+    ],
+    "text": "Indusind Bank NEVER FALLFOR FAKE THREATS! er actascops&scareyou ke egal lams to extrt money",
+    "x1": 1247.0,
+    "y1": 1291.0,
+    "x2": 1552.0,
+    "y2": 1606.0,
+    "cy": 1448.5,
+    "visual_lines": [
+      {
+        "line_id": 18,
+        "words": [
+          {
+            "text": "Indusind Bank",
+            "x1": 1382.0,
+            "y1": 1291.0,
+            "x2": 1547.0,
+            "y2": 1325.0,
+            "cx": 1464.5,
+            "cy": 1308.0,
+            "width": 165.0,
+            "height": 34.0
+          }
+        ],
+        "text": "Indusind Bank",
+        "x1": 1382.0,
+        "y1": 1291.0,
+        "x2": 1547.0,
+        "y2": 1325.0,
+        "cy": 1308.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 19,
+        "words": [
+          {
+            "text": "NEVER",
+            "x1": 1247.0,
+            "y1": 1374.0,
+            "x2": 1382.0,
+            "y2": 1418.0,
+            "cx": 1314.5,
+            "cy": 1396.0,
+            "width": 135.0,
+            "height": 44.0
+          }
+        ],
+        "text": "NEVER",
+        "x1": 1247.0,
+        "y1": 1374.0,
+        "x2": 1382.0,
+        "y2": 1418.0,
+        "cy": 1396.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 20,
+        "words": [
+          {
+            "text": "FALLFOR",
+            "x1": 1247.0,
+            "y1": 1423.0,
+            "x2": 1439.0,
+            "y2": 1467.0,
+            "cx": 1343.0,
+            "cy": 1445.0,
+            "width": 192.0,
+            "height": 44.0
+          }
+        ],
+        "text": "FALLFOR",
+        "x1": 1247.0,
+        "y1": 1423.0,
+        "x2": 1439.0,
+        "y2": 1467.0,
+        "cy": 1445.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 21,
+        "words": [
+          {
+            "text": "FAKE THREATS!",
+            "x1": 1247.0,
+            "y1": 1474.0,
+            "x2": 1552.0,
+            "y2": 1515.0,
+            "cx": 1399.5,
+            "cy": 1494.5,
+            "width": 305.0,
+            "height": 41.0
+          }
+        ],
+        "text": "FAKE THREATS!",
+        "x1": 1247.0,
+        "y1": 1474.0,
+        "x2": 1552.0,
+        "y2": 1515.0,
+        "cy": 1494.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 22,
+        "words": [
+          {
+            "text": "er actascops&scareyou",
+            "x1": 1272.0,
+            "y1": 1547.0,
+            "x2": 1464.0,
+            "y2": 1584.0,
+            "cx": 1368.0,
+            "cy": 1565.5,
+            "width": 192.0,
+            "height": 37.0
+          }
+        ],
+        "text": "er actascops&scareyou",
+        "x1": 1272.0,
+        "y1": 1547.0,
+        "x2": 1464.0,
+        "y2": 1584.0,
+        "cy": 1565.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 23,
+        "words": [
+          {
+            "text": "ke egal lams to extrt money",
+            "x1": 1282.0,
+            "y1": 1581.0,
+            "x2": 1471.0,
+            "y2": 1606.0,
+            "cx": 1376.5,
+            "cy": 1593.5,
+            "width": 189.0,
+            "height": 25.0
+          }
+        ],
+        "text": "ke egal lams to extrt money",
+        "x1": 1282.0,
+        "y1": 1581.0,
+        "x2": 1471.0,
+        "y2": 1606.0,
+        "cy": 1593.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 10,
+    "words": [
+      {
+        "text": "JAANKAAR",
+        "x1": 1461.0,
+        "y1": 2136.0,
+        "x2": 1570.0,
+        "y2": 2169.0,
+        "cx": 1515.5,
+        "cy": 2152.5,
+        "width": 109.0,
+        "height": 33.0
+      },
+      {
+        "text": "BANO",
+        "x1": 1459.0,
+        "y1": 2161.0,
+        "x2": 1572.0,
+        "y2": 2207.0,
+        "cx": 1515.5,
+        "cy": 2184.0,
+        "width": 113.0,
+        "height": 46.0
+      },
+      {
+        "text": "JAGRUK",
+        "x1": 1466.0,
+        "y1": 2210.0,
+        "x2": 1569.0,
+        "y2": 2237.0,
+        "cx": 1517.5,
+        "cy": 2223.5,
+        "width": 103.0,
+        "height": 27.0
+      },
+      {
+        "text": "RAHO",
+        "x1": 1459.0,
+        "y1": 2232.0,
+        "x2": 1574.0,
+        "y2": 2278.0,
+        "cx": 1516.5,
+        "cy": 2255.0,
+        "width": 115.0,
+        "height": 46.0
+      },
+      {
+        "text": "2",
+        "x1": 1471.0,
+        "y1": 2288.0,
+        "x2": 1491.0,
+        "y2": 2317.0,
+        "cx": 1481.0,
+        "cy": 2302.5,
+        "width": 20.0,
+        "height": 29.0
+      }
+    ],
+    "text": "JAANKAAR BANO JAGRUK RAHO 2",
+    "x1": 1459.0,
+    "y1": 2136.0,
+    "x2": 1574.0,
+    "y2": 2317.0,
+    "cy": 2226.5,
+    "visual_lines": [
+      {
+        "line_id": 24,
+        "words": [
+          {
+            "text": "JAANKAAR",
+            "x1": 1461.0,
+            "y1": 2136.0,
+            "x2": 1570.0,
+            "y2": 2169.0,
+            "cx": 1515.5,
+            "cy": 2152.5,
+            "width": 109.0,
+            "height": 33.0
+          }
+        ],
+        "text": "JAANKAAR",
+        "x1": 1461.0,
+        "y1": 2136.0,
+        "x2": 1570.0,
+        "y2": 2169.0,
+        "cy": 2152.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 25,
+        "words": [
+          {
+            "text": "BANO",
+            "x1": 1459.0,
+            "y1": 2161.0,
+            "x2": 1572.0,
+            "y2": 2207.0,
+            "cx": 1515.5,
+            "cy": 2184.0,
+            "width": 113.0,
+            "height": 46.0
+          }
+        ],
+        "text": "BANO",
+        "x1": 1459.0,
+        "y1": 2161.0,
+        "x2": 1572.0,
+        "y2": 2207.0,
+        "cy": 2184.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 26,
+        "words": [
+          {
+            "text": "JAGRUK",
+            "x1": 1466.0,
+            "y1": 2210.0,
+            "x2": 1569.0,
+            "y2": 2237.0,
+            "cx": 1517.5,
+            "cy": 2223.5,
+            "width": 103.0,
+            "height": 27.0
+          }
+        ],
+        "text": "JAGRUK",
+        "x1": 1466.0,
+        "y1": 2210.0,
+        "x2": 1569.0,
+        "y2": 2237.0,
+        "cy": 2223.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 27,
+        "words": [
+          {
+            "text": "RAHO",
+            "x1": 1459.0,
+            "y1": 2232.0,
+            "x2": 1574.0,
+            "y2": 2278.0,
+            "cx": 1516.5,
+            "cy": 2255.0,
+            "width": 115.0,
+            "height": 46.0
+          }
+        ],
+        "text": "RAHO",
+        "x1": 1459.0,
+        "y1": 2232.0,
+        "x2": 1574.0,
+        "y2": 2278.0,
+        "cy": 2255.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 28,
+        "words": [
+          {
+            "text": "2",
+            "x1": 1471.0,
+            "y1": 2288.0,
+            "x2": 1491.0,
+            "y2": 2317.0,
+            "cx": 1481.0,
+            "cy": 2302.5,
+            "width": 20.0,
+            "height": 29.0
+          }
+        ],
+        "text": "2",
+        "x1": 1471.0,
+        "y1": 2288.0,
+        "x2": 1491.0,
+        "y2": 2317.0,
+        "cy": 2302.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  }
+]

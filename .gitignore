@@ -1,0 +1,42 @@
+__pycache__/
+*.pyc
+.env
+
+# Logs
+logs/
+backend/logs/
+*.log
+
+# Databases
+*.sqlite3
+
+# Weights
+backend/weights/
+
+# Cache & Environment
+backend/cache/
+.pytest_cache/
+node_modules/
+
+# Virtual environments (NEVER commit these)
+venv/
+.venv/
+env/
+backend_v2/venv/
+
+# Frontend build output
+react-frontend/dist/
+
+# Misc generated/temporary files
+dummy.pdf
+react-frontend/vite_log.txt
+react-frontend/frontend*.log
+react-frontend/frontend_err.log
+
+# Debug and Test Data
+academic_debug/
+backend/debug/
+backend/debug_pan_test/
+backend/test_documents/
+*.png
+*.jpg

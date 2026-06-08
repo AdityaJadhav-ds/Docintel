@@ -1,0 +1,85 @@
+{
+  "header_count": 14,
+  "table_count": 14,
+  "footer_count": 1,
+  "columns": [
+    [
+      0,
+      45
+    ],
+    [
+      45,
+      158
+    ],
+    [
+      158,
+      865
+    ],
+    [
+      865,
+      1443
+    ],
+    [
+      1443,
+      1488
+    ]
+  ],
+  "table_lines": [
+    {
+      "text": "Date Description Chq/Ref. No. Withdrawal (Dr.)|Deposit (Cr) Balance",
+      "n_boxes": 5
+    },
+    {
+      "text": "Opening Balance 1.45",
+      "n_boxes": 2
+    },
+    {
+      "text": "02 Feb 2026]uPl/Shridhan Sanjay/338827314489/PaymentUPI-603376894422 663.00 664.45",
+      "n_boxes": 3
+    },
+    {
+      "text": "fromPh",
+      "n_boxes": 1
+    },
+    {
+      "text": "2 03 Feb 2026UPI/SHIVAY FO0DS/603418478917/UPI UPI-603429138176 40.00 624.45",
+      "n_boxes": 5
+    },
+    {
+      "text": "3 03 Feb2026CASHBACK EARNED ONBE- 1.00 625.45",
+      "n_boxes": 5
+    },
+    {
+      "text": "a99t3b6610a7c60",
+      "n_boxes": 1
+    },
+    {
+      "text": "4 04 Feb 2026 UPI/Balaji Medical/603523334185/UPI UPI-603532715108 130.00 495.45",
+      "n_boxes": 6
+    },
+    {
+      "text": "05 Feb 2026CASHBACK EARNED ONBE- 2.16 497.61",
+      "n_boxes": 4
+    },
+    {
+      "text": "b6793015c0459da",
+      "n_boxes": 1
+    },
+    {
+      "text": "6 5 Feb 2026 UPI/SHIVAYFO0DS/603618727491/UPI UPI-603682814851 30.00 467.61",
+      "n_boxes": 6
+    },
+    {
+      "text": "0 06 Feb 2026 UPI/TUSHAR SHARAD G/603719936347/UPI UPI-603765247379 188.00 279.61",
+      "n_boxes": 6
+    },
+    {
+      "text": "09 Feb 2026 UPI/SHIVAY FO0DS/604011778064/UPI UPI-604058658881 50.00 229.61",
+      "n_boxes": 5
+    },
+    {
+      "text": "9 09 Feb 2026][UPI/HOTEL SAHYADRI/604015597725/UPI] UPI-604075122693 229.00 0.61",
+      "n_boxes": 5
+    }
+  ]
+}

@@ -1,0 +1,5434 @@
+[
+  {
+    "line_id": 0,
+    "words": [
+      {
+        "text": "Induslnd Bank",
+        "x1": 1277.0,
+        "y1": 63.0,
+        "x2": 1594.0,
+        "y2": 105.0,
+        "cx": 1435.5,
+        "cy": 84.0,
+        "width": 317.0,
+        "height": 42.0
+      }
+    ],
+    "text": "Induslnd Bank",
+    "x1": 1277.0,
+    "y1": 63.0,
+    "x2": 1594.0,
+    "y2": 105.0,
+    "cy": 84.0,
+    "visual_lines": [
+      {
+        "line_id": 0,
+        "words": [
+          {
+            "text": "Induslnd Bank",
+            "x1": 1277.0,
+            "y1": 63.0,
+            "x2": 1594.0,
+            "y2": 105.0,
+            "cx": 1435.5,
+            "cy": 84.0,
+            "width": 317.0,
+            "height": 42.0
+          }
+        ],
+        "text": "Induslnd Bank",
+        "x1": 1277.0,
+        "y1": 63.0,
+        "x2": 1594.0,
+        "y2": 105.0,
+        "cy": 84.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 1,
+    "words": [
+      {
+        "text": "HOWTO MAKE PAYMENTS",
+        "x1": 157.0,
+        "y1": 166.0,
+        "x2": 462.0,
+        "y2": 197.0,
+        "cx": 309.5,
+        "cy": 181.5,
+        "width": 305.0,
+        "height": 31.0
+      },
+      {
+        "text": "CREDIT AND CASH WITHDRAWAL LIMITS",
+        "x1": 937.0,
+        "y1": 166.0,
+        "x2": 1407.0,
+        "y2": 197.0,
+        "cx": 1172.0,
+        "cy": 181.5,
+        "width": 470.0,
+        "height": 31.0
+      }
+    ],
+    "text": "HOWTO MAKE PAYMENTS CREDIT AND CASH WITHDRAWAL LIMITS",
+    "x1": 157.0,
+    "y1": 166.0,
+    "x2": 1407.0,
+    "y2": 197.0,
+    "cy": 181.5,
+    "visual_lines": [
+      {
+        "line_id": 1,
+        "words": [
+          {
+            "text": "HOWTO MAKE PAYMENTS",
+            "x1": 157.0,
+            "y1": 166.0,
+            "x2": 462.0,
+            "y2": 197.0,
+            "cx": 309.5,
+            "cy": 181.5,
+            "width": 305.0,
+            "height": 31.0
+          },
+          {
+            "text": "CREDIT AND CASH WITHDRAWAL LIMITS",
+            "x1": 937.0,
+            "y1": 166.0,
+            "x2": 1407.0,
+            "y2": 197.0,
+            "cx": 1172.0,
+            "cy": 181.5,
+            "width": 470.0,
+            "height": 31.0
+          }
+        ],
+        "text": "HOWTO MAKE PAYMENTS CREDIT AND CASH WITHDRAWAL LIMITS",
+        "x1": 157.0,
+        "y1": 166.0,
+        "x2": 1407.0,
+        "y2": 197.0,
+        "cy": 181.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 2,
+    "words": [
+      {
+        "text": "All Payments are to be made in Indian Rupees only.The Cardholder has the",
+        "x1": 86.0,
+        "y1": 229.0,
+        "x2": 804.0,
+        "y2": 261.0,
+        "cx": 445.0,
+        "cy": 245.0,
+        "width": 718.0,
+        "height": 32.0
+      },
+      {
+        "text": "1.",
+        "x1": 861.0,
+        "y1": 241.0,
+        "x2": 898.0,
+        "y2": 261.0,
+        "cx": 879.5,
+        "cy": 251.0,
+        "width": 37.0,
+        "height": 20.0
+      },
+      {
+        "text": "Credit LimitThisis the maximum limit assigned to the Cardholder.Your total",
+        "x1": 893.0,
+        "y1": 234.0,
+        "x2": 1596.0,
+        "y2": 266.0,
+        "cx": 1244.5,
+        "cy": 250.0,
+        "width": 703.0,
+        "height": 32.0
+      }
+    ],
+    "text": "All Payments are to be made in Indian Rupees only.The Cardholder has the 1. Credit LimitThisis the maximum limit assigned to the Cardholder.Your total",
+    "x1": 86.0,
+    "y1": 229.0,
+    "x2": 1596.0,
+    "y2": 266.0,
+    "cy": 248.66666666666666,
+    "visual_lines": [
+      {
+        "line_id": 2,
+        "words": [
+          {
+            "text": "All Payments are to be made in Indian Rupees only.The Cardholder has the",
+            "x1": 86.0,
+            "y1": 229.0,
+            "x2": 804.0,
+            "y2": 261.0,
+            "cx": 445.0,
+            "cy": 245.0,
+            "width": 718.0,
+            "height": 32.0
+          },
+          {
+            "text": "1.",
+            "x1": 861.0,
+            "y1": 241.0,
+            "x2": 898.0,
+            "y2": 261.0,
+            "cx": 879.5,
+            "cy": 251.0,
+            "width": 37.0,
+            "height": 20.0
+          },
+          {
+            "text": "Credit LimitThisis the maximum limit assigned to the Cardholder.Your total",
+            "x1": 893.0,
+            "y1": 234.0,
+            "x2": 1596.0,
+            "y2": 266.0,
+            "cx": 1244.5,
+            "cy": 250.0,
+            "width": 703.0,
+            "height": 32.0
+          }
+        ],
+        "text": "All Payments are to be made in Indian Rupees only.The Cardholder has the 1. Credit LimitThisis the maximum limit assigned to the Cardholder.Your total",
+        "x1": 86.0,
+        "y1": 229.0,
+        "x2": 1596.0,
+        "y2": 266.0,
+        "cy": 248.66666666666666,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 3,
+    "words": [
+      {
+        "text": "benefit of only following modes of effecting payment to the Bank:",
+        "x1": 84.0,
+        "y1": 256.0,
+        "x2": 706.0,
+        "y2": 288.0,
+        "cx": 395.0,
+        "cy": 272.0,
+        "width": 622.0,
+        "height": 32.0
+      },
+      {
+        "text": "outstanding including all transactions,fees and charges should not exceed",
+        "x1": 898.0,
+        "y1": 263.0,
+        "x2": 1596.0,
+        "y2": 288.0,
+        "cx": 1247.0,
+        "cy": 275.5,
+        "width": 698.0,
+        "height": 25.0
+      }
+    ],
+    "text": "benefit of only following modes of effecting payment to the Bank: outstanding including all transactions,fees and charges should not exceed",
+    "x1": 84.0,
+    "y1": 256.0,
+    "x2": 1596.0,
+    "y2": 288.0,
+    "cy": 273.75,
+    "visual_lines": [
+      {
+        "line_id": 3,
+        "words": [
+          {
+            "text": "benefit of only following modes of effecting payment to the Bank:",
+            "x1": 84.0,
+            "y1": 256.0,
+            "x2": 706.0,
+            "y2": 288.0,
+            "cx": 395.0,
+            "cy": 272.0,
+            "width": 622.0,
+            "height": 32.0
+          },
+          {
+            "text": "outstanding including all transactions,fees and charges should not exceed",
+            "x1": 898.0,
+            "y1": 263.0,
+            "x2": 1596.0,
+            "y2": 288.0,
+            "cx": 1247.0,
+            "cy": 275.5,
+            "width": 698.0,
+            "height": 25.0
+          }
+        ],
+        "text": "benefit of only following modes of effecting payment to the Bank: outstanding including all transactions,fees and charges should not exceed",
+        "x1": 84.0,
+        "y1": 256.0,
+        "x2": 1596.0,
+        "y2": 288.0,
+        "cy": 273.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 4,
+    "words": [
+      {
+        "text": "1.Using thePay Bill option in the Credit Card Dashboard section on INDIE",
+        "x1": 84.0,
+        "y1": 283.0,
+        "x2": 804.0,
+        "y2": 314.0,
+        "cx": 444.0,
+        "cy": 298.5,
+        "width": 720.0,
+        "height": 31.0
+      },
+      {
+        "text": "this limit.",
+        "x1": 898.0,
+        "y1": 288.0,
+        "x2": 991.0,
+        "y2": 312.0,
+        "cx": 944.5,
+        "cy": 300.0,
+        "width": 93.0,
+        "height": 24.0
+      },
+      {
+        "text": "App from your Induslnd Bank account.",
+        "x1": 128.0,
+        "y1": 312.0,
+        "x2": 485.0,
+        "y2": 336.0,
+        "cx": 306.5,
+        "cy": 324.0,
+        "width": 357.0,
+        "height": 24.0
+      },
+      {
+        "text": "2.",
+        "x1": 861.0,
+        "y1": 319.0,
+        "x2": 878.0,
+        "y2": 331.0,
+        "cx": 869.5,
+        "cy": 325.0,
+        "width": 17.0,
+        "height": 12.0
+      },
+      {
+        "text": "Cash Limit This is the maximum Cash Advance Limit assigned to the",
+        "x1": 893.0,
+        "y1": 309.0,
+        "x2": 1599.0,
+        "y2": 341.0,
+        "cx": 1246.0,
+        "cy": 325.0,
+        "width": 706.0,
+        "height": 32.0
+      }
+    ],
+    "text": "1.Using thePay Bill option in the Credit Card Dashboard section on INDIE this limit. App from your Induslnd Bank account. 2. Cash Limit This is the maximum Cash Advance Limit assigned to the",
+    "x1": 84.0,
+    "y1": 283.0,
+    "x2": 1599.0,
+    "y2": 341.0,
+    "cy": 312.0,
+    "visual_lines": [
+      {
+        "line_id": 4,
+        "words": [
+          {
+            "text": "1.Using thePay Bill option in the Credit Card Dashboard section on INDIE",
+            "x1": 84.0,
+            "y1": 283.0,
+            "x2": 804.0,
+            "y2": 314.0,
+            "cx": 444.0,
+            "cy": 298.5,
+            "width": 720.0,
+            "height": 31.0
+          },
+          {
+            "text": "this limit.",
+            "x1": 898.0,
+            "y1": 288.0,
+            "x2": 991.0,
+            "y2": 312.0,
+            "cx": 944.5,
+            "cy": 300.0,
+            "width": 93.0,
+            "height": 24.0
+          }
+        ],
+        "text": "1.Using thePay Bill option in the Credit Card Dashboard section on INDIE this limit.",
+        "x1": 84.0,
+        "y1": 283.0,
+        "x2": 991.0,
+        "y2": 314.0,
+        "cy": 299.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 5,
+        "words": [
+          {
+            "text": "App from your Induslnd Bank account.",
+            "x1": 128.0,
+            "y1": 312.0,
+            "x2": 485.0,
+            "y2": 336.0,
+            "cx": 306.5,
+            "cy": 324.0,
+            "width": 357.0,
+            "height": 24.0
+          },
+          {
+            "text": "2.",
+            "x1": 861.0,
+            "y1": 319.0,
+            "x2": 878.0,
+            "y2": 331.0,
+            "cx": 869.5,
+            "cy": 325.0,
+            "width": 17.0,
+            "height": 12.0
+          },
+          {
+            "text": "Cash Limit This is the maximum Cash Advance Limit assigned to the",
+            "x1": 893.0,
+            "y1": 309.0,
+            "x2": 1599.0,
+            "y2": 341.0,
+            "cx": 1246.0,
+            "cy": 325.0,
+            "width": 706.0,
+            "height": 32.0
+          }
+        ],
+        "text": "App from your Induslnd Bank account. 2. Cash Limit This is the maximum Cash Advance Limit assigned to the",
+        "x1": 128.0,
+        "y1": 309.0,
+        "x2": 1599.0,
+        "y2": 341.0,
+        "cy": 324.6666666666667,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 5,
+    "words": [
+      {
+        "text": "2.",
+        "x1": 91.0,
+        "y1": 341.0,
+        "x2": 108.0,
+        "y2": 358.0,
+        "cx": 99.5,
+        "cy": 349.5,
+        "width": 17.0,
+        "height": 17.0
+      },
+      {
+        "text": "Online Funds Transfer from a non-Indusind Bank account using NEFT/",
+        "x1": 123.0,
+        "y1": 334.0,
+        "x2": 802.0,
+        "y2": 365.0,
+        "cx": 462.5,
+        "cy": 349.5,
+        "width": 679.0,
+        "height": 31.0
+      },
+      {
+        "text": "Cardholder.This limit is lower than the credit limit and is a subset of overal",
+        "x1": 898.0,
+        "y1": 339.0,
+        "x2": 1594.0,
+        "y2": 363.0,
+        "cx": 1246.0,
+        "cy": 351.0,
+        "width": 696.0,
+        "height": 24.0
+      },
+      {
+        "text": "RTGS/IMPS/Visa Money Transfer facility.",
+        "x1": 123.0,
+        "y1": 358.0,
+        "x2": 499.0,
+        "y2": 390.0,
+        "cx": 311.0,
+        "cy": 374.0,
+        "width": 376.0,
+        "height": 32.0
+      },
+      {
+        "text": "credit limit.",
+        "x1": 898.0,
+        "y1": 363.0,
+        "x2": 1009.0,
+        "y2": 387.0,
+        "cx": 953.5,
+        "cy": 375.0,
+        "width": 111.0,
+        "height": 24.0
+      },
+      {
+        "text": "By clicking Indusind Credit Card Payment on IndusNet, you can do a",
+        "x1": 123.0,
+        "y1": 387.0,
+        "x2": 802.0,
+        "y2": 412.0,
+        "cx": 462.5,
+        "cy": 399.5,
+        "width": 679.0,
+        "height": 25.0
+      },
+      {
+        "text": "3",
+        "x1": 857.0,
+        "y1": 386.0,
+        "x2": 881.0,
+        "y2": 409.0,
+        "cx": 869.0,
+        "cy": 397.5,
+        "width": 24.0,
+        "height": 23.0
+      },
+      {
+        "text": "The Credit and Cash Limits will vary for each Cardholder and will be disclosed in",
+        "x1": 895.0,
+        "y1": 387.0,
+        "x2": 1594.0,
+        "y2": 412.0,
+        "cx": 1244.5,
+        "cy": 399.5,
+        "width": 699.0,
+        "height": 25.0
+      },
+      {
+        "text": "transfer from your Indusind Bank Savings account.",
+        "x1": 123.0,
+        "y1": 407.0,
+        "x2": 603.0,
+        "y2": 441.0,
+        "cx": 363.0,
+        "cy": 424.0,
+        "width": 480.0,
+        "height": 34.0
+      },
+      {
+        "text": "the monthly statement sent to the Cardholder.",
+        "x1": 895.0,
+        "y1": 409.0,
+        "x2": 1333.0,
+        "y2": 441.0,
+        "cx": 1114.0,
+        "cy": 425.0,
+        "width": 438.0,
+        "height": 32.0
+      }
+    ],
+    "text": "2. Online Funds Transfer from a non-Indusind Bank account using NEFT/ Cardholder.This limit is lower than the credit limit and is a subset of overal RTGS/IMPS/Visa Money Transfer facility. credit limit. By clicking Indusind Credit Card Payment on IndusNet, you can do a 3 The Credit and Cash Limits will vary for each Cardholder and will be disclosed in transfer from your Indusind Bank Savings account. the monthly statement sent to the Cardholder.",
+    "x1": 91.0,
+    "y1": 334.0,
+    "x2": 1594.0,
+    "y2": 441.0,
+    "cy": 387.5,
+    "visual_lines": [
+      {
+        "line_id": 6,
+        "words": [
+          {
+            "text": "2.",
+            "x1": 91.0,
+            "y1": 341.0,
+            "x2": 108.0,
+            "y2": 358.0,
+            "cx": 99.5,
+            "cy": 349.5,
+            "width": 17.0,
+            "height": 17.0
+          },
+          {
+            "text": "Online Funds Transfer from a non-Indusind Bank account using NEFT/",
+            "x1": 123.0,
+            "y1": 334.0,
+            "x2": 802.0,
+            "y2": 365.0,
+            "cx": 462.5,
+            "cy": 349.5,
+            "width": 679.0,
+            "height": 31.0
+          },
+          {
+            "text": "Cardholder.This limit is lower than the credit limit and is a subset of overal",
+            "x1": 898.0,
+            "y1": 339.0,
+            "x2": 1594.0,
+            "y2": 363.0,
+            "cx": 1246.0,
+            "cy": 351.0,
+            "width": 696.0,
+            "height": 24.0
+          }
+        ],
+        "text": "2. Online Funds Transfer from a non-Indusind Bank account using NEFT/ Cardholder.This limit is lower than the credit limit and is a subset of overal",
+        "x1": 91.0,
+        "y1": 334.0,
+        "x2": 1594.0,
+        "y2": 365.0,
+        "cy": 350.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 7,
+        "words": [
+          {
+            "text": "RTGS/IMPS/Visa Money Transfer facility.",
+            "x1": 123.0,
+            "y1": 358.0,
+            "x2": 499.0,
+            "y2": 390.0,
+            "cx": 311.0,
+            "cy": 374.0,
+            "width": 376.0,
+            "height": 32.0
+          },
+          {
+            "text": "credit limit.",
+            "x1": 898.0,
+            "y1": 363.0,
+            "x2": 1009.0,
+            "y2": 387.0,
+            "cx": 953.5,
+            "cy": 375.0,
+            "width": 111.0,
+            "height": 24.0
+          }
+        ],
+        "text": "RTGS/IMPS/Visa Money Transfer facility. credit limit.",
+        "x1": 123.0,
+        "y1": 358.0,
+        "x2": 1009.0,
+        "y2": 390.0,
+        "cy": 374.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 8,
+        "words": [
+          {
+            "text": "By clicking Indusind Credit Card Payment on IndusNet, you can do a",
+            "x1": 123.0,
+            "y1": 387.0,
+            "x2": 802.0,
+            "y2": 412.0,
+            "cx": 462.5,
+            "cy": 399.5,
+            "width": 679.0,
+            "height": 25.0
+          },
+          {
+            "text": "3",
+            "x1": 857.0,
+            "y1": 386.0,
+            "x2": 881.0,
+            "y2": 409.0,
+            "cx": 869.0,
+            "cy": 397.5,
+            "width": 24.0,
+            "height": 23.0
+          },
+          {
+            "text": "The Credit and Cash Limits will vary for each Cardholder and will be disclosed in",
+            "x1": 895.0,
+            "y1": 387.0,
+            "x2": 1594.0,
+            "y2": 412.0,
+            "cx": 1244.5,
+            "cy": 399.5,
+            "width": 699.0,
+            "height": 25.0
+          }
+        ],
+        "text": "By clicking Indusind Credit Card Payment on IndusNet, you can do a 3 The Credit and Cash Limits will vary for each Cardholder and will be disclosed in",
+        "x1": 123.0,
+        "y1": 386.0,
+        "x2": 1594.0,
+        "y2": 412.0,
+        "cy": 398.8333333333333,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 9,
+        "words": [
+          {
+            "text": "transfer from your Indusind Bank Savings account.",
+            "x1": 123.0,
+            "y1": 407.0,
+            "x2": 603.0,
+            "y2": 441.0,
+            "cx": 363.0,
+            "cy": 424.0,
+            "width": 480.0,
+            "height": 34.0
+          },
+          {
+            "text": "the monthly statement sent to the Cardholder.",
+            "x1": 895.0,
+            "y1": 409.0,
+            "x2": 1333.0,
+            "y2": 441.0,
+            "cx": 1114.0,
+            "cy": 425.0,
+            "width": 438.0,
+            "height": 32.0
+          }
+        ],
+        "text": "transfer from your Indusind Bank Savings account. the monthly statement sent to the Cardholder.",
+        "x1": 123.0,
+        "y1": 407.0,
+        "x2": 1333.0,
+        "y2": 441.0,
+        "cy": 424.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 6,
+    "words": [
+      {
+        "text": "4.",
+        "x1": 91.0,
+        "y1": 443.0,
+        "x2": 108.0,
+        "y2": 460.0,
+        "cx": 99.5,
+        "cy": 451.5,
+        "width": 17.0,
+        "height": 17.0
+      },
+      {
+        "text": "Using the Swift Pay option on www.indusind.com to pay from any",
+        "x1": 120.0,
+        "y1": 434.0,
+        "x2": 802.0,
+        "y2": 468.0,
+        "cx": 461.0,
+        "cy": 451.0,
+        "width": 682.0,
+        "height": 34.0
+      },
+      {
+        "text": "Bank account.",
+        "x1": 128.0,
+        "y1": 465.0,
+        "x2": 268.0,
+        "y2": 490.0,
+        "cx": 198.0,
+        "cy": 477.5,
+        "width": 140.0,
+        "height": 25.0
+      }
+    ],
+    "text": "4. Using the Swift Pay option on www.indusind.com to pay from any Bank account.",
+    "x1": 91.0,
+    "y1": 434.0,
+    "x2": 802.0,
+    "y2": 490.0,
+    "cy": 462.0,
+    "visual_lines": [
+      {
+        "line_id": 10,
+        "words": [
+          {
+            "text": "4.",
+            "x1": 91.0,
+            "y1": 443.0,
+            "x2": 108.0,
+            "y2": 460.0,
+            "cx": 99.5,
+            "cy": 451.5,
+            "width": 17.0,
+            "height": 17.0
+          },
+          {
+            "text": "Using the Swift Pay option on www.indusind.com to pay from any",
+            "x1": 120.0,
+            "y1": 434.0,
+            "x2": 802.0,
+            "y2": 468.0,
+            "cx": 461.0,
+            "cy": 451.0,
+            "width": 682.0,
+            "height": 34.0
+          }
+        ],
+        "text": "4. Using the Swift Pay option on www.indusind.com to pay from any",
+        "x1": 91.0,
+        "y1": 434.0,
+        "x2": 802.0,
+        "y2": 468.0,
+        "cy": 451.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 11,
+        "words": [
+          {
+            "text": "Bank account.",
+            "x1": 128.0,
+            "y1": 465.0,
+            "x2": 268.0,
+            "y2": 490.0,
+            "cx": 198.0,
+            "cy": 477.5,
+            "width": 140.0,
+            "height": 25.0
+          }
+        ],
+        "text": "Bank account.",
+        "x1": 128.0,
+        "y1": 465.0,
+        "x2": 268.0,
+        "y2": 490.0,
+        "cy": 477.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 7,
+    "words": [
+      {
+        "text": "5.",
+        "x1": 91.0,
+        "y1": 497.0,
+        "x2": 106.0,
+        "y2": 509.0,
+        "cx": 98.5,
+        "cy": 503.0,
+        "width": 15.0,
+        "height": 12.0
+      },
+      {
+        "text": "Using the Credit Card Quick Payoption on www.indusind.com to pay",
+        "x1": 120.0,
+        "y1": 485.0,
+        "x2": 802.0,
+        "y2": 519.0,
+        "cx": 461.0,
+        "cy": 502.0,
+        "width": 682.0,
+        "height": 34.0
+      },
+      {
+        "text": "REWARD REDEMPTION",
+        "x1": 940.0,
+        "y1": 478.0,
+        "x2": 1208.0,
+        "y2": 509.0,
+        "cx": 1074.0,
+        "cy": 493.5,
+        "width": 268.0,
+        "height": 31.0
+      },
+      {
+        "text": "from any Bank account.",
+        "x1": 128.0,
+        "y1": 517.0,
+        "x2": 349.0,
+        "y2": 541.0,
+        "cx": 238.5,
+        "cy": 529.0,
+        "width": 221.0,
+        "height": 24.0
+      }
+    ],
+    "text": "5. Using the Credit Card Quick Payoption on www.indusind.com to pay REWARD REDEMPTION from any Bank account.",
+    "x1": 91.0,
+    "y1": 478.0,
+    "x2": 1208.0,
+    "y2": 541.0,
+    "cy": 509.5,
+    "visual_lines": [
+      {
+        "line_id": 12,
+        "words": [
+          {
+            "text": "5.",
+            "x1": 91.0,
+            "y1": 497.0,
+            "x2": 106.0,
+            "y2": 509.0,
+            "cx": 98.5,
+            "cy": 503.0,
+            "width": 15.0,
+            "height": 12.0
+          },
+          {
+            "text": "Using the Credit Card Quick Payoption on www.indusind.com to pay",
+            "x1": 120.0,
+            "y1": 485.0,
+            "x2": 802.0,
+            "y2": 519.0,
+            "cx": 461.0,
+            "cy": 502.0,
+            "width": 682.0,
+            "height": 34.0
+          },
+          {
+            "text": "REWARD REDEMPTION",
+            "x1": 940.0,
+            "y1": 478.0,
+            "x2": 1208.0,
+            "y2": 509.0,
+            "cx": 1074.0,
+            "cy": 493.5,
+            "width": 268.0,
+            "height": 31.0
+          }
+        ],
+        "text": "5. Using the Credit Card Quick Payoption on www.indusind.com to pay REWARD REDEMPTION",
+        "x1": 91.0,
+        "y1": 478.0,
+        "x2": 1208.0,
+        "y2": 519.0,
+        "cy": 499.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 13,
+        "words": [
+          {
+            "text": "from any Bank account.",
+            "x1": 128.0,
+            "y1": 517.0,
+            "x2": 349.0,
+            "y2": 541.0,
+            "cx": 238.5,
+            "cy": 529.0,
+            "width": 221.0,
+            "height": 24.0
+          }
+        ],
+        "text": "from any Bank account.",
+        "x1": 128.0,
+        "y1": 517.0,
+        "x2": 349.0,
+        "y2": 541.0,
+        "cy": 529.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 8,
+    "words": [
+      {
+        "text": "6.",
+        "x1": 89.0,
+        "y1": 543.0,
+        "x2": 111.0,
+        "y2": 563.0,
+        "cx": 100.0,
+        "cy": 553.0,
+        "width": 22.0,
+        "height": 20.0
+      },
+      {
+        "text": "By activating auto payment facility on your Indusind Bank account or",
+        "x1": 123.0,
+        "y1": 538.0,
+        "x2": 804.0,
+        "y2": 570.0,
+        "cx": 463.5,
+        "cy": 554.0,
+        "width": 681.0,
+        "height": 32.0
+      },
+      {
+        "text": "For details on reward redemption,please visit www.indusind.com",
+        "x1": 858.0,
+        "y1": 548.0,
+        "x2": 1469.0,
+        "y2": 573.0,
+        "cx": 1163.5,
+        "cy": 560.5,
+        "width": 611.0,
+        "height": 25.0
+      },
+      {
+        "text": "through NACH facility on your non-Induslnd Bank account. Contact",
+        "x1": 128.0,
+        "y1": 568.0,
+        "x2": 799.0,
+        "y2": 592.0,
+        "cx": 463.5,
+        "cy": 580.0,
+        "width": 671.0,
+        "height": 24.0
+      },
+      {
+        "text": "Reward points can be redeemed through www.indusmoments.com",
+        "x1": 858.0,
+        "y1": 575.0,
+        "x2": 1486.0,
+        "y2": 599.0,
+        "cx": 1172.0,
+        "cy": 587.0,
+        "width": 628.0,
+        "height": 24.0
+      },
+      {
+        "text": "phone banking for more details.",
+        "x1": 125.0,
+        "y1": 590.0,
+        "x2": 428.0,
+        "y2": 619.0,
+        "cx": 276.5,
+        "cy": 604.5,
+        "width": 303.0,
+        "height": 29.0
+      },
+      {
+        "text": "Cash Deposit at Indusind Bank Branch.Deposit charges 100 wil be applicable.",
+        "x1": 123.0,
+        "y1": 614.0,
+        "x2": 792.0,
+        "y2": 646.0,
+        "cx": 457.5,
+        "cy": 630.0,
+        "width": 669.0,
+        "height": 32.0
+      }
+    ],
+    "text": "6. By activating auto payment facility on your Indusind Bank account or For details on reward redemption,please visit www.indusind.com through NACH facility on your non-Induslnd Bank account. Contact Reward points can be redeemed through www.indusmoments.com phone banking for more details. Cash Deposit at Indusind Bank Branch.Deposit charges 100 wil be applicable.",
+    "x1": 89.0,
+    "y1": 538.0,
+    "x2": 1486.0,
+    "y2": 646.0,
+    "cy": 592.0,
+    "visual_lines": [
+      {
+        "line_id": 14,
+        "words": [
+          {
+            "text": "6.",
+            "x1": 89.0,
+            "y1": 543.0,
+            "x2": 111.0,
+            "y2": 563.0,
+            "cx": 100.0,
+            "cy": 553.0,
+            "width": 22.0,
+            "height": 20.0
+          },
+          {
+            "text": "By activating auto payment facility on your Indusind Bank account or",
+            "x1": 123.0,
+            "y1": 538.0,
+            "x2": 804.0,
+            "y2": 570.0,
+            "cx": 463.5,
+            "cy": 554.0,
+            "width": 681.0,
+            "height": 32.0
+          },
+          {
+            "text": "For details on reward redemption,please visit www.indusind.com",
+            "x1": 858.0,
+            "y1": 548.0,
+            "x2": 1469.0,
+            "y2": 573.0,
+            "cx": 1163.5,
+            "cy": 560.5,
+            "width": 611.0,
+            "height": 25.0
+          }
+        ],
+        "text": "6. By activating auto payment facility on your Indusind Bank account or For details on reward redemption,please visit www.indusind.com",
+        "x1": 89.0,
+        "y1": 538.0,
+        "x2": 1469.0,
+        "y2": 573.0,
+        "cy": 555.8333333333334,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 15,
+        "words": [
+          {
+            "text": "through NACH facility on your non-Induslnd Bank account. Contact",
+            "x1": 128.0,
+            "y1": 568.0,
+            "x2": 799.0,
+            "y2": 592.0,
+            "cx": 463.5,
+            "cy": 580.0,
+            "width": 671.0,
+            "height": 24.0
+          },
+          {
+            "text": "Reward points can be redeemed through www.indusmoments.com",
+            "x1": 858.0,
+            "y1": 575.0,
+            "x2": 1486.0,
+            "y2": 599.0,
+            "cx": 1172.0,
+            "cy": 587.0,
+            "width": 628.0,
+            "height": 24.0
+          }
+        ],
+        "text": "through NACH facility on your non-Induslnd Bank account. Contact Reward points can be redeemed through www.indusmoments.com",
+        "x1": 128.0,
+        "y1": 568.0,
+        "x2": 1486.0,
+        "y2": 599.0,
+        "cy": 583.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 16,
+        "words": [
+          {
+            "text": "phone banking for more details.",
+            "x1": 125.0,
+            "y1": 590.0,
+            "x2": 428.0,
+            "y2": 619.0,
+            "cx": 276.5,
+            "cy": 604.5,
+            "width": 303.0,
+            "height": 29.0
+          }
+        ],
+        "text": "phone banking for more details.",
+        "x1": 125.0,
+        "y1": 590.0,
+        "x2": 428.0,
+        "y2": 619.0,
+        "cy": 604.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 17,
+        "words": [
+          {
+            "text": "Cash Deposit at Indusind Bank Branch.Deposit charges 100 wil be applicable.",
+            "x1": 123.0,
+            "y1": 614.0,
+            "x2": 792.0,
+            "y2": 646.0,
+            "cx": 457.5,
+            "cy": 630.0,
+            "width": 669.0,
+            "height": 32.0
+          }
+        ],
+        "text": "Cash Deposit at Indusind Bank Branch.Deposit charges 100 wil be applicable.",
+        "x1": 123.0,
+        "y1": 614.0,
+        "x2": 792.0,
+        "y2": 646.0,
+        "cy": 630.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 9,
+    "words": [
+      {
+        "text": "8.",
+        "x1": 91.0,
+        "y1": 651.0,
+        "x2": 108.0,
+        "y2": 668.0,
+        "cx": 99.5,
+        "cy": 659.5,
+        "width": 17.0,
+        "height": 17.0
+      },
+      {
+        "text": "Cheque/draft",
+        "x1": 125.0,
+        "y1": 643.0,
+        "x2": 268.0,
+        "y2": 668.0,
+        "cx": 196.5,
+        "cy": 655.5,
+        "width": 143.0,
+        "height": 25.0
+      },
+      {
+        "text": "favouring",
+        "x1": 280.0,
+        "y1": 646.0,
+        "x2": 384.0,
+        "y2": 670.0,
+        "cx": 332.0,
+        "cy": 658.0,
+        "width": 104.0,
+        "height": 24.0
+      },
+      {
+        "text": "Indusind",
+        "x1": 398.0,
+        "y1": 643.0,
+        "x2": 499.0,
+        "y2": 668.0,
+        "cx": 448.5,
+        "cy": 655.5,
+        "width": 101.0,
+        "height": 25.0
+      },
+      {
+        "text": "Bank",
+        "x1": 512.0,
+        "y1": 643.0,
+        "x2": 581.0,
+        "y2": 668.0,
+        "cx": 546.5,
+        "cy": 655.5,
+        "width": 69.0,
+        "height": 25.0
+      },
+      {
+        "text": "CreditCard",
+        "x1": 595.0,
+        "y1": 643.0,
+        "x2": 740.0,
+        "y2": 670.0,
+        "cx": 667.5,
+        "cy": 656.5,
+        "width": 145.0,
+        "height": 27.0
+      },
+      {
+        "text": "o",
+        "x1": 743.0,
+        "y1": 646.0,
+        "x2": 795.0,
+        "y2": 665.0,
+        "cx": 769.0,
+        "cy": 655.5,
+        "width": 52.0,
+        "height": 19.0
+      },
+      {
+        "text": "BILLING &STATEMENT",
+        "x1": 945.0,
+        "y1": 636.0,
+        "x2": 1198.0,
+        "y2": 660.0,
+        "cx": 1071.5,
+        "cy": 648.0,
+        "width": 253.0,
+        "height": 24.0
+      },
+      {
+        "text": "xxxxxxxxxxxxx deposited at the Induslnd Bank Branches/ATMs.",
+        "x1": 128.0,
+        "y1": 670.0,
+        "x2": 799.0,
+        "y2": 694.0,
+        "cx": 463.5,
+        "cy": 682.0,
+        "width": 671.0,
+        "height": 24.0
+      },
+      {
+        "text": "For a list of drop boxes visit www.indusind.com.You are advised to drop",
+        "x1": 125.0,
+        "y1": 689.0,
+        "x2": 799.0,
+        "y2": 724.0,
+        "cx": 462.0,
+        "cy": 706.5,
+        "width": 674.0,
+        "height": 35.0
+      },
+      {
+        "text": "The Bank will send a monthly statement to the Cardholder, e-mail and/or",
+        "x1": 900.0,
+        "y1": 692.0,
+        "x2": 1594.0,
+        "y2": 716.0,
+        "cx": 1247.0,
+        "cy": 704.0,
+        "width": 694.0,
+        "height": 24.0
+      },
+      {
+        "text": "cheques at least 4 working days prior to the payment due date to ensure",
+        "x1": 128.0,
+        "y1": 721.0,
+        "x2": 802.0,
+        "y2": 746.0,
+        "cx": 465.0,
+        "cy": 733.5,
+        "width": 674.0,
+        "height": 25.0
+      },
+      {
+        "text": "physical, through the delivery mode as specified by Bank for each billing",
+        "x1": 898.0,
+        "y1": 719.0,
+        "x2": 1596.0,
+        "y2": 743.0,
+        "cx": 1247.0,
+        "cy": 731.0,
+        "width": 698.0,
+        "height": 24.0
+      },
+      {
+        "text": "timely credit to your card account and avoid levy of penal charges.",
+        "x1": 128.0,
+        "y1": 748.0,
+        "x2": 802.0,
+        "y2": 772.0,
+        "cx": 465.0,
+        "cy": 760.0,
+        "width": 674.0,
+        "height": 24.0
+      },
+      {
+        "text": "period during which there is any transaction/payment or any amount",
+        "x1": 895.0,
+        "y1": 738.0,
+        "x2": 1596.0,
+        "y2": 770.0,
+        "cx": 1245.5,
+        "cy": 754.0,
+        "width": 701.0,
+        "height": 32.0
+      },
+      {
+        "text": "Please mention your name and mobile number on the reverse of",
+        "x1": 128.0,
+        "y1": 772.0,
+        "x2": 802.0,
+        "y2": 797.0,
+        "cx": 465.0,
+        "cy": 784.5,
+        "width": 674.0,
+        "height": 25.0
+      },
+      {
+        "text": "outstanding on the Card account.",
+        "x1": 898.0,
+        "y1": 770.0,
+        "x2": 1213.0,
+        "y2": 794.0,
+        "cx": 1055.5,
+        "cy": 782.0,
+        "width": 315.0,
+        "height": 24.0
+      },
+      {
+        "text": "the cheque, we shall send you an SMS on receipt of your cheque.",
+        "x1": 125.0,
+        "y1": 792.0,
+        "x2": 802.0,
+        "y2": 826.0,
+        "cx": 463.5,
+        "cy": 809.0,
+        "width": 677.0,
+        "height": 34.0
+      },
+      {
+        "text": "2.",
+        "x1": 861.0,
+        "y1": 799.0,
+        "x2": 878.0,
+        "y2": 816.0,
+        "cx": 869.5,
+        "cy": 807.5,
+        "width": 17.0,
+        "height": 17.0
+      },
+      {
+        "text": "Non-receipt of statement would not affectthe Cardholder's obligations and",
+        "x1": 895.0,
+        "y1": 789.0,
+        "x2": 1599.0,
+        "y2": 821.0,
+        "cx": 1247.0,
+        "cy": 805.0,
+        "width": 704.0,
+        "height": 32.0
+      },
+      {
+        "text": "Please do not deposit post-dated cheque.The Bank at its sole discretion",
+        "x1": 125.0,
+        "y1": 819.0,
+        "x2": 804.0,
+        "y2": 850.0,
+        "cx": 464.5,
+        "cy": 834.5,
+        "width": 679.0,
+        "height": 31.0
+      },
+      {
+        "text": "liabilities under this Agreement and he/she shall be liable to settle at least",
+        "x1": 898.0,
+        "y1": 819.0,
+        "x2": 1596.0,
+        "y2": 843.0,
+        "cx": 1247.0,
+        "cy": 831.0,
+        "width": 698.0,
+        "height": 24.0
+      },
+      {
+        "text": "may reject all post-dated cheques",
+        "x1": 128.0,
+        "y1": 845.0,
+        "x2": 445.0,
+        "y2": 870.0,
+        "cx": 286.5,
+        "cy": 857.5,
+        "width": 317.0,
+        "height": 25.0
+      },
+      {
+        "text": "the Minimum Amount Due before the payment due date.",
+        "x1": 895.0,
+        "y1": 841.0,
+        "x2": 1432.0,
+        "y2": 870.0,
+        "cx": 1163.5,
+        "cy": 855.5,
+        "width": 537.0,
+        "height": 29.0
+      },
+      {
+        "text": "Payments received against card outstanding will be adjusted against all",
+        "x1": 125.0,
+        "y1": 880.0,
+        "x2": 802.0,
+        "y2": 904.0,
+        "cx": 463.5,
+        "cy": 892.0,
+        "width": 677.0,
+        "height": 24.0
+      },
+      {
+        "text": "Minimum Amount Due is calculated as 100% of EMl amount + 100% of GST",
+        "x1": 895.0,
+        "y1": 862.0,
+        "x2": 1596.0,
+        "y2": 897.0,
+        "cx": 1245.5,
+        "cy": 879.5,
+        "width": 701.0,
+        "height": 35.0
+      },
+      {
+        "text": "EMIs taxes fees other charges interest charges,cash advance and",
+        "x1": 123.0,
+        "y1": 899.0,
+        "x2": 804.0,
+        "y2": 933.0,
+        "cx": 463.5,
+        "cy": 916.0,
+        "width": 681.0,
+        "height": 34.0
+      },
+      {
+        "text": "+100% of Fees/Charges + 100% of FinanceCharges + Overlimit Amount (if",
+        "x1": 900.0,
+        "y1": 894.0,
+        "x2": 1599.0,
+        "y2": 919.0,
+        "cx": 1249.5,
+        "cy": 906.5,
+        "width": 699.0,
+        "height": 25.0
+      },
+      {
+        "text": "purchase, in that order.",
+        "x1": 128.0,
+        "y1": 928.0,
+        "x2": 345.0,
+        "y2": 958.0,
+        "cx": 236.5,
+        "cy": 943.0,
+        "width": 217.0,
+        "height": 30.0
+      },
+      {
+        "text": "any)+ 2% of Retail Spends/Cash Advance/remaining balance outstanding.",
+        "x1": 895.0,
+        "y1": 916.0,
+        "x2": 1589.0,
+        "y2": 948.0,
+        "cx": 1242.0,
+        "cy": 932.0,
+        "width": 694.0,
+        "height": 32.0
+      },
+      {
+        "text": "Late Payment Charges will be levied if Minimum Amount Due (exact amount",
+        "x1": 898.0,
+        "y1": 945.0,
+        "x2": 1596.0,
+        "y2": 970.0,
+        "cx": 1247.0,
+        "cy": 957.5,
+        "width": 698.0,
+        "height": 25.0
+      },
+      {
+        "text": "FEES&CHARGES",
+        "x1": 160.0,
+        "y1": 979.0,
+        "x2": 367.0,
+        "y2": 1011.0,
+        "cx": 263.5,
+        "cy": 995.0,
+        "width": 207.0,
+        "height": 32.0
+      },
+      {
+        "text": "Late Payment Charges will also be levied in case of no payment or payment",
+        "x1": 895.0,
+        "y1": 994.0,
+        "x2": 1596.0,
+        "y2": 1018.0,
+        "cx": 1245.5,
+        "cy": 1006.0,
+        "width": 701.0,
+        "height": 24.0
+      },
+      {
+        "text": "including decimals if any) is not paid on or before the Payment Due Date.",
+        "x1": 898.0,
+        "y1": 970.0,
+        "x2": 1594.0,
+        "y2": 994.0,
+        "cx": 1246.0,
+        "cy": 982.0,
+        "width": 696.0,
+        "height": 24.0
+      },
+      {
+        "text": "less than the Minimum Amount Due.",
+        "x1": 898.0,
+        "y1": 1018.0,
+        "x2": 1245.0,
+        "y2": 1043.0,
+        "cx": 1071.5,
+        "cy": 1030.5,
+        "width": 347.0,
+        "height": 25.0
+      }
+    ],
+    "text": "8. Cheque/draft favouring Indusind Bank CreditCard o BILLING &STATEMENT xxxxxxxxxxxxx deposited at the Induslnd Bank Branches/ATMs. For a list of drop boxes visit www.indusind.com.You are advised to drop The Bank will send a monthly statement to the Cardholder, e-mail and/or cheques at least 4 working days prior to the payment due date to ensure physical, through the delivery mode as specified by Bank for each billing timely credit to your card account and avoid levy of penal charges. period during which there is any transaction/payment or any amount Please mention your name and mobile number on the reverse of outstanding on the Card account. the cheque, we shall send you an SMS on receipt of your cheque. 2. Non-receipt of statement would not affectthe Cardholder's obligations and Please do not deposit post-dated cheque.The Bank at its sole discretion liabilities under this Agreement and he/she shall be liable to settle at least may reject all post-dated cheques the Minimum Amount Due before the payment due date. Payments received against card outstanding will be adjusted against all Minimum Amount Due is calculated as 100% of EMl amount + 100% of GST EMIs taxes fees other charges interest charges,cash advance and +100% of Fees/Charges + 100% of FinanceCharges + Overlimit Amount (if purchase, in that order. any)+ 2% of Retail Spends/Cash Advance/remaining balance outstanding. Late Payment Charges will be levied if Minimum Amount Due (exact amount FEES&CHARGES Late Payment Charges will also be levied in case of no payment or payment including decimals if any) is not paid on or before the Payment Due Date. less than the Minimum Amount Due.",
+    "x1": 91.0,
+    "y1": 636.0,
+    "x2": 1599.0,
+    "y2": 1043.0,
+    "cy": 839.5,
+    "visual_lines": [
+      {
+        "line_id": 18,
+        "words": [
+          {
+            "text": "8.",
+            "x1": 91.0,
+            "y1": 651.0,
+            "x2": 108.0,
+            "y2": 668.0,
+            "cx": 99.5,
+            "cy": 659.5,
+            "width": 17.0,
+            "height": 17.0
+          },
+          {
+            "text": "Cheque/draft",
+            "x1": 125.0,
+            "y1": 643.0,
+            "x2": 268.0,
+            "y2": 668.0,
+            "cx": 196.5,
+            "cy": 655.5,
+            "width": 143.0,
+            "height": 25.0
+          },
+          {
+            "text": "favouring",
+            "x1": 280.0,
+            "y1": 646.0,
+            "x2": 384.0,
+            "y2": 670.0,
+            "cx": 332.0,
+            "cy": 658.0,
+            "width": 104.0,
+            "height": 24.0
+          },
+          {
+            "text": "Indusind",
+            "x1": 398.0,
+            "y1": 643.0,
+            "x2": 499.0,
+            "y2": 668.0,
+            "cx": 448.5,
+            "cy": 655.5,
+            "width": 101.0,
+            "height": 25.0
+          },
+          {
+            "text": "Bank",
+            "x1": 512.0,
+            "y1": 643.0,
+            "x2": 581.0,
+            "y2": 668.0,
+            "cx": 546.5,
+            "cy": 655.5,
+            "width": 69.0,
+            "height": 25.0
+          },
+          {
+            "text": "CreditCard",
+            "x1": 595.0,
+            "y1": 643.0,
+            "x2": 740.0,
+            "y2": 670.0,
+            "cx": 667.5,
+            "cy": 656.5,
+            "width": 145.0,
+            "height": 27.0
+          },
+          {
+            "text": "o",
+            "x1": 743.0,
+            "y1": 646.0,
+            "x2": 795.0,
+            "y2": 665.0,
+            "cx": 769.0,
+            "cy": 655.5,
+            "width": 52.0,
+            "height": 19.0
+          },
+          {
+            "text": "BILLING &STATEMENT",
+            "x1": 945.0,
+            "y1": 636.0,
+            "x2": 1198.0,
+            "y2": 660.0,
+            "cx": 1071.5,
+            "cy": 648.0,
+            "width": 253.0,
+            "height": 24.0
+          }
+        ],
+        "text": "8. Cheque/draft favouring Indusind Bank CreditCard o BILLING &STATEMENT",
+        "x1": 91.0,
+        "y1": 636.0,
+        "x2": 1198.0,
+        "y2": 670.0,
+        "cy": 655.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 19,
+        "words": [
+          {
+            "text": "xxxxxxxxxxxxx deposited at the Induslnd Bank Branches/ATMs.",
+            "x1": 128.0,
+            "y1": 670.0,
+            "x2": 799.0,
+            "y2": 694.0,
+            "cx": 463.5,
+            "cy": 682.0,
+            "width": 671.0,
+            "height": 24.0
+          }
+        ],
+        "text": "xxxxxxxxxxxxx deposited at the Induslnd Bank Branches/ATMs.",
+        "x1": 128.0,
+        "y1": 670.0,
+        "x2": 799.0,
+        "y2": 694.0,
+        "cy": 682.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 20,
+        "words": [
+          {
+            "text": "For a list of drop boxes visit www.indusind.com.You are advised to drop",
+            "x1": 125.0,
+            "y1": 689.0,
+            "x2": 799.0,
+            "y2": 724.0,
+            "cx": 462.0,
+            "cy": 706.5,
+            "width": 674.0,
+            "height": 35.0
+          },
+          {
+            "text": "The Bank will send a monthly statement to the Cardholder, e-mail and/or",
+            "x1": 900.0,
+            "y1": 692.0,
+            "x2": 1594.0,
+            "y2": 716.0,
+            "cx": 1247.0,
+            "cy": 704.0,
+            "width": 694.0,
+            "height": 24.0
+          }
+        ],
+        "text": "For a list of drop boxes visit www.indusind.com.You are advised to drop The Bank will send a monthly statement to the Cardholder, e-mail and/or",
+        "x1": 125.0,
+        "y1": 689.0,
+        "x2": 1594.0,
+        "y2": 724.0,
+        "cy": 705.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 21,
+        "words": [
+          {
+            "text": "cheques at least 4 working days prior to the payment due date to ensure",
+            "x1": 128.0,
+            "y1": 721.0,
+            "x2": 802.0,
+            "y2": 746.0,
+            "cx": 465.0,
+            "cy": 733.5,
+            "width": 674.0,
+            "height": 25.0
+          },
+          {
+            "text": "physical, through the delivery mode as specified by Bank for each billing",
+            "x1": 898.0,
+            "y1": 719.0,
+            "x2": 1596.0,
+            "y2": 743.0,
+            "cx": 1247.0,
+            "cy": 731.0,
+            "width": 698.0,
+            "height": 24.0
+          }
+        ],
+        "text": "cheques at least 4 working days prior to the payment due date to ensure physical, through the delivery mode as specified by Bank for each billing",
+        "x1": 128.0,
+        "y1": 719.0,
+        "x2": 1596.0,
+        "y2": 746.0,
+        "cy": 732.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 22,
+        "words": [
+          {
+            "text": "timely credit to your card account and avoid levy of penal charges.",
+            "x1": 128.0,
+            "y1": 748.0,
+            "x2": 802.0,
+            "y2": 772.0,
+            "cx": 465.0,
+            "cy": 760.0,
+            "width": 674.0,
+            "height": 24.0
+          },
+          {
+            "text": "period during which there is any transaction/payment or any amount",
+            "x1": 895.0,
+            "y1": 738.0,
+            "x2": 1596.0,
+            "y2": 770.0,
+            "cx": 1245.5,
+            "cy": 754.0,
+            "width": 701.0,
+            "height": 32.0
+          }
+        ],
+        "text": "timely credit to your card account and avoid levy of penal charges. period during which there is any transaction/payment or any amount",
+        "x1": 128.0,
+        "y1": 738.0,
+        "x2": 1596.0,
+        "y2": 772.0,
+        "cy": 757.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 23,
+        "words": [
+          {
+            "text": "Please mention your name and mobile number on the reverse of",
+            "x1": 128.0,
+            "y1": 772.0,
+            "x2": 802.0,
+            "y2": 797.0,
+            "cx": 465.0,
+            "cy": 784.5,
+            "width": 674.0,
+            "height": 25.0
+          },
+          {
+            "text": "outstanding on the Card account.",
+            "x1": 898.0,
+            "y1": 770.0,
+            "x2": 1213.0,
+            "y2": 794.0,
+            "cx": 1055.5,
+            "cy": 782.0,
+            "width": 315.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Please mention your name and mobile number on the reverse of outstanding on the Card account.",
+        "x1": 128.0,
+        "y1": 770.0,
+        "x2": 1213.0,
+        "y2": 797.0,
+        "cy": 783.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 24,
+        "words": [
+          {
+            "text": "the cheque, we shall send you an SMS on receipt of your cheque.",
+            "x1": 125.0,
+            "y1": 792.0,
+            "x2": 802.0,
+            "y2": 826.0,
+            "cx": 463.5,
+            "cy": 809.0,
+            "width": 677.0,
+            "height": 34.0
+          },
+          {
+            "text": "2.",
+            "x1": 861.0,
+            "y1": 799.0,
+            "x2": 878.0,
+            "y2": 816.0,
+            "cx": 869.5,
+            "cy": 807.5,
+            "width": 17.0,
+            "height": 17.0
+          },
+          {
+            "text": "Non-receipt of statement would not affectthe Cardholder's obligations and",
+            "x1": 895.0,
+            "y1": 789.0,
+            "x2": 1599.0,
+            "y2": 821.0,
+            "cx": 1247.0,
+            "cy": 805.0,
+            "width": 704.0,
+            "height": 32.0
+          }
+        ],
+        "text": "the cheque, we shall send you an SMS on receipt of your cheque. 2. Non-receipt of statement would not affectthe Cardholder's obligations and",
+        "x1": 125.0,
+        "y1": 789.0,
+        "x2": 1599.0,
+        "y2": 826.0,
+        "cy": 807.1666666666666,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 25,
+        "words": [
+          {
+            "text": "Please do not deposit post-dated cheque.The Bank at its sole discretion",
+            "x1": 125.0,
+            "y1": 819.0,
+            "x2": 804.0,
+            "y2": 850.0,
+            "cx": 464.5,
+            "cy": 834.5,
+            "width": 679.0,
+            "height": 31.0
+          },
+          {
+            "text": "liabilities under this Agreement and he/she shall be liable to settle at least",
+            "x1": 898.0,
+            "y1": 819.0,
+            "x2": 1596.0,
+            "y2": 843.0,
+            "cx": 1247.0,
+            "cy": 831.0,
+            "width": 698.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Please do not deposit post-dated cheque.The Bank at its sole discretion liabilities under this Agreement and he/she shall be liable to settle at least",
+        "x1": 125.0,
+        "y1": 819.0,
+        "x2": 1596.0,
+        "y2": 850.0,
+        "cy": 832.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 26,
+        "words": [
+          {
+            "text": "may reject all post-dated cheques",
+            "x1": 128.0,
+            "y1": 845.0,
+            "x2": 445.0,
+            "y2": 870.0,
+            "cx": 286.5,
+            "cy": 857.5,
+            "width": 317.0,
+            "height": 25.0
+          },
+          {
+            "text": "the Minimum Amount Due before the payment due date.",
+            "x1": 895.0,
+            "y1": 841.0,
+            "x2": 1432.0,
+            "y2": 870.0,
+            "cx": 1163.5,
+            "cy": 855.5,
+            "width": 537.0,
+            "height": 29.0
+          }
+        ],
+        "text": "may reject all post-dated cheques the Minimum Amount Due before the payment due date.",
+        "x1": 128.0,
+        "y1": 841.0,
+        "x2": 1432.0,
+        "y2": 870.0,
+        "cy": 856.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 27,
+        "words": [
+          {
+            "text": "Payments received against card outstanding will be adjusted against all",
+            "x1": 125.0,
+            "y1": 880.0,
+            "x2": 802.0,
+            "y2": 904.0,
+            "cx": 463.5,
+            "cy": 892.0,
+            "width": 677.0,
+            "height": 24.0
+          },
+          {
+            "text": "Minimum Amount Due is calculated as 100% of EMl amount + 100% of GST",
+            "x1": 895.0,
+            "y1": 862.0,
+            "x2": 1596.0,
+            "y2": 897.0,
+            "cx": 1245.5,
+            "cy": 879.5,
+            "width": 701.0,
+            "height": 35.0
+          }
+        ],
+        "text": "Payments received against card outstanding will be adjusted against all Minimum Amount Due is calculated as 100% of EMl amount + 100% of GST",
+        "x1": 125.0,
+        "y1": 862.0,
+        "x2": 1596.0,
+        "y2": 904.0,
+        "cy": 885.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 28,
+        "words": [
+          {
+            "text": "EMIs taxes fees other charges interest charges,cash advance and",
+            "x1": 123.0,
+            "y1": 899.0,
+            "x2": 804.0,
+            "y2": 933.0,
+            "cx": 463.5,
+            "cy": 916.0,
+            "width": 681.0,
+            "height": 34.0
+          },
+          {
+            "text": "+100% of Fees/Charges + 100% of FinanceCharges + Overlimit Amount (if",
+            "x1": 900.0,
+            "y1": 894.0,
+            "x2": 1599.0,
+            "y2": 919.0,
+            "cx": 1249.5,
+            "cy": 906.5,
+            "width": 699.0,
+            "height": 25.0
+          }
+        ],
+        "text": "EMIs taxes fees other charges interest charges,cash advance and +100% of Fees/Charges + 100% of FinanceCharges + Overlimit Amount (if",
+        "x1": 123.0,
+        "y1": 894.0,
+        "x2": 1599.0,
+        "y2": 933.0,
+        "cy": 911.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 29,
+        "words": [
+          {
+            "text": "purchase, in that order.",
+            "x1": 128.0,
+            "y1": 928.0,
+            "x2": 345.0,
+            "y2": 958.0,
+            "cx": 236.5,
+            "cy": 943.0,
+            "width": 217.0,
+            "height": 30.0
+          },
+          {
+            "text": "any)+ 2% of Retail Spends/Cash Advance/remaining balance outstanding.",
+            "x1": 895.0,
+            "y1": 916.0,
+            "x2": 1589.0,
+            "y2": 948.0,
+            "cx": 1242.0,
+            "cy": 932.0,
+            "width": 694.0,
+            "height": 32.0
+          }
+        ],
+        "text": "purchase, in that order. any)+ 2% of Retail Spends/Cash Advance/remaining balance outstanding.",
+        "x1": 128.0,
+        "y1": 916.0,
+        "x2": 1589.0,
+        "y2": 958.0,
+        "cy": 937.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 30,
+        "words": [
+          {
+            "text": "Late Payment Charges will be levied if Minimum Amount Due (exact amount",
+            "x1": 898.0,
+            "y1": 945.0,
+            "x2": 1596.0,
+            "y2": 970.0,
+            "cx": 1247.0,
+            "cy": 957.5,
+            "width": 698.0,
+            "height": 25.0
+          }
+        ],
+        "text": "Late Payment Charges will be levied if Minimum Amount Due (exact amount",
+        "x1": 898.0,
+        "y1": 945.0,
+        "x2": 1596.0,
+        "y2": 970.0,
+        "cy": 957.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 31,
+        "words": [
+          {
+            "text": "FEES&CHARGES",
+            "x1": 160.0,
+            "y1": 979.0,
+            "x2": 367.0,
+            "y2": 1011.0,
+            "cx": 263.5,
+            "cy": 995.0,
+            "width": 207.0,
+            "height": 32.0
+          },
+          {
+            "text": "Late Payment Charges will also be levied in case of no payment or payment",
+            "x1": 895.0,
+            "y1": 994.0,
+            "x2": 1596.0,
+            "y2": 1018.0,
+            "cx": 1245.5,
+            "cy": 1006.0,
+            "width": 701.0,
+            "height": 24.0
+          },
+          {
+            "text": "including decimals if any) is not paid on or before the Payment Due Date.",
+            "x1": 898.0,
+            "y1": 970.0,
+            "x2": 1594.0,
+            "y2": 994.0,
+            "cx": 1246.0,
+            "cy": 982.0,
+            "width": 696.0,
+            "height": 24.0
+          }
+        ],
+        "text": "FEES&CHARGES Late Payment Charges will also be levied in case of no payment or payment including decimals if any) is not paid on or before the Payment Due Date.",
+        "x1": 160.0,
+        "y1": 970.0,
+        "x2": 1596.0,
+        "y2": 1018.0,
+        "cy": 994.3333333333334,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 32,
+        "words": [
+          {
+            "text": "less than the Minimum Amount Due.",
+            "x1": 898.0,
+            "y1": 1018.0,
+            "x2": 1245.0,
+            "y2": 1043.0,
+            "cx": 1071.5,
+            "cy": 1030.5,
+            "width": 347.0,
+            "height": 25.0
+          }
+        ],
+        "text": "less than the Minimum Amount Due.",
+        "x1": 898.0,
+        "y1": 1018.0,
+        "x2": 1245.0,
+        "y2": 1043.0,
+        "cy": 1030.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 10,
+    "words": [
+      {
+        "text": "a)",
+        "x1": 89.0,
+        "y1": 1048.0,
+        "x2": 111.0,
+        "y2": 1067.0,
+        "cx": 100.0,
+        "cy": 1057.5,
+        "width": 22.0,
+        "height": 19.0
+      },
+      {
+        "text": "Joining & Annual Fees -Joining and annual fee may vary from customer",
+        "x1": 130.0,
+        "y1": 1043.0,
+        "x2": 799.0,
+        "y2": 1067.0,
+        "cx": 464.5,
+        "cy": 1055.0,
+        "width": 669.0,
+        "height": 24.0
+      },
+      {
+        "text": "5.",
+        "x1": 863.0,
+        "y1": 1050.0,
+        "x2": 878.0,
+        "y2": 1062.0,
+        "cx": 870.5,
+        "cy": 1056.0,
+        "width": 15.0,
+        "height": 12.0
+      },
+      {
+        "text": "The Cardholder agrees that it is his responsibility to notify the Bank in case of",
+        "x1": 898.0,
+        "y1": 1040.0,
+        "x2": 1601.0,
+        "y2": 1072.0,
+        "cx": 1249.5,
+        "cy": 1056.0,
+        "width": 703.0,
+        "height": 32.0
+      },
+      {
+        "text": "to customer and from offer to offer. These shall be communicated to the",
+        "x1": 128.0,
+        "y1": 1070.0,
+        "x2": 802.0,
+        "y2": 1094.0,
+        "cx": 465.0,
+        "cy": 1082.0,
+        "width": 674.0,
+        "height": 24.0
+      },
+      {
+        "text": "non-receiptordisarepancyin his monthly statementwithin 15 days of his statement",
+        "x1": 898.0,
+        "y1": 1070.0,
+        "x2": 1599.0,
+        "y2": 1094.0,
+        "cx": 1248.5,
+        "cy": 1082.0,
+        "width": 701.0,
+        "height": 24.0
+      },
+      {
+        "text": "card member at the time of applying for the card.",
+        "x1": 125.0,
+        "y1": 1092.0,
+        "x2": 590.0,
+        "y2": 1123.0,
+        "cx": 357.5,
+        "cy": 1107.5,
+        "width": 465.0,
+        "height": 31.0
+      },
+      {
+        "text": "billing date.In case the Cardholder does not notify the Bank of any such event the",
+        "x1": 898.0,
+        "y1": 1094.0,
+        "x2": 1596.0,
+        "y2": 1118.0,
+        "cx": 1247.0,
+        "cy": 1106.0,
+        "width": 698.0,
+        "height": 24.0
+      }
+    ],
+    "text": "a) Joining & Annual Fees -Joining and annual fee may vary from customer 5. The Cardholder agrees that it is his responsibility to notify the Bank in case of to customer and from offer to offer. These shall be communicated to the non-receiptordisarepancyin his monthly statementwithin 15 days of his statement card member at the time of applying for the card. billing date.In case the Cardholder does not notify the Bank of any such event the",
+    "x1": 89.0,
+    "y1": 1040.0,
+    "x2": 1601.0,
+    "y2": 1123.0,
+    "cy": 1081.5,
+    "visual_lines": [
+      {
+        "line_id": 33,
+        "words": [
+          {
+            "text": "a)",
+            "x1": 89.0,
+            "y1": 1048.0,
+            "x2": 111.0,
+            "y2": 1067.0,
+            "cx": 100.0,
+            "cy": 1057.5,
+            "width": 22.0,
+            "height": 19.0
+          },
+          {
+            "text": "Joining & Annual Fees -Joining and annual fee may vary from customer",
+            "x1": 130.0,
+            "y1": 1043.0,
+            "x2": 799.0,
+            "y2": 1067.0,
+            "cx": 464.5,
+            "cy": 1055.0,
+            "width": 669.0,
+            "height": 24.0
+          },
+          {
+            "text": "5.",
+            "x1": 863.0,
+            "y1": 1050.0,
+            "x2": 878.0,
+            "y2": 1062.0,
+            "cx": 870.5,
+            "cy": 1056.0,
+            "width": 15.0,
+            "height": 12.0
+          },
+          {
+            "text": "The Cardholder agrees that it is his responsibility to notify the Bank in case of",
+            "x1": 898.0,
+            "y1": 1040.0,
+            "x2": 1601.0,
+            "y2": 1072.0,
+            "cx": 1249.5,
+            "cy": 1056.0,
+            "width": 703.0,
+            "height": 32.0
+          }
+        ],
+        "text": "a) Joining & Annual Fees -Joining and annual fee may vary from customer 5. The Cardholder agrees that it is his responsibility to notify the Bank in case of",
+        "x1": 89.0,
+        "y1": 1040.0,
+        "x2": 1601.0,
+        "y2": 1072.0,
+        "cy": 1056.125,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 34,
+        "words": [
+          {
+            "text": "to customer and from offer to offer. These shall be communicated to the",
+            "x1": 128.0,
+            "y1": 1070.0,
+            "x2": 802.0,
+            "y2": 1094.0,
+            "cx": 465.0,
+            "cy": 1082.0,
+            "width": 674.0,
+            "height": 24.0
+          },
+          {
+            "text": "non-receiptordisarepancyin his monthly statementwithin 15 days of his statement",
+            "x1": 898.0,
+            "y1": 1070.0,
+            "x2": 1599.0,
+            "y2": 1094.0,
+            "cx": 1248.5,
+            "cy": 1082.0,
+            "width": 701.0,
+            "height": 24.0
+          }
+        ],
+        "text": "to customer and from offer to offer. These shall be communicated to the non-receiptordisarepancyin his monthly statementwithin 15 days of his statement",
+        "x1": 128.0,
+        "y1": 1070.0,
+        "x2": 1599.0,
+        "y2": 1094.0,
+        "cy": 1082.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 35,
+        "words": [
+          {
+            "text": "card member at the time of applying for the card.",
+            "x1": 125.0,
+            "y1": 1092.0,
+            "x2": 590.0,
+            "y2": 1123.0,
+            "cx": 357.5,
+            "cy": 1107.5,
+            "width": 465.0,
+            "height": 31.0
+          },
+          {
+            "text": "billing date.In case the Cardholder does not notify the Bank of any such event the",
+            "x1": 898.0,
+            "y1": 1094.0,
+            "x2": 1596.0,
+            "y2": 1118.0,
+            "cx": 1247.0,
+            "cy": 1106.0,
+            "width": 698.0,
+            "height": 24.0
+          }
+        ],
+        "text": "card member at the time of applying for the card. billing date.In case the Cardholder does not notify the Bank of any such event the",
+        "x1": 125.0,
+        "y1": 1092.0,
+        "x2": 1596.0,
+        "y2": 1123.0,
+        "cy": 1106.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 11,
+    "words": [
+      {
+        "text": "b)",
+        "x1": 89.0,
+        "y1": 1123.0,
+        "x2": 113.0,
+        "y2": 1143.0,
+        "cx": 101.0,
+        "cy": 1133.0,
+        "width": 24.0,
+        "height": 20.0
+      },
+      {
+        "text": "Cash Advance Charges -2.5% of the advance amount subject to a",
+        "x1": 125.0,
+        "y1": 1121.0,
+        "x2": 802.0,
+        "y2": 1145.0,
+        "cx": 463.5,
+        "cy": 1133.0,
+        "width": 677.0,
+        "height": 24.0
+      },
+      {
+        "text": "statement will be deemed to have been delivered and conclusive.",
+        "x1": 895.0,
+        "y1": 1116.0,
+        "x2": 1454.0,
+        "y2": 1148.0,
+        "cx": 1174.5,
+        "cy": 1132.0,
+        "width": 559.0,
+        "height": 32.0
+      },
+      {
+        "text": "minimum of<300.Interest accrues on cash advance transactions from",
+        "x1": 128.0,
+        "y1": 1148.0,
+        "x2": 802.0,
+        "y2": 1172.0,
+        "cx": 465.0,
+        "cy": 1160.0,
+        "width": 674.0,
+        "height": 24.0
+      },
+      {
+        "text": "6.",
+        "x1": 858.0,
+        "y1": 1148.0,
+        "x2": 881.0,
+        "y2": 1167.0,
+        "cx": 869.5,
+        "cy": 1157.5,
+        "width": 23.0,
+        "height": 19.0
+      },
+      {
+        "text": "We request you to make timely payment of the amount due on the Card",
+        "x1": 893.0,
+        "y1": 1140.0,
+        "x2": 1596.0,
+        "y2": 1172.0,
+        "cx": 1244.5,
+        "cy": 1156.0,
+        "width": 703.0,
+        "height": 32.0
+      },
+      {
+        "text": "the date of the transaction.",
+        "x1": 128.0,
+        "y1": 1172.0,
+        "x2": 379.0,
+        "y2": 1196.0,
+        "cx": 253.5,
+        "cy": 1184.0,
+        "width": 251.0,
+        "height": 24.0
+      },
+      {
+        "text": "account.The payment details including the default in payment is reported to",
+        "x1": 898.0,
+        "y1": 1165.0,
+        "x2": 1599.0,
+        "y2": 1196.0,
+        "cx": 1248.5,
+        "cy": 1180.5,
+        "width": 701.0,
+        "height": 31.0
+      }
+    ],
+    "text": "b) Cash Advance Charges -2.5% of the advance amount subject to a statement will be deemed to have been delivered and conclusive. minimum of<300.Interest accrues on cash advance transactions from 6. We request you to make timely payment of the amount due on the Card the date of the transaction. account.The payment details including the default in payment is reported to",
+    "x1": 89.0,
+    "y1": 1116.0,
+    "x2": 1599.0,
+    "y2": 1196.0,
+    "cy": 1156.0,
+    "visual_lines": [
+      {
+        "line_id": 36,
+        "words": [
+          {
+            "text": "b)",
+            "x1": 89.0,
+            "y1": 1123.0,
+            "x2": 113.0,
+            "y2": 1143.0,
+            "cx": 101.0,
+            "cy": 1133.0,
+            "width": 24.0,
+            "height": 20.0
+          },
+          {
+            "text": "Cash Advance Charges -2.5% of the advance amount subject to a",
+            "x1": 125.0,
+            "y1": 1121.0,
+            "x2": 802.0,
+            "y2": 1145.0,
+            "cx": 463.5,
+            "cy": 1133.0,
+            "width": 677.0,
+            "height": 24.0
+          },
+          {
+            "text": "statement will be deemed to have been delivered and conclusive.",
+            "x1": 895.0,
+            "y1": 1116.0,
+            "x2": 1454.0,
+            "y2": 1148.0,
+            "cx": 1174.5,
+            "cy": 1132.0,
+            "width": 559.0,
+            "height": 32.0
+          }
+        ],
+        "text": "b) Cash Advance Charges -2.5% of the advance amount subject to a statement will be deemed to have been delivered and conclusive.",
+        "x1": 89.0,
+        "y1": 1116.0,
+        "x2": 1454.0,
+        "y2": 1148.0,
+        "cy": 1132.6666666666667,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 37,
+        "words": [
+          {
+            "text": "minimum of<300.Interest accrues on cash advance transactions from",
+            "x1": 128.0,
+            "y1": 1148.0,
+            "x2": 802.0,
+            "y2": 1172.0,
+            "cx": 465.0,
+            "cy": 1160.0,
+            "width": 674.0,
+            "height": 24.0
+          },
+          {
+            "text": "6.",
+            "x1": 858.0,
+            "y1": 1148.0,
+            "x2": 881.0,
+            "y2": 1167.0,
+            "cx": 869.5,
+            "cy": 1157.5,
+            "width": 23.0,
+            "height": 19.0
+          },
+          {
+            "text": "We request you to make timely payment of the amount due on the Card",
+            "x1": 893.0,
+            "y1": 1140.0,
+            "x2": 1596.0,
+            "y2": 1172.0,
+            "cx": 1244.5,
+            "cy": 1156.0,
+            "width": 703.0,
+            "height": 32.0
+          }
+        ],
+        "text": "minimum of<300.Interest accrues on cash advance transactions from 6. We request you to make timely payment of the amount due on the Card",
+        "x1": 128.0,
+        "y1": 1140.0,
+        "x2": 1596.0,
+        "y2": 1172.0,
+        "cy": 1157.8333333333333,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 38,
+        "words": [
+          {
+            "text": "the date of the transaction.",
+            "x1": 128.0,
+            "y1": 1172.0,
+            "x2": 379.0,
+            "y2": 1196.0,
+            "cx": 253.5,
+            "cy": 1184.0,
+            "width": 251.0,
+            "height": 24.0
+          },
+          {
+            "text": "account.The payment details including the default in payment is reported to",
+            "x1": 898.0,
+            "y1": 1165.0,
+            "x2": 1599.0,
+            "y2": 1196.0,
+            "cx": 1248.5,
+            "cy": 1180.5,
+            "width": 701.0,
+            "height": 31.0
+          }
+        ],
+        "text": "the date of the transaction. account.The payment details including the default in payment is reported to",
+        "x1": 128.0,
+        "y1": 1165.0,
+        "x2": 1599.0,
+        "y2": 1196.0,
+        "cy": 1182.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 12,
+    "words": [
+      {
+        "text": "c)",
+        "x1": 89.0,
+        "y1": 1199.0,
+        "x2": 111.0,
+        "y2": 1218.0,
+        "cx": 100.0,
+        "cy": 1208.5,
+        "width": 22.0,
+        "height": 19.0
+      },
+      {
+        "text": "Service Charges-Returned Cheque Charges-250,Balance Enquiry",
+        "x1": 128.0,
+        "y1": 1196.0,
+        "x2": 799.0,
+        "y2": 1221.0,
+        "cx": 463.5,
+        "cy": 1208.5,
+        "width": 671.0,
+        "height": 25.0
+      },
+      {
+        "text": "the Credit Bureaus.",
+        "x1": 895.0,
+        "y1": 1189.0,
+        "x2": 1078.0,
+        "y2": 1218.0,
+        "cx": 986.5,
+        "cy": 1203.5,
+        "width": 183.0,
+        "height": 29.0
+      },
+      {
+        "text": "Charges at Non-Indusind Bank ATMs-325, Late payment charges",
+        "x1": 125.0,
+        "y1": 1218.0,
+        "x2": 804.0,
+        "y2": 1250.0,
+        "cx": 464.5,
+        "cy": 1234.0,
+        "width": 679.0,
+        "height": 32.0
+      },
+      {
+        "text": "Any Excess payment/credit will get adjusted against the unbilled transactions.",
+        "x1": 898.0,
+        "y1": 1213.0,
+        "x2": 1592.0,
+        "y2": 1245.0,
+        "cx": 1245.0,
+        "cy": 1229.0,
+        "width": 694.0,
+        "height": 32.0
+      },
+      {
+        "text": "Outstanding Balance:up to 100=NilBetween<101 to 500=100",
+        "x1": 125.0,
+        "y1": 1243.0,
+        "x2": 799.0,
+        "y2": 1272.0,
+        "cx": 462.0,
+        "cy": 1257.5,
+        "width": 674.0,
+        "height": 29.0
+      },
+      {
+        "text": "Credit Card Blocking -The Cardholder shall report the loss of the card to the",
+        "x1": 898.0,
+        "y1": 1243.0,
+        "x2": 1596.0,
+        "y2": 1267.0,
+        "cx": 1247.0,
+        "cy": 1255.0,
+        "width": 698.0,
+        "height": 24.0
+      },
+      {
+        "text": "Between 3501 to 1,000 =3350Between<1,001 to 10,000=550;",
+        "x1": 123.0,
+        "y1": 1269.0,
+        "x2": 802.0,
+        "y2": 1301.0,
+        "cx": 462.5,
+        "cy": 1285.0,
+        "width": 679.0,
+        "height": 32.0
+      },
+      {
+        "text": "Bank by calling the 24-Hour Phone Banking number, through IndusNet/IVR/",
+        "x1": 895.0,
+        "y1": 1265.0,
+        "x2": 1596.0,
+        "y2": 1296.0,
+        "cx": 1245.5,
+        "cy": 1280.5,
+        "width": 701.0,
+        "height": 31.0
+      },
+      {
+        "text": "Between<10,001to25,000=800Between25,001to50,000=1,100;",
+        "x1": 125.0,
+        "y1": 1299.0,
+        "x2": 799.0,
+        "y2": 1323.0,
+        "cx": 462.0,
+        "cy": 1311.0,
+        "width": 674.0,
+        "height": 24.0
+      },
+      {
+        "text": "INDIE or by sending SMS BLOCK<last 4 digits of Credit Card number> to",
+        "x1": 895.0,
+        "y1": 1289.0,
+        "x2": 1599.0,
+        "y2": 1321.0,
+        "cx": 1247.0,
+        "cy": 1305.0,
+        "width": 704.0,
+        "height": 32.0
+      },
+      {
+        "text": "above 50,000=1,300,Foreign Currency Markup-3.5% except for",
+        "x1": 120.0,
+        "y1": 1318.0,
+        "x2": 804.0,
+        "y2": 1352.0,
+        "cx": 462.0,
+        "cy": 1335.0,
+        "width": 684.0,
+        "height": 34.0
+      },
+      {
+        "text": "5676757 from his registered mobile number immediately on such loss",
+        "x1": 900.0,
+        "y1": 1318.0,
+        "x2": 1520.0,
+        "y2": 1342.0,
+        "cx": 1210.0,
+        "cy": 1330.0,
+        "width": 620.0,
+        "height": 24.0
+      },
+      {
+        "text": "Signature Legend Credit Card,which will be charged at 1.8%.Savings Plan",
+        "x1": 128.0,
+        "y1": 1350.0,
+        "x2": 799.0,
+        "y2": 1374.0,
+        "cx": 463.5,
+        "cy": 1362.0,
+        "width": 671.0,
+        "height": 24.0
+      },
+      {
+        "text": "9.",
+        "x1": 861.0,
+        "y1": 1350.0,
+        "x2": 876.0,
+        "y2": 1362.0,
+        "cx": 868.5,
+        "cy": 1356.0,
+        "width": 15.0,
+        "height": 12.0
+      },
+      {
+        "text": "The Cardholder can contact the Bank through any of the following",
+        "x1": 898.0,
+        "y1": 1340.0,
+        "x2": 1596.0,
+        "y2": 1372.0,
+        "cx": 1247.0,
+        "cy": 1356.0,
+        "width": 698.0,
+        "height": 32.0
+      },
+      {
+        "text": "Change-250, Reward RedemptionFee-100 (not applicable on InterMiles",
+        "x1": 125.0,
+        "y1": 1372.0,
+        "x2": 804.0,
+        "y2": 1403.0,
+        "cx": 464.5,
+        "cy": 1387.5,
+        "width": 679.0,
+        "height": 31.0
+      },
+      {
+        "text": "communication channels for any enquiries and/or redressal of concems.",
+        "x1": 895.0,
+        "y1": 1364.0,
+        "x2": 1567.0,
+        "y2": 1396.0,
+        "cx": 1231.0,
+        "cy": 1380.0,
+        "width": 672.0,
+        "height": 32.0
+      },
+      {
+        "text": "Credit Cards)Duplicate Physical Statement Request -100 per statement",
+        "x1": 125.0,
+        "y1": 1399.0,
+        "x2": 802.0,
+        "y2": 1430.0,
+        "cx": 463.5,
+        "cy": 1414.5,
+        "width": 677.0,
+        "height": 31.0
+      },
+      {
+        "text": "(a)",
+        "x1": 861.0,
+        "y1": 1394.0,
+        "x2": 888.0,
+        "y2": 1413.0,
+        "cx": 874.5,
+        "cy": 1403.5,
+        "width": 27.0,
+        "height": 19.0
+      },
+      {
+        "text": "24-Hour Phone Banking Number18602677777",
+        "x1": 900.0,
+        "y1": 1391.0,
+        "x2": 1353.0,
+        "y2": 1416.0,
+        "cx": 1126.5,
+        "cy": 1403.5,
+        "width": 453.0,
+        "height": 25.0
+      },
+      {
+        "text": "(Beyond3 months),Reissue/Replacement Card<100,Charge-Slip Request",
+        "x1": 128.0,
+        "y1": 1428.0,
+        "x2": 799.0,
+        "y2": 1452.0,
+        "cx": 463.5,
+        "cy": 1440.0,
+        "width": 671.0,
+        "height": 24.0
+      },
+      {
+        "text": "(b)",
+        "x1": 861.0,
+        "y1": 1420.0,
+        "x2": 898.0,
+        "y2": 1440.0,
+        "cx": 879.5,
+        "cy": 1430.0,
+        "width": 37.0,
+        "height": 20.0
+      },
+      {
+        "text": "Email:premium.care@indusind.com",
+        "x1": 900.0,
+        "y1": 1418.0,
+        "x2": 1240.0,
+        "y2": 1442.0,
+        "cx": 1070.0,
+        "cy": 1430.0,
+        "width": 340.0,
+        "height": 24.0
+      },
+      {
+        "text": "300, Cash Deposit Charges -<100 at Induslnd BankBranch Fuel Surcharge",
+        "x1": 128.0,
+        "y1": 1452.0,
+        "x2": 797.0,
+        "y2": 1476.0,
+        "cx": 462.5,
+        "cy": 1464.0,
+        "width": 669.0,
+        "height": 24.0
+      },
+      {
+        "text": "(c)",
+        "x1": 861.0,
+        "y1": 1447.0,
+        "x2": 890.0,
+        "y2": 1467.0,
+        "cx": 875.5,
+        "cy": 1457.0,
+        "width": 29.0,
+        "height": 20.0
+      },
+      {
+        "text": "By writing to the Bank's Credit Card Unit at Induslnd Bank Ltd.(Credit Cards",
+        "x1": 900.0,
+        "y1": 1442.0,
+        "x2": 1596.0,
+        "y2": 1467.0,
+        "cx": 1248.0,
+        "cy": 1454.5,
+        "width": 696.0,
+        "height": 25.0
+      },
+      {
+        "text": "1% waiver as per product offerings,visit www.indusind.com for details.GST",
+        "x1": 128.0,
+        "y1": 1479.0,
+        "x2": 799.0,
+        "y2": 1503.0,
+        "cx": 463.5,
+        "cy": 1491.0,
+        "width": 671.0,
+        "height": 24.0
+      },
+      {
+        "text": "DivisionPO Box 9421ChakalaMIDC,Andheri (E)Mumbai-400093.",
+        "x1": 898.0,
+        "y1": 1464.0,
+        "x2": 1537.0,
+        "y2": 1496.0,
+        "cx": 1217.5,
+        "cy": 1480.0,
+        "width": 639.0,
+        "height": 32.0
+      },
+      {
+        "text": "levied on fuel purchases will not be reversed.",
+        "x1": 128.0,
+        "y1": 1503.0,
+        "x2": 517.0,
+        "y2": 1528.0,
+        "cx": 322.5,
+        "cy": 1515.5,
+        "width": 389.0,
+        "height": 25.0
+      },
+      {
+        "text": "d) For Unresolved grievances,please write to;Head Card Services Induslnd",
+        "x1": 856.0,
+        "y1": 1489.0,
+        "x2": 1599.0,
+        "y2": 1520.0,
+        "cx": 1227.5,
+        "cy": 1504.5,
+        "width": 743.0,
+        "height": 31.0
+      },
+      {
+        "text": "Interest Free Grace Period-Up to 50 days;Interest free period is not",
+        "x1": 128.0,
+        "y1": 1528.0,
+        "x2": 802.0,
+        "y2": 1552.0,
+        "cx": 465.0,
+        "cy": 1540.0,
+        "width": 674.0,
+        "height": 24.0
+      },
+      {
+        "text": "Bank Ltd (Credit Cards Division)PO Box 9421,Chakala,MIDC,Andheri (East),",
+        "x1": 898.0,
+        "y1": 1518.0,
+        "x2": 1596.0,
+        "y2": 1542.0,
+        "cx": 1247.0,
+        "cy": 1530.0,
+        "width": 698.0,
+        "height": 24.0
+      },
+      {
+        "text": "applicable if total amount due is not paid in full.",
+        "x1": 125.0,
+        "y1": 1552.0,
+        "x2": 610.0,
+        "y2": 1584.0,
+        "cx": 367.5,
+        "cy": 1568.0,
+        "width": 485.0,
+        "height": 32.0
+      },
+      {
+        "text": "Mumbai-400 093 or email: head.cardservices@indusind.com",
+        "x1": 893.0,
+        "y1": 1537.0,
+        "x2": 1476.0,
+        "y2": 1572.0,
+        "cx": 1184.5,
+        "cy": 1554.5,
+        "width": 583.0,
+        "height": 35.0
+      }
+    ],
+    "text": "c) Service Charges-Returned Cheque Charges-250,Balance Enquiry the Credit Bureaus. Charges at Non-Indusind Bank ATMs-325, Late payment charges Any Excess payment/credit will get adjusted against the unbilled transactions. Outstanding Balance:up to 100=NilBetween<101 to 500=100 Credit Card Blocking -The Cardholder shall report the loss of the card to the Between 3501 to 1,000 =3350Between<1,001 to 10,000=550; Bank by calling the 24-Hour Phone Banking number, through IndusNet/IVR/ Between<10,001to25,000=800Between25,001to50,000=1,100; INDIE or by sending SMS BLOCK<last 4 digits of Credit Card number> to above 50,000=1,300,Foreign Currency Markup-3.5% except for 5676757 from his registered mobile number immediately on such loss Signature Legend Credit Card,which will be charged at 1.8%.Savings Plan 9. The Cardholder can contact the Bank through any of the following Change-250, Reward RedemptionFee-100 (not applicable on InterMiles communication channels for any enquiries and/or redressal of concems. Credit Cards)Duplicate Physical Statement Request -100 per statement (a) 24-Hour Phone Banking Number18602677777 (Beyond3 months),Reissue/Replacement Card<100,Charge-Slip Request (b) Email:premium.care@indusind.com 300, Cash Deposit Charges -<100 at Induslnd BankBranch Fuel Surcharge (c) By writing to the Bank's Credit Card Unit at Induslnd Bank Ltd.(Credit Cards 1% waiver as per product offerings,visit www.indusind.com for details.GST DivisionPO Box 9421ChakalaMIDC,Andheri (E)Mumbai-400093. levied on fuel purchases will not be reversed. d) For Unresolved grievances,please write to;Head Card Services Induslnd Interest Free Grace Period-Up to 50 days;Interest free period is not Bank Ltd (Credit Cards Division)PO Box 9421,Chakala,MIDC,Andheri (East), applicable if total amount due is not paid in full. Mumbai-400 093 or email: head.cardservices@indusind.com",
+    "x1": 89.0,
+    "y1": 1189.0,
+    "x2": 1599.0,
+    "y2": 1584.0,
+    "cy": 1386.5,
+    "visual_lines": [
+      {
+        "line_id": 39,
+        "words": [
+          {
+            "text": "c)",
+            "x1": 89.0,
+            "y1": 1199.0,
+            "x2": 111.0,
+            "y2": 1218.0,
+            "cx": 100.0,
+            "cy": 1208.5,
+            "width": 22.0,
+            "height": 19.0
+          },
+          {
+            "text": "Service Charges-Returned Cheque Charges-250,Balance Enquiry",
+            "x1": 128.0,
+            "y1": 1196.0,
+            "x2": 799.0,
+            "y2": 1221.0,
+            "cx": 463.5,
+            "cy": 1208.5,
+            "width": 671.0,
+            "height": 25.0
+          },
+          {
+            "text": "the Credit Bureaus.",
+            "x1": 895.0,
+            "y1": 1189.0,
+            "x2": 1078.0,
+            "y2": 1218.0,
+            "cx": 986.5,
+            "cy": 1203.5,
+            "width": 183.0,
+            "height": 29.0
+          }
+        ],
+        "text": "c) Service Charges-Returned Cheque Charges-250,Balance Enquiry the Credit Bureaus.",
+        "x1": 89.0,
+        "y1": 1189.0,
+        "x2": 1078.0,
+        "y2": 1221.0,
+        "cy": 1206.8333333333333,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 40,
+        "words": [
+          {
+            "text": "Charges at Non-Indusind Bank ATMs-325, Late payment charges",
+            "x1": 125.0,
+            "y1": 1218.0,
+            "x2": 804.0,
+            "y2": 1250.0,
+            "cx": 464.5,
+            "cy": 1234.0,
+            "width": 679.0,
+            "height": 32.0
+          },
+          {
+            "text": "Any Excess payment/credit will get adjusted against the unbilled transactions.",
+            "x1": 898.0,
+            "y1": 1213.0,
+            "x2": 1592.0,
+            "y2": 1245.0,
+            "cx": 1245.0,
+            "cy": 1229.0,
+            "width": 694.0,
+            "height": 32.0
+          }
+        ],
+        "text": "Charges at Non-Indusind Bank ATMs-325, Late payment charges Any Excess payment/credit will get adjusted against the unbilled transactions.",
+        "x1": 125.0,
+        "y1": 1213.0,
+        "x2": 1592.0,
+        "y2": 1250.0,
+        "cy": 1231.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 41,
+        "words": [
+          {
+            "text": "Outstanding Balance:up to 100=NilBetween<101 to 500=100",
+            "x1": 125.0,
+            "y1": 1243.0,
+            "x2": 799.0,
+            "y2": 1272.0,
+            "cx": 462.0,
+            "cy": 1257.5,
+            "width": 674.0,
+            "height": 29.0
+          },
+          {
+            "text": "Credit Card Blocking -The Cardholder shall report the loss of the card to the",
+            "x1": 898.0,
+            "y1": 1243.0,
+            "x2": 1596.0,
+            "y2": 1267.0,
+            "cx": 1247.0,
+            "cy": 1255.0,
+            "width": 698.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Outstanding Balance:up to 100=NilBetween<101 to 500=100 Credit Card Blocking -The Cardholder shall report the loss of the card to the",
+        "x1": 125.0,
+        "y1": 1243.0,
+        "x2": 1596.0,
+        "y2": 1272.0,
+        "cy": 1256.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 42,
+        "words": [
+          {
+            "text": "Between 3501 to 1,000 =3350Between<1,001 to 10,000=550;",
+            "x1": 123.0,
+            "y1": 1269.0,
+            "x2": 802.0,
+            "y2": 1301.0,
+            "cx": 462.5,
+            "cy": 1285.0,
+            "width": 679.0,
+            "height": 32.0
+          },
+          {
+            "text": "Bank by calling the 24-Hour Phone Banking number, through IndusNet/IVR/",
+            "x1": 895.0,
+            "y1": 1265.0,
+            "x2": 1596.0,
+            "y2": 1296.0,
+            "cx": 1245.5,
+            "cy": 1280.5,
+            "width": 701.0,
+            "height": 31.0
+          }
+        ],
+        "text": "Between 3501 to 1,000 =3350Between<1,001 to 10,000=550; Bank by calling the 24-Hour Phone Banking number, through IndusNet/IVR/",
+        "x1": 123.0,
+        "y1": 1265.0,
+        "x2": 1596.0,
+        "y2": 1301.0,
+        "cy": 1282.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 43,
+        "words": [
+          {
+            "text": "Between<10,001to25,000=800Between25,001to50,000=1,100;",
+            "x1": 125.0,
+            "y1": 1299.0,
+            "x2": 799.0,
+            "y2": 1323.0,
+            "cx": 462.0,
+            "cy": 1311.0,
+            "width": 674.0,
+            "height": 24.0
+          },
+          {
+            "text": "INDIE or by sending SMS BLOCK<last 4 digits of Credit Card number> to",
+            "x1": 895.0,
+            "y1": 1289.0,
+            "x2": 1599.0,
+            "y2": 1321.0,
+            "cx": 1247.0,
+            "cy": 1305.0,
+            "width": 704.0,
+            "height": 32.0
+          }
+        ],
+        "text": "Between<10,001to25,000=800Between25,001to50,000=1,100; INDIE or by sending SMS BLOCK<last 4 digits of Credit Card number> to",
+        "x1": 125.0,
+        "y1": 1289.0,
+        "x2": 1599.0,
+        "y2": 1323.0,
+        "cy": 1308.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 44,
+        "words": [
+          {
+            "text": "above 50,000=1,300,Foreign Currency Markup-3.5% except for",
+            "x1": 120.0,
+            "y1": 1318.0,
+            "x2": 804.0,
+            "y2": 1352.0,
+            "cx": 462.0,
+            "cy": 1335.0,
+            "width": 684.0,
+            "height": 34.0
+          },
+          {
+            "text": "5676757 from his registered mobile number immediately on such loss",
+            "x1": 900.0,
+            "y1": 1318.0,
+            "x2": 1520.0,
+            "y2": 1342.0,
+            "cx": 1210.0,
+            "cy": 1330.0,
+            "width": 620.0,
+            "height": 24.0
+          }
+        ],
+        "text": "above 50,000=1,300,Foreign Currency Markup-3.5% except for 5676757 from his registered mobile number immediately on such loss",
+        "x1": 120.0,
+        "y1": 1318.0,
+        "x2": 1520.0,
+        "y2": 1352.0,
+        "cy": 1332.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 45,
+        "words": [
+          {
+            "text": "Signature Legend Credit Card,which will be charged at 1.8%.Savings Plan",
+            "x1": 128.0,
+            "y1": 1350.0,
+            "x2": 799.0,
+            "y2": 1374.0,
+            "cx": 463.5,
+            "cy": 1362.0,
+            "width": 671.0,
+            "height": 24.0
+          },
+          {
+            "text": "9.",
+            "x1": 861.0,
+            "y1": 1350.0,
+            "x2": 876.0,
+            "y2": 1362.0,
+            "cx": 868.5,
+            "cy": 1356.0,
+            "width": 15.0,
+            "height": 12.0
+          },
+          {
+            "text": "The Cardholder can contact the Bank through any of the following",
+            "x1": 898.0,
+            "y1": 1340.0,
+            "x2": 1596.0,
+            "y2": 1372.0,
+            "cx": 1247.0,
+            "cy": 1356.0,
+            "width": 698.0,
+            "height": 32.0
+          }
+        ],
+        "text": "Signature Legend Credit Card,which will be charged at 1.8%.Savings Plan 9. The Cardholder can contact the Bank through any of the following",
+        "x1": 128.0,
+        "y1": 1340.0,
+        "x2": 1596.0,
+        "y2": 1374.0,
+        "cy": 1358.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 46,
+        "words": [
+          {
+            "text": "Change-250, Reward RedemptionFee-100 (not applicable on InterMiles",
+            "x1": 125.0,
+            "y1": 1372.0,
+            "x2": 804.0,
+            "y2": 1403.0,
+            "cx": 464.5,
+            "cy": 1387.5,
+            "width": 679.0,
+            "height": 31.0
+          },
+          {
+            "text": "communication channels for any enquiries and/or redressal of concems.",
+            "x1": 895.0,
+            "y1": 1364.0,
+            "x2": 1567.0,
+            "y2": 1396.0,
+            "cx": 1231.0,
+            "cy": 1380.0,
+            "width": 672.0,
+            "height": 32.0
+          }
+        ],
+        "text": "Change-250, Reward RedemptionFee-100 (not applicable on InterMiles communication channels for any enquiries and/or redressal of concems.",
+        "x1": 125.0,
+        "y1": 1364.0,
+        "x2": 1567.0,
+        "y2": 1403.0,
+        "cy": 1383.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 47,
+        "words": [
+          {
+            "text": "Credit Cards)Duplicate Physical Statement Request -100 per statement",
+            "x1": 125.0,
+            "y1": 1399.0,
+            "x2": 802.0,
+            "y2": 1430.0,
+            "cx": 463.5,
+            "cy": 1414.5,
+            "width": 677.0,
+            "height": 31.0
+          },
+          {
+            "text": "(a)",
+            "x1": 861.0,
+            "y1": 1394.0,
+            "x2": 888.0,
+            "y2": 1413.0,
+            "cx": 874.5,
+            "cy": 1403.5,
+            "width": 27.0,
+            "height": 19.0
+          },
+          {
+            "text": "24-Hour Phone Banking Number18602677777",
+            "x1": 900.0,
+            "y1": 1391.0,
+            "x2": 1353.0,
+            "y2": 1416.0,
+            "cx": 1126.5,
+            "cy": 1403.5,
+            "width": 453.0,
+            "height": 25.0
+          }
+        ],
+        "text": "Credit Cards)Duplicate Physical Statement Request -100 per statement (a) 24-Hour Phone Banking Number18602677777",
+        "x1": 125.0,
+        "y1": 1391.0,
+        "x2": 1353.0,
+        "y2": 1430.0,
+        "cy": 1407.1666666666667,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 48,
+        "words": [
+          {
+            "text": "(Beyond3 months),Reissue/Replacement Card<100,Charge-Slip Request",
+            "x1": 128.0,
+            "y1": 1428.0,
+            "x2": 799.0,
+            "y2": 1452.0,
+            "cx": 463.5,
+            "cy": 1440.0,
+            "width": 671.0,
+            "height": 24.0
+          },
+          {
+            "text": "(b)",
+            "x1": 861.0,
+            "y1": 1420.0,
+            "x2": 898.0,
+            "y2": 1440.0,
+            "cx": 879.5,
+            "cy": 1430.0,
+            "width": 37.0,
+            "height": 20.0
+          },
+          {
+            "text": "Email:premium.care@indusind.com",
+            "x1": 900.0,
+            "y1": 1418.0,
+            "x2": 1240.0,
+            "y2": 1442.0,
+            "cx": 1070.0,
+            "cy": 1430.0,
+            "width": 340.0,
+            "height": 24.0
+          }
+        ],
+        "text": "(Beyond3 months),Reissue/Replacement Card<100,Charge-Slip Request (b) Email:premium.care@indusind.com",
+        "x1": 128.0,
+        "y1": 1418.0,
+        "x2": 1240.0,
+        "y2": 1452.0,
+        "cy": 1433.3333333333333,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 49,
+        "words": [
+          {
+            "text": "300, Cash Deposit Charges -<100 at Induslnd BankBranch Fuel Surcharge",
+            "x1": 128.0,
+            "y1": 1452.0,
+            "x2": 797.0,
+            "y2": 1476.0,
+            "cx": 462.5,
+            "cy": 1464.0,
+            "width": 669.0,
+            "height": 24.0
+          },
+          {
+            "text": "(c)",
+            "x1": 861.0,
+            "y1": 1447.0,
+            "x2": 890.0,
+            "y2": 1467.0,
+            "cx": 875.5,
+            "cy": 1457.0,
+            "width": 29.0,
+            "height": 20.0
+          },
+          {
+            "text": "By writing to the Bank's Credit Card Unit at Induslnd Bank Ltd.(Credit Cards",
+            "x1": 900.0,
+            "y1": 1442.0,
+            "x2": 1596.0,
+            "y2": 1467.0,
+            "cx": 1248.0,
+            "cy": 1454.5,
+            "width": 696.0,
+            "height": 25.0
+          }
+        ],
+        "text": "300, Cash Deposit Charges -<100 at Induslnd BankBranch Fuel Surcharge (c) By writing to the Bank's Credit Card Unit at Induslnd Bank Ltd.(Credit Cards",
+        "x1": 128.0,
+        "y1": 1442.0,
+        "x2": 1596.0,
+        "y2": 1476.0,
+        "cy": 1458.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 50,
+        "words": [
+          {
+            "text": "1% waiver as per product offerings,visit www.indusind.com for details.GST",
+            "x1": 128.0,
+            "y1": 1479.0,
+            "x2": 799.0,
+            "y2": 1503.0,
+            "cx": 463.5,
+            "cy": 1491.0,
+            "width": 671.0,
+            "height": 24.0
+          },
+          {
+            "text": "DivisionPO Box 9421ChakalaMIDC,Andheri (E)Mumbai-400093.",
+            "x1": 898.0,
+            "y1": 1464.0,
+            "x2": 1537.0,
+            "y2": 1496.0,
+            "cx": 1217.5,
+            "cy": 1480.0,
+            "width": 639.0,
+            "height": 32.0
+          }
+        ],
+        "text": "1% waiver as per product offerings,visit www.indusind.com for details.GST DivisionPO Box 9421ChakalaMIDC,Andheri (E)Mumbai-400093.",
+        "x1": 128.0,
+        "y1": 1464.0,
+        "x2": 1537.0,
+        "y2": 1503.0,
+        "cy": 1485.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 51,
+        "words": [
+          {
+            "text": "levied on fuel purchases will not be reversed.",
+            "x1": 128.0,
+            "y1": 1503.0,
+            "x2": 517.0,
+            "y2": 1528.0,
+            "cx": 322.5,
+            "cy": 1515.5,
+            "width": 389.0,
+            "height": 25.0
+          },
+          {
+            "text": "d) For Unresolved grievances,please write to;Head Card Services Induslnd",
+            "x1": 856.0,
+            "y1": 1489.0,
+            "x2": 1599.0,
+            "y2": 1520.0,
+            "cx": 1227.5,
+            "cy": 1504.5,
+            "width": 743.0,
+            "height": 31.0
+          }
+        ],
+        "text": "levied on fuel purchases will not be reversed. d) For Unresolved grievances,please write to;Head Card Services Induslnd",
+        "x1": 128.0,
+        "y1": 1489.0,
+        "x2": 1599.0,
+        "y2": 1528.0,
+        "cy": 1510.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 52,
+        "words": [
+          {
+            "text": "Interest Free Grace Period-Up to 50 days;Interest free period is not",
+            "x1": 128.0,
+            "y1": 1528.0,
+            "x2": 802.0,
+            "y2": 1552.0,
+            "cx": 465.0,
+            "cy": 1540.0,
+            "width": 674.0,
+            "height": 24.0
+          },
+          {
+            "text": "Bank Ltd (Credit Cards Division)PO Box 9421,Chakala,MIDC,Andheri (East),",
+            "x1": 898.0,
+            "y1": 1518.0,
+            "x2": 1596.0,
+            "y2": 1542.0,
+            "cx": 1247.0,
+            "cy": 1530.0,
+            "width": 698.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Interest Free Grace Period-Up to 50 days;Interest free period is not Bank Ltd (Credit Cards Division)PO Box 9421,Chakala,MIDC,Andheri (East),",
+        "x1": 128.0,
+        "y1": 1518.0,
+        "x2": 1596.0,
+        "y2": 1552.0,
+        "cy": 1535.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 53,
+        "words": [
+          {
+            "text": "applicable if total amount due is not paid in full.",
+            "x1": 125.0,
+            "y1": 1552.0,
+            "x2": 610.0,
+            "y2": 1584.0,
+            "cx": 367.5,
+            "cy": 1568.0,
+            "width": 485.0,
+            "height": 32.0
+          },
+          {
+            "text": "Mumbai-400 093 or email: head.cardservices@indusind.com",
+            "x1": 893.0,
+            "y1": 1537.0,
+            "x2": 1476.0,
+            "y2": 1572.0,
+            "cx": 1184.5,
+            "cy": 1554.5,
+            "width": 583.0,
+            "height": 35.0
+          }
+        ],
+        "text": "applicable if total amount due is not paid in full. Mumbai-400 093 or email: head.cardservices@indusind.com",
+        "x1": 125.0,
+        "y1": 1537.0,
+        "x2": 1476.0,
+        "y2": 1584.0,
+        "cy": 1561.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 13,
+    "words": [
+      {
+        "text": "el",
+        "x1": 91.0,
+        "y1": 1586.0,
+        "x2": 108.0,
+        "y2": 1598.0,
+        "cx": 99.5,
+        "cy": 1592.0,
+        "width": 17.0,
+        "height": 12.0
+      },
+      {
+        "text": "Interest Charges-Platinum AuraPlatinum Aura Edge,Platinum Select",
+        "x1": 123.0,
+        "y1": 1574.0,
+        "x2": 802.0,
+        "y2": 1608.0,
+        "cx": 462.5,
+        "cy": 1591.0,
+        "width": 679.0,
+        "height": 34.0
+      },
+      {
+        "text": "(e)",
+        "x1": 861.0,
+        "y1": 1572.0,
+        "x2": 898.0,
+        "y2": 1591.0,
+        "cx": 879.5,
+        "cy": 1581.5,
+        "width": 37.0,
+        "height": 19.0
+      },
+      {
+        "text": "In case you do not receive a response from Head Card Services within 7",
+        "x1": 893.0,
+        "y1": 1562.0,
+        "x2": 1599.0,
+        "y2": 1596.0,
+        "cx": 1246.0,
+        "cy": 1579.0,
+        "width": 706.0,
+        "height": 34.0
+      },
+      {
+        "text": "Platinum,Signature Legend,Platinum RuPay Credit card-3.95% Monthly;",
+        "x1": 128.0,
+        "y1": 1606.0,
+        "x2": 799.0,
+        "y2": 1630.0,
+        "cx": 463.5,
+        "cy": 1618.0,
+        "width": 671.0,
+        "height": 24.0
+      },
+      {
+        "text": "days, you may write to:Nodal Officer, Induslnd Bank Ltd (Credit Cards",
+        "x1": 900.0,
+        "y1": 1593.0,
+        "x2": 1596.0,
+        "y2": 1618.0,
+        "cx": 1248.0,
+        "cy": 1605.5,
+        "width": 696.0,
+        "height": 25.0
+      },
+      {
+        "text": "47.40%Annual.IconiaPinnacleInterMilesDuoSignature-3.83%Monthly",
+        "x1": 125.0,
+        "y1": 1628.0,
+        "x2": 799.0,
+        "y2": 1657.0,
+        "cx": 462.0,
+        "cy": 1642.5,
+        "width": 674.0,
+        "height": 29.0
+      },
+      {
+        "text": "Division)PO Box 9421,Chakala,MIDC,Andheri (East)Mumbai-400 093 or",
+        "x1": 898.0,
+        "y1": 1618.0,
+        "x2": 1596.0,
+        "y2": 1642.0,
+        "cx": 1247.0,
+        "cy": 1630.0,
+        "width": 698.0,
+        "height": 24.0
+      },
+      {
+        "text": "46.0% Annual",
+        "x1": 128.0,
+        "y1": 1657.0,
+        "x2": 261.0,
+        "y2": 1681.0,
+        "cx": 194.5,
+        "cy": 1669.0,
+        "width": 133.0,
+        "height": 24.0
+      },
+      {
+        "text": "email: nodal.offcer@indusind.com",
+        "x1": 895.0,
+        "y1": 1640.0,
+        "x2": 1227.0,
+        "y2": 1671.0,
+        "cx": 1061.0,
+        "cy": 1655.5,
+        "width": 332.0,
+        "height": 31.0
+      }
+    ],
+    "text": "el Interest Charges-Platinum AuraPlatinum Aura Edge,Platinum Select (e) In case you do not receive a response from Head Card Services within 7 Platinum,Signature Legend,Platinum RuPay Credit card-3.95% Monthly; days, you may write to:Nodal Officer, Induslnd Bank Ltd (Credit Cards 47.40%Annual.IconiaPinnacleInterMilesDuoSignature-3.83%Monthly Division)PO Box 9421,Chakala,MIDC,Andheri (East)Mumbai-400 093 or 46.0% Annual email: nodal.offcer@indusind.com",
+    "x1": 91.0,
+    "y1": 1562.0,
+    "x2": 1599.0,
+    "y2": 1681.0,
+    "cy": 1621.5,
+    "visual_lines": [
+      {
+        "line_id": 54,
+        "words": [
+          {
+            "text": "el",
+            "x1": 91.0,
+            "y1": 1586.0,
+            "x2": 108.0,
+            "y2": 1598.0,
+            "cx": 99.5,
+            "cy": 1592.0,
+            "width": 17.0,
+            "height": 12.0
+          },
+          {
+            "text": "Interest Charges-Platinum AuraPlatinum Aura Edge,Platinum Select",
+            "x1": 123.0,
+            "y1": 1574.0,
+            "x2": 802.0,
+            "y2": 1608.0,
+            "cx": 462.5,
+            "cy": 1591.0,
+            "width": 679.0,
+            "height": 34.0
+          },
+          {
+            "text": "(e)",
+            "x1": 861.0,
+            "y1": 1572.0,
+            "x2": 898.0,
+            "y2": 1591.0,
+            "cx": 879.5,
+            "cy": 1581.5,
+            "width": 37.0,
+            "height": 19.0
+          },
+          {
+            "text": "In case you do not receive a response from Head Card Services within 7",
+            "x1": 893.0,
+            "y1": 1562.0,
+            "x2": 1599.0,
+            "y2": 1596.0,
+            "cx": 1246.0,
+            "cy": 1579.0,
+            "width": 706.0,
+            "height": 34.0
+          }
+        ],
+        "text": "el Interest Charges-Platinum AuraPlatinum Aura Edge,Platinum Select (e) In case you do not receive a response from Head Card Services within 7",
+        "x1": 91.0,
+        "y1": 1562.0,
+        "x2": 1599.0,
+        "y2": 1608.0,
+        "cy": 1585.875,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 55,
+        "words": [
+          {
+            "text": "Platinum,Signature Legend,Platinum RuPay Credit card-3.95% Monthly;",
+            "x1": 128.0,
+            "y1": 1606.0,
+            "x2": 799.0,
+            "y2": 1630.0,
+            "cx": 463.5,
+            "cy": 1618.0,
+            "width": 671.0,
+            "height": 24.0
+          },
+          {
+            "text": "days, you may write to:Nodal Officer, Induslnd Bank Ltd (Credit Cards",
+            "x1": 900.0,
+            "y1": 1593.0,
+            "x2": 1596.0,
+            "y2": 1618.0,
+            "cx": 1248.0,
+            "cy": 1605.5,
+            "width": 696.0,
+            "height": 25.0
+          }
+        ],
+        "text": "Platinum,Signature Legend,Platinum RuPay Credit card-3.95% Monthly; days, you may write to:Nodal Officer, Induslnd Bank Ltd (Credit Cards",
+        "x1": 128.0,
+        "y1": 1593.0,
+        "x2": 1596.0,
+        "y2": 1630.0,
+        "cy": 1611.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 56,
+        "words": [
+          {
+            "text": "47.40%Annual.IconiaPinnacleInterMilesDuoSignature-3.83%Monthly",
+            "x1": 125.0,
+            "y1": 1628.0,
+            "x2": 799.0,
+            "y2": 1657.0,
+            "cx": 462.0,
+            "cy": 1642.5,
+            "width": 674.0,
+            "height": 29.0
+          },
+          {
+            "text": "Division)PO Box 9421,Chakala,MIDC,Andheri (East)Mumbai-400 093 or",
+            "x1": 898.0,
+            "y1": 1618.0,
+            "x2": 1596.0,
+            "y2": 1642.0,
+            "cx": 1247.0,
+            "cy": 1630.0,
+            "width": 698.0,
+            "height": 24.0
+          }
+        ],
+        "text": "47.40%Annual.IconiaPinnacleInterMilesDuoSignature-3.83%Monthly Division)PO Box 9421,Chakala,MIDC,Andheri (East)Mumbai-400 093 or",
+        "x1": 125.0,
+        "y1": 1618.0,
+        "x2": 1596.0,
+        "y2": 1657.0,
+        "cy": 1636.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 57,
+        "words": [
+          {
+            "text": "46.0% Annual",
+            "x1": 128.0,
+            "y1": 1657.0,
+            "x2": 261.0,
+            "y2": 1681.0,
+            "cx": 194.5,
+            "cy": 1669.0,
+            "width": 133.0,
+            "height": 24.0
+          },
+          {
+            "text": "email: nodal.offcer@indusind.com",
+            "x1": 895.0,
+            "y1": 1640.0,
+            "x2": 1227.0,
+            "y2": 1671.0,
+            "cx": 1061.0,
+            "cy": 1655.5,
+            "width": 332.0,
+            "height": 31.0
+          }
+        ],
+        "text": "46.0% Annual email: nodal.offcer@indusind.com",
+        "x1": 128.0,
+        "y1": 1640.0,
+        "x2": 1227.0,
+        "y2": 1681.0,
+        "cy": 1662.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 14,
+    "words": [
+      {
+        "text": "Interest is calculated on a daily basis on the current outstanding balance",
+        "x1": 89.0,
+        "y1": 1681.0,
+        "x2": 799.0,
+        "y2": 1706.0,
+        "cx": 444.0,
+        "cy": 1693.5,
+        "width": 710.0,
+        "height": 25.0
+      },
+      {
+        "text": "(f",
+        "x1": 861.0,
+        "y1": 1671.0,
+        "x2": 898.0,
+        "y2": 1691.0,
+        "cx": 879.5,
+        "cy": 1681.0,
+        "width": 37.0,
+        "height": 20.0
+      },
+      {
+        "text": "Credit Card Closure -To close your Credit Card,please write to",
+        "x1": 895.0,
+        "y1": 1664.0,
+        "x2": 1599.0,
+        "y2": 1696.0,
+        "cx": 1247.0,
+        "cy": 1680.0,
+        "width": 704.0,
+        "height": 32.0
+      }
+    ],
+    "text": "Interest is calculated on a daily basis on the current outstanding balance (f Credit Card Closure -To close your Credit Card,please write to",
+    "x1": 89.0,
+    "y1": 1664.0,
+    "x2": 1599.0,
+    "y2": 1706.0,
+    "cy": 1684.8333333333333,
+    "visual_lines": [
+      {
+        "line_id": 58,
+        "words": [
+          {
+            "text": "Interest is calculated on a daily basis on the current outstanding balance",
+            "x1": 89.0,
+            "y1": 1681.0,
+            "x2": 799.0,
+            "y2": 1706.0,
+            "cx": 444.0,
+            "cy": 1693.5,
+            "width": 710.0,
+            "height": 25.0
+          },
+          {
+            "text": "(f",
+            "x1": 861.0,
+            "y1": 1671.0,
+            "x2": 898.0,
+            "y2": 1691.0,
+            "cx": 879.5,
+            "cy": 1681.0,
+            "width": 37.0,
+            "height": 20.0
+          },
+          {
+            "text": "Credit Card Closure -To close your Credit Card,please write to",
+            "x1": 895.0,
+            "y1": 1664.0,
+            "x2": 1599.0,
+            "y2": 1696.0,
+            "cx": 1247.0,
+            "cy": 1680.0,
+            "width": 704.0,
+            "height": 32.0
+          }
+        ],
+        "text": "Interest is calculated on a daily basis on the current outstanding balance (f Credit Card Closure -To close your Credit Card,please write to",
+        "x1": 89.0,
+        "y1": 1664.0,
+        "x2": 1599.0,
+        "y2": 1706.0,
+        "cy": 1684.8333333333333,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 15,
+    "words": [
+      {
+        "text": "of the Cardholder.Interest is levied if total amount due is not paidoff by",
+        "x1": 86.0,
+        "y1": 1706.0,
+        "x2": 802.0,
+        "y2": 1737.0,
+        "cx": 444.0,
+        "cy": 1721.5,
+        "width": 716.0,
+        "height": 31.0
+      },
+      {
+        "text": "creditcard.closure@indusind.com (subject to no outstanding dues in the",
+        "x1": 895.0,
+        "y1": 1691.0,
+        "x2": 1599.0,
+        "y2": 1723.0,
+        "cx": 1247.0,
+        "cy": 1707.0,
+        "width": 704.0,
+        "height": 32.0
+      },
+      {
+        "text": "card account)",
+        "x1": 898.0,
+        "y1": 1718.0,
+        "x2": 1033.0,
+        "y2": 1742.0,
+        "cx": 965.5,
+        "cy": 1730.0,
+        "width": 135.0,
+        "height": 24.0
+      }
+    ],
+    "text": "of the Cardholder.Interest is levied if total amount due is not paidoff by creditcard.closure@indusind.com (subject to no outstanding dues in the card account)",
+    "x1": 86.0,
+    "y1": 1691.0,
+    "x2": 1599.0,
+    "y2": 1742.0,
+    "cy": 1719.5,
+    "visual_lines": [
+      {
+        "line_id": 59,
+        "words": [
+          {
+            "text": "of the Cardholder.Interest is levied if total amount due is not paidoff by",
+            "x1": 86.0,
+            "y1": 1706.0,
+            "x2": 802.0,
+            "y2": 1737.0,
+            "cx": 444.0,
+            "cy": 1721.5,
+            "width": 716.0,
+            "height": 31.0
+          },
+          {
+            "text": "creditcard.closure@indusind.com (subject to no outstanding dues in the",
+            "x1": 895.0,
+            "y1": 1691.0,
+            "x2": 1599.0,
+            "y2": 1723.0,
+            "cx": 1247.0,
+            "cy": 1707.0,
+            "width": 704.0,
+            "height": 32.0
+          },
+          {
+            "text": "card account)",
+            "x1": 898.0,
+            "y1": 1718.0,
+            "x2": 1033.0,
+            "y2": 1742.0,
+            "cx": 965.5,
+            "cy": 1730.0,
+            "width": 135.0,
+            "height": 24.0
+          }
+        ],
+        "text": "of the Cardholder.Interest is levied if total amount due is not paidoff by creditcard.closure@indusind.com (subject to no outstanding dues in the card account)",
+        "x1": 86.0,
+        "y1": 1691.0,
+        "x2": 1599.0,
+        "y2": 1742.0,
+        "cy": 1719.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 16,
+    "words": [
+      {
+        "text": "the due date.Please note that making only the minimum payment every",
+        "x1": 84.0,
+        "y1": 1727.0,
+        "x2": 802.0,
+        "y2": 1762.0,
+        "cx": 443.0,
+        "cy": 1744.5,
+        "width": 718.0,
+        "height": 35.0
+      },
+      {
+        "text": "(g) Credit Card Complaints -To raise any complaint regarding Credit Card",
+        "x1": 856.0,
+        "y1": 1740.0,
+        "x2": 1599.0,
+        "y2": 1771.0,
+        "cx": 1227.5,
+        "cy": 1755.5,
+        "width": 743.0,
+        "height": 31.0
+      }
+    ],
+    "text": "the due date.Please note that making only the minimum payment every (g) Credit Card Complaints -To raise any complaint regarding Credit Card",
+    "x1": 84.0,
+    "y1": 1727.0,
+    "x2": 1599.0,
+    "y2": 1771.0,
+    "cy": 1750.0,
+    "visual_lines": [
+      {
+        "line_id": 60,
+        "words": [
+          {
+            "text": "the due date.Please note that making only the minimum payment every",
+            "x1": 84.0,
+            "y1": 1727.0,
+            "x2": 802.0,
+            "y2": 1762.0,
+            "cx": 443.0,
+            "cy": 1744.5,
+            "width": 718.0,
+            "height": 35.0
+          },
+          {
+            "text": "(g) Credit Card Complaints -To raise any complaint regarding Credit Card",
+            "x1": 856.0,
+            "y1": 1740.0,
+            "x2": 1599.0,
+            "y2": 1771.0,
+            "cx": 1227.5,
+            "cy": 1755.5,
+            "width": 743.0,
+            "height": 31.0
+          }
+        ],
+        "text": "the due date.Please note that making only the minimum payment every (g) Credit Card Complaints -To raise any complaint regarding Credit Card",
+        "x1": 84.0,
+        "y1": 1727.0,
+        "x2": 1599.0,
+        "y2": 1771.0,
+        "cy": 1750.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 17,
+    "words": [
+      {
+        "text": "month would result in the repayment stretching over a period of time",
+        "x1": 86.0,
+        "y1": 1757.0,
+        "x2": 802.0,
+        "y2": 1788.0,
+        "cx": 444.0,
+        "cy": 1772.5,
+        "width": 716.0,
+        "height": 31.0
+      },
+      {
+        "text": "mis-selling, please write to ccsalescomplaint@indusind.com",
+        "x1": 895.0,
+        "y1": 1766.0,
+        "x2": 1459.0,
+        "y2": 1798.0,
+        "cx": 1177.0,
+        "cy": 1782.0,
+        "width": 564.0,
+        "height": 32.0
+      }
+    ],
+    "text": "month would result in the repayment stretching over a period of time mis-selling, please write to ccsalescomplaint@indusind.com",
+    "x1": 86.0,
+    "y1": 1757.0,
+    "x2": 1459.0,
+    "y2": 1798.0,
+    "cy": 1777.25,
+    "visual_lines": [
+      {
+        "line_id": 61,
+        "words": [
+          {
+            "text": "month would result in the repayment stretching over a period of time",
+            "x1": 86.0,
+            "y1": 1757.0,
+            "x2": 802.0,
+            "y2": 1788.0,
+            "cx": 444.0,
+            "cy": 1772.5,
+            "width": 716.0,
+            "height": 31.0
+          },
+          {
+            "text": "mis-selling, please write to ccsalescomplaint@indusind.com",
+            "x1": 895.0,
+            "y1": 1766.0,
+            "x2": 1459.0,
+            "y2": 1798.0,
+            "cx": 1177.0,
+            "cy": 1782.0,
+            "width": 564.0,
+            "height": 32.0
+          }
+        ],
+        "text": "month would result in the repayment stretching over a period of time mis-selling, please write to ccsalescomplaint@indusind.com",
+        "x1": 86.0,
+        "y1": 1757.0,
+        "x2": 1459.0,
+        "y2": 1798.0,
+        "cy": 1777.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 18,
+    "words": [
+      {
+        "text": "with consequent interest payment on your outstanding balance.",
+        "x1": 86.0,
+        "y1": 1781.0,
+        "x2": 726.0,
+        "y2": 1813.0,
+        "cx": 406.0,
+        "cy": 1797.0,
+        "width": 640.0,
+        "height": 32.0
+      }
+    ],
+    "text": "with consequent interest payment on your outstanding balance.",
+    "x1": 86.0,
+    "y1": 1781.0,
+    "x2": 726.0,
+    "y2": 1813.0,
+    "cy": 1797.0,
+    "visual_lines": [
+      {
+        "line_id": 62,
+        "words": [
+          {
+            "text": "with consequent interest payment on your outstanding balance.",
+            "x1": 86.0,
+            "y1": 1781.0,
+            "x2": 726.0,
+            "y2": 1813.0,
+            "cx": 406.0,
+            "cy": 1797.0,
+            "width": 640.0,
+            "height": 32.0
+          }
+        ],
+        "text": "with consequent interest payment on your outstanding balance.",
+        "x1": 86.0,
+        "y1": 1781.0,
+        "x2": 726.0,
+        "y2": 1813.0,
+        "cy": 1797.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 19,
+    "words": [
+      {
+        "text": "Interest Calculation Example-If the statement cycle is 25th of every month",
+        "x1": 84.0,
+        "y1": 1803.0,
+        "x2": 802.0,
+        "y2": 1837.0,
+        "cx": 443.0,
+        "cy": 1820.0,
+        "width": 718.0,
+        "height": 34.0
+      },
+      {
+        "text": "Complaint Redressal-Clickhere for Indusind Bank Grievance Redressal Policy.",
+        "x1": 898.0,
+        "y1": 1801.0,
+        "x2": 1592.0,
+        "y2": 1830.0,
+        "cx": 1245.0,
+        "cy": 1815.5,
+        "width": 694.0,
+        "height": 29.0
+      }
+    ],
+    "text": "Interest Calculation Example-If the statement cycle is 25th of every month Complaint Redressal-Clickhere for Indusind Bank Grievance Redressal Policy.",
+    "x1": 84.0,
+    "y1": 1801.0,
+    "x2": 1592.0,
+    "y2": 1837.0,
+    "cy": 1817.75,
+    "visual_lines": [
+      {
+        "line_id": 63,
+        "words": [
+          {
+            "text": "Interest Calculation Example-If the statement cycle is 25th of every month",
+            "x1": 84.0,
+            "y1": 1803.0,
+            "x2": 802.0,
+            "y2": 1837.0,
+            "cx": 443.0,
+            "cy": 1820.0,
+            "width": 718.0,
+            "height": 34.0
+          },
+          {
+            "text": "Complaint Redressal-Clickhere for Indusind Bank Grievance Redressal Policy.",
+            "x1": 898.0,
+            "y1": 1801.0,
+            "x2": 1592.0,
+            "y2": 1830.0,
+            "cx": 1245.0,
+            "cy": 1815.5,
+            "width": 694.0,
+            "height": 29.0
+          }
+        ],
+        "text": "Interest Calculation Example-If the statement cycle is 25th of every month Complaint Redressal-Clickhere for Indusind Bank Grievance Redressal Policy.",
+        "x1": 84.0,
+        "y1": 1801.0,
+        "x2": 1592.0,
+        "y2": 1837.0,
+        "cy": 1817.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 20,
+    "words": [
+      {
+        "text": "and the January statement has one transaction: 14 January Shoppers Stop",
+        "x1": 86.0,
+        "y1": 1832.0,
+        "x2": 802.0,
+        "y2": 1864.0,
+        "cx": 444.0,
+        "cy": 1848.0,
+        "width": 716.0,
+        "height": 32.0
+      },
+      {
+        "text": "Please quote your Indusind Bank Credit Card Number in all your",
+        "x1": 895.0,
+        "y1": 1835.0,
+        "x2": 1599.0,
+        "y2": 1869.0,
+        "cx": 1247.0,
+        "cy": 1852.0,
+        "width": 704.0,
+        "height": 34.0
+      }
+    ],
+    "text": "and the January statement has one transaction: 14 January Shoppers Stop Please quote your Indusind Bank Credit Card Number in all your",
+    "x1": 86.0,
+    "y1": 1832.0,
+    "x2": 1599.0,
+    "y2": 1869.0,
+    "cy": 1850.0,
+    "visual_lines": [
+      {
+        "line_id": 64,
+        "words": [
+          {
+            "text": "and the January statement has one transaction: 14 January Shoppers Stop",
+            "x1": 86.0,
+            "y1": 1832.0,
+            "x2": 802.0,
+            "y2": 1864.0,
+            "cx": 444.0,
+            "cy": 1848.0,
+            "width": 716.0,
+            "height": 32.0
+          },
+          {
+            "text": "Please quote your Indusind Bank Credit Card Number in all your",
+            "x1": 895.0,
+            "y1": 1835.0,
+            "x2": 1599.0,
+            "y2": 1869.0,
+            "cx": 1247.0,
+            "cy": 1852.0,
+            "width": 704.0,
+            "height": 34.0
+          }
+        ],
+        "text": "and the January statement has one transaction: 14 January Shoppers Stop Please quote your Indusind Bank Credit Card Number in all your",
+        "x1": 86.0,
+        "y1": 1832.0,
+        "x2": 1599.0,
+        "y2": 1869.0,
+        "cy": 1850.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 21,
+    "words": [
+      {
+        "text": "10,000.",
+        "x1": 86.0,
+        "y1": 1861.0,
+        "x2": 172.0,
+        "y2": 1886.0,
+        "cx": 129.0,
+        "cy": 1873.5,
+        "width": 86.0,
+        "height": 25.0
+      },
+      {
+        "text": "correspondence with us.",
+        "x1": 898.0,
+        "y1": 1866.0,
+        "x2": 1119.0,
+        "y2": 1891.0,
+        "cx": 1008.5,
+        "cy": 1878.5,
+        "width": 221.0,
+        "height": 25.0
+      }
+    ],
+    "text": "10,000. correspondence with us.",
+    "x1": 86.0,
+    "y1": 1861.0,
+    "x2": 1119.0,
+    "y2": 1891.0,
+    "cy": 1876.0,
+    "visual_lines": [
+      {
+        "line_id": 65,
+        "words": [
+          {
+            "text": "10,000.",
+            "x1": 86.0,
+            "y1": 1861.0,
+            "x2": 172.0,
+            "y2": 1886.0,
+            "cx": 129.0,
+            "cy": 1873.5,
+            "width": 86.0,
+            "height": 25.0
+          },
+          {
+            "text": "correspondence with us.",
+            "x1": 898.0,
+            "y1": 1866.0,
+            "x2": 1119.0,
+            "y2": 1891.0,
+            "cx": 1008.5,
+            "cy": 1878.5,
+            "width": 221.0,
+            "height": 25.0
+          }
+        ],
+        "text": "10,000. correspondence with us.",
+        "x1": 86.0,
+        "y1": 1861.0,
+        "x2": 1119.0,
+        "y2": 1891.0,
+        "cy": 1876.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 22,
+    "words": [
+      {
+        "text": "The outstanding balance on 25th January is <10,o00.If the complete payment",
+        "x1": 86.0,
+        "y1": 1883.0,
+        "x2": 804.0,
+        "y2": 1915.0,
+        "cx": 445.0,
+        "cy": 1899.0,
+        "width": 718.0,
+        "height": 32.0
+      }
+    ],
+    "text": "The outstanding balance on 25th January is <10,o00.If the complete payment",
+    "x1": 86.0,
+    "y1": 1883.0,
+    "x2": 804.0,
+    "y2": 1915.0,
+    "cy": 1899.0,
+    "visual_lines": [
+      {
+        "line_id": 66,
+        "words": [
+          {
+            "text": "The outstanding balance on 25th January is <10,o00.If the complete payment",
+            "x1": 86.0,
+            "y1": 1883.0,
+            "x2": 804.0,
+            "y2": 1915.0,
+            "cx": 445.0,
+            "cy": 1899.0,
+            "width": 718.0,
+            "height": 32.0
+          }
+        ],
+        "text": "The outstanding balance on 25th January is <10,o00.If the complete payment",
+        "x1": 86.0,
+        "y1": 1883.0,
+        "x2": 804.0,
+        "y2": 1915.0,
+        "cy": 1899.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 23,
+    "words": [
+      {
+        "text": "is made before 14February,no interest shall be levied.",
+        "x1": 86.0,
+        "y1": 1913.0,
+        "x2": 605.0,
+        "y2": 1937.0,
+        "cx": 345.5,
+        "cy": 1925.0,
+        "width": 519.0,
+        "height": 24.0
+      }
+    ],
+    "text": "is made before 14February,no interest shall be levied.",
+    "x1": 86.0,
+    "y1": 1913.0,
+    "x2": 605.0,
+    "y2": 1937.0,
+    "cy": 1925.0,
+    "visual_lines": [
+      {
+        "line_id": 67,
+        "words": [
+          {
+            "text": "is made before 14February,no interest shall be levied.",
+            "x1": 86.0,
+            "y1": 1913.0,
+            "x2": 605.0,
+            "y2": 1937.0,
+            "cx": 345.5,
+            "cy": 1925.0,
+            "width": 519.0,
+            "height": 24.0
+          }
+        ],
+        "text": "is made before 14February,no interest shall be levied.",
+        "x1": 86.0,
+        "y1": 1913.0,
+        "x2": 605.0,
+        "y2": 1937.0,
+        "cy": 1925.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 24,
+    "words": [
+      {
+        "text": "However,if a part payment of 7,o00 is made on 10February, then interest",
+        "x1": 86.0,
+        "y1": 1935.0,
+        "x2": 799.0,
+        "y2": 1964.0,
+        "cx": 442.5,
+        "cy": 1949.5,
+        "width": 713.0,
+        "height": 29.0
+      },
+      {
+        "text": "INSURANCE",
+        "x1": 940.0,
+        "y1": 1930.0,
+        "x2": 1082.0,
+        "y2": 1964.0,
+        "cx": 1011.0,
+        "cy": 1947.0,
+        "width": 142.0,
+        "height": 34.0
+      }
+    ],
+    "text": "However,if a part payment of 7,o00 is made on 10February, then interest INSURANCE",
+    "x1": 86.0,
+    "y1": 1930.0,
+    "x2": 1082.0,
+    "y2": 1964.0,
+    "cy": 1948.25,
+    "visual_lines": [
+      {
+        "line_id": 68,
+        "words": [
+          {
+            "text": "However,if a part payment of 7,o00 is made on 10February, then interest",
+            "x1": 86.0,
+            "y1": 1935.0,
+            "x2": 799.0,
+            "y2": 1964.0,
+            "cx": 442.5,
+            "cy": 1949.5,
+            "width": 713.0,
+            "height": 29.0
+          },
+          {
+            "text": "INSURANCE",
+            "x1": 940.0,
+            "y1": 1930.0,
+            "x2": 1082.0,
+            "y2": 1964.0,
+            "cx": 1011.0,
+            "cy": 1947.0,
+            "width": 142.0,
+            "height": 34.0
+          }
+        ],
+        "text": "However,if a part payment of 7,o00 is made on 10February, then interest INSURANCE",
+        "x1": 86.0,
+        "y1": 1930.0,
+        "x2": 1082.0,
+        "y2": 1964.0,
+        "cy": 1948.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 25,
+    "words": [
+      {
+        "text": "will be calculated as below.",
+        "x1": 86.0,
+        "y1": 1964.0,
+        "x2": 344.0,
+        "y2": 1988.0,
+        "cx": 215.0,
+        "cy": 1976.0,
+        "width": 258.0,
+        "height": 24.0
+      },
+      {
+        "text": "Interest on<10,000 from 14January-25January (11 days=10,000 x",
+        "x1": 121.0,
+        "y1": 1983.0,
+        "x2": 804.0,
+        "y2": 2015.0,
+        "cx": 462.5,
+        "cy": 1999.0,
+        "width": 683.0,
+        "height": 32.0
+      },
+      {
+        "text": "Please visit www.indusind.com for details of insurance coverage on your",
+        "x1": 898.0,
+        "y1": 1993.0,
+        "x2": 1592.0,
+        "y2": 2017.0,
+        "cx": 1245.0,
+        "cy": 2005.0,
+        "width": 694.0,
+        "height": 24.0
+      },
+      {
+        "text": "3.83%x12/365x11=138.51",
+        "x1": 125.0,
+        "y1": 2015.0,
+        "x2": 408.0,
+        "y2": 2039.0,
+        "cx": 266.5,
+        "cy": 2027.0,
+        "width": 283.0,
+        "height": 24.0
+      },
+      {
+        "text": "Induslnd Bank Credit Card.",
+        "x1": 898.0,
+        "y1": 2020.0,
+        "x2": 1163.0,
+        "y2": 2044.0,
+        "cx": 1030.5,
+        "cy": 2032.0,
+        "width": 265.0,
+        "height": 24.0
+      }
+    ],
+    "text": "will be calculated as below. Interest on<10,000 from 14January-25January (11 days=10,000 x Please visit www.indusind.com for details of insurance coverage on your 3.83%x12/365x11=138.51 Induslnd Bank Credit Card.",
+    "x1": 86.0,
+    "y1": 1964.0,
+    "x2": 1592.0,
+    "y2": 2044.0,
+    "cy": 2004.0,
+    "visual_lines": [
+      {
+        "line_id": 69,
+        "words": [
+          {
+            "text": "will be calculated as below.",
+            "x1": 86.0,
+            "y1": 1964.0,
+            "x2": 344.0,
+            "y2": 1988.0,
+            "cx": 215.0,
+            "cy": 1976.0,
+            "width": 258.0,
+            "height": 24.0
+          }
+        ],
+        "text": "will be calculated as below.",
+        "x1": 86.0,
+        "y1": 1964.0,
+        "x2": 344.0,
+        "y2": 1988.0,
+        "cy": 1976.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 70,
+        "words": [
+          {
+            "text": "Interest on<10,000 from 14January-25January (11 days=10,000 x",
+            "x1": 121.0,
+            "y1": 1983.0,
+            "x2": 804.0,
+            "y2": 2015.0,
+            "cx": 462.5,
+            "cy": 1999.0,
+            "width": 683.0,
+            "height": 32.0
+          },
+          {
+            "text": "Please visit www.indusind.com for details of insurance coverage on your",
+            "x1": 898.0,
+            "y1": 1993.0,
+            "x2": 1592.0,
+            "y2": 2017.0,
+            "cx": 1245.0,
+            "cy": 2005.0,
+            "width": 694.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Interest on<10,000 from 14January-25January (11 days=10,000 x Please visit www.indusind.com for details of insurance coverage on your",
+        "x1": 121.0,
+        "y1": 1983.0,
+        "x2": 1592.0,
+        "y2": 2017.0,
+        "cy": 2002.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 71,
+        "words": [
+          {
+            "text": "3.83%x12/365x11=138.51",
+            "x1": 125.0,
+            "y1": 2015.0,
+            "x2": 408.0,
+            "y2": 2039.0,
+            "cx": 266.5,
+            "cy": 2027.0,
+            "width": 283.0,
+            "height": 24.0
+          },
+          {
+            "text": "Induslnd Bank Credit Card.",
+            "x1": 898.0,
+            "y1": 2020.0,
+            "x2": 1163.0,
+            "y2": 2044.0,
+            "cx": 1030.5,
+            "cy": 2032.0,
+            "width": 265.0,
+            "height": 24.0
+          }
+        ],
+        "text": "3.83%x12/365x11=138.51 Induslnd Bank Credit Card.",
+        "x1": 125.0,
+        "y1": 2015.0,
+        "x2": 1163.0,
+        "y2": 2044.0,
+        "cy": 2029.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 26,
+    "words": [
+      {
+        "text": "2.",
+        "x1": 89.0,
+        "y1": 2042.0,
+        "x2": 111.0,
+        "y2": 2061.0,
+        "cx": 100.0,
+        "cy": 2051.5,
+        "width": 22.0,
+        "height": 19.0
+      },
+      {
+        "text": "Interest on statement balance as per 25statement from 25January",
+        "x1": 121.0,
+        "y1": 2037.0,
+        "x2": 792.0,
+        "y2": 2069.0,
+        "cx": 456.5,
+        "cy": 2053.0,
+        "width": 671.0,
+        "height": 32.0
+      },
+      {
+        "text": "Insurance Claim",
+        "x1": 851.0,
+        "y1": 2051.0,
+        "x2": 1011.0,
+        "y2": 2076.0,
+        "cx": 931.0,
+        "cy": 2063.5,
+        "width": 160.0,
+        "height": 25.0
+      },
+      {
+        "text": "10February(16 days)=10,000x3.83%x12/365x16=201.47",
+        "x1": 130.0,
+        "y1": 2066.0,
+        "x2": 735.0,
+        "y2": 2090.0,
+        "cx": 432.5,
+        "cy": 2078.0,
+        "width": 605.0,
+        "height": 24.0
+      },
+      {
+        "text": "ICICI Lombard General Insurance Company Limited",
+        "x1": 851.0,
+        "y1": 2078.0,
+        "x2": 1328.0,
+        "y2": 2103.0,
+        "cx": 1089.5,
+        "cy": 2090.5,
+        "width": 477.0,
+        "height": 25.0
+      }
+    ],
+    "text": "2. Interest on statement balance as per 25statement from 25January Insurance Claim 10February(16 days)=10,000x3.83%x12/365x16=201.47 ICICI Lombard General Insurance Company Limited",
+    "x1": 89.0,
+    "y1": 2037.0,
+    "x2": 1328.0,
+    "y2": 2103.0,
+    "cy": 2070.0,
+    "visual_lines": [
+      {
+        "line_id": 72,
+        "words": [
+          {
+            "text": "2.",
+            "x1": 89.0,
+            "y1": 2042.0,
+            "x2": 111.0,
+            "y2": 2061.0,
+            "cx": 100.0,
+            "cy": 2051.5,
+            "width": 22.0,
+            "height": 19.0
+          },
+          {
+            "text": "Interest on statement balance as per 25statement from 25January",
+            "x1": 121.0,
+            "y1": 2037.0,
+            "x2": 792.0,
+            "y2": 2069.0,
+            "cx": 456.5,
+            "cy": 2053.0,
+            "width": 671.0,
+            "height": 32.0
+          },
+          {
+            "text": "Insurance Claim",
+            "x1": 851.0,
+            "y1": 2051.0,
+            "x2": 1011.0,
+            "y2": 2076.0,
+            "cx": 931.0,
+            "cy": 2063.5,
+            "width": 160.0,
+            "height": 25.0
+          }
+        ],
+        "text": "2. Interest on statement balance as per 25statement from 25January Insurance Claim",
+        "x1": 89.0,
+        "y1": 2037.0,
+        "x2": 1011.0,
+        "y2": 2076.0,
+        "cy": 2056.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 73,
+        "words": [
+          {
+            "text": "10February(16 days)=10,000x3.83%x12/365x16=201.47",
+            "x1": 130.0,
+            "y1": 2066.0,
+            "x2": 735.0,
+            "y2": 2090.0,
+            "cx": 432.5,
+            "cy": 2078.0,
+            "width": 605.0,
+            "height": 24.0
+          },
+          {
+            "text": "ICICI Lombard General Insurance Company Limited",
+            "x1": 851.0,
+            "y1": 2078.0,
+            "x2": 1328.0,
+            "y2": 2103.0,
+            "cx": 1089.5,
+            "cy": 2090.5,
+            "width": 477.0,
+            "height": 25.0
+          }
+        ],
+        "text": "10February(16 days)=10,000x3.83%x12/365x16=201.47 ICICI Lombard General Insurance Company Limited",
+        "x1": 130.0,
+        "y1": 2066.0,
+        "x2": 1328.0,
+        "y2": 2103.0,
+        "cy": 2084.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 27,
+    "words": [
+      {
+        "text": "3.",
+        "x1": 89.0,
+        "y1": 2093.0,
+        "x2": 111.0,
+        "y2": 2112.0,
+        "cx": 100.0,
+        "cy": 2102.5,
+        "width": 22.0,
+        "height": 19.0
+      },
+      {
+        "text": "Interest on Outstanding balance of 3,000 from 10 February-25t February",
+        "x1": 123.0,
+        "y1": 2088.0,
+        "x2": 802.0,
+        "y2": 2120.0,
+        "cx": 462.5,
+        "cy": 2104.0,
+        "width": 679.0,
+        "height": 32.0
+      },
+      {
+        "text": "Name:Aswan Kumar",
+        "x1": 846.0,
+        "y1": 2100.0,
+        "x2": 1048.0,
+        "y2": 2130.0,
+        "cx": 947.0,
+        "cy": 2115.0,
+        "width": 202.0,
+        "height": 30.0
+      },
+      {
+        "text": "15 days=<3,000x3.83%x12/365x15=56.66.",
+        "x1": 128.0,
+        "y1": 2117.0,
+        "x2": 593.0,
+        "y2": 2142.0,
+        "cx": 360.5,
+        "cy": 2129.5,
+        "width": 465.0,
+        "height": 25.0
+      },
+      {
+        "text": "Email ID:ihealthcare@icicilombard.com,Contact Number:18002666",
+        "x1": 851.0,
+        "y1": 2127.0,
+        "x2": 1483.0,
+        "y2": 2151.0,
+        "cx": 1167.0,
+        "cy": 2139.0,
+        "width": 632.0,
+        "height": 24.0
+      },
+      {
+        "text": "Total interest as per25Februarystatement=138.51+201.47+356.66",
+        "x1": 123.0,
+        "y1": 2139.0,
+        "x2": 802.0,
+        "y2": 2171.0,
+        "cx": 462.5,
+        "cy": 2155.0,
+        "width": 679.0,
+        "height": 32.0
+      },
+      {
+        "text": "=<396.64.Please note in the above illustration interest has been",
+        "x1": 130.0,
+        "y1": 2168.0,
+        "x2": 802.0,
+        "y2": 2193.0,
+        "cx": 466.0,
+        "cy": 2180.5,
+        "width": 672.0,
+        "height": 25.0
+      },
+      {
+        "text": "AON Risk Insurance Brokers Pvt Ltd",
+        "x1": 849.0,
+        "y1": 2159.0,
+        "x2": 1183.0,
+        "y2": 2190.0,
+        "cx": 1016.0,
+        "cy": 2174.5,
+        "width": 334.0,
+        "height": 31.0
+      },
+      {
+        "text": "calculated at3.83%p.m.",
+        "x1": 128.0,
+        "y1": 2195.0,
+        "x2": 359.0,
+        "y2": 2220.0,
+        "cx": 243.5,
+        "cy": 2207.5,
+        "width": 231.0,
+        "height": 25.0
+      },
+      {
+        "text": "Email D:arib.claim.cards@aon.com",
+        "x1": 851.0,
+        "y1": 2190.0,
+        "x2": 1183.0,
+        "y2": 2215.0,
+        "cx": 1017.0,
+        "cy": 2202.5,
+        "width": 332.0,
+        "height": 25.0
+      }
+    ],
+    "text": "3. Interest on Outstanding balance of 3,000 from 10 February-25t February Name:Aswan Kumar 15 days=<3,000x3.83%x12/365x15=56.66. Email ID:ihealthcare@icicilombard.com,Contact Number:18002666 Total interest as per25Februarystatement=138.51+201.47+356.66 =<396.64.Please note in the above illustration interest has been AON Risk Insurance Brokers Pvt Ltd calculated at3.83%p.m. Email D:arib.claim.cards@aon.com",
+    "x1": 89.0,
+    "y1": 2088.0,
+    "x2": 1483.0,
+    "y2": 2220.0,
+    "cy": 2154.0,
+    "visual_lines": [
+      {
+        "line_id": 74,
+        "words": [
+          {
+            "text": "3.",
+            "x1": 89.0,
+            "y1": 2093.0,
+            "x2": 111.0,
+            "y2": 2112.0,
+            "cx": 100.0,
+            "cy": 2102.5,
+            "width": 22.0,
+            "height": 19.0
+          },
+          {
+            "text": "Interest on Outstanding balance of 3,000 from 10 February-25t February",
+            "x1": 123.0,
+            "y1": 2088.0,
+            "x2": 802.0,
+            "y2": 2120.0,
+            "cx": 462.5,
+            "cy": 2104.0,
+            "width": 679.0,
+            "height": 32.0
+          },
+          {
+            "text": "Name:Aswan Kumar",
+            "x1": 846.0,
+            "y1": 2100.0,
+            "x2": 1048.0,
+            "y2": 2130.0,
+            "cx": 947.0,
+            "cy": 2115.0,
+            "width": 202.0,
+            "height": 30.0
+          }
+        ],
+        "text": "3. Interest on Outstanding balance of 3,000 from 10 February-25t February Name:Aswan Kumar",
+        "x1": 89.0,
+        "y1": 2088.0,
+        "x2": 1048.0,
+        "y2": 2130.0,
+        "cy": 2107.1666666666665,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 75,
+        "words": [
+          {
+            "text": "15 days=<3,000x3.83%x12/365x15=56.66.",
+            "x1": 128.0,
+            "y1": 2117.0,
+            "x2": 593.0,
+            "y2": 2142.0,
+            "cx": 360.5,
+            "cy": 2129.5,
+            "width": 465.0,
+            "height": 25.0
+          },
+          {
+            "text": "Email ID:ihealthcare@icicilombard.com,Contact Number:18002666",
+            "x1": 851.0,
+            "y1": 2127.0,
+            "x2": 1483.0,
+            "y2": 2151.0,
+            "cx": 1167.0,
+            "cy": 2139.0,
+            "width": 632.0,
+            "height": 24.0
+          }
+        ],
+        "text": "15 days=<3,000x3.83%x12/365x15=56.66. Email ID:ihealthcare@icicilombard.com,Contact Number:18002666",
+        "x1": 128.0,
+        "y1": 2117.0,
+        "x2": 1483.0,
+        "y2": 2151.0,
+        "cy": 2134.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 76,
+        "words": [
+          {
+            "text": "Total interest as per25Februarystatement=138.51+201.47+356.66",
+            "x1": 123.0,
+            "y1": 2139.0,
+            "x2": 802.0,
+            "y2": 2171.0,
+            "cx": 462.5,
+            "cy": 2155.0,
+            "width": 679.0,
+            "height": 32.0
+          }
+        ],
+        "text": "Total interest as per25Februarystatement=138.51+201.47+356.66",
+        "x1": 123.0,
+        "y1": 2139.0,
+        "x2": 802.0,
+        "y2": 2171.0,
+        "cy": 2155.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 77,
+        "words": [
+          {
+            "text": "=<396.64.Please note in the above illustration interest has been",
+            "x1": 130.0,
+            "y1": 2168.0,
+            "x2": 802.0,
+            "y2": 2193.0,
+            "cx": 466.0,
+            "cy": 2180.5,
+            "width": 672.0,
+            "height": 25.0
+          },
+          {
+            "text": "AON Risk Insurance Brokers Pvt Ltd",
+            "x1": 849.0,
+            "y1": 2159.0,
+            "x2": 1183.0,
+            "y2": 2190.0,
+            "cx": 1016.0,
+            "cy": 2174.5,
+            "width": 334.0,
+            "height": 31.0
+          }
+        ],
+        "text": "=<396.64.Please note in the above illustration interest has been AON Risk Insurance Brokers Pvt Ltd",
+        "x1": 130.0,
+        "y1": 2159.0,
+        "x2": 1183.0,
+        "y2": 2193.0,
+        "cy": 2177.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 78,
+        "words": [
+          {
+            "text": "calculated at3.83%p.m.",
+            "x1": 128.0,
+            "y1": 2195.0,
+            "x2": 359.0,
+            "y2": 2220.0,
+            "cx": 243.5,
+            "cy": 2207.5,
+            "width": 231.0,
+            "height": 25.0
+          },
+          {
+            "text": "Email D:arib.claim.cards@aon.com",
+            "x1": 851.0,
+            "y1": 2190.0,
+            "x2": 1183.0,
+            "y2": 2215.0,
+            "cx": 1017.0,
+            "cy": 2202.5,
+            "width": 332.0,
+            "height": 25.0
+          }
+        ],
+        "text": "calculated at3.83%p.m. Email D:arib.claim.cards@aon.com",
+        "x1": 128.0,
+        "y1": 2190.0,
+        "x2": 1183.0,
+        "y2": 2220.0,
+        "cy": 2205.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 28,
+    "words": [
+      {
+        "text": "f)",
+        "x1": 89.0,
+        "y1": 2224.0,
+        "x2": 111.0,
+        "y2": 2244.0,
+        "cx": 100.0,
+        "cy": 2234.0,
+        "width": 22.0,
+        "height": 20.0
+      },
+      {
+        "text": "Over Limit Charges -2.5% of Over Limit Amount subject to a minimum of",
+        "x1": 123.0,
+        "y1": 2220.0,
+        "x2": 812.0,
+        "y2": 2251.0,
+        "cx": 467.5,
+        "cy": 2235.5,
+        "width": 689.0,
+        "height": 31.0
+      },
+      {
+        "text": "Contact Number:+91 02266560500/505-10 AM to 6 PM,Monday to Friday",
+        "x1": 849.0,
+        "y1": 2210.0,
+        "x2": 1555.0,
+        "y2": 2242.0,
+        "cx": 1202.0,
+        "cy": 2226.0,
+        "width": 706.0,
+        "height": 32.0
+      },
+      {
+        "text": "<500.",
+        "x1": 130.0,
+        "y1": 2251.0,
+        "x2": 180.0,
+        "y2": 2271.0,
+        "cx": 155.0,
+        "cy": 2261.0,
+        "width": 50.0,
+        "height": 20.0
+      },
+      {
+        "text": "*GST as applicable on all fees and charges.",
+        "x1": 128.0,
+        "y1": 2273.0,
+        "x2": 519.0,
+        "y2": 2298.0,
+        "cx": 323.5,
+        "cy": 2285.5,
+        "width": 391.0,
+        "height": 25.0
+      },
+      {
+        "text": "ndd BankGS27314G2Z2",
+        "x1": 1363.0,
+        "y1": 2276.0,
+        "x2": 1594.0,
+        "y2": 2300.0,
+        "cx": 1478.5,
+        "cy": 2288.0,
+        "width": 231.0,
+        "height": 24.0
+      }
+    ],
+    "text": "f) Over Limit Charges -2.5% of Over Limit Amount subject to a minimum of Contact Number:+91 02266560500/505-10 AM to 6 PM,Monday to Friday <500. *GST as applicable on all fees and charges. ndd BankGS27314G2Z2",
+    "x1": 89.0,
+    "y1": 2210.0,
+    "x2": 1594.0,
+    "y2": 2300.0,
+    "cy": 2255.0,
+    "visual_lines": [
+      {
+        "line_id": 79,
+        "words": [
+          {
+            "text": "f)",
+            "x1": 89.0,
+            "y1": 2224.0,
+            "x2": 111.0,
+            "y2": 2244.0,
+            "cx": 100.0,
+            "cy": 2234.0,
+            "width": 22.0,
+            "height": 20.0
+          },
+          {
+            "text": "Over Limit Charges -2.5% of Over Limit Amount subject to a minimum of",
+            "x1": 123.0,
+            "y1": 2220.0,
+            "x2": 812.0,
+            "y2": 2251.0,
+            "cx": 467.5,
+            "cy": 2235.5,
+            "width": 689.0,
+            "height": 31.0
+          },
+          {
+            "text": "Contact Number:+91 02266560500/505-10 AM to 6 PM,Monday to Friday",
+            "x1": 849.0,
+            "y1": 2210.0,
+            "x2": 1555.0,
+            "y2": 2242.0,
+            "cx": 1202.0,
+            "cy": 2226.0,
+            "width": 706.0,
+            "height": 32.0
+          }
+        ],
+        "text": "f) Over Limit Charges -2.5% of Over Limit Amount subject to a minimum of Contact Number:+91 02266560500/505-10 AM to 6 PM,Monday to Friday",
+        "x1": 89.0,
+        "y1": 2210.0,
+        "x2": 1555.0,
+        "y2": 2251.0,
+        "cy": 2231.8333333333335,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 80,
+        "words": [
+          {
+            "text": "<500.",
+            "x1": 130.0,
+            "y1": 2251.0,
+            "x2": 180.0,
+            "y2": 2271.0,
+            "cx": 155.0,
+            "cy": 2261.0,
+            "width": 50.0,
+            "height": 20.0
+          }
+        ],
+        "text": "<500.",
+        "x1": 130.0,
+        "y1": 2251.0,
+        "x2": 180.0,
+        "y2": 2271.0,
+        "cy": 2261.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 81,
+        "words": [
+          {
+            "text": "*GST as applicable on all fees and charges.",
+            "x1": 128.0,
+            "y1": 2273.0,
+            "x2": 519.0,
+            "y2": 2298.0,
+            "cx": 323.5,
+            "cy": 2285.5,
+            "width": 391.0,
+            "height": 25.0
+          },
+          {
+            "text": "ndd BankGS27314G2Z2",
+            "x1": 1363.0,
+            "y1": 2276.0,
+            "x2": 1594.0,
+            "y2": 2300.0,
+            "cx": 1478.5,
+            "cy": 2288.0,
+            "width": 231.0,
+            "height": 24.0
+          }
+        ],
+        "text": "*GST as applicable on all fees and charges. ndd BankGS27314G2Z2",
+        "x1": 128.0,
+        "y1": 2273.0,
+        "x2": 1594.0,
+        "y2": 2300.0,
+        "cy": 2286.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  }
+]

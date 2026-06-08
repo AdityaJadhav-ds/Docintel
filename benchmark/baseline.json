@@ -1,0 +1,4 @@
+{
+  "_comment": "Initial baseline — run benchmark with --save-baseline after adding PDFs to benchmark/pdfs/",
+  "_instructions": "1. Add sample PDFs to benchmark/pdfs/   2. Run: python run_benchmark.py --save-baseline   3. This file will be overwritten with actual measured values"
+}

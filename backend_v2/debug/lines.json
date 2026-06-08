@@ -1,0 +1,234 @@
+[
+  {
+    "text": "kotak8/l kotak",
+    "n_boxes": 2,
+    "y1": 64.0,
+    "y2": 175.0,
+    "x1": 62.0,
+    "x2": 1327.0
+  },
+  {
+    "text": "Kotak Mahindra Bank",
+    "n_boxes": 1,
+    "y1": 129.0,
+    "y2": 171.0,
+    "x1": 1173.0,
+    "x2": 1406.0
+  },
+  {
+    "text": "Account Statement",
+    "n_boxes": 1,
+    "y1": 268.0,
+    "y2": 311.0,
+    "x1": 97.0,
+    "x2": 609.0
+  },
+  {
+    "text": "01 Feb 2026 - 20 Feb 2026",
+    "n_boxes": 1,
+    "y1": 320.0,
+    "y2": 355.0,
+    "x1": 91.0,
+    "x2": 388.0
+  },
+  {
+    "text": "Shridhan Sanjay Shinde Account No. 8650687756",
+    "n_boxes": 2,
+    "y1": 432.0,
+    "y2": 469.0,
+    "x1": 100.0,
+    "x2": 1098.0
+  },
+  {
+    "text": "CRN xxxxxx475 Account Type Savings",
+    "n_boxes": 2,
+    "y1": 471.0,
+    "y2": 515.0,
+    "x1": 93.0,
+    "x2": 1081.0
+  },
+  {
+    "text": "Branch Sangli",
+    "n_boxes": 1,
+    "y1": 513.0,
+    "y2": 544.0,
+    "x1": 864.0,
+    "x2": 1003.0
+  },
+  {
+    "text": "S-O Sanjay Shinde Flat No.7 Branch Phone Number 7391052465",
+    "n_boxes": 2,
+    "y1": 553.0,
+    "y2": 594.0,
+    "x1": 95.0,
+    "x2": 1200.0
+  },
+  {
+    "text": "Omkar Heights Shivaji Housing Account Status Active",
+    "n_boxes": 2,
+    "y1": 601.0,
+    "y2": 645.0,
+    "x1": 93.0,
+    "x2": 1096.0
+  },
+  {
+    "text": "So.Opp.sugar Factory Sangli S Nominee Registered Yes",
+    "n_boxes": 2,
+    "y1": 640.0,
+    "y2": 680.0,
+    "x1": 95.0,
+    "x2": 1098.0
+  },
+  {
+    "text": "Sangli-416416",
+    "n_boxes": 1,
+    "y1": 680.0,
+    "y2": 704.0,
+    "x1": 100.0,
+    "x2": 246.0
+  },
+  {
+    "text": "Maharashtra-India Currency INDIAN RUPEE",
+    "n_boxes": 2,
+    "y1": 713.0,
+    "y2": 743.0,
+    "x1": 95.0,
+    "x2": 1098.0
+  },
+  {
+    "text": "MICR416485152 IFSC Code KKBK0002046",
+    "n_boxes": 1,
+    "y1": 774.0,
+    "y2": 803.0,
+    "x1": 95.0,
+    "x2": 509.0
+  },
+  {
+    "text": "Savings Account Transactions",
+    "n_boxes": 1,
+    "y1": 849.0,
+    "y2": 877.0,
+    "x1": 558.0,
+    "x2": 930.0
+  },
+  {
+    "text": "Date Description Chq/Ref. No. Withdrawal (Dr.)|Deposit (Cr) Balance",
+    "n_boxes": 5,
+    "y1": 903.0,
+    "y2": 941.0,
+    "x1": 190.0,
+    "x2": 1323.0
+  },
+  {
+    "text": "Opening Balance 1.45",
+    "n_boxes": 2,
+    "y1": 958.0,
+    "y2": 985.0,
+    "x1": 306.0,
+    "x2": 1391.0
+  },
+  {
+    "text": "02 Feb 2026]uPl/Shridhan Sanjay/338827314489/PaymentUPI-603376894422 663.00 664.45",
+    "n_boxes": 3,
+    "y1": 984.0,
+    "y2": 1022.0,
+    "x1": 182.0,
+    "x2": 1391.0
+  },
+  {
+    "text": "fromPh",
+    "n_boxes": 1,
+    "y1": 1015.0,
+    "y2": 1031.0,
+    "x1": 306.0,
+    "x2": 374.0
+  },
+  {
+    "text": "2 03 Feb 2026UPI/SHIVAY FO0DS/603418478917/UPI UPI-603429138176 40.00 624.45",
+    "n_boxes": 5,
+    "y1": 1039.0,
+    "y2": 1072.0,
+    "x1": 106.0,
+    "x2": 1393.0
+  },
+  {
+    "text": "3 03 Feb2026CASHBACK EARNED ONBE- 1.00 625.45",
+    "n_boxes": 5,
+    "y1": 1071.0,
+    "y2": 1107.0,
+    "x1": 93.0,
+    "x2": 1393.0
+  },
+  {
+    "text": "a99t3b6610a7c60",
+    "n_boxes": 1,
+    "y1": 1094.0,
+    "y2": 1118.0,
+    "x1": 689.0,
+    "x2": 833.0
+  },
+  {
+    "text": "4 04 Feb 2026 UPI/Balaji Medical/603523334185/UPI UPI-603532715108 130.00 495.45",
+    "n_boxes": 6,
+    "y1": 1125.0,
+    "y2": 1158.0,
+    "x1": 100.0,
+    "x2": 1393.0
+  },
+  {
+    "text": "05 Feb 2026CASHBACK EARNED ONBE- 2.16 497.61",
+    "n_boxes": 4,
+    "y1": 1158.0,
+    "y2": 1193.0,
+    "x1": 184.0,
+    "x2": 1393.0
+  },
+  {
+    "text": "b6793015c0459da",
+    "n_boxes": 1,
+    "y1": 1180.0,
+    "y2": 1204.0,
+    "x1": 689.0,
+    "x2": 841.0
+  },
+  {
+    "text": "6 5 Feb 2026 UPI/SHIVAYFO0DS/603618727491/UPI UPI-603682814851 30.00 467.61",
+    "n_boxes": 6,
+    "y1": 1208.0,
+    "y2": 1244.0,
+    "x1": 100.0,
+    "x2": 1393.0
+  },
+  {
+    "text": "0 06 Feb 2026 UPI/TUSHAR SHARAD G/603719936347/UPI UPI-603765247379 188.00 279.61",
+    "n_boxes": 6,
+    "y1": 1238.0,
+    "y2": 1279.0,
+    "x1": 102.0,
+    "x2": 1394.0
+  },
+  {
+    "text": "09 Feb 2026 UPI/SHIVAY FO0DS/604011778064/UPI UPI-604058658881 50.00 229.61",
+    "n_boxes": 5,
+    "y1": 1276.0,
+    "y2": 1309.0,
+    "x1": 193.0,
+    "x2": 1391.0
+  },
+  {
+    "text": "9 09 Feb 2026][UPI/HOTEL SAHYADRI/604015597725/UPI] UPI-604075122693 229.00 0.61",
+    "n_boxes": 5,
+    "y1": 1309.0,
+    "y2": 1342.0,
+    "x1": 102.0,
+    "x2": 1393.0
+  },
+  {
+    "text": "Statement Generated on 21 Feb 2026, 15:02 Page 1 of 3",
+    "n_boxes": 2,
+    "y1": 2002.0,
+    "y2": 2039.0,
+    "x1": 108.0,
+    "x2": 1410.0
+  }
+]

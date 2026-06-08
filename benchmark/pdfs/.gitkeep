@@ -1,0 +1,12 @@
+# benchmark/pdfs/.gitkeep
+# Add your test PDFs here:
+#
+#   1page_scanned.pdf
+#   4page_bank_statement.pdf
+#   12page_statement.pdf
+#   low_quality_scan.pdf
+#   digital_vector.pdf
+#
+# Then run:
+#   python run_benchmark.py --save-baseline   (first time)
+#   python run_benchmark.py                   (every time after)

@@ -1,0 +1,4101 @@
+[
+  {
+    "line_id": 0,
+    "words": [
+      {
+        "text": "INDUSIND BANK LEGEND CREDIT CARD STATEMENT",
+        "x1": 55.0,
+        "y1": 61.0,
+        "x2": 605.0,
+        "y2": 85.0,
+        "cx": 330.0,
+        "cy": 73.0,
+        "width": 550.0,
+        "height": 24.0
+      },
+      {
+        "text": "Induslnd Bank",
+        "x1": 1121.0,
+        "y1": 33.0,
+        "x2": 1526.0,
+        "y2": 83.0,
+        "cx": 1323.5,
+        "cy": 58.0,
+        "width": 405.0,
+        "height": 50.0
+      },
+      {
+        "text": "Previous Balance",
+        "x1": 1264.0,
+        "y1": 132.0,
+        "x2": 1455.0,
+        "y2": 163.0,
+        "cx": 1359.5,
+        "cy": 147.5,
+        "width": 191.0,
+        "height": 31.0
+      },
+      {
+        "text": "lifestyle",
+        "x1": 69.0,
+        "y1": 149.0,
+        "x2": 207.0,
+        "y2": 198.0,
+        "cx": 138.0,
+        "cy": 173.5,
+        "width": 138.0,
+        "height": 49.0
+      },
+      {
+        "text": "InduslndBan",
+        "x1": 983.0,
+        "y1": 149.0,
+        "x2": 1150.0,
+        "y2": 175.0,
+        "cx": 1066.5,
+        "cy": 162.0,
+        "width": 167.0,
+        "height": 26.0
+      },
+      {
+        "text": "22449.12DR",
+        "x1": 1305.0,
+        "y1": 179.0,
+        "x2": 1438.0,
+        "y2": 205.0,
+        "cx": 1371.5,
+        "cy": 192.0,
+        "width": 133.0,
+        "height": 26.0
+      },
+      {
+        "text": "+",
+        "x1": 1343.0,
+        "y1": 212.0,
+        "x2": 1383.0,
+        "y2": 255.0,
+        "cx": 1363.0,
+        "cy": 233.5,
+        "width": 40.0,
+        "height": 43.0
+      },
+      {
+        "text": "Turn Heads with Style",
+        "x1": 157.0,
+        "y1": 243.0,
+        "x2": 567.0,
+        "y2": 283.0,
+        "cx": 362.0,
+        "cy": 263.0,
+        "width": 410.0,
+        "height": 40.0
+      },
+      {
+        "text": "-",
+        "x1": 557.0,
+        "y1": 255.0,
+        "x2": 583.0,
+        "y2": 276.0,
+        "cx": 570.0,
+        "cy": 265.5,
+        "width": 26.0,
+        "height": 21.0
+      },
+      {
+        "text": "Purchases & Other Charges",
+        "x1": 1207.0,
+        "y1": 252.0,
+        "x2": 1512.0,
+        "y2": 288.0,
+        "cx": 1359.5,
+        "cy": 270.0,
+        "width": 305.0,
+        "height": 36.0
+      },
+      {
+        "text": "Exclusive Deals at Lifestyle",
+        "x1": 98.0,
+        "y1": 302.0,
+        "x2": 636.0,
+        "y2": 349.0,
+        "cx": 367.0,
+        "cy": 325.5,
+        "width": 538.0,
+        "height": 47.0
+      },
+      {
+        "text": "16146.37",
+        "x1": 1326.0,
+        "y1": 302.0,
+        "x2": 1419.0,
+        "y2": 328.0,
+        "cx": 1372.5,
+        "cy": 315.0,
+        "width": 93.0,
+        "height": 26.0
+      },
+      {
+        "text": "+",
+        "x1": 1343.0,
+        "y1": 335.0,
+        "x2": 1383.0,
+        "y2": 377.0,
+        "cx": 1363.0,
+        "cy": 356.0,
+        "width": 40.0,
+        "height": 42.0
+      },
+      {
+        "text": "Get 500 off on a minimum spend of Rs 2499",
+        "x1": 174.0,
+        "y1": 375.0,
+        "x2": 564.0,
+        "y2": 406.0,
+        "cx": 369.0,
+        "cy": 390.5,
+        "width": 390.0,
+        "height": 31.0
+      },
+      {
+        "text": "Cash Advance",
+        "x1": 1281.0,
+        "y1": 380.0,
+        "x2": 1433.0,
+        "y2": 406.0,
+        "cx": 1357.0,
+        "cy": 393.0,
+        "width": 152.0,
+        "height": 26.0
+      },
+      {
+        "text": "Promo code:INDS500 |Offer valid till: 30Sep25",
+        "x1": 162.0,
+        "y1": 417.0,
+        "x2": 576.0,
+        "y2": 441.0,
+        "cx": 369.0,
+        "cy": 429.0,
+        "width": 414.0,
+        "height": 24.0
+      },
+      {
+        "text": "0.00",
+        "x1": 1343.0,
+        "y1": 422.0,
+        "x2": 1400.0,
+        "y2": 458.0,
+        "cx": 1371.5,
+        "cy": 440.0,
+        "width": 57.0,
+        "height": 36.0
+      },
+      {
+        "text": "Payment &Other Credits",
+        "x1": 1224.0,
+        "y1": 502.0,
+        "x2": 1493.0,
+        "y2": 533.0,
+        "cx": 1358.5,
+        "cy": 517.5,
+        "width": 269.0,
+        "height": 31.0
+      },
+      {
+        "text": "Credit",
+        "x1": 79.0,
+        "y1": 549.0,
+        "x2": 150.0,
+        "y2": 575.0,
+        "cx": 114.5,
+        "cy": 562.0,
+        "width": 71.0,
+        "height": 26.0
+      },
+      {
+        "text": "Credit Limit",
+        "x1": 260.0,
+        "y1": 547.0,
+        "x2": 381.0,
+        "y2": 573.0,
+        "cx": 320.5,
+        "cy": 560.0,
+        "width": 121.0,
+        "height": 26.0
+      },
+      {
+        "text": "Available Credit Limit",
+        "x1": 462.0,
+        "y1": 545.0,
+        "x2": 690.0,
+        "y2": 575.0,
+        "cx": 576.0,
+        "cy": 560.0,
+        "width": 228.0,
+        "height": 30.0
+      },
+      {
+        "text": "Cash Limit",
+        "x1": 769.0,
+        "y1": 547.0,
+        "x2": 879.0,
+        "y2": 573.0,
+        "cx": 824.0,
+        "cy": 560.0,
+        "width": 110.0,
+        "height": 26.0
+      },
+      {
+        "text": "Available Cash Limit",
+        "x1": 957.0,
+        "y1": 545.0,
+        "x2": 1174.0,
+        "y2": 575.0,
+        "cx": 1065.5,
+        "cy": 560.0,
+        "width": 217.0,
+        "height": 30.0
+      },
+      {
+        "text": "22449.12",
+        "x1": 1318.0,
+        "y1": 542.0,
+        "x2": 1422.0,
+        "y2": 581.0,
+        "cx": 1370.0,
+        "cy": 561.5,
+        "width": 104.0,
+        "height": 39.0
+      },
+      {
+        "text": "Summary",
+        "x1": 61.0,
+        "y1": 568.0,
+        "x2": 170.0,
+        "y2": 609.0,
+        "cx": 115.5,
+        "cy": 588.5,
+        "width": 109.0,
+        "height": 41.0
+      },
+      {
+        "text": "50000.00",
+        "x1": 286.0,
+        "y1": 592.0,
+        "x2": 379.0,
+        "y2": 618.0,
+        "cx": 332.5,
+        "cy": 605.0,
+        "width": 93.0,
+        "height": 26.0
+      },
+      {
+        "text": "33853.63",
+        "x1": 543.0,
+        "y1": 592.0,
+        "x2": 638.0,
+        "y2": 616.0,
+        "cx": 590.5,
+        "cy": 604.0,
+        "width": 95.0,
+        "height": 24.0
+      },
+      {
+        "text": "10000.00",
+        "x1": 788.0,
+        "y1": 592.0,
+        "x2": 886.0,
+        "y2": 616.0,
+        "cx": 837.0,
+        "cy": 604.0,
+        "width": 98.0,
+        "height": 24.0
+      },
+      {
+        "text": "10000.00",
+        "x1": 1029.0,
+        "y1": 587.0,
+        "x2": 1129.0,
+        "y2": 620.0,
+        "cx": 1079.0,
+        "cy": 603.5,
+        "width": 100.0,
+        "height": 33.0
+      },
+      {
+        "text": "e",
+        "x1": 1348.0,
+        "y1": 585.0,
+        "x2": 1381.0,
+        "y2": 620.0,
+        "cx": 1364.5,
+        "cy": 602.5,
+        "width": 33.0,
+        "height": 35.0
+      },
+      {
+        "text": "Total Amount Due",
+        "x1": 1262.0,
+        "y1": 625.0,
+        "x2": 1455.0,
+        "y2": 656.0,
+        "cx": 1358.5,
+        "cy": 640.5,
+        "width": 193.0,
+        "height": 31.0
+      },
+      {
+        "text": "IMPORTANT MESSAGES:",
+        "x1": 57.0,
+        "y1": 653.0,
+        "x2": 291.0,
+        "y2": 682.0,
+        "cx": 174.0,
+        "cy": 667.5,
+        "width": 234.0,
+        "height": 29.0
+      },
+      {
+        "text": "PROMOTIONALMESSAGES:",
+        "x1": 638.0,
+        "y1": 658.0,
+        "x2": 895.0,
+        "y2": 682.0,
+        "cx": 766.5,
+        "cy": 670.0,
+        "width": 257.0,
+        "height": 24.0
+      },
+      {
+        "text": "Minimum Amount Due (MAD) calculation on your Indusind Bank",
+        "x1": 62.0,
+        "y1": 674.0,
+        "x2": 567.0,
+        "y2": 705.0,
+        "cx": 314.5,
+        "cy": 689.5,
+        "width": 505.0,
+        "height": 31.0
+      },
+      {
+        "text": "Check your eligibility for Outstanding to EMl conversion Loan on",
+        "x1": 640.0,
+        "y1": 679.0,
+        "x2": 1145.0,
+        "y2": 703.0,
+        "cx": 892.5,
+        "cy": 691.0,
+        "width": 505.0,
+        "height": 24.0
+      },
+      {
+        "text": "16146.00 DR",
+        "x1": 1305.0,
+        "y1": 674.0,
+        "x2": 1440.0,
+        "y2": 700.0,
+        "cx": 1372.5,
+        "cy": 687.0,
+        "width": 135.0,
+        "height": 26.0
+      },
+      {
+        "text": "Credit Card will be revised w.e.t 01st Aug25. For more details,visit",
+        "x1": 64.0,
+        "y1": 700.0,
+        "x2": 588.0,
+        "y2": 724.0,
+        "cx": 326.0,
+        "cy": 712.0,
+        "width": 524.0,
+        "height": 24.0
+      },
+      {
+        "text": "Credit Card, Add-on Credit Card tor your loved ones and otner",
+        "x1": 643.0,
+        "y1": 700.0,
+        "x2": 1129.0,
+        "y2": 724.0,
+        "cx": 886.0,
+        "cy": 712.0,
+        "width": 486.0,
+        "height": 24.0
+      },
+      {
+        "text": "www.indusind.com",
+        "x1": 64.0,
+        "y1": 719.0,
+        "x2": 217.0,
+        "y2": 743.0,
+        "cx": 140.5,
+        "cy": 731.0,
+        "width": 153.0,
+        "height": 24.0
+      },
+      {
+        "text": "exciting offers on your Indusind Bank Credit Card at inblins",
+        "x1": 640.0,
+        "y1": 719.0,
+        "x2": 1114.0,
+        "y2": 743.0,
+        "cx": 877.0,
+        "cy": 731.0,
+        "width": 474.0,
+        "height": 24.0
+      },
+      {
+        "text": "Minimum Amount Due",
+        "x1": 1243.0,
+        "y1": 747.0,
+        "x2": 1476.0,
+        "y2": 776.0,
+        "cx": 1359.5,
+        "cy": 761.5,
+        "width": 233.0,
+        "height": 29.0
+      },
+      {
+        "text": "MARKETINGMESSAGE1:",
+        "x1": 62.0,
+        "y1": 804.0,
+        "x2": 298.0,
+        "y2": 840.0,
+        "cx": 180.0,
+        "cy": 822.0,
+        "width": 236.0,
+        "height": 36.0
+      },
+      {
+        "text": "MARKETING MESSAGE 2:",
+        "x1": 640.0,
+        "y1": 811.0,
+        "x2": 874.0,
+        "y2": 835.0,
+        "cx": 757.0,
+        "cy": 823.0,
+        "width": 234.0,
+        "height": 24.0
+      },
+      {
+        "text": "363.00",
+        "x1": 1336.0,
+        "y1": 797.0,
+        "x2": 1410.0,
+        "y2": 823.0,
+        "cx": 1373.0,
+        "cy": 810.0,
+        "width": 74.0,
+        "height": 26.0
+      },
+      {
+        "text": "AjoGet Flat Rs.150 off with Indusind Bank Credit",
+        "x1": 64.0,
+        "y1": 830.0,
+        "x2": 462.0,
+        "y2": 854.0,
+        "cx": 263.0,
+        "cy": 842.0,
+        "width": 398.0,
+        "height": 24.0
+      },
+      {
+        "text": "Cards.Promocode-ADNAJIO Link",
+        "x1": 64.0,
+        "y1": 849.0,
+        "x2": 343.0,
+        "y2": 873.0,
+        "cx": 203.5,
+        "cy": 861.0,
+        "width": 279.0,
+        "height": 24.0
+      },
+      {
+        "text": "Eam Accelerated Reward Points of up to 10x on your Indusind Bank",
+        "x1": 640.0,
+        "y1": 832.0,
+        "x2": 1176.0,
+        "y2": 856.0,
+        "cx": 908.0,
+        "cy": 844.0,
+        "width": 536.0,
+        "height": 24.0
+      },
+      {
+        "text": "Credit Card spends on top brand vouchers.Link",
+        "x1": 640.0,
+        "y1": 851.0,
+        "x2": 1019.0,
+        "y2": 875.0,
+        "cx": 829.5,
+        "cy": 863.0,
+        "width": 379.0,
+        "height": 24.0
+      },
+      {
+        "text": "-https:/Aww.indusmoments.com/offers/AJlO2605",
+        "x1": 67.0,
+        "y1": 873.0,
+        "x2": 455.0,
+        "y2": 896.0,
+        "cx": 261.0,
+        "cy": 884.5,
+        "width": 388.0,
+        "height": 23.0
+      },
+      {
+        "text": "https./www.gyttr.com/indusindinstavouchers",
+        "x1": 636.0,
+        "y1": 870.0,
+        "x2": 993.0,
+        "y2": 899.0,
+        "cx": 814.5,
+        "cy": 884.5,
+        "width": 357.0,
+        "height": 29.0
+      },
+      {
+        "text": "Payment Due Date",
+        "x1": 1257.0,
+        "y1": 873.0,
+        "x2": 1460.0,
+        "y2": 903.0,
+        "cx": 1358.5,
+        "cy": 888.0,
+        "width": 203.0,
+        "height": 30.0
+      },
+      {
+        "text": "04/09/2025",
+        "x1": 1312.0,
+        "y1": 917.0,
+        "x2": 1426.0,
+        "y2": 941.0,
+        "cx": 1369.0,
+        "cy": 929.0,
+        "width": 114.0,
+        "height": 24.0
+      },
+      {
+        "text": "ACCOUNT SUMMARY",
+        "x1": 505.0,
+        "y1": 969.0,
+        "x2": 721.0,
+        "y2": 993.0,
+        "cx": 613.0,
+        "cy": 981.0,
+        "width": 216.0,
+        "height": 24.0
+      },
+      {
+        "text": "Statement Period",
+        "x1": 1264.0,
+        "y1": 995.0,
+        "x2": 1452.0,
+        "y2": 1026.0,
+        "cx": 1358.0,
+        "cy": 1010.5,
+        "width": 188.0,
+        "height": 31.0
+      },
+      {
+        "text": "Date",
+        "x1": 86.0,
+        "y1": 1028.0,
+        "x2": 131.0,
+        "y2": 1054.0,
+        "cx": 108.5,
+        "cy": 1041.0,
+        "width": 45.0,
+        "height": 26.0
+      },
+      {
+        "text": "Transaction Details",
+        "x1": 307.0,
+        "y1": 1031.0,
+        "x2": 476.0,
+        "y2": 1054.0,
+        "cx": 391.5,
+        "cy": 1042.5,
+        "width": 169.0,
+        "height": 23.0
+      },
+      {
+        "text": "Reward",
+        "x1": 859.0,
+        "y1": 1013.0,
+        "x2": 943.0,
+        "y2": 1045.0,
+        "cx": 901.0,
+        "cy": 1029.0,
+        "width": 84.0,
+        "height": 32.0
+      },
+      {
+        "text": "Amount (in)",
+        "x1": 1002.0,
+        "y1": 1028.0,
+        "x2": 1126.0,
+        "y2": 1054.0,
+        "cx": 1064.0,
+        "cy": 1041.0,
+        "width": 124.0,
+        "height": 26.0
+      },
+      {
+        "text": "16/07/2025 To 15/08/2025",
+        "x1": 1243.0,
+        "y1": 1038.0,
+        "x2": 1500.0,
+        "y2": 1068.0,
+        "cx": 1371.5,
+        "cy": 1053.0,
+        "width": 257.0,
+        "height": 30.0
+      },
+      {
+        "text": "Payment Detalls for MR UMESH PATIL (Credit Card No.4147XXXX5073)",
+        "x1": 52.0,
+        "y1": 1056.0,
+        "x2": 655.0,
+        "y2": 1090.0,
+        "cx": 353.5,
+        "cy": 1073.0,
+        "width": 603.0,
+        "height": 34.0
+      },
+      {
+        "text": "03/08/2025INDIEPAYMENT",
+        "x1": 55.0,
+        "y1": 1099.0,
+        "x2": 302.0,
+        "y2": 1123.0,
+        "cx": 178.5,
+        "cy": 1111.0,
+        "width": 247.0,
+        "height": 24.0
+      },
+      {
+        "text": "0",
+        "x1": 894.0,
+        "y1": 1095.0,
+        "x2": 923.0,
+        "y2": 1127.0,
+        "cx": 908.5,
+        "cy": 1111.0,
+        "width": 29.0,
+        "height": 32.0
+      },
+      {
+        "text": "22449.12CR",
+        "x1": 1067.0,
+        "y1": 1099.0,
+        "x2": 1179.0,
+        "y2": 1123.0,
+        "cx": 1123.0,
+        "cy": 1111.0,
+        "width": 112.0,
+        "height": 24.0
+      },
+      {
+        "text": "Total",
+        "x1": 55.0,
+        "y1": 1134.0,
+        "x2": 112.0,
+        "y2": 1160.0,
+        "cx": 83.5,
+        "cy": 1147.0,
+        "width": 57.0,
+        "height": 26.0
+      },
+      {
+        "text": "0",
+        "x1": 898.0,
+        "y1": 1132.0,
+        "x2": 919.0,
+        "y2": 1158.0,
+        "cx": 908.5,
+        "cy": 1145.0,
+        "width": 21.0,
+        "height": 26.0
+      },
+      {
+        "text": "22449.12",
+        "x1": 1052.0,
+        "y1": 1130.0,
+        "x2": 1145.0,
+        "y2": 1156.0,
+        "cx": 1098.5,
+        "cy": 1143.0,
+        "width": 93.0,
+        "height": 26.0
+      },
+      {
+        "text": "Statement Date",
+        "x1": 1274.0,
+        "y1": 1120.0,
+        "x2": 1440.0,
+        "y2": 1146.0,
+        "cx": 1357.0,
+        "cy": 1133.0,
+        "width": 166.0,
+        "height": 26.0
+      },
+      {
+        "text": "Purchases &Cash Transactions tor MR UMESH PATIL (Credit Card No.4147oxx5073)",
+        "x1": 60.0,
+        "y1": 1170.0,
+        "x2": 771.0,
+        "y2": 1193.0,
+        "cx": 415.5,
+        "cy": 1181.5,
+        "width": 711.0,
+        "height": 23.0
+      },
+      {
+        "text": "15/08/2025",
+        "x1": 1317.0,
+        "y1": 1165.0,
+        "x2": 1429.0,
+        "y2": 1191.0,
+        "cx": 1373.0,
+        "cy": 1178.0,
+        "width": 112.0,
+        "height": 26.0
+      },
+      {
+        "text": "23/07/2025SAWAIVEGCHAKAN N",
+        "x1": 55.0,
+        "y1": 1207.0,
+        "x2": 367.0,
+        "y2": 1231.0,
+        "cx": 211.0,
+        "cy": 1219.0,
+        "width": 312.0,
+        "height": 24.0
+      },
+      {
+        "text": "SUPCERXAKET",
+        "x1": 669.0,
+        "y1": 1200.0,
+        "x2": 817.0,
+        "y2": 1252.0,
+        "cx": 743.0,
+        "cy": 1226.0,
+        "width": 148.0,
+        "height": 52.0
+      },
+      {
+        "text": "30",
+        "x1": 893.0,
+        "y1": 1205.0,
+        "x2": 924.0,
+        "y2": 1236.0,
+        "cx": 908.5,
+        "cy": 1220.5,
+        "width": 31.0,
+        "height": 31.0
+      },
+      {
+        "text": "3000.00DR",
+        "x1": 1076.0,
+        "y1": 1207.0,
+        "x2": 1179.0,
+        "y2": 1231.0,
+        "cx": 1127.5,
+        "cy": 1219.0,
+        "width": 103.0,
+        "height": 24.0
+      },
+      {
+        "text": "Total Outstanding",
+        "x1": 1261.0,
+        "y1": 1228.0,
+        "x2": 1458.0,
+        "y2": 1269.0,
+        "cx": 1359.5,
+        "cy": 1248.5,
+        "width": 197.0,
+        "height": 41.0
+      },
+      {
+        "text": "24/07/2025",
+        "x1": 57.0,
+        "y1": 1257.0,
+        "x2": 160.0,
+        "y2": 1281.0,
+        "cx": 108.5,
+        "cy": 1269.0,
+        "width": 103.0,
+        "height": 24.0
+      },
+      {
+        "text": "HOTEL DREAMLAND UNIT OF MPUNE IN",
+        "x1": 155.0,
+        "y1": 1259.0,
+        "x2": 500.0,
+        "y2": 1276.0,
+        "cx": 327.5,
+        "cy": 1267.5,
+        "width": 345.0,
+        "height": 17.0
+      },
+      {
+        "text": "HOTELS&RESORTS",
+        "x1": 674.0,
+        "y1": 1257.0,
+        "x2": 848.0,
+        "y2": 1281.0,
+        "cx": 761.0,
+        "cy": 1269.0,
+        "width": 174.0,
+        "height": 24.0
+      },
+      {
+        "text": "25",
+        "x1": 893.0,
+        "y1": 1255.0,
+        "x2": 924.0,
+        "y2": 1285.0,
+        "cx": 908.5,
+        "cy": 1270.0,
+        "width": 31.0,
+        "height": 30.0
+      },
+      {
+        "text": "2500.00DR",
+        "x1": 1074.0,
+        "y1": 1255.0,
+        "x2": 1176.0,
+        "y2": 1281.0,
+        "cx": 1125.0,
+        "cy": 1268.0,
+        "width": 102.0,
+        "height": 26.0
+      },
+      {
+        "text": "(nduding Loans",
+        "x1": 1300.0,
+        "y1": 1264.0,
+        "x2": 1419.0,
+        "y2": 1281.0,
+        "cx": 1359.5,
+        "cy": 1272.5,
+        "width": 119.0,
+        "height": 17.0
+      },
+      {
+        "text": "25/07/2025",
+        "x1": 60.0,
+        "y1": 1288.0,
+        "x2": 160.0,
+        "y2": 1311.0,
+        "cx": 110.0,
+        "cy": 1299.5,
+        "width": 100.0,
+        "height": 23.0
+      },
+      {
+        "text": "HOTEL DREAMLAND UNIT OF MPUNE IN",
+        "x1": 155.0,
+        "y1": 1288.0,
+        "x2": 505.0,
+        "y2": 1311.0,
+        "cx": 330.0,
+        "cy": 1299.5,
+        "width": 350.0,
+        "height": 23.0
+      },
+      {
+        "text": "HOTELS&RESORTS",
+        "x1": 674.0,
+        "y1": 1288.0,
+        "x2": 848.0,
+        "y2": 1311.0,
+        "cx": 761.0,
+        "cy": 1299.5,
+        "width": 174.0,
+        "height": 23.0
+      },
+      {
+        "text": "6",
+        "x1": 898.0,
+        "y1": 1288.0,
+        "x2": 919.0,
+        "y2": 1311.0,
+        "cx": 908.5,
+        "cy": 1299.5,
+        "width": 21.0,
+        "height": 23.0
+      },
+      {
+        "text": "562.00DR",
+        "x1": 1086.0,
+        "y1": 1288.0,
+        "x2": 1176.0,
+        "y2": 1311.0,
+        "cx": 1131.0,
+        "cy": 1299.5,
+        "width": 90.0,
+        "height": 23.0
+      },
+      {
+        "text": "16146.37 DR",
+        "x1": 1307.0,
+        "y1": 1288.0,
+        "x2": 1438.0,
+        "y2": 1314.0,
+        "cx": 1372.5,
+        "cy": 1301.0,
+        "width": 131.0,
+        "height": 26.0
+      },
+      {
+        "text": "29/07/2025",
+        "x1": 57.0,
+        "y1": 1321.0,
+        "x2": 160.0,
+        "y2": 1344.0,
+        "cx": 108.5,
+        "cy": 1332.5,
+        "width": 103.0,
+        "height": 23.0
+      },
+      {
+        "text": "DNSU9W8ED2DUBLIN IE",
+        "x1": 162.0,
+        "y1": 1321.0,
+        "x2": 381.0,
+        "y2": 1344.0,
+        "cx": 271.5,
+        "cy": 1332.5,
+        "width": 219.0,
+        "height": 23.0
+      },
+      {
+        "text": "1",
+        "x1": 898.0,
+        "y1": 1321.0,
+        "x2": 917.0,
+        "y2": 1344.0,
+        "cx": 907.5,
+        "cy": 1332.5,
+        "width": 19.0,
+        "height": 23.0
+      },
+      {
+        "text": "87.14DR",
+        "x1": 1095.0,
+        "y1": 1318.0,
+        "x2": 1179.0,
+        "y2": 1344.0,
+        "cx": 1137.0,
+        "cy": 1331.0,
+        "width": 84.0,
+        "height": 26.0
+      },
+      {
+        "text": "01/08/2025",
+        "x1": 57.0,
+        "y1": 1354.0,
+        "x2": 160.0,
+        "y2": 1377.0,
+        "cx": 108.5,
+        "cy": 1365.5,
+        "width": 103.0,
+        "height": 23.0
+      },
+      {
+        "text": "33",
+        "x1": 893.0,
+        "y1": 1349.0,
+        "x2": 924.0,
+        "y2": 1380.0,
+        "cx": 908.5,
+        "cy": 1364.5,
+        "width": 31.0,
+        "height": 31.0
+      },
+      {
+        "text": "3307.18DR",
+        "x1": 1076.0,
+        "y1": 1351.0,
+        "x2": 1179.0,
+        "y2": 1377.0,
+        "cx": 1127.5,
+        "cy": 1364.0,
+        "width": 103.0,
+        "height": 26.0
+      },
+      {
+        "text": "06/08/2025",
+        "x1": 57.0,
+        "y1": 1384.0,
+        "x2": 157.0,
+        "y2": 1408.0,
+        "cx": 107.0,
+        "cy": 1396.0,
+        "width": 100.0,
+        "height": 24.0
+      },
+      {
+        "text": "HOTEL DREAMLAND UNIT OFMPUNE IN",
+        "x1": 162.0,
+        "y1": 1384.0,
+        "x2": 505.0,
+        "y2": 1408.0,
+        "cx": 333.5,
+        "cy": 1396.0,
+        "width": 343.0,
+        "height": 24.0
+      },
+      {
+        "text": "HOTELS&RESORTS",
+        "x1": 674.0,
+        "y1": 1384.0,
+        "x2": 848.0,
+        "y2": 1408.0,
+        "cx": 761.0,
+        "cy": 1396.0,
+        "width": 174.0,
+        "height": 24.0
+      },
+      {
+        "text": "25",
+        "x1": 893.0,
+        "y1": 1380.0,
+        "x2": 924.0,
+        "y2": 1410.0,
+        "cx": 908.5,
+        "cy": 1395.0,
+        "width": 31.0,
+        "height": 30.0
+      },
+      {
+        "text": "2500.00DR",
+        "x1": 1074.0,
+        "y1": 1384.0,
+        "x2": 1179.0,
+        "y2": 1408.0,
+        "cx": 1126.5,
+        "cy": 1396.0,
+        "width": 105.0,
+        "height": 24.0
+      },
+      {
+        "text": "eazydiner",
+        "x1": 1202.0,
+        "y1": 1401.0,
+        "x2": 1281.0,
+        "y2": 1424.0,
+        "cx": 1241.5,
+        "cy": 1412.5,
+        "width": 79.0,
+        "height": 23.0
+      },
+      {
+        "text": "Indusind Bank",
+        "x1": 1376.0,
+        "y1": 1403.0,
+        "x2": 1517.0,
+        "y2": 1427.0,
+        "cx": 1446.5,
+        "cy": 1415.0,
+        "width": 141.0,
+        "height": 24.0
+      },
+      {
+        "text": "06/08/2025",
+        "x1": 57.0,
+        "y1": 1417.0,
+        "x2": 162.0,
+        "y2": 1441.0,
+        "cx": 109.5,
+        "cy": 1429.0,
+        "width": 105.0,
+        "height": 24.0
+      },
+      {
+        "text": "ANAND VEG PUNE IN",
+        "x1": 160.0,
+        "y1": 1417.0,
+        "x2": 348.0,
+        "y2": 1441.0,
+        "cx": 254.0,
+        "cy": 1429.0,
+        "width": 188.0,
+        "height": 24.0
+      },
+      {
+        "text": "RESTAURANTS",
+        "x1": 674.0,
+        "y1": 1415.0,
+        "x2": 807.0,
+        "y2": 1441.0,
+        "cx": 740.5,
+        "cy": 1428.0,
+        "width": 133.0,
+        "height": 26.0
+      },
+      {
+        "text": "17",
+        "x1": 893.0,
+        "y1": 1413.0,
+        "x2": 924.0,
+        "y2": 1446.0,
+        "cx": 908.5,
+        "cy": 1429.5,
+        "width": 31.0,
+        "height": 33.0
+      },
+      {
+        "text": "1650.00DR",
+        "x1": 1076.0,
+        "y1": 1415.0,
+        "x2": 1179.0,
+        "y2": 1441.0,
+        "cx": 1127.5,
+        "cy": 1428.0,
+        "width": 103.0,
+        "height": 26.0
+      },
+      {
+        "text": "07/08/2025HOTEL DREAMLAND UNITOFMPUNE IN",
+        "x1": 55.0,
+        "y1": 1450.0,
+        "x2": 505.0,
+        "y2": 1474.0,
+        "cx": 280.0,
+        "cy": 1462.0,
+        "width": 450.0,
+        "height": 24.0
+      },
+      {
+        "text": "HOTELS&RESORTS",
+        "x1": 671.0,
+        "y1": 1448.0,
+        "x2": 848.0,
+        "y2": 1472.0,
+        "cx": 759.5,
+        "cy": 1460.0,
+        "width": 177.0,
+        "height": 24.0
+      },
+      {
+        "text": "25",
+        "x1": 893.0,
+        "y1": 1446.0,
+        "x2": 924.0,
+        "y2": 1476.0,
+        "cx": 908.5,
+        "cy": 1461.0,
+        "width": 31.0,
+        "height": 30.0
+      },
+      {
+        "text": "2500.00DR",
+        "x1": 1074.0,
+        "y1": 1448.0,
+        "x2": 1179.0,
+        "y2": 1474.0,
+        "cx": 1126.5,
+        "cy": 1461.0,
+        "width": 105.0,
+        "height": 26.0
+      },
+      {
+        "text": "Total",
+        "x1": 55.0,
+        "y1": 1483.0,
+        "x2": 112.0,
+        "y2": 1509.0,
+        "cx": 83.5,
+        "cy": 1496.0,
+        "width": 57.0,
+        "height": 26.0
+      },
+      {
+        "text": "162",
+        "x1": 888.0,
+        "y1": 1479.0,
+        "x2": 929.0,
+        "y2": 1507.0,
+        "cx": 908.5,
+        "cy": 1493.0,
+        "width": 41.0,
+        "height": 28.0
+      },
+      {
+        "text": "16106.32",
+        "x1": 1055.0,
+        "y1": 1481.0,
+        "x2": 1143.0,
+        "y2": 1507.0,
+        "cx": 1099.0,
+        "cy": 1494.0,
+        "width": 88.0,
+        "height": 26.0
+      },
+      {
+        "text": "Enjoy the Delicious",
+        "x1": 1210.0,
+        "y1": 1486.0,
+        "x2": 1457.0,
+        "y2": 1519.0,
+        "cx": 1333.5,
+        "cy": 1502.5,
+        "width": 247.0,
+        "height": 33.0
+      },
+      {
+        "text": "Interest &Other Charges tor MR UMESH PATIL (Credit Card No.4147XXXXXXX5073)",
+        "x1": 57.0,
+        "y1": 1516.0,
+        "x2": 719.0,
+        "y2": 1545.0,
+        "cx": 388.0,
+        "cy": 1530.5,
+        "width": 662.0,
+        "height": 29.0
+      },
+      {
+        "text": "Monsoon Drizzle",
+        "x1": 1207.0,
+        "y1": 1523.0,
+        "x2": 1443.0,
+        "y2": 1554.0,
+        "cx": 1325.0,
+        "cy": 1538.5,
+        "width": 236.0,
+        "height": 31.0
+      },
+      {
+        "text": "with EazyDiner",
+        "x1": 1207.0,
+        "y1": 1561.0,
+        "x2": 1414.0,
+        "y2": 1592.0,
+        "cx": 1310.5,
+        "cy": 1576.5,
+        "width": 207.0,
+        "height": 31.0
+      }
+    ],
+    "text": "INDUSIND BANK LEGEND CREDIT CARD STATEMENT Induslnd Bank Previous Balance lifestyle InduslndBan 22449.12DR + Turn Heads with Style - Purchases & Other Charges Exclusive Deals at Lifestyle 16146.37 + Get 500 off on a minimum spend of Rs 2499 Cash Advance Promo code:INDS500 |Offer valid till: 30Sep25 0.00 Payment &Other Credits Credit Credit Limit Available Credit Limit Cash Limit Available Cash Limit 22449.12 Summary 50000.00 33853.63 10000.00 10000.00 e Total Amount Due IMPORTANT MESSAGES: PROMOTIONALMESSAGES: Minimum Amount Due (MAD) calculation on your Indusind Bank Check your eligibility for Outstanding to EMl conversion Loan on 16146.00 DR Credit Card will be revised w.e.t 01st Aug25. For more details,visit Credit Card, Add-on Credit Card tor your loved ones and otner www.indusind.com exciting offers on your Indusind Bank Credit Card at inblins Minimum Amount Due MARKETINGMESSAGE1: MARKETING MESSAGE 2: 363.00 AjoGet Flat Rs.150 off with Indusind Bank Credit Cards.Promocode-ADNAJIO Link Eam Accelerated Reward Points of up to 10x on your Indusind Bank Credit Card spends on top brand vouchers.Link -https:/Aww.indusmoments.com/offers/AJlO2605 https./www.gyttr.com/indusindinstavouchers Payment Due Date 04/09/2025 ACCOUNT SUMMARY Statement Period Date Transaction Details Reward Amount (in) 16/07/2025 To 15/08/2025 Payment Detalls for MR UMESH PATIL (Credit Card No.4147XXXX5073) 03/08/2025INDIEPAYMENT 0 22449.12CR Total 0 22449.12 Statement Date Purchases &Cash Transactions tor MR UMESH PATIL (Credit Card No.4147oxx5073) 15/08/2025 23/07/2025SAWAIVEGCHAKAN N SUPCERXAKET 30 3000.00DR Total Outstanding 24/07/2025 HOTEL DREAMLAND UNIT OF MPUNE IN HOTELS&RESORTS 25 2500.00DR (nduding Loans 25/07/2025 HOTEL DREAMLAND UNIT OF MPUNE IN HOTELS&RESORTS 6 562.00DR 16146.37 DR 29/07/2025 DNSU9W8ED2DUBLIN IE 1 87.14DR 01/08/2025 33 3307.18DR 06/08/2025 HOTEL DREAMLAND UNIT OFMPUNE IN HOTELS&RESORTS 25 2500.00DR eazydiner Indusind Bank 06/08/2025 ANAND VEG PUNE IN RESTAURANTS 17 1650.00DR 07/08/2025HOTEL DREAMLAND UNITOFMPUNE IN HOTELS&RESORTS 25 2500.00DR Total 162 16106.32 Enjoy the Delicious Interest &Other Charges tor MR UMESH PATIL (Credit Card No.4147XXXXXXX5073) Monsoon Drizzle with EazyDiner",
+    "x1": 52.0,
+    "y1": 33.0,
+    "x2": 1526.0,
+    "y2": 1592.0,
+    "cy": 812.5,
+    "visual_lines": [
+      {
+        "line_id": 0,
+        "words": [
+          {
+            "text": "INDUSIND BANK LEGEND CREDIT CARD STATEMENT",
+            "x1": 55.0,
+            "y1": 61.0,
+            "x2": 605.0,
+            "y2": 85.0,
+            "cx": 330.0,
+            "cy": 73.0,
+            "width": 550.0,
+            "height": 24.0
+          },
+          {
+            "text": "Induslnd Bank",
+            "x1": 1121.0,
+            "y1": 33.0,
+            "x2": 1526.0,
+            "y2": 83.0,
+            "cx": 1323.5,
+            "cy": 58.0,
+            "width": 405.0,
+            "height": 50.0
+          }
+        ],
+        "text": "INDUSIND BANK LEGEND CREDIT CARD STATEMENT Induslnd Bank",
+        "x1": 55.0,
+        "y1": 33.0,
+        "x2": 1526.0,
+        "y2": 85.0,
+        "cy": 65.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 1,
+        "words": [
+          {
+            "text": "Previous Balance",
+            "x1": 1264.0,
+            "y1": 132.0,
+            "x2": 1455.0,
+            "y2": 163.0,
+            "cx": 1359.5,
+            "cy": 147.5,
+            "width": 191.0,
+            "height": 31.0
+          }
+        ],
+        "text": "Previous Balance",
+        "x1": 1264.0,
+        "y1": 132.0,
+        "x2": 1455.0,
+        "y2": 163.0,
+        "cy": 147.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 2,
+        "words": [
+          {
+            "text": "lifestyle",
+            "x1": 69.0,
+            "y1": 149.0,
+            "x2": 207.0,
+            "y2": 198.0,
+            "cx": 138.0,
+            "cy": 173.5,
+            "width": 138.0,
+            "height": 49.0
+          },
+          {
+            "text": "InduslndBan",
+            "x1": 983.0,
+            "y1": 149.0,
+            "x2": 1150.0,
+            "y2": 175.0,
+            "cx": 1066.5,
+            "cy": 162.0,
+            "width": 167.0,
+            "height": 26.0
+          }
+        ],
+        "text": "lifestyle InduslndBan",
+        "x1": 69.0,
+        "y1": 149.0,
+        "x2": 1150.0,
+        "y2": 198.0,
+        "cy": 167.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 3,
+        "words": [
+          {
+            "text": "22449.12DR",
+            "x1": 1305.0,
+            "y1": 179.0,
+            "x2": 1438.0,
+            "y2": 205.0,
+            "cx": 1371.5,
+            "cy": 192.0,
+            "width": 133.0,
+            "height": 26.0
+          }
+        ],
+        "text": "22449.12DR",
+        "x1": 1305.0,
+        "y1": 179.0,
+        "x2": 1438.0,
+        "y2": 205.0,
+        "cy": 192.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 4,
+        "words": [
+          {
+            "text": "+",
+            "x1": 1343.0,
+            "y1": 212.0,
+            "x2": 1383.0,
+            "y2": 255.0,
+            "cx": 1363.0,
+            "cy": 233.5,
+            "width": 40.0,
+            "height": 43.0
+          }
+        ],
+        "text": "+",
+        "x1": 1343.0,
+        "y1": 212.0,
+        "x2": 1383.0,
+        "y2": 255.0,
+        "cy": 233.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 5,
+        "words": [
+          {
+            "text": "Turn Heads with Style",
+            "x1": 157.0,
+            "y1": 243.0,
+            "x2": 567.0,
+            "y2": 283.0,
+            "cx": 362.0,
+            "cy": 263.0,
+            "width": 410.0,
+            "height": 40.0
+          },
+          {
+            "text": "-",
+            "x1": 557.0,
+            "y1": 255.0,
+            "x2": 583.0,
+            "y2": 276.0,
+            "cx": 570.0,
+            "cy": 265.5,
+            "width": 26.0,
+            "height": 21.0
+          },
+          {
+            "text": "Purchases & Other Charges",
+            "x1": 1207.0,
+            "y1": 252.0,
+            "x2": 1512.0,
+            "y2": 288.0,
+            "cx": 1359.5,
+            "cy": 270.0,
+            "width": 305.0,
+            "height": 36.0
+          }
+        ],
+        "text": "Turn Heads with Style - Purchases & Other Charges",
+        "x1": 157.0,
+        "y1": 243.0,
+        "x2": 1512.0,
+        "y2": 288.0,
+        "cy": 266.1666666666667,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 6,
+        "words": [
+          {
+            "text": "Exclusive Deals at Lifestyle",
+            "x1": 98.0,
+            "y1": 302.0,
+            "x2": 636.0,
+            "y2": 349.0,
+            "cx": 367.0,
+            "cy": 325.5,
+            "width": 538.0,
+            "height": 47.0
+          },
+          {
+            "text": "16146.37",
+            "x1": 1326.0,
+            "y1": 302.0,
+            "x2": 1419.0,
+            "y2": 328.0,
+            "cx": 1372.5,
+            "cy": 315.0,
+            "width": 93.0,
+            "height": 26.0
+          }
+        ],
+        "text": "Exclusive Deals at Lifestyle 16146.37",
+        "x1": 98.0,
+        "y1": 302.0,
+        "x2": 1419.0,
+        "y2": 349.0,
+        "cy": 320.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 7,
+        "words": [
+          {
+            "text": "+",
+            "x1": 1343.0,
+            "y1": 335.0,
+            "x2": 1383.0,
+            "y2": 377.0,
+            "cx": 1363.0,
+            "cy": 356.0,
+            "width": 40.0,
+            "height": 42.0
+          }
+        ],
+        "text": "+",
+        "x1": 1343.0,
+        "y1": 335.0,
+        "x2": 1383.0,
+        "y2": 377.0,
+        "cy": 356.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 8,
+        "words": [
+          {
+            "text": "Get 500 off on a minimum spend of Rs 2499",
+            "x1": 174.0,
+            "y1": 375.0,
+            "x2": 564.0,
+            "y2": 406.0,
+            "cx": 369.0,
+            "cy": 390.5,
+            "width": 390.0,
+            "height": 31.0
+          },
+          {
+            "text": "Cash Advance",
+            "x1": 1281.0,
+            "y1": 380.0,
+            "x2": 1433.0,
+            "y2": 406.0,
+            "cx": 1357.0,
+            "cy": 393.0,
+            "width": 152.0,
+            "height": 26.0
+          }
+        ],
+        "text": "Get 500 off on a minimum spend of Rs 2499 Cash Advance",
+        "x1": 174.0,
+        "y1": 375.0,
+        "x2": 1433.0,
+        "y2": 406.0,
+        "cy": 391.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 9,
+        "words": [
+          {
+            "text": "Promo code:INDS500 |Offer valid till: 30Sep25",
+            "x1": 162.0,
+            "y1": 417.0,
+            "x2": 576.0,
+            "y2": 441.0,
+            "cx": 369.0,
+            "cy": 429.0,
+            "width": 414.0,
+            "height": 24.0
+          },
+          {
+            "text": "0.00",
+            "x1": 1343.0,
+            "y1": 422.0,
+            "x2": 1400.0,
+            "y2": 458.0,
+            "cx": 1371.5,
+            "cy": 440.0,
+            "width": 57.0,
+            "height": 36.0
+          }
+        ],
+        "text": "Promo code:INDS500 |Offer valid till: 30Sep25 0.00",
+        "x1": 162.0,
+        "y1": 417.0,
+        "x2": 1400.0,
+        "y2": 458.0,
+        "cy": 434.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 10,
+        "words": [
+          {
+            "text": "Payment &Other Credits",
+            "x1": 1224.0,
+            "y1": 502.0,
+            "x2": 1493.0,
+            "y2": 533.0,
+            "cx": 1358.5,
+            "cy": 517.5,
+            "width": 269.0,
+            "height": 31.0
+          }
+        ],
+        "text": "Payment &Other Credits",
+        "x1": 1224.0,
+        "y1": 502.0,
+        "x2": 1493.0,
+        "y2": 533.0,
+        "cy": 517.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 11,
+        "words": [
+          {
+            "text": "Credit",
+            "x1": 79.0,
+            "y1": 549.0,
+            "x2": 150.0,
+            "y2": 575.0,
+            "cx": 114.5,
+            "cy": 562.0,
+            "width": 71.0,
+            "height": 26.0
+          },
+          {
+            "text": "Credit Limit",
+            "x1": 260.0,
+            "y1": 547.0,
+            "x2": 381.0,
+            "y2": 573.0,
+            "cx": 320.5,
+            "cy": 560.0,
+            "width": 121.0,
+            "height": 26.0
+          },
+          {
+            "text": "Available Credit Limit",
+            "x1": 462.0,
+            "y1": 545.0,
+            "x2": 690.0,
+            "y2": 575.0,
+            "cx": 576.0,
+            "cy": 560.0,
+            "width": 228.0,
+            "height": 30.0
+          },
+          {
+            "text": "Cash Limit",
+            "x1": 769.0,
+            "y1": 547.0,
+            "x2": 879.0,
+            "y2": 573.0,
+            "cx": 824.0,
+            "cy": 560.0,
+            "width": 110.0,
+            "height": 26.0
+          },
+          {
+            "text": "Available Cash Limit",
+            "x1": 957.0,
+            "y1": 545.0,
+            "x2": 1174.0,
+            "y2": 575.0,
+            "cx": 1065.5,
+            "cy": 560.0,
+            "width": 217.0,
+            "height": 30.0
+          },
+          {
+            "text": "22449.12",
+            "x1": 1318.0,
+            "y1": 542.0,
+            "x2": 1422.0,
+            "y2": 581.0,
+            "cx": 1370.0,
+            "cy": 561.5,
+            "width": 104.0,
+            "height": 39.0
+          }
+        ],
+        "text": "Credit Credit Limit Available Credit Limit Cash Limit Available Cash Limit 22449.12",
+        "x1": 79.0,
+        "y1": 542.0,
+        "x2": 1422.0,
+        "y2": 581.0,
+        "cy": 560.5833333333334,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 12,
+        "words": [
+          {
+            "text": "Summary",
+            "x1": 61.0,
+            "y1": 568.0,
+            "x2": 170.0,
+            "y2": 609.0,
+            "cx": 115.5,
+            "cy": 588.5,
+            "width": 109.0,
+            "height": 41.0
+          },
+          {
+            "text": "50000.00",
+            "x1": 286.0,
+            "y1": 592.0,
+            "x2": 379.0,
+            "y2": 618.0,
+            "cx": 332.5,
+            "cy": 605.0,
+            "width": 93.0,
+            "height": 26.0
+          },
+          {
+            "text": "33853.63",
+            "x1": 543.0,
+            "y1": 592.0,
+            "x2": 638.0,
+            "y2": 616.0,
+            "cx": 590.5,
+            "cy": 604.0,
+            "width": 95.0,
+            "height": 24.0
+          },
+          {
+            "text": "10000.00",
+            "x1": 788.0,
+            "y1": 592.0,
+            "x2": 886.0,
+            "y2": 616.0,
+            "cx": 837.0,
+            "cy": 604.0,
+            "width": 98.0,
+            "height": 24.0
+          },
+          {
+            "text": "10000.00",
+            "x1": 1029.0,
+            "y1": 587.0,
+            "x2": 1129.0,
+            "y2": 620.0,
+            "cx": 1079.0,
+            "cy": 603.5,
+            "width": 100.0,
+            "height": 33.0
+          },
+          {
+            "text": "e",
+            "x1": 1348.0,
+            "y1": 585.0,
+            "x2": 1381.0,
+            "y2": 620.0,
+            "cx": 1364.5,
+            "cy": 602.5,
+            "width": 33.0,
+            "height": 35.0
+          }
+        ],
+        "text": "Summary 50000.00 33853.63 10000.00 10000.00 e",
+        "x1": 61.0,
+        "y1": 568.0,
+        "x2": 1381.0,
+        "y2": 620.0,
+        "cy": 601.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 13,
+        "words": [
+          {
+            "text": "Total Amount Due",
+            "x1": 1262.0,
+            "y1": 625.0,
+            "x2": 1455.0,
+            "y2": 656.0,
+            "cx": 1358.5,
+            "cy": 640.5,
+            "width": 193.0,
+            "height": 31.0
+          }
+        ],
+        "text": "Total Amount Due",
+        "x1": 1262.0,
+        "y1": 625.0,
+        "x2": 1455.0,
+        "y2": 656.0,
+        "cy": 640.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 14,
+        "words": [
+          {
+            "text": "IMPORTANT MESSAGES:",
+            "x1": 57.0,
+            "y1": 653.0,
+            "x2": 291.0,
+            "y2": 682.0,
+            "cx": 174.0,
+            "cy": 667.5,
+            "width": 234.0,
+            "height": 29.0
+          },
+          {
+            "text": "PROMOTIONALMESSAGES:",
+            "x1": 638.0,
+            "y1": 658.0,
+            "x2": 895.0,
+            "y2": 682.0,
+            "cx": 766.5,
+            "cy": 670.0,
+            "width": 257.0,
+            "height": 24.0
+          }
+        ],
+        "text": "IMPORTANT MESSAGES: PROMOTIONALMESSAGES:",
+        "x1": 57.0,
+        "y1": 653.0,
+        "x2": 895.0,
+        "y2": 682.0,
+        "cy": 668.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 15,
+        "words": [
+          {
+            "text": "Minimum Amount Due (MAD) calculation on your Indusind Bank",
+            "x1": 62.0,
+            "y1": 674.0,
+            "x2": 567.0,
+            "y2": 705.0,
+            "cx": 314.5,
+            "cy": 689.5,
+            "width": 505.0,
+            "height": 31.0
+          },
+          {
+            "text": "Check your eligibility for Outstanding to EMl conversion Loan on",
+            "x1": 640.0,
+            "y1": 679.0,
+            "x2": 1145.0,
+            "y2": 703.0,
+            "cx": 892.5,
+            "cy": 691.0,
+            "width": 505.0,
+            "height": 24.0
+          },
+          {
+            "text": "16146.00 DR",
+            "x1": 1305.0,
+            "y1": 674.0,
+            "x2": 1440.0,
+            "y2": 700.0,
+            "cx": 1372.5,
+            "cy": 687.0,
+            "width": 135.0,
+            "height": 26.0
+          }
+        ],
+        "text": "Minimum Amount Due (MAD) calculation on your Indusind Bank Check your eligibility for Outstanding to EMl conversion Loan on 16146.00 DR",
+        "x1": 62.0,
+        "y1": 674.0,
+        "x2": 1440.0,
+        "y2": 705.0,
+        "cy": 689.1666666666666,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 16,
+        "words": [
+          {
+            "text": "Credit Card will be revised w.e.t 01st Aug25. For more details,visit",
+            "x1": 64.0,
+            "y1": 700.0,
+            "x2": 588.0,
+            "y2": 724.0,
+            "cx": 326.0,
+            "cy": 712.0,
+            "width": 524.0,
+            "height": 24.0
+          },
+          {
+            "text": "Credit Card, Add-on Credit Card tor your loved ones and otner",
+            "x1": 643.0,
+            "y1": 700.0,
+            "x2": 1129.0,
+            "y2": 724.0,
+            "cx": 886.0,
+            "cy": 712.0,
+            "width": 486.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Credit Card will be revised w.e.t 01st Aug25. For more details,visit Credit Card, Add-on Credit Card tor your loved ones and otner",
+        "x1": 64.0,
+        "y1": 700.0,
+        "x2": 1129.0,
+        "y2": 724.0,
+        "cy": 712.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 17,
+        "words": [
+          {
+            "text": "www.indusind.com",
+            "x1": 64.0,
+            "y1": 719.0,
+            "x2": 217.0,
+            "y2": 743.0,
+            "cx": 140.5,
+            "cy": 731.0,
+            "width": 153.0,
+            "height": 24.0
+          },
+          {
+            "text": "exciting offers on your Indusind Bank Credit Card at inblins",
+            "x1": 640.0,
+            "y1": 719.0,
+            "x2": 1114.0,
+            "y2": 743.0,
+            "cx": 877.0,
+            "cy": 731.0,
+            "width": 474.0,
+            "height": 24.0
+          }
+        ],
+        "text": "www.indusind.com exciting offers on your Indusind Bank Credit Card at inblins",
+        "x1": 64.0,
+        "y1": 719.0,
+        "x2": 1114.0,
+        "y2": 743.0,
+        "cy": 731.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 18,
+        "words": [
+          {
+            "text": "Minimum Amount Due",
+            "x1": 1243.0,
+            "y1": 747.0,
+            "x2": 1476.0,
+            "y2": 776.0,
+            "cx": 1359.5,
+            "cy": 761.5,
+            "width": 233.0,
+            "height": 29.0
+          }
+        ],
+        "text": "Minimum Amount Due",
+        "x1": 1243.0,
+        "y1": 747.0,
+        "x2": 1476.0,
+        "y2": 776.0,
+        "cy": 761.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 19,
+        "words": [
+          {
+            "text": "MARKETINGMESSAGE1:",
+            "x1": 62.0,
+            "y1": 804.0,
+            "x2": 298.0,
+            "y2": 840.0,
+            "cx": 180.0,
+            "cy": 822.0,
+            "width": 236.0,
+            "height": 36.0
+          },
+          {
+            "text": "MARKETING MESSAGE 2:",
+            "x1": 640.0,
+            "y1": 811.0,
+            "x2": 874.0,
+            "y2": 835.0,
+            "cx": 757.0,
+            "cy": 823.0,
+            "width": 234.0,
+            "height": 24.0
+          },
+          {
+            "text": "363.00",
+            "x1": 1336.0,
+            "y1": 797.0,
+            "x2": 1410.0,
+            "y2": 823.0,
+            "cx": 1373.0,
+            "cy": 810.0,
+            "width": 74.0,
+            "height": 26.0
+          }
+        ],
+        "text": "MARKETINGMESSAGE1: MARKETING MESSAGE 2: 363.00",
+        "x1": 62.0,
+        "y1": 797.0,
+        "x2": 1410.0,
+        "y2": 840.0,
+        "cy": 818.3333333333334,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 20,
+        "words": [
+          {
+            "text": "AjoGet Flat Rs.150 off with Indusind Bank Credit",
+            "x1": 64.0,
+            "y1": 830.0,
+            "x2": 462.0,
+            "y2": 854.0,
+            "cx": 263.0,
+            "cy": 842.0,
+            "width": 398.0,
+            "height": 24.0
+          },
+          {
+            "text": "Cards.Promocode-ADNAJIO Link",
+            "x1": 64.0,
+            "y1": 849.0,
+            "x2": 343.0,
+            "y2": 873.0,
+            "cx": 203.5,
+            "cy": 861.0,
+            "width": 279.0,
+            "height": 24.0
+          },
+          {
+            "text": "Eam Accelerated Reward Points of up to 10x on your Indusind Bank",
+            "x1": 640.0,
+            "y1": 832.0,
+            "x2": 1176.0,
+            "y2": 856.0,
+            "cx": 908.0,
+            "cy": 844.0,
+            "width": 536.0,
+            "height": 24.0
+          },
+          {
+            "text": "Credit Card spends on top brand vouchers.Link",
+            "x1": 640.0,
+            "y1": 851.0,
+            "x2": 1019.0,
+            "y2": 875.0,
+            "cx": 829.5,
+            "cy": 863.0,
+            "width": 379.0,
+            "height": 24.0
+          }
+        ],
+        "text": "AjoGet Flat Rs.150 off with Indusind Bank Credit Cards.Promocode-ADNAJIO Link Eam Accelerated Reward Points of up to 10x on your Indusind Bank Credit Card spends on top brand vouchers.Link",
+        "x1": 64.0,
+        "y1": 830.0,
+        "x2": 1176.0,
+        "y2": 875.0,
+        "cy": 852.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 21,
+        "words": [
+          {
+            "text": "-https:/Aww.indusmoments.com/offers/AJlO2605",
+            "x1": 67.0,
+            "y1": 873.0,
+            "x2": 455.0,
+            "y2": 896.0,
+            "cx": 261.0,
+            "cy": 884.5,
+            "width": 388.0,
+            "height": 23.0
+          },
+          {
+            "text": "https./www.gyttr.com/indusindinstavouchers",
+            "x1": 636.0,
+            "y1": 870.0,
+            "x2": 993.0,
+            "y2": 899.0,
+            "cx": 814.5,
+            "cy": 884.5,
+            "width": 357.0,
+            "height": 29.0
+          },
+          {
+            "text": "Payment Due Date",
+            "x1": 1257.0,
+            "y1": 873.0,
+            "x2": 1460.0,
+            "y2": 903.0,
+            "cx": 1358.5,
+            "cy": 888.0,
+            "width": 203.0,
+            "height": 30.0
+          }
+        ],
+        "text": "-https:/Aww.indusmoments.com/offers/AJlO2605 https./www.gyttr.com/indusindinstavouchers Payment Due Date",
+        "x1": 67.0,
+        "y1": 870.0,
+        "x2": 1460.0,
+        "y2": 903.0,
+        "cy": 885.6666666666666,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 22,
+        "words": [
+          {
+            "text": "04/09/2025",
+            "x1": 1312.0,
+            "y1": 917.0,
+            "x2": 1426.0,
+            "y2": 941.0,
+            "cx": 1369.0,
+            "cy": 929.0,
+            "width": 114.0,
+            "height": 24.0
+          }
+        ],
+        "text": "04/09/2025",
+        "x1": 1312.0,
+        "y1": 917.0,
+        "x2": 1426.0,
+        "y2": 941.0,
+        "cy": 929.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 23,
+        "words": [
+          {
+            "text": "ACCOUNT SUMMARY",
+            "x1": 505.0,
+            "y1": 969.0,
+            "x2": 721.0,
+            "y2": 993.0,
+            "cx": 613.0,
+            "cy": 981.0,
+            "width": 216.0,
+            "height": 24.0
+          }
+        ],
+        "text": "ACCOUNT SUMMARY",
+        "x1": 505.0,
+        "y1": 969.0,
+        "x2": 721.0,
+        "y2": 993.0,
+        "cy": 981.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 24,
+        "words": [
+          {
+            "text": "Statement Period",
+            "x1": 1264.0,
+            "y1": 995.0,
+            "x2": 1452.0,
+            "y2": 1026.0,
+            "cx": 1358.0,
+            "cy": 1010.5,
+            "width": 188.0,
+            "height": 31.0
+          }
+        ],
+        "text": "Statement Period",
+        "x1": 1264.0,
+        "y1": 995.0,
+        "x2": 1452.0,
+        "y2": 1026.0,
+        "cy": 1010.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 25,
+        "words": [
+          {
+            "text": "Date",
+            "x1": 86.0,
+            "y1": 1028.0,
+            "x2": 131.0,
+            "y2": 1054.0,
+            "cx": 108.5,
+            "cy": 1041.0,
+            "width": 45.0,
+            "height": 26.0
+          },
+          {
+            "text": "Transaction Details",
+            "x1": 307.0,
+            "y1": 1031.0,
+            "x2": 476.0,
+            "y2": 1054.0,
+            "cx": 391.5,
+            "cy": 1042.5,
+            "width": 169.0,
+            "height": 23.0
+          },
+          {
+            "text": "Reward",
+            "x1": 859.0,
+            "y1": 1013.0,
+            "x2": 943.0,
+            "y2": 1045.0,
+            "cx": 901.0,
+            "cy": 1029.0,
+            "width": 84.0,
+            "height": 32.0
+          },
+          {
+            "text": "Amount (in)",
+            "x1": 1002.0,
+            "y1": 1028.0,
+            "x2": 1126.0,
+            "y2": 1054.0,
+            "cx": 1064.0,
+            "cy": 1041.0,
+            "width": 124.0,
+            "height": 26.0
+          },
+          {
+            "text": "16/07/2025 To 15/08/2025",
+            "x1": 1243.0,
+            "y1": 1038.0,
+            "x2": 1500.0,
+            "y2": 1068.0,
+            "cx": 1371.5,
+            "cy": 1053.0,
+            "width": 257.0,
+            "height": 30.0
+          }
+        ],
+        "text": "Date Transaction Details Reward Amount (in) 16/07/2025 To 15/08/2025",
+        "x1": 86.0,
+        "y1": 1013.0,
+        "x2": 1500.0,
+        "y2": 1068.0,
+        "cy": 1041.3,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 26,
+        "words": [
+          {
+            "text": "Payment Detalls for MR UMESH PATIL (Credit Card No.4147XXXX5073)",
+            "x1": 52.0,
+            "y1": 1056.0,
+            "x2": 655.0,
+            "y2": 1090.0,
+            "cx": 353.5,
+            "cy": 1073.0,
+            "width": 603.0,
+            "height": 34.0
+          }
+        ],
+        "text": "Payment Detalls for MR UMESH PATIL (Credit Card No.4147XXXX5073)",
+        "x1": 52.0,
+        "y1": 1056.0,
+        "x2": 655.0,
+        "y2": 1090.0,
+        "cy": 1073.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 27,
+        "words": [
+          {
+            "text": "03/08/2025INDIEPAYMENT",
+            "x1": 55.0,
+            "y1": 1099.0,
+            "x2": 302.0,
+            "y2": 1123.0,
+            "cx": 178.5,
+            "cy": 1111.0,
+            "width": 247.0,
+            "height": 24.0
+          },
+          {
+            "text": "0",
+            "x1": 894.0,
+            "y1": 1095.0,
+            "x2": 923.0,
+            "y2": 1127.0,
+            "cx": 908.5,
+            "cy": 1111.0,
+            "width": 29.0,
+            "height": 32.0
+          },
+          {
+            "text": "22449.12CR",
+            "x1": 1067.0,
+            "y1": 1099.0,
+            "x2": 1179.0,
+            "y2": 1123.0,
+            "cx": 1123.0,
+            "cy": 1111.0,
+            "width": 112.0,
+            "height": 24.0
+          }
+        ],
+        "text": "03/08/2025INDIEPAYMENT 0 22449.12CR",
+        "x1": 55.0,
+        "y1": 1095.0,
+        "x2": 1179.0,
+        "y2": 1127.0,
+        "cy": 1111.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 28,
+        "words": [
+          {
+            "text": "Total",
+            "x1": 55.0,
+            "y1": 1134.0,
+            "x2": 112.0,
+            "y2": 1160.0,
+            "cx": 83.5,
+            "cy": 1147.0,
+            "width": 57.0,
+            "height": 26.0
+          },
+          {
+            "text": "0",
+            "x1": 898.0,
+            "y1": 1132.0,
+            "x2": 919.0,
+            "y2": 1158.0,
+            "cx": 908.5,
+            "cy": 1145.0,
+            "width": 21.0,
+            "height": 26.0
+          },
+          {
+            "text": "22449.12",
+            "x1": 1052.0,
+            "y1": 1130.0,
+            "x2": 1145.0,
+            "y2": 1156.0,
+            "cx": 1098.5,
+            "cy": 1143.0,
+            "width": 93.0,
+            "height": 26.0
+          },
+          {
+            "text": "Statement Date",
+            "x1": 1274.0,
+            "y1": 1120.0,
+            "x2": 1440.0,
+            "y2": 1146.0,
+            "cx": 1357.0,
+            "cy": 1133.0,
+            "width": 166.0,
+            "height": 26.0
+          }
+        ],
+        "text": "Total 0 22449.12 Statement Date",
+        "x1": 55.0,
+        "y1": 1120.0,
+        "x2": 1440.0,
+        "y2": 1160.0,
+        "cy": 1142.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 29,
+        "words": [
+          {
+            "text": "Purchases &Cash Transactions tor MR UMESH PATIL (Credit Card No.4147oxx5073)",
+            "x1": 60.0,
+            "y1": 1170.0,
+            "x2": 771.0,
+            "y2": 1193.0,
+            "cx": 415.5,
+            "cy": 1181.5,
+            "width": 711.0,
+            "height": 23.0
+          },
+          {
+            "text": "15/08/2025",
+            "x1": 1317.0,
+            "y1": 1165.0,
+            "x2": 1429.0,
+            "y2": 1191.0,
+            "cx": 1373.0,
+            "cy": 1178.0,
+            "width": 112.0,
+            "height": 26.0
+          }
+        ],
+        "text": "Purchases &Cash Transactions tor MR UMESH PATIL (Credit Card No.4147oxx5073) 15/08/2025",
+        "x1": 60.0,
+        "y1": 1165.0,
+        "x2": 1429.0,
+        "y2": 1193.0,
+        "cy": 1179.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 30,
+        "words": [
+          {
+            "text": "23/07/2025SAWAIVEGCHAKAN N",
+            "x1": 55.0,
+            "y1": 1207.0,
+            "x2": 367.0,
+            "y2": 1231.0,
+            "cx": 211.0,
+            "cy": 1219.0,
+            "width": 312.0,
+            "height": 24.0
+          },
+          {
+            "text": "SUPCERXAKET",
+            "x1": 669.0,
+            "y1": 1200.0,
+            "x2": 817.0,
+            "y2": 1252.0,
+            "cx": 743.0,
+            "cy": 1226.0,
+            "width": 148.0,
+            "height": 52.0
+          },
+          {
+            "text": "30",
+            "x1": 893.0,
+            "y1": 1205.0,
+            "x2": 924.0,
+            "y2": 1236.0,
+            "cx": 908.5,
+            "cy": 1220.5,
+            "width": 31.0,
+            "height": 31.0
+          },
+          {
+            "text": "3000.00DR",
+            "x1": 1076.0,
+            "y1": 1207.0,
+            "x2": 1179.0,
+            "y2": 1231.0,
+            "cx": 1127.5,
+            "cy": 1219.0,
+            "width": 103.0,
+            "height": 24.0
+          }
+        ],
+        "text": "23/07/2025SAWAIVEGCHAKAN N SUPCERXAKET 30 3000.00DR",
+        "x1": 55.0,
+        "y1": 1200.0,
+        "x2": 1179.0,
+        "y2": 1252.0,
+        "cy": 1221.125,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 31,
+        "words": [
+          {
+            "text": "Total Outstanding",
+            "x1": 1261.0,
+            "y1": 1228.0,
+            "x2": 1458.0,
+            "y2": 1269.0,
+            "cx": 1359.5,
+            "cy": 1248.5,
+            "width": 197.0,
+            "height": 41.0
+          }
+        ],
+        "text": "Total Outstanding",
+        "x1": 1261.0,
+        "y1": 1228.0,
+        "x2": 1458.0,
+        "y2": 1269.0,
+        "cy": 1248.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 32,
+        "words": [
+          {
+            "text": "24/07/2025",
+            "x1": 57.0,
+            "y1": 1257.0,
+            "x2": 160.0,
+            "y2": 1281.0,
+            "cx": 108.5,
+            "cy": 1269.0,
+            "width": 103.0,
+            "height": 24.0
+          },
+          {
+            "text": "HOTEL DREAMLAND UNIT OF MPUNE IN",
+            "x1": 155.0,
+            "y1": 1259.0,
+            "x2": 500.0,
+            "y2": 1276.0,
+            "cx": 327.5,
+            "cy": 1267.5,
+            "width": 345.0,
+            "height": 17.0
+          },
+          {
+            "text": "HOTELS&RESORTS",
+            "x1": 674.0,
+            "y1": 1257.0,
+            "x2": 848.0,
+            "y2": 1281.0,
+            "cx": 761.0,
+            "cy": 1269.0,
+            "width": 174.0,
+            "height": 24.0
+          },
+          {
+            "text": "25",
+            "x1": 893.0,
+            "y1": 1255.0,
+            "x2": 924.0,
+            "y2": 1285.0,
+            "cx": 908.5,
+            "cy": 1270.0,
+            "width": 31.0,
+            "height": 30.0
+          },
+          {
+            "text": "2500.00DR",
+            "x1": 1074.0,
+            "y1": 1255.0,
+            "x2": 1176.0,
+            "y2": 1281.0,
+            "cx": 1125.0,
+            "cy": 1268.0,
+            "width": 102.0,
+            "height": 26.0
+          },
+          {
+            "text": "(nduding Loans",
+            "x1": 1300.0,
+            "y1": 1264.0,
+            "x2": 1419.0,
+            "y2": 1281.0,
+            "cx": 1359.5,
+            "cy": 1272.5,
+            "width": 119.0,
+            "height": 17.0
+          }
+        ],
+        "text": "24/07/2025 HOTEL DREAMLAND UNIT OF MPUNE IN HOTELS&RESORTS 25 2500.00DR (nduding Loans",
+        "x1": 57.0,
+        "y1": 1255.0,
+        "x2": 1419.0,
+        "y2": 1285.0,
+        "cy": 1269.3333333333333,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 33,
+        "words": [
+          {
+            "text": "25/07/2025",
+            "x1": 60.0,
+            "y1": 1288.0,
+            "x2": 160.0,
+            "y2": 1311.0,
+            "cx": 110.0,
+            "cy": 1299.5,
+            "width": 100.0,
+            "height": 23.0
+          },
+          {
+            "text": "HOTEL DREAMLAND UNIT OF MPUNE IN",
+            "x1": 155.0,
+            "y1": 1288.0,
+            "x2": 505.0,
+            "y2": 1311.0,
+            "cx": 330.0,
+            "cy": 1299.5,
+            "width": 350.0,
+            "height": 23.0
+          },
+          {
+            "text": "HOTELS&RESORTS",
+            "x1": 674.0,
+            "y1": 1288.0,
+            "x2": 848.0,
+            "y2": 1311.0,
+            "cx": 761.0,
+            "cy": 1299.5,
+            "width": 174.0,
+            "height": 23.0
+          },
+          {
+            "text": "6",
+            "x1": 898.0,
+            "y1": 1288.0,
+            "x2": 919.0,
+            "y2": 1311.0,
+            "cx": 908.5,
+            "cy": 1299.5,
+            "width": 21.0,
+            "height": 23.0
+          },
+          {
+            "text": "562.00DR",
+            "x1": 1086.0,
+            "y1": 1288.0,
+            "x2": 1176.0,
+            "y2": 1311.0,
+            "cx": 1131.0,
+            "cy": 1299.5,
+            "width": 90.0,
+            "height": 23.0
+          },
+          {
+            "text": "16146.37 DR",
+            "x1": 1307.0,
+            "y1": 1288.0,
+            "x2": 1438.0,
+            "y2": 1314.0,
+            "cx": 1372.5,
+            "cy": 1301.0,
+            "width": 131.0,
+            "height": 26.0
+          }
+        ],
+        "text": "25/07/2025 HOTEL DREAMLAND UNIT OF MPUNE IN HOTELS&RESORTS 6 562.00DR 16146.37 DR",
+        "x1": 60.0,
+        "y1": 1288.0,
+        "x2": 1438.0,
+        "y2": 1314.0,
+        "cy": 1299.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 34,
+        "words": [
+          {
+            "text": "29/07/2025",
+            "x1": 57.0,
+            "y1": 1321.0,
+            "x2": 160.0,
+            "y2": 1344.0,
+            "cx": 108.5,
+            "cy": 1332.5,
+            "width": 103.0,
+            "height": 23.0
+          },
+          {
+            "text": "DNSU9W8ED2DUBLIN IE",
+            "x1": 162.0,
+            "y1": 1321.0,
+            "x2": 381.0,
+            "y2": 1344.0,
+            "cx": 271.5,
+            "cy": 1332.5,
+            "width": 219.0,
+            "height": 23.0
+          },
+          {
+            "text": "1",
+            "x1": 898.0,
+            "y1": 1321.0,
+            "x2": 917.0,
+            "y2": 1344.0,
+            "cx": 907.5,
+            "cy": 1332.5,
+            "width": 19.0,
+            "height": 23.0
+          },
+          {
+            "text": "87.14DR",
+            "x1": 1095.0,
+            "y1": 1318.0,
+            "x2": 1179.0,
+            "y2": 1344.0,
+            "cx": 1137.0,
+            "cy": 1331.0,
+            "width": 84.0,
+            "height": 26.0
+          }
+        ],
+        "text": "29/07/2025 DNSU9W8ED2DUBLIN IE 1 87.14DR",
+        "x1": 57.0,
+        "y1": 1318.0,
+        "x2": 1179.0,
+        "y2": 1344.0,
+        "cy": 1332.125,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 35,
+        "words": [
+          {
+            "text": "01/08/2025",
+            "x1": 57.0,
+            "y1": 1354.0,
+            "x2": 160.0,
+            "y2": 1377.0,
+            "cx": 108.5,
+            "cy": 1365.5,
+            "width": 103.0,
+            "height": 23.0
+          },
+          {
+            "text": "33",
+            "x1": 893.0,
+            "y1": 1349.0,
+            "x2": 924.0,
+            "y2": 1380.0,
+            "cx": 908.5,
+            "cy": 1364.5,
+            "width": 31.0,
+            "height": 31.0
+          },
+          {
+            "text": "3307.18DR",
+            "x1": 1076.0,
+            "y1": 1351.0,
+            "x2": 1179.0,
+            "y2": 1377.0,
+            "cx": 1127.5,
+            "cy": 1364.0,
+            "width": 103.0,
+            "height": 26.0
+          }
+        ],
+        "text": "01/08/2025 33 3307.18DR",
+        "x1": 57.0,
+        "y1": 1349.0,
+        "x2": 1179.0,
+        "y2": 1380.0,
+        "cy": 1364.6666666666667,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 36,
+        "words": [
+          {
+            "text": "06/08/2025",
+            "x1": 57.0,
+            "y1": 1384.0,
+            "x2": 157.0,
+            "y2": 1408.0,
+            "cx": 107.0,
+            "cy": 1396.0,
+            "width": 100.0,
+            "height": 24.0
+          },
+          {
+            "text": "HOTEL DREAMLAND UNIT OFMPUNE IN",
+            "x1": 162.0,
+            "y1": 1384.0,
+            "x2": 505.0,
+            "y2": 1408.0,
+            "cx": 333.5,
+            "cy": 1396.0,
+            "width": 343.0,
+            "height": 24.0
+          },
+          {
+            "text": "HOTELS&RESORTS",
+            "x1": 674.0,
+            "y1": 1384.0,
+            "x2": 848.0,
+            "y2": 1408.0,
+            "cx": 761.0,
+            "cy": 1396.0,
+            "width": 174.0,
+            "height": 24.0
+          },
+          {
+            "text": "25",
+            "x1": 893.0,
+            "y1": 1380.0,
+            "x2": 924.0,
+            "y2": 1410.0,
+            "cx": 908.5,
+            "cy": 1395.0,
+            "width": 31.0,
+            "height": 30.0
+          },
+          {
+            "text": "2500.00DR",
+            "x1": 1074.0,
+            "y1": 1384.0,
+            "x2": 1179.0,
+            "y2": 1408.0,
+            "cx": 1126.5,
+            "cy": 1396.0,
+            "width": 105.0,
+            "height": 24.0
+          },
+          {
+            "text": "eazydiner",
+            "x1": 1202.0,
+            "y1": 1401.0,
+            "x2": 1281.0,
+            "y2": 1424.0,
+            "cx": 1241.5,
+            "cy": 1412.5,
+            "width": 79.0,
+            "height": 23.0
+          },
+          {
+            "text": "Indusind Bank",
+            "x1": 1376.0,
+            "y1": 1403.0,
+            "x2": 1517.0,
+            "y2": 1427.0,
+            "cx": 1446.5,
+            "cy": 1415.0,
+            "width": 141.0,
+            "height": 24.0
+          }
+        ],
+        "text": "06/08/2025 HOTEL DREAMLAND UNIT OFMPUNE IN HOTELS&RESORTS 25 2500.00DR eazydiner Indusind Bank",
+        "x1": 57.0,
+        "y1": 1380.0,
+        "x2": 1517.0,
+        "y2": 1427.0,
+        "cy": 1400.9285714285713,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 37,
+        "words": [
+          {
+            "text": "06/08/2025",
+            "x1": 57.0,
+            "y1": 1417.0,
+            "x2": 162.0,
+            "y2": 1441.0,
+            "cx": 109.5,
+            "cy": 1429.0,
+            "width": 105.0,
+            "height": 24.0
+          },
+          {
+            "text": "ANAND VEG PUNE IN",
+            "x1": 160.0,
+            "y1": 1417.0,
+            "x2": 348.0,
+            "y2": 1441.0,
+            "cx": 254.0,
+            "cy": 1429.0,
+            "width": 188.0,
+            "height": 24.0
+          },
+          {
+            "text": "RESTAURANTS",
+            "x1": 674.0,
+            "y1": 1415.0,
+            "x2": 807.0,
+            "y2": 1441.0,
+            "cx": 740.5,
+            "cy": 1428.0,
+            "width": 133.0,
+            "height": 26.0
+          },
+          {
+            "text": "17",
+            "x1": 893.0,
+            "y1": 1413.0,
+            "x2": 924.0,
+            "y2": 1446.0,
+            "cx": 908.5,
+            "cy": 1429.5,
+            "width": 31.0,
+            "height": 33.0
+          },
+          {
+            "text": "1650.00DR",
+            "x1": 1076.0,
+            "y1": 1415.0,
+            "x2": 1179.0,
+            "y2": 1441.0,
+            "cx": 1127.5,
+            "cy": 1428.0,
+            "width": 103.0,
+            "height": 26.0
+          }
+        ],
+        "text": "06/08/2025 ANAND VEG PUNE IN RESTAURANTS 17 1650.00DR",
+        "x1": 57.0,
+        "y1": 1413.0,
+        "x2": 1179.0,
+        "y2": 1446.0,
+        "cy": 1428.7,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 38,
+        "words": [
+          {
+            "text": "07/08/2025HOTEL DREAMLAND UNITOFMPUNE IN",
+            "x1": 55.0,
+            "y1": 1450.0,
+            "x2": 505.0,
+            "y2": 1474.0,
+            "cx": 280.0,
+            "cy": 1462.0,
+            "width": 450.0,
+            "height": 24.0
+          },
+          {
+            "text": "HOTELS&RESORTS",
+            "x1": 671.0,
+            "y1": 1448.0,
+            "x2": 848.0,
+            "y2": 1472.0,
+            "cx": 759.5,
+            "cy": 1460.0,
+            "width": 177.0,
+            "height": 24.0
+          },
+          {
+            "text": "25",
+            "x1": 893.0,
+            "y1": 1446.0,
+            "x2": 924.0,
+            "y2": 1476.0,
+            "cx": 908.5,
+            "cy": 1461.0,
+            "width": 31.0,
+            "height": 30.0
+          },
+          {
+            "text": "2500.00DR",
+            "x1": 1074.0,
+            "y1": 1448.0,
+            "x2": 1179.0,
+            "y2": 1474.0,
+            "cx": 1126.5,
+            "cy": 1461.0,
+            "width": 105.0,
+            "height": 26.0
+          }
+        ],
+        "text": "07/08/2025HOTEL DREAMLAND UNITOFMPUNE IN HOTELS&RESORTS 25 2500.00DR",
+        "x1": 55.0,
+        "y1": 1446.0,
+        "x2": 1179.0,
+        "y2": 1476.0,
+        "cy": 1461.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 39,
+        "words": [
+          {
+            "text": "Total",
+            "x1": 55.0,
+            "y1": 1483.0,
+            "x2": 112.0,
+            "y2": 1509.0,
+            "cx": 83.5,
+            "cy": 1496.0,
+            "width": 57.0,
+            "height": 26.0
+          },
+          {
+            "text": "162",
+            "x1": 888.0,
+            "y1": 1479.0,
+            "x2": 929.0,
+            "y2": 1507.0,
+            "cx": 908.5,
+            "cy": 1493.0,
+            "width": 41.0,
+            "height": 28.0
+          },
+          {
+            "text": "16106.32",
+            "x1": 1055.0,
+            "y1": 1481.0,
+            "x2": 1143.0,
+            "y2": 1507.0,
+            "cx": 1099.0,
+            "cy": 1494.0,
+            "width": 88.0,
+            "height": 26.0
+          },
+          {
+            "text": "Enjoy the Delicious",
+            "x1": 1210.0,
+            "y1": 1486.0,
+            "x2": 1457.0,
+            "y2": 1519.0,
+            "cx": 1333.5,
+            "cy": 1502.5,
+            "width": 247.0,
+            "height": 33.0
+          }
+        ],
+        "text": "Total 162 16106.32 Enjoy the Delicious",
+        "x1": 55.0,
+        "y1": 1479.0,
+        "x2": 1457.0,
+        "y2": 1519.0,
+        "cy": 1496.375,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 40,
+        "words": [
+          {
+            "text": "Interest &Other Charges tor MR UMESH PATIL (Credit Card No.4147XXXXXXX5073)",
+            "x1": 57.0,
+            "y1": 1516.0,
+            "x2": 719.0,
+            "y2": 1545.0,
+            "cx": 388.0,
+            "cy": 1530.5,
+            "width": 662.0,
+            "height": 29.0
+          },
+          {
+            "text": "Monsoon Drizzle",
+            "x1": 1207.0,
+            "y1": 1523.0,
+            "x2": 1443.0,
+            "y2": 1554.0,
+            "cx": 1325.0,
+            "cy": 1538.5,
+            "width": 236.0,
+            "height": 31.0
+          }
+        ],
+        "text": "Interest &Other Charges tor MR UMESH PATIL (Credit Card No.4147XXXXXXX5073) Monsoon Drizzle",
+        "x1": 57.0,
+        "y1": 1516.0,
+        "x2": 1443.0,
+        "y2": 1554.0,
+        "cy": 1534.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 41,
+        "words": [
+          {
+            "text": "with EazyDiner",
+            "x1": 1207.0,
+            "y1": 1561.0,
+            "x2": 1414.0,
+            "y2": 1592.0,
+            "cx": 1310.5,
+            "cy": 1576.5,
+            "width": 207.0,
+            "height": 31.0
+          }
+        ],
+        "text": "with EazyDiner",
+        "x1": 1207.0,
+        "y1": 1561.0,
+        "x2": 1414.0,
+        "y2": 1592.0,
+        "cy": 1576.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 1,
+    "words": [
+      {
+        "text": "Rewards",
+        "x1": 64.0,
+        "y1": 1663.0,
+        "x2": 160.0,
+        "y2": 1689.0,
+        "cx": 112.0,
+        "cy": 1676.0,
+        "width": 96.0,
+        "height": 26.0
+      },
+      {
+        "text": "Opening Balance(Paints)",
+        "x1": 200.0,
+        "y1": 1658.0,
+        "x2": 414.0,
+        "y2": 1689.0,
+        "cx": 307.0,
+        "cy": 1673.5,
+        "width": 214.0,
+        "height": 31.0
+      },
+      {
+        "text": "+",
+        "x1": 431.0,
+        "y1": 1665.0,
+        "x2": 452.0,
+        "y2": 1693.0,
+        "cx": 441.5,
+        "cy": 1679.0,
+        "width": 21.0,
+        "height": 28.0
+      },
+      {
+        "text": "Points Earned",
+        "x1": 507.0,
+        "y1": 1658.0,
+        "x2": 631.0,
+        "y2": 1684.0,
+        "cx": 569.0,
+        "cy": 1671.0,
+        "width": 124.0,
+        "height": 26.0
+      },
+      {
+        "text": "Points Redeemed*",
+        "x1": 745.0,
+        "y1": 1658.0,
+        "x2": 898.0,
+        "y2": 1684.0,
+        "cx": 821.5,
+        "cy": 1671.0,
+        "width": 153.0,
+        "height": 26.0
+      },
+      {
+        "text": "=",
+        "x1": 929.0,
+        "y1": 1665.0,
+        "x2": 948.0,
+        "y2": 1689.0,
+        "cx": 938.5,
+        "cy": 1677.0,
+        "width": 19.0,
+        "height": 24.0
+      },
+      {
+        "text": "Closing Balance(Points)",
+        "x1": 962.0,
+        "y1": 1653.0,
+        "x2": 1169.0,
+        "y2": 1689.0,
+        "cx": 1065.5,
+        "cy": 1671.0,
+        "width": 207.0,
+        "height": 36.0
+      }
+    ],
+    "text": "Rewards Opening Balance(Paints) + Points Earned Points Redeemed* = Closing Balance(Points)",
+    "x1": 64.0,
+    "y1": 1653.0,
+    "x2": 1169.0,
+    "y2": 1693.0,
+    "cy": 1674.0714285714287,
+    "visual_lines": [
+      {
+        "line_id": 42,
+        "words": [
+          {
+            "text": "Rewards",
+            "x1": 64.0,
+            "y1": 1663.0,
+            "x2": 160.0,
+            "y2": 1689.0,
+            "cx": 112.0,
+            "cy": 1676.0,
+            "width": 96.0,
+            "height": 26.0
+          },
+          {
+            "text": "Opening Balance(Paints)",
+            "x1": 200.0,
+            "y1": 1658.0,
+            "x2": 414.0,
+            "y2": 1689.0,
+            "cx": 307.0,
+            "cy": 1673.5,
+            "width": 214.0,
+            "height": 31.0
+          },
+          {
+            "text": "+",
+            "x1": 431.0,
+            "y1": 1665.0,
+            "x2": 452.0,
+            "y2": 1693.0,
+            "cx": 441.5,
+            "cy": 1679.0,
+            "width": 21.0,
+            "height": 28.0
+          },
+          {
+            "text": "Points Earned",
+            "x1": 507.0,
+            "y1": 1658.0,
+            "x2": 631.0,
+            "y2": 1684.0,
+            "cx": 569.0,
+            "cy": 1671.0,
+            "width": 124.0,
+            "height": 26.0
+          },
+          {
+            "text": "Points Redeemed*",
+            "x1": 745.0,
+            "y1": 1658.0,
+            "x2": 898.0,
+            "y2": 1684.0,
+            "cx": 821.5,
+            "cy": 1671.0,
+            "width": 153.0,
+            "height": 26.0
+          },
+          {
+            "text": "=",
+            "x1": 929.0,
+            "y1": 1665.0,
+            "x2": 948.0,
+            "y2": 1689.0,
+            "cx": 938.5,
+            "cy": 1677.0,
+            "width": 19.0,
+            "height": 24.0
+          },
+          {
+            "text": "Closing Balance(Points)",
+            "x1": 962.0,
+            "y1": 1653.0,
+            "x2": 1169.0,
+            "y2": 1689.0,
+            "cx": 1065.5,
+            "cy": 1671.0,
+            "width": 207.0,
+            "height": 36.0
+          }
+        ],
+        "text": "Rewards Opening Balance(Paints) + Points Earned Points Redeemed* = Closing Balance(Points)",
+        "x1": 64.0,
+        "y1": 1653.0,
+        "x2": 1169.0,
+        "y2": 1693.0,
+        "cy": 1674.0714285714287,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 2,
+    "words": [
+      {
+        "text": "Summary",
+        "x1": 59.0,
+        "y1": 1683.0,
+        "x2": 165.0,
+        "y2": 1720.0,
+        "cx": 112.0,
+        "cy": 1701.5,
+        "width": 106.0,
+        "height": 37.0
+      },
+      {
+        "text": "5419",
+        "x1": 293.0,
+        "y1": 1700.0,
+        "x2": 348.0,
+        "y2": 1729.0,
+        "cx": 320.5,
+        "cy": 1714.5,
+        "width": 55.0,
+        "height": 29.0
+      },
+      {
+        "text": "162",
+        "x1": 560.0,
+        "y1": 1698.0,
+        "x2": 602.0,
+        "y2": 1729.0,
+        "cx": 581.0,
+        "cy": 1713.5,
+        "width": 42.0,
+        "height": 31.0
+      },
+      {
+        "text": "0",
+        "x1": 817.0,
+        "y1": 1703.0,
+        "x2": 838.0,
+        "y2": 1726.0,
+        "cx": 827.5,
+        "cy": 1714.5,
+        "width": 21.0,
+        "height": 23.0
+      },
+      {
+        "text": "5581",
+        "x1": 1052.0,
+        "y1": 1698.0,
+        "x2": 1102.0,
+        "y2": 1726.0,
+        "cx": 1077.0,
+        "cy": 1712.0,
+        "width": 50.0,
+        "height": 28.0
+      }
+    ],
+    "text": "Summary 5419 162 0 5581",
+    "x1": 59.0,
+    "y1": 1683.0,
+    "x2": 1102.0,
+    "y2": 1729.0,
+    "cy": 1711.2,
+    "visual_lines": [
+      {
+        "line_id": 43,
+        "words": [
+          {
+            "text": "Summary",
+            "x1": 59.0,
+            "y1": 1683.0,
+            "x2": 165.0,
+            "y2": 1720.0,
+            "cx": 112.0,
+            "cy": 1701.5,
+            "width": 106.0,
+            "height": 37.0
+          },
+          {
+            "text": "5419",
+            "x1": 293.0,
+            "y1": 1700.0,
+            "x2": 348.0,
+            "y2": 1729.0,
+            "cx": 320.5,
+            "cy": 1714.5,
+            "width": 55.0,
+            "height": 29.0
+          },
+          {
+            "text": "162",
+            "x1": 560.0,
+            "y1": 1698.0,
+            "x2": 602.0,
+            "y2": 1729.0,
+            "cx": 581.0,
+            "cy": 1713.5,
+            "width": 42.0,
+            "height": 31.0
+          },
+          {
+            "text": "0",
+            "x1": 817.0,
+            "y1": 1703.0,
+            "x2": 838.0,
+            "y2": 1726.0,
+            "cx": 827.5,
+            "cy": 1714.5,
+            "width": 21.0,
+            "height": 23.0
+          },
+          {
+            "text": "5581",
+            "x1": 1052.0,
+            "y1": 1698.0,
+            "x2": 1102.0,
+            "y2": 1726.0,
+            "cx": 1077.0,
+            "cy": 1712.0,
+            "width": 50.0,
+            "height": 28.0
+          }
+        ],
+        "text": "Summary 5419 162 0 5581",
+        "x1": 59.0,
+        "y1": 1683.0,
+        "x2": 1102.0,
+        "y2": 1729.0,
+        "cy": 1711.2,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 3,
+    "words": [
+      {
+        "text": "X",
+        "x1": 17.0,
+        "y1": 1755.0,
+        "x2": 43.0,
+        "y2": 1771.0,
+        "cx": 30.0,
+        "cy": 1763.0,
+        "width": 26.0,
+        "height": 16.0
+      },
+      {
+        "text": "NOTETtal  points redemed by you and points forfeted by the Bank  any for tansactons above the assigned credit imit during the biling cycle",
+        "x1": 40.0,
+        "y1": 1733.0,
+        "x2": 1100.0,
+        "y2": 1766.0,
+        "cx": 570.0,
+        "cy": 1749.5,
+        "width": 1060.0,
+        "height": 33.0
+      }
+    ],
+    "text": "X NOTETtal  points redemed by you and points forfeted by the Bank  any for tansactons above the assigned credit imit during the biling cycle",
+    "x1": 17.0,
+    "y1": 1733.0,
+    "x2": 1100.0,
+    "y2": 1771.0,
+    "cy": 1756.25,
+    "visual_lines": [
+      {
+        "line_id": 44,
+        "words": [
+          {
+            "text": "X",
+            "x1": 17.0,
+            "y1": 1755.0,
+            "x2": 43.0,
+            "y2": 1771.0,
+            "cx": 30.0,
+            "cy": 1763.0,
+            "width": 26.0,
+            "height": 16.0
+          },
+          {
+            "text": "NOTETtal  points redemed by you and points forfeted by the Bank  any for tansactons above the assigned credit imit during the biling cycle",
+            "x1": 40.0,
+            "y1": 1733.0,
+            "x2": 1100.0,
+            "y2": 1766.0,
+            "cx": 570.0,
+            "cy": 1749.5,
+            "width": 1060.0,
+            "height": 33.0
+          }
+        ],
+        "text": "X NOTETtal  points redemed by you and points forfeted by the Bank  any for tansactons above the assigned credit imit during the biling cycle",
+        "x1": 17.0,
+        "y1": 1733.0,
+        "x2": 1100.0,
+        "y2": 1771.0,
+        "cy": 1756.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 4,
+    "words": [
+      {
+        "text": "MR UMESH PATIL",
+        "x1": 64.0,
+        "y1": 1858.0,
+        "x2": 229.0,
+        "y2": 1882.0,
+        "cx": 146.5,
+        "cy": 1870.0,
+        "width": 165.0,
+        "height": 24.0
+      },
+      {
+        "text": "1ST FLOOR KUMAR PLAZA",
+        "x1": 64.0,
+        "y1": 1884.0,
+        "x2": 324.0,
+        "y2": 1908.0,
+        "cx": 194.0,
+        "cy": 1896.0,
+        "width": 260.0,
+        "height": 24.0
+      },
+      {
+        "text": "OPP N S LAW COLLEGE",
+        "x1": 64.0,
+        "y1": 1913.0,
+        "x2": 295.0,
+        "y2": 1936.0,
+        "cx": 179.5,
+        "cy": 1924.5,
+        "width": 231.0,
+        "height": 23.0
+      },
+      {
+        "text": "COLLEGE CORNER SANGLI",
+        "x1": 64.0,
+        "y1": 1939.0,
+        "x2": 321.0,
+        "y2": 1962.0,
+        "cx": 192.5,
+        "cy": 1950.5,
+        "width": 257.0,
+        "height": 23.0
+      },
+      {
+        "text": "SANGLIMH-416416",
+        "x1": 64.0,
+        "y1": 1964.0,
+        "x2": 252.0,
+        "y2": 1988.0,
+        "cx": 158.0,
+        "cy": 1976.0,
+        "width": 188.0,
+        "height": 24.0
+      },
+      {
+        "text": "GSTIN",
+        "x1": 64.0,
+        "y1": 1993.0,
+        "x2": 129.0,
+        "y2": 2016.0,
+        "cx": 96.5,
+        "cy": 2004.5,
+        "width": 65.0,
+        "height": 23.0
+      },
+      {
+        "text": "Get 10% off up to INR 500",
+        "x1": 1207.0,
+        "y1": 1988.0,
+        "x2": 1479.0,
+        "y2": 2019.0,
+        "cx": 1343.0,
+        "cy": 2003.5,
+        "width": 272.0,
+        "height": 31.0
+      },
+      {
+        "text": "Invoice and Credit note No:2292017413307456227",
+        "x1": 62.0,
+        "y1": 2016.0,
+        "x2": 510.0,
+        "y2": 2045.0,
+        "cx": 286.0,
+        "cy": 2030.5,
+        "width": 448.0,
+        "height": 29.0
+      },
+      {
+        "text": "on your Induslnd Bank",
+        "x1": 1205.0,
+        "y1": 2019.0,
+        "x2": 1448.0,
+        "y2": 2049.0,
+        "cx": 1326.5,
+        "cy": 2034.0,
+        "width": 243.0,
+        "height": 30.0
+      },
+      {
+        "text": "Credit Card*",
+        "x1": 1210.0,
+        "y1": 2052.0,
+        "x2": 1338.0,
+        "y2": 2078.0,
+        "cx": 1274.0,
+        "cy": 2065.0,
+        "width": 128.0,
+        "height": 26.0
+      }
+    ],
+    "text": "MR UMESH PATIL 1ST FLOOR KUMAR PLAZA OPP N S LAW COLLEGE COLLEGE CORNER SANGLI SANGLIMH-416416 GSTIN Get 10% off up to INR 500 Invoice and Credit note No:2292017413307456227 on your Induslnd Bank Credit Card*",
+    "x1": 62.0,
+    "y1": 1858.0,
+    "x2": 1479.0,
+    "y2": 2078.0,
+    "cy": 1968.0,
+    "visual_lines": [
+      {
+        "line_id": 45,
+        "words": [
+          {
+            "text": "MR UMESH PATIL",
+            "x1": 64.0,
+            "y1": 1858.0,
+            "x2": 229.0,
+            "y2": 1882.0,
+            "cx": 146.5,
+            "cy": 1870.0,
+            "width": 165.0,
+            "height": 24.0
+          }
+        ],
+        "text": "MR UMESH PATIL",
+        "x1": 64.0,
+        "y1": 1858.0,
+        "x2": 229.0,
+        "y2": 1882.0,
+        "cy": 1870.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 46,
+        "words": [
+          {
+            "text": "1ST FLOOR KUMAR PLAZA",
+            "x1": 64.0,
+            "y1": 1884.0,
+            "x2": 324.0,
+            "y2": 1908.0,
+            "cx": 194.0,
+            "cy": 1896.0,
+            "width": 260.0,
+            "height": 24.0
+          }
+        ],
+        "text": "1ST FLOOR KUMAR PLAZA",
+        "x1": 64.0,
+        "y1": 1884.0,
+        "x2": 324.0,
+        "y2": 1908.0,
+        "cy": 1896.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 47,
+        "words": [
+          {
+            "text": "OPP N S LAW COLLEGE",
+            "x1": 64.0,
+            "y1": 1913.0,
+            "x2": 295.0,
+            "y2": 1936.0,
+            "cx": 179.5,
+            "cy": 1924.5,
+            "width": 231.0,
+            "height": 23.0
+          }
+        ],
+        "text": "OPP N S LAW COLLEGE",
+        "x1": 64.0,
+        "y1": 1913.0,
+        "x2": 295.0,
+        "y2": 1936.0,
+        "cy": 1924.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 48,
+        "words": [
+          {
+            "text": "COLLEGE CORNER SANGLI",
+            "x1": 64.0,
+            "y1": 1939.0,
+            "x2": 321.0,
+            "y2": 1962.0,
+            "cx": 192.5,
+            "cy": 1950.5,
+            "width": 257.0,
+            "height": 23.0
+          }
+        ],
+        "text": "COLLEGE CORNER SANGLI",
+        "x1": 64.0,
+        "y1": 1939.0,
+        "x2": 321.0,
+        "y2": 1962.0,
+        "cy": 1950.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 49,
+        "words": [
+          {
+            "text": "SANGLIMH-416416",
+            "x1": 64.0,
+            "y1": 1964.0,
+            "x2": 252.0,
+            "y2": 1988.0,
+            "cx": 158.0,
+            "cy": 1976.0,
+            "width": 188.0,
+            "height": 24.0
+          }
+        ],
+        "text": "SANGLIMH-416416",
+        "x1": 64.0,
+        "y1": 1964.0,
+        "x2": 252.0,
+        "y2": 1988.0,
+        "cy": 1976.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 50,
+        "words": [
+          {
+            "text": "GSTIN",
+            "x1": 64.0,
+            "y1": 1993.0,
+            "x2": 129.0,
+            "y2": 2016.0,
+            "cx": 96.5,
+            "cy": 2004.5,
+            "width": 65.0,
+            "height": 23.0
+          },
+          {
+            "text": "Get 10% off up to INR 500",
+            "x1": 1207.0,
+            "y1": 1988.0,
+            "x2": 1479.0,
+            "y2": 2019.0,
+            "cx": 1343.0,
+            "cy": 2003.5,
+            "width": 272.0,
+            "height": 31.0
+          }
+        ],
+        "text": "GSTIN Get 10% off up to INR 500",
+        "x1": 64.0,
+        "y1": 1988.0,
+        "x2": 1479.0,
+        "y2": 2019.0,
+        "cy": 2004.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 51,
+        "words": [
+          {
+            "text": "Invoice and Credit note No:2292017413307456227",
+            "x1": 62.0,
+            "y1": 2016.0,
+            "x2": 510.0,
+            "y2": 2045.0,
+            "cx": 286.0,
+            "cy": 2030.5,
+            "width": 448.0,
+            "height": 29.0
+          },
+          {
+            "text": "on your Induslnd Bank",
+            "x1": 1205.0,
+            "y1": 2019.0,
+            "x2": 1448.0,
+            "y2": 2049.0,
+            "cx": 1326.5,
+            "cy": 2034.0,
+            "width": 243.0,
+            "height": 30.0
+          }
+        ],
+        "text": "Invoice and Credit note No:2292017413307456227 on your Induslnd Bank",
+        "x1": 62.0,
+        "y1": 2016.0,
+        "x2": 1448.0,
+        "y2": 2049.0,
+        "cy": 2032.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 52,
+        "words": [
+          {
+            "text": "Credit Card*",
+            "x1": 1210.0,
+            "y1": 2052.0,
+            "x2": 1338.0,
+            "y2": 2078.0,
+            "cx": 1274.0,
+            "cy": 2065.0,
+            "width": 128.0,
+            "height": 26.0
+          }
+        ],
+        "text": "Credit Card*",
+        "x1": 1210.0,
+        "y1": 2052.0,
+        "x2": 1338.0,
+        "y2": 2078.0,
+        "cy": 2065.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 5,
+    "words": [
+      {
+        "text": "Payment Due Date",
+        "x1": 57.0,
+        "y1": 2118.0,
+        "x2": 217.0,
+        "y2": 2144.0,
+        "cx": 137.0,
+        "cy": 2131.0,
+        "width": 160.0,
+        "height": 26.0
+      },
+      {
+        "text": "Min.Amount Due",
+        "x1": 255.0,
+        "y1": 2118.0,
+        "x2": 398.0,
+        "y2": 2144.0,
+        "cx": 326.5,
+        "cy": 2131.0,
+        "width": 143.0,
+        "height": 26.0
+      },
+      {
+        "text": "Cheque No",
+        "x1": 464.0,
+        "y1": 2118.0,
+        "x2": 562.0,
+        "y2": 2144.0,
+        "cx": 513.0,
+        "cy": 2131.0,
+        "width": 98.0,
+        "height": 26.0
+      },
+      {
+        "text": "Date",
+        "x1": 676.0,
+        "y1": 2113.0,
+        "x2": 731.0,
+        "y2": 2148.0,
+        "cx": 703.5,
+        "cy": 2130.5,
+        "width": 55.0,
+        "height": 35.0
+      },
+      {
+        "text": "Bank",
+        "x1": 863.0,
+        "y1": 2112.0,
+        "x2": 918.0,
+        "y2": 2147.0,
+        "cx": 890.5,
+        "cy": 2129.5,
+        "width": 55.0,
+        "height": 35.0
+      },
+      {
+        "text": "Amount",
+        "x1": 1045.0,
+        "y1": 2118.0,
+        "x2": 1114.0,
+        "y2": 2144.0,
+        "cx": 1079.5,
+        "cy": 2131.0,
+        "width": 69.0,
+        "height": 26.0
+      },
+      {
+        "text": "Offer code:INDUSIND500",
+        "x1": 1207.0,
+        "y1": 2120.0,
+        "x2": 1429.0,
+        "y2": 2144.0,
+        "cx": 1318.0,
+        "cy": 2132.0,
+        "width": 222.0,
+        "height": 24.0
+      },
+      {
+        "text": "04/09/2025",
+        "x1": 98.0,
+        "y1": 2163.0,
+        "x2": 210.0,
+        "y2": 2189.0,
+        "cx": 154.0,
+        "cy": 2176.0,
+        "width": 112.0,
+        "height": 26.0
+      },
+      {
+        "text": "363.00",
+        "x1": 305.0,
+        "y1": 2163.0,
+        "x2": 376.0,
+        "y2": 2189.0,
+        "cx": 340.5,
+        "cy": 2176.0,
+        "width": 71.0,
+        "height": 26.0
+      },
+      {
+        "text": "Offer valid till: 30Sep25",
+        "x1": 1207.0,
+        "y1": 2146.0,
+        "x2": 1429.0,
+        "y2": 2170.0,
+        "cx": 1318.0,
+        "cy": 2158.0,
+        "width": 222.0,
+        "height": 24.0
+      }
+    ],
+    "text": "Payment Due Date Min.Amount Due Cheque No Date Bank Amount Offer code:INDUSIND500 04/09/2025 363.00 Offer valid till: 30Sep25",
+    "x1": 57.0,
+    "y1": 2112.0,
+    "x2": 1429.0,
+    "y2": 2189.0,
+    "cy": 2150.5,
+    "visual_lines": [
+      {
+        "line_id": 53,
+        "words": [
+          {
+            "text": "Payment Due Date",
+            "x1": 57.0,
+            "y1": 2118.0,
+            "x2": 217.0,
+            "y2": 2144.0,
+            "cx": 137.0,
+            "cy": 2131.0,
+            "width": 160.0,
+            "height": 26.0
+          },
+          {
+            "text": "Min.Amount Due",
+            "x1": 255.0,
+            "y1": 2118.0,
+            "x2": 398.0,
+            "y2": 2144.0,
+            "cx": 326.5,
+            "cy": 2131.0,
+            "width": 143.0,
+            "height": 26.0
+          },
+          {
+            "text": "Cheque No",
+            "x1": 464.0,
+            "y1": 2118.0,
+            "x2": 562.0,
+            "y2": 2144.0,
+            "cx": 513.0,
+            "cy": 2131.0,
+            "width": 98.0,
+            "height": 26.0
+          },
+          {
+            "text": "Date",
+            "x1": 676.0,
+            "y1": 2113.0,
+            "x2": 731.0,
+            "y2": 2148.0,
+            "cx": 703.5,
+            "cy": 2130.5,
+            "width": 55.0,
+            "height": 35.0
+          },
+          {
+            "text": "Bank",
+            "x1": 863.0,
+            "y1": 2112.0,
+            "x2": 918.0,
+            "y2": 2147.0,
+            "cx": 890.5,
+            "cy": 2129.5,
+            "width": 55.0,
+            "height": 35.0
+          },
+          {
+            "text": "Amount",
+            "x1": 1045.0,
+            "y1": 2118.0,
+            "x2": 1114.0,
+            "y2": 2144.0,
+            "cx": 1079.5,
+            "cy": 2131.0,
+            "width": 69.0,
+            "height": 26.0
+          },
+          {
+            "text": "Offer code:INDUSIND500",
+            "x1": 1207.0,
+            "y1": 2120.0,
+            "x2": 1429.0,
+            "y2": 2144.0,
+            "cx": 1318.0,
+            "cy": 2132.0,
+            "width": 222.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Payment Due Date Min.Amount Due Cheque No Date Bank Amount Offer code:INDUSIND500",
+        "x1": 57.0,
+        "y1": 2112.0,
+        "x2": 1429.0,
+        "y2": 2148.0,
+        "cy": 2130.8571428571427,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 54,
+        "words": [
+          {
+            "text": "04/09/2025",
+            "x1": 98.0,
+            "y1": 2163.0,
+            "x2": 210.0,
+            "y2": 2189.0,
+            "cx": 154.0,
+            "cy": 2176.0,
+            "width": 112.0,
+            "height": 26.0
+          },
+          {
+            "text": "363.00",
+            "x1": 305.0,
+            "y1": 2163.0,
+            "x2": 376.0,
+            "y2": 2189.0,
+            "cx": 340.5,
+            "cy": 2176.0,
+            "width": 71.0,
+            "height": 26.0
+          },
+          {
+            "text": "Offer valid till: 30Sep25",
+            "x1": 1207.0,
+            "y1": 2146.0,
+            "x2": 1429.0,
+            "y2": 2170.0,
+            "cx": 1318.0,
+            "cy": 2158.0,
+            "width": 222.0,
+            "height": 24.0
+          }
+        ],
+        "text": "04/09/2025 363.00 Offer valid till: 30Sep25",
+        "x1": 98.0,
+        "y1": 2146.0,
+        "x2": 1429.0,
+        "y2": 2189.0,
+        "cy": 2170.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  }
+]

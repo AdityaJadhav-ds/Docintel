@@ -1,0 +1,24 @@
+[
+  {
+    "line_id": 0,
+    "words": [
+      {
+        "text": "STATEMENT OF ACCOUNT",
+        "x1": 124.0,
+        "y1": 79.0,
+        "x2": 514.0,
+        "y2": 110.0,
+        "cx": 319.0,
+        "cy": 94.5,
+        "width": 390.0,
+        "height": 31.0
+      }
+    ],
+    "text": "STATEMENT OF ACCOUNT",
+    "x1": 124.0,
+    "y1": 79.0,
+    "x2": 514.0,
+    "y2": 110.0,
+    "cy": 94.5
+  }
+]

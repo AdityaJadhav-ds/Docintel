@@ -1,0 +1,2065 @@
+"""
+app/api/extraction_studio_routes.py
+=====================================
+Document Reconstruction Engine — API Routes.
+
+Phase 2 improvements:
+- Parallel per-region OCR (asyncio.gather)
+- Table regions routed to geometry-based table engine (image-in, structured table-out)
+- Pipeline snapshots at each stage (normalized, layout-map, OCR-confidence-map)
+- Block confidence filtering (discard garbage, not just warn)
+- Language routing per-region with fallback chain
+- Handwriting detection: never contaminate printed OCR
+
+8-Stage Pipeline:
+    1. file_ingest    — Load + decode PDF/image
+    2. normalize      — Image normalization + quality assessment
+    3. page_analyze   — Visual layout analysis BEFORE OCR (Document DNA)
+    4. region_detect  — Typed regions + column-first reading order
+    5. ocr_route      — PARALLEL per-region OCR with language fallback
+    6. table_detect   — GEOMETRY-FIRST table reconstruction from image crops
+    7. reconstruct    — Reading-order text → typed document blocks
+    8. quality_score  — Structure-first quality scoring + garbage filter
+"""
+from __future__ import annotations
+
+import asyncio
+import base64
+import io
+import time
+import traceback
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+import cv2
+import numpy as np
+from fastapi import APIRouter, File, Form, UploadFile, HTTPException
+from fastapi.responses import JSONResponse
+from PIL import Image
+
+from app.core.logger import logger
+from app.extraction.pipeline_state import (
+    create_run, get_run,
+    STATUS_DONE, STATUS_FAILED,
+    PIPELINE_STAGES,
+)
+
+router    = APIRouter()
+_EXECUTOR = ThreadPoolExecutor(max_workers=4, thread_name_prefix="extraction_studio")
+
+_LOG_DIR  = Path(__file__).resolve().parent.parent.parent / "logs"
+_LOG_DIR.mkdir(exist_ok=True)
+_PERF_LOG = _LOG_DIR / "extraction_studio.log"
+
+
+# ── Helpers ────────────────────────────────────────────────────────────────────
+
+def _write_perf(lines: List[str], filename: str) -> None:
+    try:
+        with open(_PERF_LOG, "a", encoding="utf-8") as f:
+            f.write(f"\n=== {filename} ===\n")
+            f.write("\n".join(lines) + "\n")
+    except Exception:
+        pass
+
+
+async def _with_timeout(coro, seconds: float, label: str):
+    try:
+        return await asyncio.wait_for(coro, timeout=seconds)
+    except asyncio.TimeoutError:
+        raise TimeoutError(f"{label} timed out after {seconds}s")
+
+
+def _run_sync(fn, *args):
+    loop = asyncio.get_event_loop()
+    return loop.run_in_executor(_EXECUTOR, fn, *args)
+
+
+def _arr_to_b64(arr: np.ndarray, quality: int = 88) -> str:
+    try:
+        h, w = arr.shape[:2]
+        scale = min(1.0, 1200 / max(h, w, 1))
+        if scale < 1.0:
+            arr = cv2.resize(arr, (int(w * scale), int(h * scale)))
+        if len(arr.shape) == 2:
+            pil = Image.fromarray(arr)
+        else:
+            pil = Image.fromarray(cv2.cvtColor(arr, cv2.COLOR_BGR2RGB))
+        buf = io.BytesIO()
+        pil.save(buf, format="JPEG", quality=quality)
+        return base64.b64encode(buf.getvalue()).decode()
+    except Exception:
+        return ""
+
+
+# ── Pipeline Snapshot Generator ───────────────────────────────────────────────
+
+def _make_layout_snapshot(
+    page_bgr: np.ndarray,
+    regions:  List[Dict],
+) -> str:
+    """Generate a color-coded layout map overlay as base64 JPEG."""
+    try:
+        overlay = page_bgr.copy()
+
+        _TYPE_COLORS = {
+            "table":           (37,  99,  235),  # blue
+            "paragraph":       (22,  163,  74),  # green
+            "form_field":      (234,  88,  12),  # orange
+            "header":          (6,  182, 212),   # cyan
+            "document_header": (6,  182, 212),
+            "section_header":  (99,  102, 241),  # purple-ish
+            "footer":          (148, 163, 184),  # gray
+            "handwritten":     (124,  58, 237),  # purple
+        }
+
+        for region in regions:
+            rx  = region.get("x", 0)
+            ry  = region.get("y", 0)
+            rw  = region.get("width", 0)
+            rh  = region.get("height", 0)
+            rt  = region.get("type", "paragraph")
+            ro  = region.get("reading_order", 0)
+
+            color = _TYPE_COLORS.get(rt, (100, 100, 100))
+            # Semi-transparent fill
+            sub   = overlay[ry:ry+rh, rx:rx+rw].copy()
+            fill  = np.zeros_like(sub)
+            fill[:] = color[::-1]  # BGR
+            cv2.addWeighted(fill, 0.25, sub, 0.75, 0, sub)
+            overlay[ry:ry+rh, rx:rx+rw] = sub
+
+            # Border
+            cv2.rectangle(overlay, (rx, ry), (rx+rw, ry+rh), color[::-1], 2)
+
+            # Reading order label
+            label = f"#{ro} {rt[:3]}"
+            cv2.rectangle(overlay, (rx, ry), (rx + len(label) * 7 + 4, ry + 14), color[::-1], -1)
+            cv2.putText(overlay, label, (rx + 2, ry + 11),
+                       cv2.FONT_HERSHEY_PLAIN, 0.75, (255, 255, 255), 1)
+
+        return _arr_to_b64(overlay, quality=82)
+    except Exception as exc:
+        logger.debug("[routes] Layout snapshot failed: %s", exc)
+        return ""
+
+
+def _make_confidence_snapshot(
+    page_bgr:       np.ndarray,
+    region_results: List[Dict],
+    enriched_regions: List[Dict],
+) -> str:
+    """Generate an OCR confidence heatmap overlay as base64 JPEG."""
+    try:
+        overlay = page_bgr.copy()
+        for i, rr in enumerate(region_results):
+            conf = rr.get("confidence", 0.0)
+            if i >= len(enriched_regions):
+                continue
+            region = enriched_regions[i]
+            rx = region.get("x", 0)
+            ry = region.get("y", 0)
+            rw = region.get("width", 0)
+            rh = region.get("height", 0)
+
+            # Red → Yellow → Green confidence scale
+            if conf < 0.40:
+                color = (0, 0, 220)      # red (bad)
+            elif conf < 0.60:
+                color = (0, 165, 255)    # orange (medium)
+            else:
+                color = (0, 180, 0)      # green (good)
+
+            cv2.rectangle(overlay, (rx, ry), (rx+rw, ry+rh), color, 2)
+            label = f"{int(conf*100)}%"
+            cv2.rectangle(overlay, (rx, ry), (rx + 35, ry + 14), color, -1)
+            cv2.putText(overlay, label, (rx + 2, ry + 11),
+                       cv2.FONT_HERSHEY_PLAIN, 0.75, (255, 255, 255), 1)
+
+        return _arr_to_b64(overlay, quality=82)
+    except Exception:
+        return ""
+
+
+# ── Stage Runners ─────────────────────────────────────────────────────────────
+
+def _stage_file_ingest(file_bytes: bytes, filename: str) -> Dict:
+    is_pdf = file_bytes[:4] == b"%PDF"
+    pages: List[np.ndarray] = []
+    page_count = 0
+
+    if is_pdf:
+        from app.files.pdf_converter import pdf_to_pages
+        raw_pages = pdf_to_pages(file_bytes)
+        if not raw_pages:
+            raise ValueError("PDF rendered no pages")
+        for pg in raw_pages[:10]:
+            pil = pg.image.convert("RGB")
+            pages.append(cv2.cvtColor(np.array(pil), cv2.COLOR_RGB2BGR))
+        page_count = len(raw_pages)
+    else:
+        pil = Image.open(io.BytesIO(file_bytes)).convert("RGB")
+        pages.append(cv2.cvtColor(np.array(pil), cv2.COLOR_RGB2BGR))
+        page_count = 1
+
+    return {"pages": pages, "page_count": page_count, "is_pdf": is_pdf}
+
+
+def _stage_normalize(pages: List[np.ndarray], mode: str) -> Dict:
+    from app.extraction.normalizer import normalize_page
+    normalized_pages: List[np.ndarray] = []
+    quality_reports:  List[Dict]       = []
+    snapshots:        List[str]        = []
+
+    for page_bgr in pages:
+        gray, quality = normalize_page(page_bgr, mode=mode)
+        normalized_pages.append(gray)
+        quality_reports.append(quality)
+        snapshots.append(_arr_to_b64(gray, quality=85))
+
+    return {
+        "normalized_pages": normalized_pages,
+        "quality_reports":  quality_reports,
+        "normalize_snapshots": snapshots,
+    }
+
+
+# ── Stage 2.5: Document Aging Engine ─────────────────────────────────────────
+
+def _stage_age_detect(
+    pages:            List[np.ndarray],
+    normalized_pages: List[np.ndarray],
+    mode:             str,
+) -> Dict:
+    """
+    Phase 4: Detect document age and apply adaptive enhancement.
+    Only activates when age_score > 0.35.
+    Returns enhanced normalized pages + age reports.
+    """
+    from app.extraction.document_age_engine import score_document_age, enhance_aged_document
+
+    age_reports:      List[Dict]       = []
+    enhanced_pages:   List[np.ndarray] = []
+    any_enhanced = False
+
+    for i, page_bgr in enumerate(pages):
+        gray = normalized_pages[i]
+
+        age_report = score_document_age(page_bgr)
+        age_reports.append(age_report)
+
+        if age_report["needs_enhancement"] and mode != "fast":
+            enhanced = enhance_aged_document(gray, age_report)
+            enhanced_pages.append(enhanced)
+            any_enhanced = True
+            logger.info(
+                "[routes] Age enhancement page %d: age=%.2f",
+                i, age_report["age_score"],
+            )
+        else:
+            enhanced_pages.append(gray)
+
+    avg_age = sum(r["age_score"] for r in age_reports) / max(len(age_reports), 1)
+    return {
+        "age_reports":      age_reports,
+        "normalized_pages": enhanced_pages,   # replaces previous normalized
+        "avg_age_score":    round(avg_age, 3),
+        "age_enhanced":     any_enhanced,
+    }
+
+
+def _stage_page_analyze(normalized_pages: List[np.ndarray]) -> Dict:
+    from app.extraction.page_analyzer import analyze_page
+    page_analyses: List[Dict] = []
+
+    for gray in normalized_pages:
+        analysis = analyze_page(gray)
+        page_analyses.append(analysis)
+
+    total_regions = sum(len(a["regions"]) for a in page_analyses)
+    return {
+        "page_analyses":  page_analyses,
+        "total_regions":  total_regions,
+    }
+
+
+def _stage_region_detect(
+    page_analyses: List[Dict],
+    pages:         List[np.ndarray],
+) -> Dict:
+    from app.extraction.handwriting_engine import detect_handwriting_regions
+
+    enriched: List[List[Dict]] = []
+    layout_snapshots: List[str] = []
+    layer_stats: List[Dict]    = []
+
+    for page_idx, analysis in enumerate(page_analyses):
+        regions  = analysis.get("regions", [])
+        page_arr = pages[page_idx]
+        h, w     = page_arr.shape[:2]
+
+        if not regions:
+            regions = [{
+                "type": "paragraph",
+                "x": 0, "y": 0, "width": w, "height": h,
+                "confidence": 0.50,
+                "reading_order": 0,
+                "is_table_candidate": False,
+                "language_hint": "auto",
+            }]
+
+        # Phase 4: Classify each region into a document layer
+        try:
+            regions = detect_handwriting_regions(page_arr, regions)
+            # Collect layer stats for debug
+            layers = {}
+            for r in regions:
+                l = r.get("layer", "printed")
+                layers[l] = layers.get(l, 0) + 1
+            layer_stats.append(layers)
+        except Exception as exc:
+            logger.debug("[routes] Handwriting layer detection failed page %d: %s", page_idx, exc)
+            layer_stats.append({})
+
+        enriched.append(regions)
+
+        # Layout snapshot with region overlay
+        snap = _make_layout_snapshot(page_arr, regions)
+        layout_snapshots.append(snap)
+
+    return {
+        "enriched_regions":  enriched,
+        "total_enriched":    sum(len(r) for r in enriched),
+        "layout_snapshots":  layout_snapshots,
+        "layer_stats":       layer_stats,
+    }
+
+
+# ── Parallel Per-Region OCR ───────────────────────────────────────────────────
+
+def _ocr_one_region(
+    page_bgr:     np.ndarray,
+    region:       Dict,
+    mode:         str,
+    pipeline_cfg: Optional[Dict] = None,
+) -> Tuple[Dict, Dict, List[Dict], Dict]:
+    """
+    OCR a single region. Returns (region, ocr_result, offset_boxes, forensics).
+    Phase 3: text_isolator runs BEFORE OCR to clean visual signal.
+    Safe to call in thread pool. Applies pipeline_cfg for language lock + handwritten mode.
+    """
+    from app.extraction.ocr_router import ocr_region
+    from app.extraction.text_isolator import isolate_text_from_bgr
+
+    cfg = pipeline_cfg or {}
+
+    h_page, w_page = page_bgr.shape[:2]
+    rx  = max(0, region.get("x", 0) - 3)
+    ry  = max(0, region.get("y", 0) - 3)
+    rw  = min(w_page, region.get("x", 0) + region.get("width",  w_page) + 3) - rx
+    rh  = min(h_page, region.get("y", 0) + region.get("height", h_page) + 3) - ry
+
+    empty_forensics: Dict = {
+        "region_type":     region.get("type", "paragraph"),
+        "reading_order":   region.get("reading_order", 0),
+        "bbox":            [rx, ry, rw, rh],
+        "has_real_text":   False,
+        "text_density":    0.0,
+        "table_lines_removed": False,
+        "bleedthrough_suppressed": False,
+        "variant_results": [],
+        "devanagari_ratio": 0.0,
+        "rejection_reason": "region_too_small",
+        "final_text":      "",
+        "final_conf":      0.0,
+        "final_engine":    "none",
+        "final_variant":   "none",
+        "raw_crop_b64":    "",
+        "cleaned_crop_b64": "",
+        "thresh_crop_b64": "",
+    }
+
+    if rw <= 10 or rh <= 10:
+        return region, {}, [], empty_forensics
+
+    crop_bgr = page_bgr[ry:ry+rh, rx:rx+rw]
+    if crop_bgr.size == 0:
+        return region, {}, [], empty_forensics
+
+    rtype = region.get("type", "paragraph")
+
+    # ── Profile: handwritten_mode forces handwritten routing ─────────────────
+    is_hw_mode = bool(cfg.get("handwritten_mode"))
+    if is_hw_mode:
+        if rtype not in ("stamp", "signature", "image"):
+            rtype = "handwritten"
+
+    # ── Visual handwriting detection — override if flagged by page_analyzer ───
+    elif rtype not in ("handwritten", "stamp", "signature", "image"):
+        if region.get("is_handwritten") or region.get("handwriting_score", 0) > 0.5:
+            rtype = "handwritten"
+            logger.debug("[routes] Region %d overridden to handwritten", region.get("reading_order", 0))
+
+    # ── Language hint: profile lang_lock wins over auto-detect ────────────────
+    lang_hint = region.get("language_hint", "auto")
+    if cfg.get("force_lang") and cfg.get("lang") and cfg["lang"] != "auto":
+        lang_hint = cfg["lang"]
+
+    # ── Detect old/degraded document from age report ──────────────────────────
+    is_old_doc     = bool(cfg.get("is_old_document", False))
+    is_table_region = bool(region.get("is_table_candidate") or region.get("type") == "table")
+
+    # ── STEP 1: Text Isolation (visual signal cleaning) ───────────────────────
+    isolation = None
+    forensics_base: Dict = {
+        "region_type":    rtype,
+        "reading_order":  region.get("reading_order", 0),
+        "bbox":           [rx, ry, rw, rh],
+        "table_lines_removed": False,
+        "bleedthrough_suppressed": False,
+        "has_real_text":  True,
+        "text_density":   0.05,
+        "raw_crop_b64":   "",
+        "cleaned_crop_b64": "",
+        "thresh_crop_b64":  "",
+    }
+    try:
+        isolation = isolate_text_from_bgr(
+            crop_bgr,
+            is_table_region=is_table_region,
+            is_old_document=is_old_doc,
+        )
+        forensics_base["has_real_text"]           = isolation.has_real_text
+        forensics_base["text_density"]            = isolation.text_density
+        forensics_base["table_lines_removed"]     = isolation.table_lines_removed
+        forensics_base["bleedthrough_suppressed"] = isolation.bleedthrough_suppressed
+
+        # Encode debug crops as base64 for Forensics tab
+        forensics_base["raw_crop_b64"]     = _arr_to_b64(isolation.debug_crops.get("00_original",  crop_bgr[:,:,0] if len(crop_bgr.shape)==3 else crop_bgr), quality=75)
+        forensics_base["cleaned_crop_b64"] = _arr_to_b64(isolation.cleaned,     quality=75)
+        forensics_base["thresh_crop_b64"]  = _arr_to_b64(isolation.thresholded, quality=75)
+
+        # Gate: if no real text detected, skip OCR entirely
+        if not isolation.has_real_text:
+            logger.info(
+                "[routes] Region %d skipped — no real text (density=%.3f)",
+                region.get("reading_order", 0), isolation.text_density,
+            )
+            skip_forensics = {
+                **forensics_base,
+                "rejection_reason": "no_real_text_detected",
+                "variant_results":  [],
+                "devanagari_ratio": 0.0,
+                "final_text":       "",
+                "final_conf":       0.0,
+                "final_engine":     "skipped",
+                "final_variant":    "skipped",
+            }
+            return region, {}, [], skip_forensics
+
+    except Exception as exc:
+        logger.debug("[routes] Text isolation failed for region %d: %s",
+                     region.get("reading_order", 0), exc)
+        isolation = None  # fall through to OCR without isolation
+
+    # ── STEP 2: OCR (with pre-computed isolation variants) ────────────────────
+    effective_rtype = rtype if not is_table_region else "paragraph"
+    ocr_result = ocr_region(
+        crop_bgr,
+        region_type=effective_rtype,
+        language_hint=lang_hint,
+        mode=mode,
+        isolation_result=isolation,
+    )
+
+    # Apply encoding fix immediately after OCR
+    from app.extraction.ocr_validator import fix_encoding
+    raw_text = ocr_result.get("text", "")
+    if raw_text:
+        ocr_result["text"]     = fix_encoding(raw_text)
+        ocr_result["raw_text"] = raw_text
+
+    # ── STEP 3: Build forensics record ───────────────────────────────────────
+    # Pick best variant name from variant_results
+    best_variant = "none"
+    vr_list = ocr_result.get("variant_results", [])
+    if vr_list:
+        best_vr = max(vr_list, key=lambda v: v.get("confidence", 0.0))
+        best_variant = best_vr.get("variant", "none")
+
+    forensics: Dict = {
+        **forensics_base,
+        "variant_results":   vr_list,
+        "devanagari_ratio":  ocr_result.get("devanagari_ratio", 0.0),
+        "rejection_reason":  ocr_result.get("rejection_reason", ""),
+        "final_text":        ocr_result.get("text", "")[:200],  # truncate for payload
+        "final_conf":        ocr_result.get("confidence", 0.0),
+        "final_engine":      ocr_result.get("engine", "none"),
+        "final_variant":     best_variant,
+        "script":            ocr_result.get("script", "unknown"),
+        "lang":              ocr_result.get("lang", "none"),
+    }
+
+    # Log per-region result for empty output debugging
+    logger.info(
+        "[routes] Region %d (%s) → text=%d chars conf=%.2f engine=%s density=%.3f",
+        region.get("reading_order", 0),
+        rtype,
+        len(ocr_result.get("text", "")),
+        ocr_result.get("confidence", 0.0),
+        ocr_result.get("engine", "none"),
+        isolation.text_density if isolation else -1,
+    )
+
+    # Offset bounding boxes to full page coordinates
+    offset_boxes: List[Dict] = []
+    for box in ocr_result.get("line_boxes", []):
+        ob = dict(box)
+        if isinstance(ob.get("bbox"), list):
+            ob["bbox"] = [[pt[0] + rx, pt[1] + ry] for pt in ob["bbox"]]
+        ob["region_type"]          = rtype
+        ob["region_reading_order"] = region.get("reading_order", 0)
+        ob["is_table_source"]      = region.get("is_table_candidate", False)
+        if ob.get("text"):
+            ob["text"] = fix_encoding(ob["text"])
+        offset_boxes.append(ob)
+
+    return region, ocr_result, offset_boxes, forensics
+
+
+async def _stage_ocr_route_parallel(
+    pages:            List[np.ndarray],
+    normalized_pages: List[np.ndarray],
+    enriched_regions: List[List[Dict]],
+    mode:             str,
+    pipeline_cfg:     Optional[Dict] = None,
+) -> Dict:
+    """Parallel per-region OCR with pipeline_cfg language lock + handwritten mode.
+    Phase 3: text_isolator runs inside _ocr_one_region. Forensics collected here."""
+    from app.extraction.ocr_router import ocr_full_page
+
+    cfg = pipeline_cfg or {}
+    all_raw_texts:      List[str]        = []
+    all_page_boxes:     List[List[Dict]] = []
+    all_region_results: List[List[Dict]] = []
+    all_forensics:      List[List[Dict]] = []   # Phase 3: per-region forensics
+    engines_used:       List[str]        = []
+    total_conf   = 0.0
+    conf_count   = 0
+    detected_script = "Latin"
+    ocr_lang        = "eng"
+    conf_snapshots: List[str] = []
+
+    for page_idx, page_bgr in enumerate(pages):
+        regions = enriched_regions[page_idx]
+
+        # Launch all regions in parallel, passing pipeline_cfg to each
+        tasks = [
+            _run_sync(_ocr_one_region, page_bgr, region, mode, cfg)
+            for region in regions
+        ]
+
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        page_parts:     List[str]  = []
+        page_boxes:     List[Dict] = []
+        page_rr:        List[Dict] = []
+        page_forensics: List[Dict] = []
+
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                logger.warning("[routes] Region %d OCR error: %s", i, result)
+                err_rr = {
+                    "region_type":   regions[i].get("type", "paragraph"),
+                    "reading_order": regions[i].get("reading_order", 0),
+                    "confidence":    0.0,
+                    "engine":        "failed",
+                    "box_count":     0,
+                    "bbox": [regions[i].get("x",0), regions[i].get("y",0),
+                             regions[i].get("width",0), regions[i].get("height",0)],
+                }
+                page_rr.append(err_rr)
+                page_forensics.append({**err_rr, "rejection_reason": f"exception:{result}"})
+                continue
+
+            # Phase 3: unpack 4-tuple (region, ocr_result, offset_boxes, forensics)
+            if len(result) == 4:
+                region, ocr_result, offset_boxes, forensics_rec = result
+            else:
+                region, ocr_result, offset_boxes = result
+                forensics_rec = {}
+
+            if ocr_result.get("text", "").strip():
+                page_parts.append(ocr_result["text"])
+
+            page_boxes.extend(offset_boxes)
+            page_forensics.append(forensics_rec)
+
+            # Region result for debug overlay
+            rx  = max(0, region.get("x", 0) - 3)
+            ry  = max(0, region.get("y", 0) - 3)
+            rw  = min(page_bgr.shape[1], region.get("x", 0) + region.get("width",  page_bgr.shape[1]) + 3) - rx
+            rh  = min(page_bgr.shape[0], region.get("y", 0) + region.get("height", page_bgr.shape[0]) + 3) - ry
+
+            page_rr.append({
+                "region_type":   region.get("type", "paragraph"),
+                "reading_order": region.get("reading_order", 0),
+                "confidence":    ocr_result.get("confidence", 0.0),
+                "engine":        ocr_result.get("engine", "none"),
+                "script":        ocr_result.get("script", "Latin"),
+                "lang":          ocr_result.get("lang", "eng"),
+                "chain_tried":   ocr_result.get("chain_tried", []),
+                "box_count":     len(ocr_result.get("line_boxes", [])),
+                "bbox":          [rx, ry, rw, rh],
+            })
+
+            engine = ocr_result.get("engine", "")
+            if engine and engine not in engines_used:
+                engines_used.append(engine)
+
+            conf = ocr_result.get("confidence", 0.0)
+            if conf > 0:
+                total_conf += conf
+                conf_count += 1
+
+            if page_idx == 0 and ocr_result.get("script"):
+                detected_script = ocr_result["script"]
+                ocr_lang        = ocr_result.get("lang", "eng")
+
+        # Stage logging — track box counts after OCR
+        logger.info(
+            "[pipeline] page=%d after_ocr=%d boxes | %d regions | %d with text",
+            page_idx, len(page_boxes), len(regions), len(page_parts),
+        )
+
+        # Full-page fallback if no output
+        if not page_boxes:
+            logger.warning("[routes] No boxes from regions for page %d — full-page fallback", page_idx)
+            fp = ocr_full_page(page_bgr, mode=mode)
+            page_boxes  = fp.get("line_boxes", [])
+            page_parts  = [fp.get("text", "")]
+            if fp.get("confidence", 0) > 0:
+                total_conf += fp["confidence"]
+                conf_count += 1
+            if "tesseract" not in engines_used:
+                engines_used.append("tesseract")
+            logger.info(
+                "[pipeline] page=%d full-page fallback → %d boxes text=%d chars",
+                page_idx, len(page_boxes), len(fp.get("text", "")),
+            )
+
+        all_raw_texts.append("\n".join(page_parts))
+        all_page_boxes.append(page_boxes)
+        all_region_results.append(page_rr)
+        all_forensics.append(page_forensics)
+
+        # Confidence snapshot
+        conf_snap = _make_confidence_snapshot(page_bgr, page_rr, regions)
+        conf_snapshots.append(conf_snap)
+
+    raw_text = "\n\n--- PAGE BREAK ---\n\n".join(all_raw_texts)
+    avg_conf = total_conf / max(conf_count, 1)
+
+    logger.info(
+        "[pipeline] OCR complete: %d pages | %d total boxes | avg_conf=%.2f | engines=%s",
+        len(pages),
+        sum(len(b) for b in all_page_boxes),
+        avg_conf,
+        engines_used,
+    )
+
+    return {
+        "raw_text":            raw_text,
+        "all_raw_texts":       all_raw_texts,
+        "all_page_boxes":      all_page_boxes,
+        "all_region_results":  all_region_results,
+        "all_forensics":       all_forensics,
+        "engines_used":        engines_used,
+        "avg_conf":            avg_conf,
+        "detected_script":     detected_script,
+        "ocr_lang":            ocr_lang,
+        "confidence_snapshots": conf_snapshots,
+    }
+
+
+# ── Geometry Table Stage ──────────────────────────────────────────────────────
+
+def _stage_table_detect_geometry(
+    pages:             List[np.ndarray],
+    enriched_regions:  List[List[Dict]],
+    all_page_boxes:    List[List[Dict]],
+    all_region_results: List[List[Dict]],
+    page_analyses:     List[Dict],
+    mode:              str,
+    pipeline_cfg:      Optional[Dict] = None,
+) -> Dict:
+    """
+    Geometry-first table reconstruction.
+    Table regions get their IMAGE CROP passed to reconstruct_table_from_image().
+    Falls back to line_box clustering if geometry fails.
+    Respects pipeline_cfg for confidence threshold and table_reconstruction toggle.
+    """
+    from app.extraction.table_engine import reconstruct_table_from_image, reconstruct_table
+
+    cfg = pipeline_cfg or {}
+    # Profile may disable table reconstruction entirely (e.g. handwritten, marathi_document)
+    if not cfg.get("table_reconstruction", True):
+        logger.info("[table] Table reconstruction disabled by profile")
+        return {"all_page_tables": [[] for _ in pages], "total_tables": 0}
+
+    # Profile-specific confidence threshold (default: 0.35)
+    conf_threshold = float(cfg.get("table_confidence_threshold", 0.35))
+
+    all_page_tables: List[List[Dict]] = []
+
+    for page_idx, page_bgr in enumerate(pages):
+        page_tables: List[Dict] = []
+        regions       = enriched_regions[page_idx]
+        region_results = all_region_results[page_idx]
+
+        h_page, w_page = page_bgr.shape[:2]
+
+        for ri, region in enumerate(regions):
+            if not (region.get("is_table_candidate") or region.get("type") == "table"):
+                continue
+
+            rx  = max(0, region.get("x", 0) - 5)
+            ry  = max(0, region.get("y", 0) - 5)
+            rw  = min(w_page, region.get("x", 0) + region.get("width",  w_page)  + 5) - rx
+            rh  = min(h_page, region.get("y", 0) + region.get("height", h_page) + 5) - ry
+
+            if rw <= 20 or rh <= 20:
+                continue
+
+            crop_bgr = page_bgr[ry:ry+rh, rx:rx+rw]
+            if crop_bgr.size == 0:
+                continue
+
+            # ── CONFIDENCE GUARD — profile-controlled threshold ──────────────
+            region_conf = 1.0
+            if ri < len(region_results):
+                region_conf = float(region_results[ri].get("confidence", 1.0))
+
+            if region_conf < conf_threshold:
+                logger.info(
+                    "[routes] Table region %d skipped — conf %.2f < threshold %.2f (rendering as text)",
+                    ri, region_conf, conf_threshold,
+                )
+                continue
+
+            # Try geometry-first reconstruction
+            table = None
+            try:
+                table = reconstruct_table_from_image(crop_bgr, mode=mode)
+            except Exception as exc:
+                logger.debug("[routes] Geometry table failed for region %d: %s", ri, exc)
+
+            # Fallback: line_box clustering (only if geometry succeeded partially)
+            if not table:
+                table_boxes = [
+                    b for b in all_page_boxes[page_idx]
+                    if b.get("is_table_source") or _box_overlaps_region(b, rx, ry, rw, rh)
+                ]
+                if table_boxes:
+                    local_boxes = []
+                    for b in table_boxes:
+                        lb = dict(b)
+                        if isinstance(lb.get("bbox"), list):
+                            lb["bbox"] = [[pt[0]-rx, pt[1]-ry] for pt in lb["bbox"]]
+                        local_boxes.append(lb)
+                    try:
+                        table = reconstruct_table(local_boxes)
+                    except Exception as exc2:
+                        logger.debug("[routes] Fallback table failed: %s", exc2)
+
+            if table and table.get("rows"):
+                table["reading_order"] = region.get("reading_order", 0)
+                table["bbox"]          = [rx, ry, rw, rh]
+                page_tables.append(table)
+                logger.info(
+                    "[routes] Table p%d r%d: method=%s %d×%d",
+                    page_idx, ri, table.get("method", "?"),
+                    len(table.get("rows", [])),
+                    table.get("col_count", 0),
+                )
+
+
+        all_page_tables.append(page_tables)
+
+    total_tables = sum(len(t) for t in all_page_tables)
+    return {
+        "all_page_tables": all_page_tables,
+        "total_tables":    total_tables,
+    }
+
+
+def _box_overlaps_region(box: Dict, rx: int, ry: int, rw: int, rh: int) -> bool:
+    bbox = box.get("bbox", [])
+    if not bbox:
+        return False
+    try:
+        xs = [pt[0] for pt in bbox]
+        ys = [pt[1] for pt in bbox]
+        bx1, by1 = min(xs), min(ys)
+        bx2, by2 = max(xs), max(ys)
+        return not (bx2 < rx or bx1 > rx+rw or by2 < ry or by1 > ry+rh)
+    except Exception:
+        return False
+
+
+# ── Reconstruct Stage ─────────────────────────────────────────────────────────
+
+def _stage_reconstruct(
+    all_page_boxes:  List[List[Dict]],
+    all_page_tables: List[List[Dict]],
+    page_analyses:   List[Dict],
+    dna_hints:       Optional[Dict] = None,
+) -> Dict:
+    from app.extraction.text_reconstructor import reconstruct_text_blocks, blocks_to_text
+
+    all_page_blocks:     List[List[Dict]] = []
+    all_positioned:      List[List[Dict]] = []
+    all_page_dims:       List[Dict]       = []
+    clean_pages:         List[str]        = []
+    all_graphs:          List[Dict]       = []
+
+    for page_idx, page_boxes in enumerate(all_page_boxes):
+        analysis  = page_analyses[page_idx] if page_idx < len(page_analyses) else {}
+        page_w    = float(analysis.get("page_width",  0))
+        page_h    = float(analysis.get("page_height", 0))
+        col_count = analysis.get("dna", {}).get("column_count", 1)
+
+        # Filter out table-source boxes (handled by table stage)
+        text_boxes = [b for b in page_boxes if not b.get("is_table_source")]
+
+        blocks, positioned = reconstruct_text_blocks(text_boxes, page_w, page_h)
+
+        # Inject table blocks at reading order position
+        page_tables = all_page_tables[page_idx] if page_idx < len(all_page_tables) else []
+        table_blocks_injected = []
+        for tbl in page_tables:
+            ro   = tbl.pop("reading_order", len(blocks))
+            bbox = tbl.pop("bbox", None)
+            tbl_copy = dict(tbl)
+            if bbox:
+                tbl_copy["bbox"] = bbox
+                tbl_copy["x1"]   = float(bbox[0])
+                tbl_copy["y1"]   = float(bbox[1])
+                tbl_copy["x2"]   = float(bbox[0]) + float(bbox[2])
+                tbl_copy["y2"]   = float(bbox[1]) + float(bbox[3])
+            insert_at = min(ro, len(blocks))
+            blocks.insert(insert_at, tbl_copy)
+            table_blocks_injected.append(tbl_copy)
+
+        # ── Phase 3: Build Layout Graph (column-aware structure) ─────────────
+        layout_graph: Dict = {}
+        try:
+            from app.extraction.layout_graph import build_layout_graph, graph_to_reading_order_blocks
+            # Use positioned elements with bbox coordinates for graph building
+            graph_elements = [
+                {**el, "type": el.get("block_type", el.get("type", "paragraph"))}
+                for el in positioned
+                if el.get("text") or el.get("content")
+            ]
+            if graph_elements:
+                layout_graph = build_layout_graph(
+                    graph_elements, page_w=page_w, page_h=page_h
+                )
+                # Apply graph reading order to text blocks (not tables)
+                graph_blocks = graph_to_reading_order_blocks(layout_graph)
+                if graph_blocks:
+                    # Re-insert tables at their Y positions
+                    final_blocks = list(graph_blocks)
+                    for tbl_copy in table_blocks_injected:
+                        tbl_y = tbl_copy.get("y1", 0)
+                        insert_pos = len(final_blocks)
+                        for fi, fb in enumerate(final_blocks):
+                            fb_y = fb.get("y1", fb.get("bbox", [0,0])[1] if fb.get("bbox") else 0)
+                            if fb_y and tbl_y < fb_y:
+                                insert_pos = fi
+                                break
+                        final_blocks.insert(insert_pos, tbl_copy)
+                    blocks = final_blocks
+        except Exception as exc:
+            logger.debug("[routes] Layout graph failed for page %d: %s", page_idx, exc)
+
+        all_graphs.append(layout_graph)
+
+        # ── Phase 4: Semantic Reconstruction — DISABLED (Truth Stabilization) ──
+        # apply_semantic_reconstruction was merging garbage OCR lines into fake
+        # KV pairs and grouping unrelated content as paragraphs.
+        # Raw blocks from layout_graph are more trustworthy.
+        # TODO: Re-enable after OCR truth layer is stable.
+        # try:
+        #     from app.extraction.semantic_reconstruction import apply_semantic_reconstruction
+        #     blocks = apply_semantic_reconstruction(blocks, ...)
+        # except Exception:
+        #     pass
+
+
+        clean_p = blocks_to_text(blocks)
+        clean_pages.append(clean_p)
+        all_page_blocks.append(blocks)
+        all_positioned.append(positioned)
+        all_page_dims.append({
+            "width":        int(page_w),
+            "height":       int(page_h),
+            "column_count": col_count,
+        })
+
+    # Merge pages
+    merged_blocks: List[Dict] = []
+    positioned_all: List[Dict] = []
+
+    for pg_idx, (pg_blocks, pg_pos) in enumerate(zip(all_page_blocks, all_positioned)):
+        if pg_idx > 0 and pg_blocks:
+            merged_blocks.append({"type": "section_header", "content": f"PAGE {pg_idx + 1}"})
+        merged_blocks.extend(pg_blocks)
+        for el in pg_pos:
+            el["page_index"] = pg_idx
+        positioned_all.extend(pg_pos)
+    clean_text     = "\n\n".join(clean_pages)
+    page_dims_list = all_page_dims or [{"width": 0, "height": 0, "column_count": 1}]
+    page_dims      = page_dims_list[0]
+
+    # PIPELINE SAFETY: if reconstruction produced 0 blocks but raw text exists,
+    # convert the raw text into basic paragraph blocks so the user sees the OCR result.
+    if not merged_blocks and clean_text.strip():
+        from app.extraction.ocr_validator import safe_raw_fallback
+        merged_blocks = safe_raw_fallback(clean_text, page_dims.get("width", 794), page_dims.get("height", 1123))
+        logger.warning("[routes] reconstruct: 0 blocks but %d chars raw text — safe_raw_fallback applied", len(clean_text))
+
+    # Merge graph metadata (use first page graph)
+    merged_graph = all_graphs[0] if all_graphs else {}
+
+    return {
+        "blocks":              merged_blocks,
+        "positioned_elements": positioned_all,
+        "clean_pages":         clean_pages,
+        "clean_text":          clean_text,
+        "page_dims":           page_dims,
+        "page_dims_list":      page_dims_list,
+        "page_count":          len(all_page_blocks),
+        "layout_graph":        merged_graph,
+    }
+
+
+# ── Quality Score Stage ───────────────────────────────────────────────────────
+
+def _stage_quality_score(
+    blocks:             List[Dict],
+    avg_conf:           float,
+    all_region_results: List[List[Dict]],
+    pages:              List[np.ndarray],
+    normalized_pages:   List[np.ndarray],
+    mode:               str,
+    layout_graph:       Optional[Dict] = None,
+) -> Dict:
+    from app.extraction.semantic_cleaner import (
+        clean_blocks,
+        detect_language, extract_universal_fields, detect_doc_type,
+    )
+    from app.extraction.quality_engine import (
+        score_extraction, identify_low_quality_regions
+    )
+    from app.extraction.ocr_router import ocr_region
+    from app.extraction.ocr_validator import validate_and_fix_blocks, safe_raw_fallback
+
+    # ── 1. Character-level cleaning (mojibake, control chars) ─────────────────
+    clean_blk = clean_blocks(blocks)
+    logger.info("[pipeline] after_char_clean=%d blocks (was %d)", len(clean_blk), len(blocks))
+
+    # ── 2. Encoding fix + garbage validation (REPLACES aggressive filters) ────
+    clean_blk = validate_and_fix_blocks(clean_blk)
+    logger.info("[pipeline] after_encoding_fix=%d blocks", len(clean_blk))
+
+    # ── 3. REMOVED: filter_by_semantic_improbability ─────────────────────────
+    # This filter was removing valid English AND Marathi blocks aggressively.
+    # Replaced by the softer validate_and_fix_blocks above which marks
+    # uncertain blocks as _uncertain=True instead of deleting them.
+
+    # ── 4. Never-empty guarantee ───────────────────────────────────────────────
+    if not clean_blk:
+        logger.warning("[routes] clean_blk empty after validation — using raw text fallback")
+        # Assuming we might need context from original blocks if sd isn't available
+        raw = " ".join(b.get("text", "") for b in blocks if b.get("text"))
+        clean_blk = safe_raw_fallback(raw)
+
+    # Flatten text
+    from app.extraction.text_reconstructor import blocks_to_text
+    all_text = blocks_to_text(clean_blk)
+    language = detect_language(all_text)
+    doc_type = detect_doc_type(all_text)
+    fields   = extract_universal_fields(all_text)
+
+    # Quality scoring V2 (graph-aware)
+    quality = score_extraction(
+        clean_blk,
+        avg_conf=avg_conf,
+        language=language,
+        graph=layout_graph,
+        region_results=all_region_results,
+    )
+
+    # Phase 3: Document DNA
+    dna_match: Dict = {}
+    dna_hints: Dict = {}
+    try:
+        from app.extraction.doc_dna import compute_dna_features, match_document_type, get_reconstruction_hints
+        dna_features = compute_dna_features(all_text, clean_blk, {})
+        dna_match    = match_document_type(dna_features, hint=doc_type.get("doc_type"), text=all_text)
+        dna_hints    = get_reconstruction_hints(dna_match["doc_type"], dna_match["confidence"])
+        logger.info(
+            "[routes] DNA: type=%s conf=%.2f hints=%s",
+            dna_match["doc_type"], dna_match["confidence"],
+            {k: v for k, v in dna_hints.items() if v is True},
+        )
+    except Exception as exc:
+        logger.debug("[routes] DNA failed: %s", exc)
+
+    # Region retry for low quality
+    retried_count = 0
+    if quality["retry_recommended"] and mode in ("standard", "deep"):
+        flat_regions = [rr for page_rr in all_region_results for rr in page_rr]
+        retry_indices = identify_low_quality_regions(flat_regions, threshold=0.35)
+        logger.info("[routes] Retry %d low-quality regions (grade=%s)", len(retry_indices), quality["grade"])
+
+        for idx in retry_indices[:5]:
+            try:
+                rr = flat_regions[idx]
+                pg_idx = 0
+                running = 0
+                for pi, page_rr in enumerate(all_region_results):
+                    if running + len(page_rr) > idx:
+                        pg_idx = pi
+                        break
+                    running += len(page_rr)
+
+                bbox   = rr.get("bbox", [0, 0, 0, 0])
+                rx, ry, rw, rh = bbox[0], bbox[1], bbox[2], bbox[3]
+                crop   = pages[pg_idx][ry:ry+rh, rx:rx+rw]
+                if crop.size == 0:
+                    continue
+
+                retry_result = ocr_region(crop, region_type=rr.get("region_type", "paragraph"), mode="deep")
+                if retry_result.get("confidence", 0) > rr.get("confidence", 0):
+                    retried_count += 1
+            except Exception as exc:
+                logger.debug("[routes] Retry %d failed: %s", idx, exc)
+
+    return {
+        "clean_blocks":       clean_blk,
+        "quality":            quality,
+        "language":           language,
+        "doc_type_result":    doc_type,
+        "detected_doc_type":  doc_type.get("doc_type", "unknown"),
+        "fields":             fields,
+        "retried_count":      retried_count,
+        "dna_match":          dna_match,
+        "dna_hints":          dna_hints,
+    }
+
+
+def _stage_render_prep(pages: List[np.ndarray]) -> Dict:
+    page_images: List[str] = []
+    for page_bgr in pages:
+        b64 = _arr_to_b64(page_bgr, quality=90)
+        if b64:
+            page_images.append(b64)
+    return {"page_images": page_images}
+
+
+# ── Stage P5: Typography + Digital Twin ─────────────────────────────────────────
+
+def _stage_typography_and_twin(
+    blocks:    List[Dict],
+    page_dims: Dict,
+    dna_hints: Dict,
+    dna_match: Dict,
+    graph:     Dict,
+) -> Dict:
+    """
+    Phase 5: Annotate blocks with typography, build Digital Twin blocks,
+    and build a LayoutSignature for Structural Memory.
+    """
+    page_w = float(page_dims.get("width",  794))
+    page_h = float(page_dims.get("height", 1123))
+
+    if not blocks:
+        return {
+            "blocks":         blocks,
+            "twin_blocks":    [],
+            "twin_metadata":  {},
+            "layout_sig":     {},
+        }
+
+    # 1. Typography annotation
+    try:
+        from app.extraction.typography_engine import annotate_blocks_with_typography
+        blocks = annotate_blocks_with_typography(blocks, page_w, page_h, dpi_hint=150)
+    except Exception as exc:
+        logger.debug("[routes] Typography annotation failed: %s", exc)
+
+    # 2. Digital Twin blocks
+    twin_json: List[Dict] = []
+    twin_meta: Dict       = {}
+    try:
+        from app.extraction.digital_twin_engine import (
+            build_twin_blocks, twin_blocks_to_json,
+            compute_spacing_rhythm, build_twin_metadata,
+        )
+        twin_list = build_twin_blocks(blocks, page_w, page_h)
+        twin_json = twin_blocks_to_json(twin_list)
+        rhythm    = compute_spacing_rhythm(blocks, page_w, page_h)
+        twin_meta = build_twin_metadata(twin_list, rhythm, page_w, page_h)
+    except Exception as exc:
+        logger.debug("[routes] Digital Twin build failed: %s", exc)
+
+    # 3. Structural Memory — build + store signature
+    layout_sig: Dict = {}
+    try:
+        from app.extraction.structure_memory import (
+            build_signature, store_signature, match_signature,
+            apply_signature_hints, signature_to_dict,
+        )
+        sig = build_signature(blocks, graph, dna_match, page_w, page_h)
+        # Check for similar past signature and apply hints
+        matched = match_signature(sig)
+        if matched:
+            logger.info("[routes] Structural memory match: %s", matched.sig_id)
+            blocks = apply_signature_hints(matched, blocks)
+        store_signature(sig)
+        layout_sig = signature_to_dict(sig)
+    except Exception as exc:
+        logger.debug("[routes] Structural memory failed: %s", exc)
+
+    return {
+        "blocks":        blocks,
+        "twin_blocks":   twin_json,
+        "twin_metadata": twin_meta,
+        "layout_sig":    layout_sig,
+    }
+
+
+
+
+# ── Core Async Pipeline ────────────────────────────────────────────────────────
+
+async def _run_pipeline(
+    run_id:       str,
+    file_bytes:   bytes,
+    filename:     str,
+    mode:         str,
+    pipeline_cfg: Optional[Dict] = None,
+) -> None:
+    run = get_run(run_id)
+    if not run:
+        return
+
+    # Apply profile defaults if no config provided
+    if pipeline_cfg is None:
+        pipeline_cfg = {}
+
+    # Store config in shared state for stage access
+    sd: Dict[str, Any] = {"_pipeline_cfg": pipeline_cfg}
+    logger.info("[pipeline] cfg=%s", {k: v for k, v in pipeline_cfg.items() if k in ("lang", "safe_mode", "handwritten_mode", "table_reconstruction", "profile")})
+
+    # ═══════════════════════════════════════════════════════════════════════════
+    # ── CLEAN CORE PIPELINE ───────────────────────────────────────────────────
+    # Three separate routes. No filters. No semantic layers. Raw output.
+    # ═══════════════════════════════════════════════════════════════════════════
+    try:
+        from app.extraction.core_extractor import run_extraction
+        import time as _time
+
+        run.start_stage("file_ingest", "Detecting document type…")
+        _t0 = _time.monotonic()
+
+        lang_cfg = pipeline_cfg.get("lang", "auto") or "auto"
+        ext_result = await _run_sync(run_extraction, file_bytes, filename, lang_cfg, mode)
+
+        elapsed_ms = int((_time.monotonic() - _t0) * 1000)
+        run.finish_stage("file_ingest",
+            f"Pipeline {ext_result.pipeline.upper()} | {ext_result.word_count} words | engine={ext_result.engine}",
+            extra={"pipeline": ext_result.pipeline, "word_count": ext_result.word_count})
+
+        # ── Assemble final result ──────────────────────────────────────────────
+        page_images   = ext_result.page_images
+        clean_text    = ext_result.full_text
+        final_blocks  = ext_result.blocks
+
+        quality = {
+            "overall":          80 if ext_result.word_count > 10 else 30,
+            "grade":            "B" if ext_result.word_count > 10 else "D",
+            "word_count":       ext_result.word_count,
+            "line_count":       ext_result.line_count,
+            "layout_integrity": 80,
+            "table_integrity":  60,
+            "ocr_confidence":   70,
+            "semantic_coherence": 60,
+            "reading_order":    80,
+            "noise_ratio":      20,
+        }
+
+        final = {
+            "success":  True,
+            "run_id":   run_id,
+            "meta": {
+                "filename":          filename,
+                "is_pdf":            filename.lower().endswith(".pdf"),
+                "page_count":        len(ext_result.pages),
+                "file_size_bytes":   len(file_bytes),
+                "total_elapsed_ms":  elapsed_ms,
+                "mode":              mode,
+                "phase":             "core_v2",
+                "pipeline":          ext_result.pipeline,
+                "age_score":         0.0,
+                "age_enhanced":      False,
+                "layer_stats":       {},
+            },
+            "document": {"detected_type": "unknown", "type_confidence": 0, "type_scores": {}},
+            "dna":       {},
+            "dna_hints": {},
+            "layout_graph": {"column_count": 1, "section_count": 0, "column_boundaries": [], "sections": []},
+            "twin_blocks":   [],
+            "twin_metadata": {},
+            "layout_sig":    {},
+            "language":      {},
+            "ocr": {
+                "raw_text":              clean_text,
+                "clean_text":            clean_text,
+                "human_readable":        clean_text,
+                "pages":                 ext_result.pages,
+                "engines_used":          [ext_result.engine],
+                "avg_engine_confidence": 70.0,
+                "word_count":            ext_result.word_count,
+                "line_count":            ext_result.line_count,
+                "detected_script":       "Devanagari" if any("\u0900" <= c <= "\u097F" for c in clean_text) else "Latin",
+                "ocr_lang":              lang_cfg,
+            },
+            "quality":             quality,
+            "fields":              {},
+            "tables":              [],
+            "transactions":        [],
+            "blocks":              final_blocks,
+            "positioned_elements": [],
+            "page_dims":           {"width": 794, "height": 1123, "column_count": 1},
+            "page_dims_list":      [{"width": 794, "height": 1123, "column_count": 1}],
+            "page_count":          len(ext_result.pages),
+            "images": {
+                "pages":    page_images,
+                "original": page_images[0] if page_images else "",
+            },
+            "snapshots":           {"normalized": "", "layout_map": "", "ocr_confidence": ""},
+            "region_debug":        {"page_analyses": [], "region_results": []},
+            "semantic":            {},
+            "forensics":           [],
+            "restoration":         {"applied": bool(ext_result.notes), "notes": ext_result.notes},
+        }
+
+        _write_perf(run.perf_log, filename)
+        run.complete(final)
+        logger.info("[pipeline] CORE_V2 run %s completed: pipeline=%s words=%d elapsed=%dms",
+                    run_id, ext_result.pipeline, ext_result.word_count, elapsed_ms)
+        return   # ← EXIT: skip legacy pipeline entirely
+
+    except Exception as exc:
+        logger.warning("[pipeline] core_extractor failed (%s) — falling back to legacy pipeline", exc)
+        # If clean pipeline fails, fall through to legacy stages below
+
+    # ═══════════════════════════════════════════════════════════════════════════
+    # ── LEGACY PIPELINE (fallback only) ───────────────────────────────────────
+    # ═══════════════════════════════════════════════════════════════════════════
+
+
+    # ── STAGE 1: File Ingest ──────────────────────────────────────────────────
+    run.start_stage("file_ingest", "Loading and decoding file…")
+    try:
+        result = await _with_timeout(_run_sync(_stage_file_ingest, file_bytes, filename), 15, "File Ingest")
+        sd.update(result)
+        run.finish_stage("file_ingest",
+            f"{result['page_count']} page(s) — {'PDF' if result['is_pdf'] else 'Image'}",
+            extra={"page_count": result["page_count"]})
+    except Exception as exc:
+        run.fail_stage("file_ingest", str(exc), timed_out=isinstance(exc, TimeoutError))
+        run.abort(f"File load failed: {exc}")
+        return
+
+    pages = sd["pages"]
+
+    # ── STAGE 1.5: Document Restoration (Stage 0) ─────────────────────────────
+    # Runs BEFORE normalization. Fixes mobile photo inputs:
+    #   - Perspective distortion (book on table, tilted page)
+    #   - Dark background (photo with non-white surface)
+    #   - Uneven illumination / shadows
+    #   - Faded / blue ink
+    # Only fires when input is an image (not PDF) or when dark bg detected.
+    if not sd.get("is_pdf", True):
+        try:
+            from app.extraction.document_restorer import restore_document, is_mobile_photo
+            restored_pages = []
+            restoration_notes = []
+            any_perspective = False
+            for pg in pages:
+                rr = restore_document(pg, force_mobile=False, skip_perspective=False)
+                restored_pages.append(rr.restored)
+                restoration_notes.append(rr.notes)
+                if rr.perspective_applied:
+                    any_perspective = True
+            sd["pages"] = restored_pages
+            pages       = restored_pages
+            sd["restoration_meta"] = {
+                "applied":            True,
+                "notes":              restoration_notes,
+                "perspective_applied": any_perspective,
+            }
+            logger.info("[pipeline] Stage0 restoration: perspective=%s notes=%s",
+                        any_perspective, restoration_notes)
+        except Exception as exc:
+            logger.warning("[pipeline] Stage0 restoration failed (non-fatal): %s", exc)
+            sd["restoration_meta"] = {"applied": False, "notes": [], "error": str(exc)}
+
+
+    # ── STAGE 2: Normalize ────────────────────────────────────────────────────
+    run.start_stage("normalize", "Normalizing image quality…")
+    try:
+        result = await _with_timeout(_run_sync(_stage_normalize, pages, mode), 20, "Normalize")
+
+        sd.update(result)
+        q0 = result["quality_reports"][0] if result["quality_reports"] else {}
+        run.finish_stage("normalize",
+            f"ops={q0.get('ops_applied', [])} skew={q0.get('skew_angle', 0):.1f}°",
+            extra={"quality_p0": {k: v for k, v in q0.items() if isinstance(v, bool)},
+                   "snapshots": result.get("normalize_snapshots", [])[:1]})
+    except Exception as exc:
+        run.fail_stage("normalize", str(exc), timed_out=isinstance(exc, TimeoutError))
+        sd["normalized_pages"] = [cv2.cvtColor(p, cv2.COLOR_BGR2GRAY) if len(p.shape)==3 else p for p in pages]
+        sd["quality_reports"]  = [{}] * len(pages)
+        sd["normalize_snapshots"] = []
+        run.finish_stage("normalize", "Fallback: raw grayscale", used_fallback=True, fallback_reason=str(exc))
+
+    normalized_pages = sd["normalized_pages"]
+
+    # ── STAGE 2.5: Document Aging Engine ────────────────────────────────────────
+    if mode != "fast":
+        try:
+            age_result = await _with_timeout(
+                _run_sync(_stage_age_detect, pages, normalized_pages, mode),
+                25, "Age Detect",
+            )
+            sd.update(age_result)
+            # normalized_pages is now the enhanced version
+            normalized_pages = sd["normalized_pages"]
+            if age_result["age_enhanced"]:
+                logger.info(
+                    "[pipeline] Age enhancement applied — avg_age=%.2f",
+                    age_result["avg_age_score"],
+                )
+        except Exception as exc:
+            logger.debug("[pipeline] Age detect skipped: %s", exc)
+            sd["age_reports"]    = [{"age_score": 0.0, "needs_enhancement": False}] * len(pages)
+            sd["avg_age_score"]  = 0.0
+            sd["age_enhanced"]   = False
+    else:
+        sd["age_reports"]   = [{"age_score": 0.0, "needs_enhancement": False}] * len(pages)
+        sd["avg_age_score"] = 0.0
+        sd["age_enhanced"]  = False
+
+    # Propagate old-document flag into pipeline_cfg for text_isolator bleed-through suppression
+    avg_age = sd.get("avg_age_score", 0.0)
+    if avg_age > 0.35:
+        pipeline_cfg["is_old_document"] = True
+        logger.info("[pipeline] Old document detected (age=%.2f) — bleed-through suppression ON", avg_age)
+
+    # ── STAGE 3: Page Analyze ─────────────────────────────────────────────────
+    run.start_stage("page_analyze", "Analyzing document layout (Document DNA)…")
+    try:
+        result = await _with_timeout(_run_sync(_stage_page_analyze, normalized_pages), 15, "Page Analyze")
+        sd.update(result)
+        patterns = [a["dna"]["pattern"] for a in result["page_analyses"]]
+        run.finish_stage("page_analyze",
+            f"Pattern(s): {patterns} | {result['total_regions']} regions",
+            extra={"patterns": patterns})
+    except Exception as exc:
+        run.fail_stage("page_analyze", str(exc), timed_out=isinstance(exc, TimeoutError))
+        h, w = normalized_pages[0].shape[:2] if normalized_pages else (100, 100)
+        sd["page_analyses"]  = [{"dna": {"pattern": "generic", "confidence": 0.5, "column_count": 1, "has_dense_rows": False, "has_grid_lines": False, "has_two_columns": False, "gutters": []}, "regions": [], "page_width": w, "page_height": h}] * len(pages)
+        sd["total_regions"]  = 0
+        run.finish_stage("page_analyze", "Fallback: generic layout", used_fallback=True, fallback_reason=str(exc))
+
+    # ── STAGE 4: Region Detect ────────────────────────────────────────────────
+    run.start_stage("region_detect", "Detecting regions + layer classification…")
+    try:
+        result = await _with_timeout(
+            _run_sync(_stage_region_detect, sd["page_analyses"], pages), 20, "Region Detect"
+        )
+        sd.update(result)
+        layer_info = result.get("layer_stats", [{}])[0] if result.get("layer_stats") else {}
+        run.finish_stage("region_detect",
+            f"{result['total_enriched']} regions | layers={layer_info}",
+            extra={"total_enriched": result["total_enriched"],
+                   "layout_snapshots": result.get("layout_snapshots", [])[:1],
+                   "layer_stats": result.get("layer_stats", [])})
+    except Exception as exc:
+        run.fail_stage("region_detect", str(exc), timed_out=isinstance(exc, TimeoutError))
+        h0, w0 = pages[0].shape[:2] if pages else (100, 100)
+        sd["enriched_regions"]   = [[{"type": "paragraph", "x": 0, "y": 0, "width": w0, "height": h0, "confidence": 0.5, "reading_order": 0, "is_table_candidate": False, "language_hint": "auto"}]] * len(pages)
+        sd["total_enriched"]     = len(pages)
+        sd["layout_snapshots"]   = []
+        run.finish_stage("region_detect", "Fallback: full-page region", used_fallback=True, fallback_reason=str(exc))
+
+    # ── STAGE 5: OCR Route (PARALLEL) ────────────────────────────────────────
+    run.start_stage("ocr_route", "Running OCR (parallel per-region + language routing)…")
+    try:
+        result = await _with_timeout(
+            _stage_ocr_route_parallel(pages, normalized_pages, sd["enriched_regions"], mode, sd.get("_pipeline_cfg", {})),
+            120, "OCR Route",
+        )
+        sd.update(result)
+        wc = len(result["raw_text"].split())
+        run.finish_stage("ocr_route",
+            f"~{wc} words | engines={result['engines_used']} | script={result['detected_script']} | conf={result['avg_conf']:.2f}",
+            extra={"word_count": wc, "engines_used": result["engines_used"],
+                   "confidence_snapshots": result.get("confidence_snapshots", [])[:1]})
+    except Exception as exc:
+        run.fail_stage("ocr_route", str(exc), timed_out=isinstance(exc, TimeoutError))
+        sd.update({"raw_text": "", "all_raw_texts": [""]*len(pages),
+                   "all_page_boxes": [[]]*len(pages), "all_region_results": [[]]*len(pages),
+                   "engines_used": [], "avg_conf": 0.0, "detected_script": "Latin", "ocr_lang": "eng",
+                   "confidence_snapshots": []})
+        run.finish_stage("ocr_route", "OCR failed", used_fallback=True, fallback_reason=str(exc))
+
+    # ── STAGE 6: Table Detect (GEOMETRY-FIRST) ────────────────────────────────
+    run.start_stage("table_detect", "Reconstructing tables (geometry-first pipeline)…")
+    try:
+        result = await _with_timeout(
+            _run_sync(_stage_table_detect_geometry,
+                      pages, sd["enriched_regions"], sd["all_page_boxes"],
+                      sd["all_region_results"], sd["page_analyses"], mode,
+                      sd.get("_pipeline_cfg", {})),
+            45, "Table Detect",
+        )
+        sd.update(result)
+        run.finish_stage("table_detect",
+            f"Reconstructed {result['total_tables']} table(s) [geometry-first]",
+            extra={"total_tables": result["total_tables"]})
+    except Exception as exc:
+        run.fail_stage("table_detect", str(exc), timed_out=isinstance(exc, TimeoutError))
+        sd["all_page_tables"] = [[] for _ in pages]
+        sd["total_tables"]    = 0
+        run.finish_stage("table_detect", "Tables skipped", used_fallback=True, fallback_reason=str(exc))
+
+    # ── STAGE 7: Reconstruct ──────────────────────────────────────────────────
+    run.start_stage("reconstruct", "Building document structure (reading-order)…")
+    try:
+        result = await _with_timeout(
+            _run_sync(_stage_reconstruct, sd["all_page_boxes"], sd["all_page_tables"], sd["page_analyses"]),
+            20, "Reconstruct",
+        )
+        sd.update(result)
+        run.finish_stage("reconstruct",
+            f"{len(result['blocks'])} blocks | {len(result['positioned_elements'])} elements",
+            extra={"block_count": len(result["blocks"])})
+    except Exception as exc:
+        run.fail_stage("reconstruct", str(exc), timed_out=isinstance(exc, TimeoutError))
+        sd.update({"blocks": [], "positioned_elements": [],
+                   "clean_pages": sd.get("all_raw_texts", [""]),
+                   "clean_text":  sd.get("raw_text", ""),
+                   "page_dims":   {"width": 0, "height": 0, "column_count": 1},
+                   "page_dims_list": [{"width": 0, "height": 0, "column_count": 1}],
+                   "page_count":  len(pages)})
+        run.finish_stage("reconstruct", "Fallback: raw text", used_fallback=True, fallback_reason=str(exc))
+
+    # ── STAGE 8: Quality Score ────────────────────────────────────────────────
+    run.start_stage("quality_score", "Quality V2 + DNA + garbage filter…")
+    try:
+        result = await _with_timeout(
+            _run_sync(_stage_quality_score,
+                      sd.get("blocks", []), sd.get("avg_conf", 0.0),
+                      sd.get("all_region_results", [[]]),
+                      pages, normalized_pages, mode,
+                      sd.get("layout_graph", {})),
+            30, "Quality Score",
+        )
+        sd.update(result)
+        q = result["quality"]
+        dna = result.get("dna_match", {})
+        run.finish_stage("quality_score",
+            f"Grade {q['grade']} ({q['overall']}/100) | DNA={dna.get('doc_type','?')} | retried={result['retried_count']}",
+            extra={"grade": q["grade"], "overall": q["overall"]})
+    except Exception as exc:
+        run.fail_stage("quality_score", str(exc), timed_out=isinstance(exc, TimeoutError))
+        sd["clean_blocks"]      = sd.get("blocks", [])
+        sd["quality"]           = {"overall": 0, "grade": "F", "word_count": 0, "line_count": 0,
+                                    "layout_integrity": 0, "table_integrity": 0, "ocr_confidence": 0,
+                                    "semantic_coherence": 0, "reading_order": 0, "noise_ratio": 0}
+        sd["language"]          = {}
+        sd["doc_type_result"]   = {}
+        sd["detected_doc_type"] = "unknown"
+        sd["fields"]            = {}
+        sd["dna_match"]         = {}
+        sd["dna_hints"]         = {}
+        run.finish_stage("quality_score", "Scoring failed", used_fallback=True, fallback_reason=str(exc))
+
+    # ── PIPELINE_TRUTH_MODE: controlled by profile safe_mode setting ────────
+    # safe_mode=True  → bypass P5+P6 intelligence (default while OCR is unstable)
+    # safe_mode=False → run P5+P6 (for clean PDFs / stable document types)
+    _cfg = sd.get("_pipeline_cfg", {})
+    PIPELINE_TRUTH_MODE = _cfg.get("safe_mode", True)  # Default: safe
+
+    if not PIPELINE_TRUTH_MODE:
+
+        # ── STAGE P5: Typography + Digital Twin + Structural Memory ──────────
+        try:
+            p5_result = await _with_timeout(
+                _run_sync(
+                    _stage_typography_and_twin,
+                    sd.get("clean_blocks", sd.get("blocks", [])),
+                    sd.get("page_dims", {"width": 794, "height": 1123}),
+                    sd.get("dna_hints", {}),
+                    sd.get("dna_match", {}),
+                    sd.get("layout_graph", {}),
+                ),
+                30, "Typography+Twin",
+            )
+            sd.update(p5_result)
+        except Exception as exc:
+            logger.debug("[pipeline] Phase 5 skipped: %s", exc)
+            sd["twin_blocks"]   = []
+            sd["twin_metadata"] = {}
+            sd["layout_sig"]    = {}
+
+        # ── STAGE P6: Persistent Memory + Active Learning + Semantic ─────────
+        try:
+            p6_sig    = sd.get("layout_sig", {})
+            p6_blocks = sd.get("blocks", sd.get("clean_blocks", []))
+            p6_dna    = sd.get("dna_match", {})
+
+            try:
+                from app.extraction.structure_memory import signature_from_dict
+                from app.extraction.memory_store import get_memory_store
+                if p6_sig:
+                    ms = get_memory_store()
+                    recovered_sig = signature_from_dict(p6_sig) if p6_sig else None
+                    if recovered_sig:
+                        ms.store(recovered_sig)
+            except Exception as exc:
+                logger.debug("[pipeline] P6 persistent memory failed: %s", exc)
+
+            try:
+                from app.extraction.active_learning import apply_learning_hints
+                p6_blocks = apply_learning_hints(p6_blocks, p6_dna.get("doc_type", "unknown"))
+                sd["blocks"] = p6_blocks
+            except Exception as exc:
+                logger.debug("[pipeline] P6 active learning failed: %s", exc)
+
+            try:
+                from app.extraction.semantic_understanding import understand_document
+                sem_result = understand_document(p6_blocks, p6_dna)
+                sd["semantic"] = sem_result.to_dict()
+            except Exception as exc:
+                logger.debug("[pipeline] P6 semantic failed: %s", exc)
+                sd["semantic"] = {}
+
+        except Exception as exc:
+            logger.debug("[pipeline] Phase 6 stage failed: %s", exc)
+            sd["semantic"] = {}
+    else:
+        # Truth mode: skip all intelligence layers
+        sd["twin_blocks"]   = []
+        sd["twin_metadata"] = {}
+        sd["layout_sig"]    = {}
+
+    # ── STAGE P6: Persistent Memory + Active Learning + Semantic Understanding ──
+    try:
+        p6_sig     = sd.get("layout_sig", {})
+        p6_blocks  = sd.get("blocks", sd.get("clean_blocks", []))
+        p6_dna     = sd.get("dna_match", {})
+
+        # P6-A: Persist signature to SQLite
+        try:
+            from app.extraction.structure_memory import signature_from_dict
+            from app.extraction.memory_store import get_memory_store
+            if p6_sig:
+                ms = get_memory_store()
+                recovered_sig = signature_from_dict(p6_sig) if p6_sig else None
+                if recovered_sig:
+                    ms.store(recovered_sig)
+                    logger.debug("[pipeline] P6: signature persisted to SQLite")
+        except Exception as exc:
+            logger.debug("[pipeline] P6 persistent memory failed: %s", exc)
+
+        # P6-B: Apply active learning calibration hints to blocks
+        try:
+            from app.extraction.active_learning import apply_learning_hints
+            doc_type = p6_dna.get("doc_type", "unknown")
+            p6_blocks = apply_learning_hints(p6_blocks, doc_type)
+            sd["blocks"] = p6_blocks
+        except Exception as exc:
+            logger.debug("[pipeline] P6 active learning hints failed: %s", exc)
+
+        # P6-C: Semantic understanding
+        try:
+            from app.extraction.semantic_understanding import understand_document
+            sem_result = understand_document(p6_blocks, p6_dna)
+            sd["semantic"] = sem_result.to_dict()
+            logger.info(
+                "[pipeline] P6 semantic: %s | %d entities | summary=%s",
+                sem_result.doc_type,
+                len(sem_result.entities),
+                sem_result.summary[:60],
+            )
+        except Exception as exc:
+            logger.debug("[pipeline] P6 semantic failed: %s", exc)
+            sd["semantic"] = {}
+
+    except Exception as exc:
+        logger.debug("[pipeline] Phase 6 stage failed: %s", exc)
+        sd["semantic"] = {}
+
+
+    # ── Render Page Previews ──────────────────────────────────────────────────
+    try:
+        render_result = await _with_timeout(_run_sync(_stage_render_prep, pages), 10, "Render")
+        page_images = render_result.get("page_images", [])
+    except Exception:
+        page_images = []
+
+    # ── Assemble Final Result ─────────────────────────────────────────────────
+    clean_text   = sd.get("clean_text", "")
+    raw_text     = sd.get("raw_text",   "")
+    # Phase 5 blocks (with typography) or fallback
+    final_blocks = sd.get("blocks", sd.get("clean_blocks", []))
+    quality      = sd.get("quality", {"overall": 0, "grade": "F"})
+    doc_type_res = sd.get("doc_type_result", {})
+    dna_match    = sd.get("dna_match", {})
+    dna_hints    = sd.get("dna_hints", {})
+    graph        = sd.get("layout_graph", {})
+    age_report   = sd.get("age_reports", [{}])[0] if sd.get("age_reports") else {}
+    twin_blocks  = sd.get("twin_blocks",  [])
+    twin_meta    = sd.get("twin_metadata", {})
+    layout_sig   = sd.get("layout_sig",   {})
+
+    # Forensics: flatten all pages into one list (capped at 50 regions for payload)
+    all_forensics_flat: List[Dict] = []
+    for page_foren in sd.get("all_forensics", []):
+        all_forensics_flat.extend(page_foren)
+    # Strip raw_crop_b64 from variant_results to keep payload size manageable
+    forensics_payload = []
+    for fr in all_forensics_flat[:50]:
+        fr_copy = dict(fr)
+        vr_clean = []
+        for vr in fr_copy.get("variant_results", []):
+            vr_clean.append({
+                k: v for k, v in vr.items() if k != "boxes"
+            })
+        fr_copy["variant_results"] = vr_clean
+        forensics_payload.append(fr_copy)
+
+    final = {
+        "success":  True,
+        "run_id":   run_id,
+        "meta": {
+            "filename":          filename,
+            "is_pdf":            sd.get("is_pdf", False),
+            "page_count":        sd.get("page_count", len(pages)),
+            "file_size_bytes":   len(file_bytes),
+            "total_elapsed_ms":  int((time.monotonic() - run.created_at) * 1000),
+            "mode":              mode,
+            "phase":             6,
+            "age_score":         sd.get("avg_age_score", 0.0),
+            "age_enhanced":      sd.get("age_enhanced", False),
+            "layer_stats":       sd.get("layer_stats", [{}])[0] if sd.get("layer_stats") else {},
+        },
+        "document": {
+            "detected_type":   sd.get("detected_doc_type", "unknown"),
+            "type_confidence": doc_type_res.get("confidence", 0),
+            "type_scores":     doc_type_res.get("scores", {}),
+        },
+        # Phase 3: Document DNA
+        "dna":       dna_match,
+        "dna_hints": dna_hints,
+        # Phase 3: Layout graph metadata (for frontend)
+        "layout_graph": {
+            "column_count":      graph.get("column_count", 1),
+            "section_count":     graph.get("section_count", 0),
+            "column_boundaries": graph.get("column_boundaries", []),
+            "sections":          graph.get("sections", []),
+        },
+        # Phase 5: Digital Twin + Typography
+        "twin_blocks":   twin_blocks,
+        "twin_metadata": twin_meta,
+        "layout_sig":    layout_sig,
+        "language": sd.get("language", {}),
+        "ocr": {
+            "raw_text":              raw_text,
+            "clean_text":            clean_text,
+            "human_readable":        clean_text,
+            "pages":                 sd.get("clean_pages", []),
+            "engines_used":          sd.get("engines_used", []),
+            "avg_engine_confidence": round(sd.get("avg_conf", 0.0) * 100, 1),
+            "word_count":            len(clean_text.split()),
+            "line_count":            len([l for l in clean_text.splitlines() if l.strip()]),
+            "detected_script":       sd.get("detected_script", "Latin"),
+            "ocr_lang":              sd.get("ocr_lang", "eng"),
+        },
+        "quality":             quality,
+        "fields":              sd.get("fields", {}),
+        "tables":              [b for b in final_blocks if b.get("type") == "table"],
+        "transactions":        [b for b in final_blocks if b.get("type") == "transaction"],
+        "blocks":              final_blocks,
+        "positioned_elements": sd.get("positioned_elements", []),
+        "page_dims":           sd.get("page_dims", {"width": 0, "height": 0, "column_count": 1}),
+        "page_dims_list":      sd.get("page_dims_list", [{"width": 0, "height": 0, "column_count": 1}]),
+        "page_count":          sd.get("page_count", len(pages)),
+        "images": {
+            "pages":    page_images,
+            "original": page_images[0] if page_images else "",
+        },
+        "snapshots": {
+            "normalized":      (sd.get("normalize_snapshots",  []) or [""])[0],
+            "layout_map":      (sd.get("layout_snapshots",     []) or [""])[0],
+            "ocr_confidence":  (sd.get("confidence_snapshots", []) or [""])[0],
+        },
+        "region_debug": {
+            "page_analyses":  [{"dna": a.get("dna", {}), "regions": a.get("regions", [])} for a in sd.get("page_analyses", [])],
+            "region_results": sd.get("all_region_results", []),
+        },
+        # Phase 6: Semantic understanding
+        "semantic":            sd.get("semantic", {}),
+        # Phase 3: OCR Forensics (per-region debug data)
+        "forensics":           forensics_payload,
+        # Stage 0: Document Restoration metadata
+        "restoration": sd.get("restoration_meta", {
+            "applied": False,
+            "notes":   [],
+        }),
+    }
+
+    _write_perf(run.perf_log, filename)
+    run.complete(final)
+    logger.info("[pipeline] Run %s completed in %dms grade=%s",
+                run_id, final["meta"]["total_elapsed_ms"], quality.get("grade", "?"))
+
+
+# ── API Endpoints ──────────────────────────────────────────────────────────────
+
+@router.get("/ocr/pipeline/health", tags=["Extraction Studio"])
+async def pipeline_health():
+    return {"status": "ok", "service": "extraction_studio", "phase": 6, "timestamp": time.time()}
+
+
+@router.post("/ocr/pipeline/start", tags=["Extraction Studio"])
+async def pipeline_start(
+    file:        UploadFile = File(...),
+    mode:        str = Form("standard"),
+    profile:     str = Form("auto"),
+    safe_mode:   str = Form("false"),
+    handwritten: str = Form("false"),
+    lang_lock:   str = Form("auto"),
+):
+    file_bytes = await file.read()
+    if not file_bytes:
+        raise HTTPException(400, "Empty file")
+    if len(file_bytes) > 50 * 1024 * 1024:
+        raise HTTPException(413, "File too large (max 50MB)")
+
+    mode     = mode if mode in ("fast", "standard", "deep") else "standard"
+    filename = file.filename or "document"
+    run      = create_run(filename=filename)
+
+    # Resolve extraction profile
+    from app.extraction.extraction_profiles import get_profile, apply_profile_to_pipeline
+    prof     = get_profile(profile)
+    safe     = safe_mode.lower() in ("true", "1", "yes")
+    hw       = handwritten.lower() in ("true", "1", "yes")
+    lang     = lang_lock if lang_lock not in ("auto", "") else None
+    pipeline_cfg = apply_profile_to_pipeline(prof, safe_mode_override=safe, handwritten_override=hw, lang_override=lang)
+
+    logger.info(
+        "[pipeline] start: file=%s mode=%s profile=%s safe=%s hw=%s lang=%s",
+        filename, mode, profile, safe, hw, lang_lock,
+    )
+
+    asyncio.create_task(_run_pipeline(run.run_id, file_bytes, filename, mode, pipeline_cfg))
+    return {
+        "run_id":   run.run_id,
+        "filename": filename,
+        "status":   "started",
+        "mode":     mode,
+        "profile":  profile,
+        "safe_mode": safe,
+        "handwritten": hw,
+    }
+
+
+
+@router.get("/ocr/profiles", tags=["Extraction Studio"])
+async def get_profiles():
+    """Return available extraction profiles for the UI dropdown."""
+    from app.extraction.extraction_profiles import get_profile_list
+    return {"profiles": get_profile_list()}
+
+
+@router.get("/ocr/pipeline/status/{run_id}", tags=["Extraction Studio"])
+async def pipeline_status(run_id: str):
+    run = get_run(run_id)
+    if not run:
+        raise HTTPException(404, f"Run {run_id} not found")
+    return run.to_status_dict()
+
+
+@router.get("/ocr/pipeline/result/{run_id}", tags=["Extraction Studio"])
+async def pipeline_result(run_id: str):
+    run = get_run(run_id)
+    if not run:
+        raise HTTPException(404, f"Run {run_id} not found")
+    if run.overall_status not in (STATUS_DONE, STATUS_FAILED):
+        return JSONResponse({"ready": False, "overall_status": run.overall_status})
+    d = run.to_full_dict()
+    d["ready"] = True
+    return d
+
+
+@router.post("/api/ocr/universal-analyze", tags=["Extraction Studio"])
+@router.post("/ocr/universal-analyze", tags=["Extraction Studio"])
+async def universal_analyze(
+    file: UploadFile = File(...),
+    doc_type: Optional[str] = Form(None),
+    include_images: bool = Form(True),
+    mode: str = Form("standard"),
+):
+    file_bytes = await file.read()
+    if not file_bytes:
+        raise HTTPException(400, "Empty file")
+
+    filename = file.filename or "document"
+    mode     = mode if mode in ("fast", "standard", "deep") else "standard"
+    run      = create_run(filename=filename)
+
+    await _run_pipeline(run.run_id, file_bytes, filename, mode)
+
+    run_obj = get_run(run.run_id)
+    if not run_obj or run_obj.overall_status == STATUS_FAILED:
+        raise HTTPException(500, f"Extraction failed: {run_obj.error if run_obj else 'unknown'}")
+
+    result = run_obj.result or {}
+    result["success"] = True
+    return result
+
+
+# ── Phase 5: Export Endpoint ──────────────────────────────────────────────────
+
+@router.get("/ocr/pipeline/{run_id}/export/{fmt}", tags=["Extraction Studio"])
+async def pipeline_export(run_id: str, fmt: str):
+    """
+    Export a completed pipeline result in the requested format.
+
+    Supported formats:
+        json      → Structured JSON with full metadata and twin blocks
+        markdown  → GFM Markdown (hierarchy-aware)
+        html      → Absolute-positioned HTML reconstruction
+        csv       → All tables as CSV (joined by ---)
+        docx      → Word document (requires python-docx)
+    """
+    from fastapi.responses import PlainTextResponse, Response
+
+    run = get_run(run_id)
+    if not run:
+        raise HTTPException(404, f"Run {run_id} not found")
+    if run.overall_status not in (STATUS_DONE, STATUS_FAILED):
+        raise HTTPException(400, "Pipeline not yet complete")
+
+    result = run.result or {}
+    blocks     = result.get("blocks", [])
+    quality    = result.get("quality", {})
+    meta       = result.get("meta", {})
+    page_dims  = result.get("page_dims", {"width": 794, "height": 1123})
+    dna        = result.get("dna", {})
+    twin_blocks = result.get("twin_blocks", [])
+
+    try:
+        from app.extraction.export_engine import export_document
+        export = export_document(
+            format=fmt,
+            blocks=blocks,
+            quality=quality,
+            meta=meta,
+            page_dims=page_dims,
+            dna=dna,
+            twin_blocks=twin_blocks,
+        )
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    except Exception as e:
+        raise HTTPException(500, f"Export failed: {e}")
+
+    content   = export["content"]
+    mime_type = export["mime_type"]
+    filename  = export["filename"]
+
+    if isinstance(content, bytes):
+        return Response(
+            content=content,
+            media_type=mime_type,
+            headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+        )
+    elif isinstance(content, dict):
+        return JSONResponse(content=content)
+    else:
+        return PlainTextResponse(
+            content=str(content),
+            media_type=mime_type,
+            headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+        )
+
+
+@router.get("/ocr/pipeline/memory/library", tags=["Extraction Studio"])
+async def get_memory_library():
+    """Return the current session + persistent structural memory library."""
+    try:
+        from app.extraction.structure_memory import get_session_library, signature_to_dict
+        from app.extraction.memory_store import get_memory_store
+        session_lib = get_session_library()
+        ms          = get_memory_store()
+        persistent_count = ms.count()
+        return {
+            "session_library":    [signature_to_dict(s) for s in session_lib],
+            "session_count":      len(session_lib),
+            "persistent_count":   persistent_count,
+        }
+    except Exception as e:
+        return {"library": [], "count": 0, "error": str(e)}
+
+
+# ── Phase 6: PDF Export ────────────────────────────────────────────────────────
+
+@router.get("/ocr/pipeline/{run_id}/export/pdf", tags=["Extraction Studio"])
+async def pipeline_export_pdf(run_id: str):
+    """
+    Export a completed pipeline result as a searchable PDF.
+
+    The PDF embeds:
+    - Original scanned page as background image
+    - Invisible OCR text at exact coordinates (selectable/searchable)
+    - Unicode-safe Devanagari + Latin text
+    - Reading order preserved (Ctrl+A → correct reading flow)
+    """
+    from fastapi.responses import Response
+
+    run = get_run(run_id)
+    if not run:
+        raise HTTPException(404, f"Run {run_id} not found")
+    if run.overall_status not in (STATUS_DONE, STATUS_FAILED):
+        raise HTTPException(400, "Pipeline not yet complete")
+
+    result = run.result or {}
+
+    try:
+        from app.extraction.pdf_engine import build_pdf_from_result
+        pdf_bytes = build_pdf_from_result(result)
+    except ImportError as e:
+        raise HTTPException(500, f"PDF engine unavailable: {e}")
+    except Exception as e:
+        raise HTTPException(500, f"PDF generation failed: {e}")
+
+    filename = (result.get("meta", {}).get("filename") or "document")
+    filename = filename.rsplit(".", 1)[0] + "_searchable.pdf"
+
+    return Response(
+        content=pdf_bytes,
+        media_type="application/pdf",
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
+
+
+# ── Phase 6: Active Learning — Corrections ────────────────────────────────────
+
+@router.post("/ocr/pipeline/{run_id}/corrections", tags=["Extraction Studio"])
+async def store_correction_endpoint(run_id: str, payload: dict):
+    """
+    Store a user correction from the Digital Twin editor.
+
+    Body:
+    {
+        "block_id":    "...",
+        "original":    "Brnach Name",
+        "corrected":   "Branch Name",
+        "doc_type":    "bank_statement",
+        "region_type": "paragraph",
+        "engine":      "tesseract",
+        "script":      "Latin",
+        "confidence":  0.72
+    }
+    """
+    try:
+        from app.extraction.active_learning import store_correction
+        rec = store_correction(
+            run_id      = run_id,
+            block_id    = payload.get("block_id",    ""),
+            original    = payload.get("original",    ""),
+            corrected   = payload.get("corrected",   ""),
+            doc_type    = payload.get("doc_type",    "unknown"),
+            region_type = payload.get("region_type", "paragraph"),
+            engine      = payload.get("engine",      "unknown"),
+            script      = payload.get("script",      "Latin"),
+            confidence  = float(payload.get("confidence", 0.5)),
+        )
+        return {
+            "stored":       True,
+            "record_id":    rec.record_id,
+            "error_class":  rec.error_class,
+            "delta":        rec.confidence_delta,
+        }
+    except Exception as e:
+        raise HTTPException(500, f"Correction storage failed: {e}")
+
+
+@router.get("/ocr/corrections/stats", tags=["Extraction Studio"])
+async def get_correction_stats():
+    """Return active learning correction statistics."""
+    try:
+        from app.extraction.active_learning import get_correction_stats
+        return get_correction_stats()
+    except Exception as e:
+        return {"total_corrections": 0, "error": str(e)}
+
+
+# ── Phase 6: Semantic Understanding ───────────────────────────────────────────
+
+@router.get("/ocr/pipeline/{run_id}/semantic", tags=["Extraction Studio"])
+async def get_semantic_result(run_id: str):
+    """Return the semantic understanding result for a completed run."""
+    run = get_run(run_id)
+    if not run:
+        raise HTTPException(404, f"Run {run_id} not found")
+    result = run.result or {}
+    semantic = result.get("semantic", {})
+    if not semantic:
+        # Re-run semantic on demand
+        try:
+            from app.extraction.semantic_understanding import understand_document
+            blocks = result.get("blocks", [])
+            dna    = result.get("dna", {})
+            sem    = understand_document(blocks, dna)
+            semantic = sem.to_dict()
+        except Exception as e:
+            semantic = {"error": str(e)}
+    return semantic
+
+
+# ── Phase 6: Persistent Memory Stats ─────────────────────────────────────────
+
+@router.get("/ocr/pipeline/memory/stats", tags=["Extraction Studio"])
+async def get_memory_stats():
+    """Return persistent memory store statistics."""
+    try:
+        from app.extraction.memory_store import get_memory_store
+        ms = get_memory_store()
+        return {
+            "persistent_count": ms.count(),
+            "status": "ok",
+        }
+    except Exception as e:
+        return {"persistent_count": 0, "error": str(e)}

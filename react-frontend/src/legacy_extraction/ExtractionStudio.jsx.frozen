@@ -1,0 +1,1420 @@
+/**
+ * ExtractionStudio.jsx — Phase 3 Document Renderer V2
+ *
+ * Render Modes:
+ *   PAPER     — formatted blocks on white paper (Phase 1/2 style)
+ *   SIDEBYSIDE — original image | reconstructed document, linked scroll
+ *   ABSOLUTE  — blocks positioned at real coordinates (digital twin)
+ *   OVERLAY   — text SVG overlay on original image
+ *
+ * Phase 3 additions:
+ *   - Render mode selector in toolbar
+ *   - Side-by-side with synchronized scroll
+ *   - Absolute positioning respecting real block coordinates
+ *   - Document DNA chip (detected type + evidence)
+ *   - Layout graph metadata (column count, section count)
+ *   - Quality Engine V2 weighted breakdown
+ *   - Smart garbage filter badge
+ *   - Multi-pass OCR chain display
+ *   - Extended region types in overlay (stamp=red, signature=violet, photo=gray)
+ */
+
+import React, { useState, useRef, useCallback, useEffect, useMemo } from 'react';
+
+const API_BASE = '';
+const FONT_URL  = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif:wght@400;700&family=Fira+Code:wght@400;500&display=swap';
+
+// ── Region type colors (extended Phase 3) ─────────────────────────────────────
+const REGION_COLORS = {
+  table:           { stroke: '#2563eb', fill: 'rgba(37,99,235,0.15)',  label: 'TABLE'   },
+  paragraph:       { stroke: '#16a34a', fill: 'rgba(22,163,74,0.12)',  label: 'PARA'    },
+  form_field:      { stroke: '#ea580c', fill: 'rgba(234,88,12,0.15)',  label: 'FORM'    },
+  header:          { stroke: '#0891b2', fill: 'rgba(8,145,178,0.15)',  label: 'HEADER'  },
+  document_header: { stroke: '#0891b2', fill: 'rgba(8,145,178,0.15)',  label: 'DHEADER' },
+  section_header:  { stroke: '#7c3aed', fill: 'rgba(124,58,237,0.12)', label: 'SECTION' },
+  footer:          { stroke: '#64748b', fill: 'rgba(100,116,139,0.10)',label: 'FOOTER'  },
+  handwritten:     { stroke: '#7c3aed', fill: 'rgba(124,58,237,0.15)', label: 'HW'      },
+  handwriting:     { stroke: '#7c3aed', fill: 'rgba(124,58,237,0.15)', label: 'HW'      },
+  signature:       { stroke: '#a21caf', fill: 'rgba(162,28,175,0.15)', label: 'SIG'     },
+  stamp:           { stroke: '#dc2626', fill: 'rgba(220,38,38,0.15)',  label: 'STAMP'   },
+  photo:           { stroke: '#78716c', fill: 'rgba(120,113,108,0.12)',label: 'PHOTO'   },
+  barcode:         { stroke: '#0f766e', fill: 'rgba(15,118,110,0.15)', label: 'BC'      },
+  annotation:      { stroke: '#d97706', fill: 'rgba(217,119,6,0.12)',  label: 'NOTE'    },
+  watermark:       { stroke: '#e2e8f0', fill: 'rgba(226,232,240,0.08)',label: 'WM'      },
+};
+
+const GRADE_COLORS = { A: '#16a34a', B: '#2563eb', C: '#d97706', D: '#dc2626', F: '#7c3aed' };
+const DNA_ICONS = {
+  aadhaar: '🪪', pan: '💳', bank_statement: '🏦', invoice: '🧾',
+  marksheet: '📊', ration_card: '🗂️', government_doc: '🏛️', passport: '📘', unknown: '📄',
+};
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+function gc(g) { return GRADE_COLORS[g] || '#64748b'; }
+
+// ── Global CSS injection ───────────────────────────────────────────────────────
+function injectStyles() {
+  if (document.getElementById('es-p3-styles')) return;
+  const style = document.createElement('style');
+  style.id = 'es-p3-styles';
+  style.textContent = `
+    .es-scroll-sync { overflow-y: auto; }
+    .es-paper-block:hover { outline: 1px solid rgba(37,99,235,0.3); }
+    .es-abs-block { position: absolute; overflow: hidden; cursor: default; }
+    .es-abs-block:hover { outline: 2px solid rgba(37,99,235,0.5); z-index: 10; }
+    .es-overlay-text { pointer-events: none; }
+    .es-link-scroll { scroll-behavior: smooth; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .es-spinner { animation: spin 0.8s linear infinite; }
+    .es-tab-active { border-bottom: 2px solid #2563eb !important; color: #2563eb !important; font-weight: 600 !important; }
+    .es-quality-bar { height: 3px; border-radius: 2px; transition: width 0.4s ease; }
+    .es-chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+    .es-region-label { font: bold 8px/10px monospace; fill: white; }
+  `;
+  document.head.appendChild(style);
+}
+
+// ── Shared Layout ──────────────────────────────────────────────────────────────
+const S = {
+  root: { fontFamily: "'Inter','Segoe UI',system-ui,sans-serif", background:'#f0f2f5', minHeight:'100vh', display:'flex', flexDirection:'column', color:'#1e293b', fontSize:'14px' },
+  topBar: { background:'#fff', borderBottom:'1px solid #e2e8f0', padding:'9px 18px', display:'flex', alignItems:'center', gap:'10px', flexShrink:0, boxShadow:'0 1px 3px rgba(0,0,0,0.06)' },
+  titleMark: { display:'flex', alignItems:'baseline', gap:'8px' },
+  title: { fontWeight:700, fontSize:'15px', color:'#0f172a', letterSpacing:'-0.3px' },
+  badge: (bg,c) => ({ background:bg, color:c, padding:'2px 8px', borderRadius:'4px', fontSize:'10px', fontWeight:700, letterSpacing:'0.3px' }),
+  btn: (active, color='#2563eb') => ({
+    padding:'4px 11px', borderRadius:'5px', border:`1px solid ${active ? color : '#cbd5e1'}`,
+    background: active ? `${color}15` : '#fff', color: active ? color : '#64748b',
+    cursor:'pointer', fontSize:'12px', fontWeight: active ? 600 : 400, transition:'all 0.15s',
+  }),
+  extractBtn: { background:'#2563eb', color:'#fff', border:'none', borderRadius:'6px', padding:'7px 20px', cursor:'pointer', fontWeight:700, fontSize:'13px', display:'flex', alignItems:'center', gap:'6px', letterSpacing:'0.2px' },
+  disabledBtn: { background:'#94a3b8', cursor:'not-allowed' },
+  workspace: { display:'flex', flex:1, overflow:'hidden' },
+  leftPanel: { width:'320px', flexShrink:0, borderRight:'1px solid #e2e8f0', display:'flex', flexDirection:'column', background:'#fff', overflow:'hidden' },
+  rightPanel: { flex:1, display:'flex', flexDirection:'column', overflow:'hidden', background:'#f8fafc' },
+  panelHdr: { padding:'8px 14px', borderBottom:'1px solid #f1f5f9', fontWeight:700, fontSize:'10px', color:'#94a3b8', textTransform:'uppercase', letterSpacing:'0.6px', display:'flex', alignItems:'center', justifyContent:'space-between', flexShrink:0 },
+  imgViewer: { flex:1, background:'#e2e8f0', display:'flex', alignItems:'flex-start', justifyContent:'center', overflow:'auto', padding:'10px' },
+  tabBar: { display:'flex', borderBottom:'1px solid #e2e8f0', background:'#fff', flexShrink:0, overflowX:'auto' },
+  tab: (a) => ({ padding:'8px 15px', border:'none', background:'none', color: a ? '#2563eb':'#64748b', fontWeight: a ? 600:400, fontSize:'12px', cursor:'pointer', borderBottom: a ? '2px solid #2563eb':'2px solid transparent', whiteSpace:'nowrap' }),
+  hudRow: { display:'flex', gap:'8px', padding:'7px 16px', background:'#fff', borderBottom:'1px solid #e2e8f0', alignItems:'center', flexShrink:0, flexWrap:'wrap', boxShadow:'0 1px 2px rgba(0,0,0,0.03)' },
+  emptyState: { flex:1, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', color:'#94a3b8', gap:'10px', padding:'40px', textAlign:'center' },
+  // Paper
+  paperWrap: { flex:1, overflowY:'auto', background:'#e0e4e8', padding:'28px 16px', display:'flex', flexDirection:'column', alignItems:'center' },
+  paper: { background:'#fff', boxShadow:'0 2px 8px rgba(0,0,0,0.08),0 12px 40px rgba(0,0,0,0.07)', borderRadius:'2px', width:'100%', maxWidth:'720px', padding:'52px 60px 60px', marginBottom:'24px', minHeight:'400px', lineHeight:1.75, color:'#1a1a2e' },
+  // Side by side
+  sbsWrap: { flex:1, display:'flex', overflow:'hidden', gap:0 },
+  sbsPane: { flex:1, display:'flex', flexDirection:'column', overflow:'hidden', borderRight:'1px solid #e2e8f0' },
+  sbsPaneHdr: { background:'#f8fafc', borderBottom:'1px solid #e2e8f0', padding:'6px 14px', fontSize:'10px', fontWeight:700, color:'#64748b', textTransform:'uppercase', letterSpacing:'0.5px', flexShrink:0 },
+  sbsContent: { flex:1, overflow:'auto' },
+  // Absolute (digital twin)
+  absWrap: { flex:1, overflow:'auto', background:'#e0e4e8', padding:'24px', display:'flex', justifyContent:'center' },
+  absPage: { position:'relative', background:'#fff', boxShadow:'0 2px 8px rgba(0,0,0,0.10),0 12px 40px rgba(0,0,0,0.08)', overflow:'hidden' },
+  // Legend
+  legendBar: { display:'flex', gap:'10px', flexWrap:'wrap', padding:'6px 14px', background:'#f8fafc', borderTop:'1px solid #e2e8f0', flexShrink:0 },
+  legendDot: (c) => ({ width:'10px', height:'10px', borderRadius:'2px', background:c, flexShrink:0 }),
+  // Pipeline
+  pipeBar: { background:'#f8fafc', borderTop:'1px solid #e2e8f0', padding:'8px 14px', flexShrink:0, maxHeight:'200px', overflowY:'auto' },
+  stageRow: { display:'flex', alignItems:'flex-start', gap:'8px', marginBottom:'4px', fontSize:'11px' },
+  stageIcon: (s) => ({ width:'14px', height:'14px', borderRadius:'50%', flexShrink:0, marginTop:'1px', background: s==='done'?'#16a34a':s==='running'?'#2563eb':s==='failed'?'#dc2626':'#e2e8f0', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'8px', color:'#fff' }),
+};
+
+// ── Canvas Region Overlay ──────────────────────────────────────────────────────
+function RegionCanvas({ imageB64, regions, showOrder }) {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    if (!canvasRef.current || !imageB64) return;
+    const canvas = canvasRef.current;
+    const ctx    = canvas.getContext('2d');
+    const img    = new window.Image();
+    img.onload = () => {
+      canvas.width  = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      ctx.drawImage(img, 0, 0);
+      (regions || []).forEach(r => {
+        const col = REGION_COLORS[r.type] || REGION_COLORS.paragraph;
+        ctx.fillStyle   = col.fill;
+        ctx.fillRect(r.x||0, r.y||0, r.width||0, r.height||0);
+        ctx.strokeStyle = col.stroke;
+        ctx.lineWidth   = 1.5;
+        ctx.strokeRect(r.x||0, r.y||0, r.width||0, r.height||0);
+        // Label
+        const lbl = showOrder ? `#${r.reading_order} ${col.label}` : col.label;
+        const tw  = lbl.length * 5.8 + 6;
+        ctx.fillStyle   = col.stroke;
+        ctx.globalAlpha = 0.9;
+        ctx.fillRect(r.x||0, r.y||0, tw, 14);
+        ctx.globalAlpha = 1;
+        ctx.fillStyle   = '#fff';
+        ctx.font        = 'bold 8px monospace';
+        ctx.fillText(lbl, (r.x||0)+2, (r.y||0)+10);
+      });
+    };
+    img.src = `data:image/jpeg;base64,${imageB64}`;
+  }, [imageB64, regions, showOrder]);
+
+  return <canvas ref={canvasRef} style={{ maxWidth:'100%', boxShadow:'0 4px 20px rgba(0,0,0,0.12)', borderRadius:'2px' }} />;
+}
+
+// ── Paper Document Renderer ────────────────────────────────────────────────────
+function PaperBlock({ block }) {
+  const type = block.type || 'paragraph';
+
+  if (type === 'document_header') {
+    return <h1 style={{ fontSize:'22px', fontWeight:700, color:'#0f172a', marginBottom:'18px', lineHeight:1.3, borderBottom:'2px solid #e2e8f0', paddingBottom:'14px', letterSpacing:'-0.4px' }}>{block.content}</h1>;
+  }
+  if (type === 'section_header') {
+    return <h2 style={{ fontSize:'14px', fontWeight:700, color:'#1e293b', marginTop:'28px', marginBottom:'8px', paddingLeft:'10px', borderLeft:'3px solid #3b82f6', lineHeight:1.4 }}>{block.content}</h2>;
+  }
+  if (type === 'footer') {
+    return <div style={{ color:'#9ca3af', fontSize:'11px', marginTop:'20px', borderTop:'1px solid #f1f5f9', paddingTop:'10px' }}>{block.content}</div>;
+  }
+  if (type === 'key_value' && block.fields?.length) {
+    return (
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:'8px 16px', background:'#f8fafc', borderRadius:'6px', border:'1px solid #e2e8f0', padding:'14px 18px', marginBottom:'16px' }}>
+        {(block.fields||[]).map((f,i) => (
+          <div key={i}>
+            {f.key && <div style={{ fontSize:'9px', color:'#64748b', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.5px', marginBottom:'2px' }}>{f.key}</div>}
+            <div style={{ fontSize:'13px', color:'#1e293b', fontWeight:500, fontFamily:"'Fira Code',monospace" }}>{f.value||'—'}</div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  if (type === 'table') {
+    const headers = block.headers||[];
+    const rows    = block.rows||[];
+    return (
+      <div style={{ overflowX:'auto', marginBottom:'18px' }}>
+        <div style={{ fontSize:'10px', color:'#64748b', marginBottom:'4px' }}>
+          {block.method && <span style={{ background:'#f1f5f9', padding:'1px 6px', borderRadius:'3px', marginRight:'6px' }}>{block.method}</span>}
+          {block.col_count && <span>{block.col_count} cols × {rows.length} rows</span>}
+        </div>
+        <table style={{ width:'100%', borderCollapse:'collapse', fontSize:'12.5px' }}>
+          {headers.some(h=>h) && (
+            <thead>
+              <tr>{headers.map((h,i)=><th key={i} style={{ background:'#f1f5f9', border:'1px solid #e2e8f0', padding:'8px 10px', textAlign:'left', fontWeight:600, color:'#374151', fontSize:'11px' }}>{h||''}</th>)}</tr>
+            </thead>
+          )}
+          <tbody>
+            {rows.map((row,ri)=>(
+              <tr key={ri} style={{ background: ri%2===0?'#fff':'#f8fafc' }}>
+                {(Array.isArray(row)?row:[]).map((cell,ci)=><td key={ci} style={{ border:'1px solid #e2e8f0', padding:'6px 10px', color:'#374151', verticalAlign:'top' }}>{cell||''}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
+  if (type === 'signature') {
+    return <div style={{ background:'#faf5ff', border:'1px dashed #7c3aed', borderRadius:'4px', padding:'8px 14px', marginBottom:'10px', color:'#7c3aed', fontSize:'12px' }}>✒ [Signature region detected]</div>;
+  }
+  if (type === 'stamp') {
+    return <div style={{ background:'#fef2f2', border:'1px dashed #dc2626', borderRadius:'50%', display:'inline-block', padding:'8px 20px', marginBottom:'10px', color:'#dc2626', fontSize:'12px' }}>🔴 [Stamp / Seal]{block.content ? `: ${block.content}` : ''}</div>;
+  }
+  if (type === 'photo') {
+    return <div style={{ background:'#f1f5f9', border:'1px solid #e2e8f0', borderRadius:'4px', padding:'12px 16px', marginBottom:'10px', color:'#64748b', fontSize:'12px', textAlign:'center' }}>🖼 [Photo / Image Region]</div>;
+  }
+
+  if (!block.content?.trim()) return null;
+
+  const isLong = (block.content||'').length > 200;
+  return (
+    <p style={{ color:'#374151', marginBottom:'14px', lineHeight: isLong ? 1.85 : 1.7, fontSize:'13.5px' }}>
+      {block.column_id !== undefined && block.column_id > 0 && (
+        <span style={{ fontSize:'9px', background:'#eff6ff', color:'#2563eb', padding:'1px 4px', borderRadius:'2px', marginRight:'4px', verticalAlign:'middle' }}>C{block.column_id+1}</span>
+      )}
+      {block.content}
+    </p>
+  );
+}
+
+function PaperView({ blocks }) {
+  if (!blocks?.length) {
+    return <div style={S.emptyState}><div style={{ fontSize:'48px', opacity:0.25 }}>📄</div><div style={{ fontWeight:600 }}>Upload a document to begin</div><div style={{ fontSize:'12px', maxWidth:'260px', marginTop:'4px' }}>The system reconstructs the document preserving layout, columns, tables, and multilingual content</div></div>;
+  }
+  return (
+    <div style={S.paperWrap}>
+      <div style={S.paper}>
+        {blocks.map((b,i)=><PaperBlock key={i} block={b} />)}
+      </div>
+    </div>
+  );
+}
+
+// ── Side-by-Side Renderer ──────────────────────────────────────────────────────
+function SideBySideView({ imageB64, blocks, regions, showOverlay, showOrder }) {
+  const leftRef  = useRef(null);
+  const rightRef = useRef(null);
+  const syncing  = useRef(false);
+
+  const syncScroll = useCallback((source, target) => {
+    if (syncing.current) return;
+    syncing.current = true;
+    const ratio = source.scrollTop / (source.scrollHeight - source.clientHeight || 1);
+    target.scrollTop = ratio * (target.scrollHeight - target.clientHeight);
+    setTimeout(() => { syncing.current = false; }, 50);
+  }, []);
+
+  useEffect(() => {
+    const l = leftRef.current, r = rightRef.current;
+    if (!l || !r) return;
+    const onLeft  = () => syncScroll(l, r);
+    const onRight = () => syncScroll(r, l);
+    l.addEventListener('scroll', onLeft);
+    r.addEventListener('scroll', onRight);
+    return () => { l.removeEventListener('scroll', onLeft); r.removeEventListener('scroll', onRight); };
+  }, [syncScroll]);
+
+  return (
+    <div style={S.sbsWrap}>
+      {/* Original */}
+      <div style={{ ...S.sbsPane, borderRight:'1px solid #e2e8f0' }}>
+        <div style={S.sbsPaneHdr}>Original Document</div>
+        <div ref={leftRef} style={S.sbsContent}>
+          {imageB64 ? (
+            <div style={{ padding:'12px', display:'flex', justifyContent:'center' }}>
+              {showOverlay && regions?.length > 0
+                ? <RegionCanvas imageB64={imageB64} regions={regions} showOrder={showOrder} />
+                : <img src={`data:image/jpeg;base64,${imageB64}`} alt="Original" style={{ maxWidth:'100%', boxShadow:'0 4px 20px rgba(0,0,0,0.12)' }} />
+              }
+            </div>
+          ) : (
+            <div style={S.emptyState}><div style={{ opacity:0.3 }}>No image</div></div>
+          )}
+        </div>
+      </div>
+
+      {/* Reconstructed */}
+      <div style={{ ...S.sbsPane, borderRight:'none' }}>
+        <div style={S.sbsPaneHdr}>Reconstructed Document</div>
+        <div ref={rightRef} style={{ ...S.sbsContent, background:'#e0e4e8', padding:'12px', display:'flex', flexDirection:'column', alignItems:'center' }}>
+          <div style={{ ...S.paper, maxWidth:'none', width:'100%', boxSizing:'border-box', padding:'32px 40px' }}>
+            {(blocks||[]).map((b,i) => <PaperBlock key={i} block={b} />)}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Digital Twin V3 (Phase 5) ─────────────────────────────────────────────────
+// Uses twin_blocks from backend (pre-computed coordinates + typography)
+function DigitalTwinV3({ twinBlocks, twinMeta, pageW, pageH, imageB64, runId }) {
+  const containerRef  = useRef(null);
+  const [scale, setScale]       = useState(1.0);
+  const [showBg, setShowBg]     = useState(true);
+  const [hoverId, setHoverId]   = useState(null);
+  const [editId, setEditId]     = useState(null);
+  const [editText, setEditText] = useState('');
+  const [activeLayers, setActiveLayers] = useState(
+    new Set(['printed', 'handwritten', 'stamp', 'signature', 'photo'])
+  );
+
+  // Auto-fit on mount
+  useEffect(() => {
+    if (!containerRef.current || !pageW) return;
+    const cw = containerRef.current.clientWidth - 48;
+    setScale(Math.min(1.0, cw / (pageW || 800)));
+  }, [pageW, twinBlocks]);
+
+  const pw = pageW || twinMeta?.page_w || 794;
+  const ph = pageH || twinMeta?.page_h || 1123;
+  const scaledW = pw * scale;
+  const scaledH = ph * scale;
+
+  const toggleLayer = (layer) => setActiveLayers(prev => {
+    const next = new Set(prev);
+    next.has(layer) ? next.delete(layer) : next.add(layer);
+    return next;
+  });
+
+  const LAYER_COLORS = {
+    printed:     '#2563eb',
+    handwritten: '#7c3aed',
+    stamp:       '#dc2626',
+    signature:   '#a21caf',
+    photo:       '#78716c',
+    noise:       '#9ca3af',
+  };
+
+  // Export helper
+  const doExport = async (fmt) => {
+    if (!runId) return alert('No run ID — extract a document first');
+    try {
+      const r = await fetch(`/api/ocr/pipeline/${runId}/export/${fmt}`);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const disp = r.headers.get('content-disposition') || '';
+      const fname = (disp.match(/filename="([^"]+)"/) || [])[1] || `export.${fmt}`;
+      const blob = await r.blob();
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href = url; a.download = fname; a.click();
+      URL.revokeObjectURL(url);
+    } catch(e) { alert(`Export failed: ${e.message}`); }
+  };
+
+  // Active learning: post correction when block text is edited
+  const postCorrection = async (block, newText) => {
+    if (!runId || !block || block.content === newText) return;
+    try {
+      await fetch(`/api/ocr/pipeline/${runId}/corrections`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          block_id:    block.id || block.reading_order || '',
+          original:    block.content || '',
+          corrected:   newText,
+          doc_type:    twinMeta?.doc_type || 'unknown',
+          region_type: block.layer || block.type || 'paragraph',
+          engine:      block.engine || 'unknown',
+          script:      block.script || 'Latin',
+          confidence:  block.confidence || 0.5,
+        }),
+      });
+    } catch(e) { /* silent — corrections are best-effort */ }
+  };
+
+  const visibleBlocks = (twinBlocks || []).filter(b => activeLayers.has(b.layer || 'printed'));
+
+  return (
+    <div ref={containerRef} style={{ flex:1, overflow:'auto', background:'#1e2130', padding:'16px', display:'flex', flexDirection:'column', gap:'12px' }}>
+
+      {/* Controls Bar */}
+      <div style={{ display:'flex', gap:'8px', alignItems:'center', flexWrap:'wrap' }}>
+        {/* Zoom */}
+        <div style={{ display:'flex', gap:'4px', alignItems:'center', background:'#252836', borderRadius:'6px', padding:'4px 8px' }}>
+          <span style={{ fontSize:'10px', color:'#64748b', marginRight:'2px' }}>ZOOM</span>
+          {[0.5, 0.75, 1.0, 1.25, 1.5].map(z => (
+            <button key={z}
+              style={{ ...S.btn(Math.abs(scale-z)<0.05), background: Math.abs(scale-z)<0.05?'#3b82f620':'transparent', border:'none', color: Math.abs(scale-z)<0.05?'#3b82f6':'#94a3b8', fontSize:'11px', padding:'2px 8px' }}
+              onClick={() => setScale(z)}>{(z*100).toFixed(0)}%
+            </button>
+          ))}
+        </div>
+
+        {/* BG toggle */}
+        <button
+          onClick={() => setShowBg(v => !v)}
+          style={{ ...S.btn(showBg, '#7c3aed'), fontSize:'11px', padding:'4px 10px' }}
+        >{showBg ? '🖼 BG On' : '🖼 BG Off'}</button>
+
+        {/* Layer toggles */}
+        <div style={{ display:'flex', gap:'4px', alignItems:'center' }}>
+          <span style={{ fontSize:'10px', color:'#64748b' }}>LAYERS</span>
+          {Object.entries(LAYER_COLORS).map(([layer, color]) => (
+            <button key={layer}
+              onClick={() => toggleLayer(layer)}
+              style={{ padding:'2px 8px', borderRadius:'4px', border:`1px solid ${color}50`, background: activeLayers.has(layer)?`${color}20`:'transparent', color: activeLayers.has(layer)?color:'#64748b', fontSize:'10px', cursor:'pointer' }}
+            >{layer}</button>
+          ))}
+        </div>
+
+          {/* Export buttons */}
+        <div style={{ marginLeft:'auto', display:'flex', gap:'4px', alignItems:'center' }}>
+          <span style={{ fontSize:'10px', color:'#64748b' }}>EXPORT</span>
+          {[['json','📋'],['markdown','📝'],['html','🌐'],['csv','📊'],['pdf','📄']].map(([fmt, icon]) => (
+            <button key={fmt}
+              onClick={() => doExport(fmt)}
+              title={fmt === 'pdf' ? 'Searchable PDF (invisible text layer)' : `Export as ${fmt.toUpperCase()}`}
+              style={{ padding:'4px 10px', borderRadius:'5px', border: fmt==='pdf' ? '1px solid #3b82f6' : '1px solid #334155', background: fmt==='pdf' ? '#3b82f620' : '#252836', color: fmt==='pdf' ? '#3b82f6' : '#94a3b8', fontSize:'11px', cursor:'pointer' }}
+            >{icon} {fmt.toUpperCase()}</button>
+          ))}
+        </div>
+      </div>
+
+      {/* Twin metadata strip */}
+      {twinMeta?.block_count > 0 && (
+        <div style={{ display:'flex', gap:'16px', padding:'6px 12px', background:'#252836', borderRadius:'6px', fontSize:'10px', color:'#64748b', flexWrap:'wrap' }}>
+          <span>📐 {pw}×{ph}px</span>
+          <span>📦 {twinMeta.block_count} blocks</span>
+          <span>🔤 Body {twinMeta.body_font_pt?.toFixed(1)}pt</span>
+          <span>📏 {twinMeta.col_count} col{twinMeta.col_count !== 1 ? 's' : ''}</span>
+          {twinMeta.layer_counts && Object.entries(twinMeta.layer_counts).map(([l, n]) => (
+            <span key={l} style={{ color: LAYER_COLORS[l] || '#94a3b8' }}>◈ {n} {l}</span>
+          ))}
+        </div>
+      )}
+
+      {/* The twin page */}
+      <div style={{ display:'flex', justifyContent:'center' }}>
+        <div style={{ position:'relative', width: scaledW+'px', height: scaledH+'px', background:'#fff', boxShadow:'0 4px 40px rgba(0,0,0,0.5)', overflow:'hidden', flexShrink:0 }}>
+
+          {/* Background scan image */}
+          {showBg && imageB64 && (
+            <img src={`data:image/jpeg;base64,${imageB64}`} alt=""
+              style={{ position:'absolute', top:0, left:0, width:'100%', height:'100%', objectFit:'fill', opacity:0.18, pointerEvents:'none' }}
+            />
+          )}
+
+          {/* Render twin blocks */}
+          {visibleBlocks.map((tb, i) => {
+            const isHovered = hoverId === tb.block_id;
+            const isEditing = editId === tb.block_id;
+            const layerColor = LAYER_COLORS[tb.layer] || '#64748b';
+
+            // Apply scale to all coordinates
+            const sx = tb.x * scale, sy = tb.y * scale;
+            const sw = tb.w * scale, sh = tb.h * scale;
+
+            // Build inline style from render_style (scale font sizes)
+            const baseStyle = {
+              position:  'absolute',
+              left:       sx + 'px',
+              top:        sy + 'px',
+              width:      sw + 'px',
+              minHeight:  sh + 'px',
+              fontSize:   Math.max(6, tb.font_size_px * scale) + 'px',
+              fontWeight: tb.font_weight === 'bold' ? 700 : tb.font_weight === 'semibold' ? 600 : 400,
+              textAlign:  tb.alignment || 'left',
+              lineHeight: tb.line_spacing || 1.5,
+              overflow:   'hidden',
+              boxSizing:  'border-box',
+              padding:    '1px 2px',
+              cursor:     'default',
+              transition: 'outline 0.1s',
+              // Confidence background tint
+              background: isHovered ? `${layerColor}18` : tb.confidence_color || 'transparent',
+              outline:    isHovered ? `2px solid ${layerColor}80` : 'none',
+              zIndex:     isHovered ? 10 : 1,
+            };
+
+            // Layer-specific overrides
+            if (tb.layer === 'handwritten') {
+              baseStyle.fontFamily = "'Caveat','Segoe Script',cursive";
+              baseStyle.color = '#1a3c8f';
+            } else if (tb.layer === 'stamp') {
+              baseStyle.border = `2px solid ${layerColor}60`;
+              baseStyle.borderRadius = '4px';
+              baseStyle.color = layerColor;
+            } else if (tb.layer === 'signature') {
+              baseStyle.fontStyle = 'italic';
+              baseStyle.color = '#1a3c8f';
+              baseStyle.opacity = 0.7;
+            }
+
+            // Editing mode
+            if (isEditing) {
+              return (
+                <textarea key={tb.block_id}
+                  style={{ ...baseStyle, resize:'none', border:`2px solid #2563eb`, zIndex:20, outline:'none', background:'#fff', color:'#111' }}
+                  value={editText}
+                  onChange={e => setEditText(e.target.value)}
+                  onBlur={() => { setEditId(null); }}
+                  autoFocus
+                />
+              );
+            }
+
+            // Table block
+            if (tb.block_type === 'table' && tb.table_rows?.length) {
+              return (
+                <div key={tb.block_id} style={{ ...baseStyle, overflow:'auto' }}
+                  onMouseEnter={() => setHoverId(tb.block_id)}
+                  onMouseLeave={() => setHoverId(null)}
+                >
+                  <table style={{ borderCollapse:'collapse', fontSize: Math.max(5, tb.font_size_px * scale * 0.85)+'px', width:'100%' }}>
+                    {tb.table_headers?.some(h => h) && (
+                      <thead><tr>{tb.table_headers.map((h,hi) => (
+                        <th key={hi} style={{ border:'1px solid #d1d5db', padding:'1px 3px', background:'#f3f4f6', fontWeight:700, textAlign:'center', whiteSpace:'nowrap' }}>{h}</th>
+                      ))}</tr></thead>
+                    )}
+                    <tbody>
+                      {(tb.table_rows || []).slice(0, 40).map((row, ri) => (
+                        <tr key={ri}>
+                          {(Array.isArray(row) ? row : []).map((cell, ci) => (
+                            <td key={ci} style={{ border:'1px solid #e5e7eb', padding:'1px 3px', whiteSpace:'nowrap', textAlign: tb.numeric_columns?.includes(ci) ? 'right' : 'left' }}>{cell || ''}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            }
+
+            // Text block
+            return (
+              <div key={tb.block_id}
+                style={baseStyle}
+                onMouseEnter={() => setHoverId(tb.block_id)}
+                onMouseLeave={() => setHoverId(null)}
+                onDoubleClick={() => { setEditId(tb.block_id); setEditText(tb.content); }}
+                title={`[${tb.hierarchy}] ${tb.layer} conf=${(tb.confidence*100).toFixed(0)}%`}
+              >
+                {tb.content}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div style={{ textAlign:'center', fontSize:'10px', color:'#475569' }}>
+        {visibleBlocks.length}/{blocks.length} blocks shown · scale {(scale*100).toFixed(0)}% · double-click to edit
+      </div>
+    </div>
+  );
+}
+
+
+// ── Quality HUD V2 ─────────────────────────────────────────────────────────────
+function QualityHUDV2({ quality, language, dna, restoration }) {
+  if (!quality) return null;
+  const gc2  = GRADE_COLORS[quality.grade] || '#64748b';
+  const dnaT = dna?.doc_type || 'unknown';
+  const dnaC = Math.round((dna?.confidence || 0) * 100);
+  const dnaI = DNA_ICONS[dnaT] || '📄';
+
+  const metrics = [
+    { k:'layout_integrity',   label:'Layout', w:30 },
+    { k:'table_integrity',    label:'Tables', w:20 },
+    { k:'ocr_confidence',     label:'OCR',    w:20 },
+    { k:'semantic_coherence', label:'Semantic', w:15 },
+    { k:'reading_order',      label:'Order',  w:10 },
+    { k:'noise_ratio',        label:'Noise',  w:5  },
+  ];
+
+  return (
+    <div style={{ background:'#fff', borderBottom:'1px solid #e2e8f0', flexShrink:0, boxShadow:'0 1px 2px rgba(0,0,0,0.03)' }}>
+      {/* Top row: grade + chips */}
+      <div style={{ display:'flex', gap:'8px', padding:'7px 16px', alignItems:'center', flexWrap:'wrap' }}>
+        <div style={{ background: gc2, color:'#fff', padding:'3px 12px', borderRadius:'5px', fontWeight:700, fontSize:'13px', letterSpacing:'0.3px' }}>
+          {quality.grade} · {quality.overall}/100
+        </div>
+
+        {dnaT !== 'unknown' && (
+          <div className="es-chip" style={{ background:`${gc2}12`, color:gc2, border:`1px solid ${gc2}30` }}>
+            {dnaI} {dnaT.replace(/_/g,' ')} {dnaC>0 && `(${dnaC}%)`}
+          </div>
+        )}
+
+        {language?.primary && language.primary !== 'unknown' && (
+          <div className="es-chip" style={{ background:'#f5f3ff', color:'#7c3aed', border:'1px solid #ede9fe' }}>
+            🌐 {language.primary} {language.script && `· ${language.script}`}
+          </div>
+        )}
+
+        {quality.word_count > 0 && (
+          <span style={{ fontSize:'11px', color:'#64748b' }}>{quality.word_count?.toLocaleString()} words</span>
+        )}
+
+        {quality.retry_recommended && (
+          <div className="es-chip" style={{ background:'#fef2f2', color:'#dc2626', border:'1px solid #fecaca' }}>
+            ⚠ {quality.retry_reason || 'Low quality'}
+          </div>
+        )}
+
+        {dna?.soft_hints?.length > 0 && (
+          <div className="es-chip" style={{ background:'#f0fdf4', color:'#16a34a', border:'1px solid #bbf7d0' }}>
+            💡 {dna.soft_hints.slice(0,2).join(', ')}
+          </div>
+        )}
+
+        {restoration?.applied && (
+          <div className="es-chip" style={{ background:'#fff7ed', color:'#c2410c', border:'1px solid #fed7aa' }}>
+            🔧 Restored{restoration.perspective_applied ? ' (perspective)' : ''}
+          </div>
+        )}
+      </div>
+
+      {/* Sub-score bars */}
+      <div style={{ display:'flex', gap:'0', padding:'4px 16px 8px', overflowX:'auto' }}>
+        {metrics.map(m => {
+          const val = quality[m.k] ?? 0;
+          const barColor = val >= 70 ? '#16a34a' : val >= 45 ? '#d97706' : '#dc2626';
+          return (
+            <div key={m.k} style={{ flex:`${m.w} 0 0`, minWidth:0, paddingRight:'12px' }}>
+              <div style={{ fontSize:'9px', color:'#94a3b8', marginBottom:'2px', fontWeight:600, textTransform:'uppercase', letterSpacing:'0.4px', whiteSpace:'nowrap' }}>
+                {m.label} <span style={{ color:'#64748b' }}>{val?.toFixed(0)}</span>
+              </div>
+              <div style={{ height:'3px', background:'#e2e8f0', borderRadius:'2px', overflow:'hidden' }}>
+                <div className="es-quality-bar" style={{ width:`${Math.min(100,val)}%`, background:barColor }} />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ── Stage Pipeline ─────────────────────────────────────────────────────────────
+function PipelineView({ stages }) {
+  if (!stages?.length) return null;
+  return (
+    <div style={S.pipeBar}>
+      <div style={{ fontSize:'9px', color:'#94a3b8', fontWeight:700, marginBottom:'5px', letterSpacing:'0.5px' }}>8-STAGE PIPELINE</div>
+      {stages.map(s => (
+        <div key={s.stage_id} style={S.stageRow}>
+          <div style={S.stageIcon(s.status)}>
+            {s.status==='done'?'✓':s.status==='failed'?'✕':s.status==='running'?'…':''}
+          </div>
+          <div style={{ flex:1, minWidth:0 }}>
+            <div style={{ fontWeight: s.status==='running'?600:400, color: s.status==='running'?'#2563eb':'#374151' }}>{s.label}</div>
+            {s.message && <div style={{ color:'#94a3b8', fontSize:'9px', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>{s.message}</div>}
+          </div>
+          <div style={{ display:'flex', gap:'4px', alignItems:'center', flexShrink:0 }}>
+            {s.elapsed_ms>0 && <span style={{ color:'#94a3b8', fontSize:'9px' }}>{s.elapsed_ms}ms</span>}
+            {s.used_fallback && <span style={{ background:'#fef3c7', color:'#92400e', padding:'0 3px', borderRadius:'2px', fontSize:'8px' }}>FB</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── Developer View V2 ──────────────────────────────────────────────────────────
+function DeveloperView({ stages, result, snapshots }) {
+  const [snap, setSnap] = useState('layout_map');
+  const rd = result?.region_debug;
+  const dna = result?.dna || {};
+  const dnaHints = result?.dna_hints || {};
+
+  return (
+    <div style={{ padding:'16px', overflowY:'auto', display:'flex', flexDirection:'column', gap:'16px' }}>
+
+      {/* Document DNA */}
+      {dna.doc_type && (
+        <div>
+          <div style={{ fontSize:'10px', fontWeight:700, color:'#64748b', textTransform:'uppercase', letterSpacing:'0.5px', marginBottom:'8px' }}>Document DNA</div>
+          <div style={{ background:'#f8fafc', border:'1px solid #e2e8f0', borderRadius:'6px', padding:'12px' }}>
+            <div style={{ display:'flex', gap:'12px', alignItems:'center', marginBottom:'8px' }}>
+              <span style={{ fontSize:'20px' }}>{DNA_ICONS[dna.doc_type]||'📄'}</span>
+              <div>
+                <div style={{ fontWeight:700, fontSize:'13px', color:'#1e293b' }}>{dna.doc_type?.replace(/_/g,' ')}</div>
+                <div style={{ fontSize:'11px', color:'#64748b' }}>Confidence {((dna.confidence||0)*100).toFixed(0)}%</div>
+              </div>
+            </div>
+            {dna.soft_hints?.length > 0 && (
+              <div style={{ display:'flex', gap:'6px', flexWrap:'wrap' }}>
+                {dna.soft_hints.map((h,i) => <span key={i} className="es-chip" style={{ background:'#f0fdf4', color:'#16a34a', border:'1px solid #bbf7d0' }}>{h}</span>)}
+              </div>
+            )}
+            {dna.scores && (
+              <div style={{ marginTop:'8px', fontSize:'10px', color:'#64748b' }}>
+                Scores: {Object.entries(dna.scores).map(([k,v]) => `${k}=${(v*100).toFixed(0)}%`).join(' · ')}
+              </div>
+            )}
+            {Object.keys(dnaHints).length > 0 && (
+              <div style={{ marginTop:'8px', display:'flex', gap:'6px', flexWrap:'wrap' }}>
+                {Object.entries(dnaHints).filter(([,v])=>v===true).map(([k],i) => (
+                  <span key={i} className="es-chip" style={{ background:'#eff6ff', color:'#2563eb', border:'1px solid #bfdbfe' }}>{k.replace(/_/g,' ')}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Pipeline Snapshots */}
+      {(snapshots?.normalized || snapshots?.layout_map || snapshots?.ocr_confidence) && (
+        <div>
+          <div style={{ fontSize:'10px', fontWeight:700, color:'#64748b', textTransform:'uppercase', letterSpacing:'0.5px', marginBottom:'6px' }}>Pipeline Snapshots</div>
+          <div style={{ display:'flex', gap:'6px', marginBottom:'10px', flexWrap:'wrap' }}>
+            {['normalized','layout_map','ocr_confidence'].filter(k=>snapshots[k]).map(k => (
+              <button key={k} style={S.btn(snap===k)} onClick={()=>setSnap(k)}>
+                {k.replace(/_/g,' ')}
+              </button>
+            ))}
+          </div>
+          {snapshots[snap] && <img src={`data:image/jpeg;base64,${snapshots[snap]}`} alt={snap} style={{ maxWidth:'100%', borderRadius:'4px', boxShadow:'0 2px 8px rgba(0,0,0,0.1)' }} />}
+        </div>
+      )}
+
+      {/* Stage timings */}
+      {stages?.length > 0 && (
+        <div>
+          <div style={{ fontSize:'10px', fontWeight:700, color:'#64748b', textTransform:'uppercase', letterSpacing:'0.5px', marginBottom:'6px' }}>Stage Timings</div>
+          {stages.map(s => (
+            <div key={s.stage_id} style={{ display:'flex', alignItems:'flex-start', gap:'8px', marginBottom:'5px', background:'#f8fafc', border:'1px solid #e2e8f0', borderRadius:'4px', padding:'6px 10px' }}>
+              <div style={S.stageIcon(s.status)}>{s.status==='done'?'✓':s.status==='failed'?'✕':s.status==='running'?'…':''}</div>
+              <div style={{ flex:1 }}>
+                <div style={{ fontWeight:600, fontSize:'11px' }}>{s.label}</div>
+                {s.used_fallback && <div style={{ color:'#d97706', fontSize:'10px' }}>FALLBACK: {s.fallback_reason}</div>}
+                {s.message && <div style={{ color:'#64748b', fontSize:'10px' }}>{s.message}</div>}
+              </div>
+              <span style={{ color:'#94a3b8', fontSize:'10px', flexShrink:0 }}>{s.elapsed_ms}ms</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Layout graph info */}
+      {result?.region_debug?.page_analyses?.map((pa,pi) => (
+        <div key={pi}>
+          <div style={{ fontSize:'10px', fontWeight:700, color:'#64748b', textTransform:'uppercase', letterSpacing:'0.5px', marginBottom:'6px' }}>
+            Page {pi+1} Layout
+          </div>
+          <div style={{ background:'#f8fafc', border:'1px solid #e2e8f0', borderRadius:'6px', padding:'10px', fontSize:'11px', color:'#374151' }}>
+            <div>Pattern: <strong>{pa.dna?.pattern||'generic'}</strong> · Cols: <strong>{pa.dna?.column_count||1}</strong></div>
+            <div>Grid lines: {String(pa.dna?.has_grid_lines||false)} · Dense rows: {String(pa.dna?.has_dense_rows||false)}</div>
+            {pa.dna?.gutters?.length > 0 && <div>Gutters: {pa.dna.gutters.map(g=>`${g[0]}–${g[1]}`).join(', ')}</div>}
+          </div>
+          <div style={{ marginTop:'8px' }}>
+            {(pa.regions||[]).map((r,ri) => {
+              const col = REGION_COLORS[r.type]||REGION_COLORS.paragraph;
+              return (
+                <div key={ri} style={{ display:'flex', alignItems:'center', gap:'8px', padding:'3px 8px', marginBottom:'2px', background:'#f8fafc', border:'1px solid #f1f5f9', borderRadius:'3px', fontSize:'10px' }}>
+                  <span style={{ color:'#94a3b8', minWidth:'16px', fontFamily:'monospace' }}>#{r.reading_order}</span>
+                  <span style={{ background:col.fill, color:col.stroke, border:`1px solid ${col.stroke}40`, padding:'1px 5px', borderRadius:'2px', fontSize:'9px', fontWeight:700 }}>{r.type}</span>
+                  <span style={{ color:'#374151', fontFamily:'monospace' }}>{r.x},{r.y} {r.width}×{r.height}</span>
+                  <span style={{ color: r.confidence<0.35?'#dc2626':r.confidence<0.6?'#d97706':'#16a34a', fontWeight:700 }}>{((r.confidence||0)*100).toFixed(0)}%</span>
+                  {r.is_table_candidate && <span style={{ color:'#d97706', fontWeight:700, fontSize:'8px' }}>TABLE?</span>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+
+      {/* OCR region chain debug */}
+      {result?.region_debug?.region_results?.map((pageRR, pi) => (
+        <div key={pi}>
+          <div style={{ fontSize:'10px', fontWeight:700, color:'#64748b', textTransform:'uppercase', letterSpacing:'0.5px', marginBottom:'6px' }}>Page {pi+1} OCR Chain Debug</div>
+          {pageRR.map((rr, ri) => {
+            const col = REGION_COLORS[rr.region_type]||REGION_COLORS.paragraph;
+            return (
+              <div key={ri} style={{ display:'flex', alignItems:'center', gap:'6px', marginBottom:'2px', background:'#f8fafc', border:'1px solid #f1f5f9', borderRadius:'3px', padding:'3px 8px', fontSize:'10px' }}>
+                <span style={{ color:'#94a3b8', fontFamily:'monospace', minWidth:'16px' }}>#{rr.reading_order}</span>
+                <span style={{ background:col.fill, color:col.stroke, border:`1px solid ${col.stroke}40`, padding:'1px 5px', borderRadius:'2px', fontSize:'8px', fontWeight:700 }}>{rr.region_type}</span>
+                <span style={{ color:'#374151' }}>{rr.engine}</span>
+                <span style={{ color:'#7c3aed', fontSize:'9px' }}>{rr.script}</span>
+                <span style={{ color:'#64748b', fontSize:'9px', fontFamily:'monospace' }}>{rr.lang}</span>
+                <span style={{ color: rr.confidence<0.35?'#dc2626':rr.confidence<0.6?'#d97706':'#16a34a', fontWeight:700 }}>{((rr.confidence||0)*100).toFixed(0)}%</span>
+                {rr.chain_tried?.length > 1 && <span style={{ color:'#94a3b8', fontSize:'8px' }}>→{rr.chain_tried.slice(1,3).join('→')}</span>}
+              </div>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── Field / Table / Form Views ─────────────────────────────────────────────────
+function TableView({ blocks }) {
+  const tables = (blocks||[]).filter(b=>b.type==='table');
+  if (!tables.length) return <div style={S.emptyState}><div style={{ fontSize:'32px', opacity:0.3 }}>⊞</div><div>No tables detected</div></div>;
+  return (
+    <div style={{ ...S.paperWrap, padding:'16px' }}>
+      {tables.map((tbl,ti) => (
+        <div key={ti} style={{ ...S.paper, padding:'24px', marginBottom:'16px' }}>
+          <div style={{ fontSize:'10px', color:'#64748b', fontWeight:700, marginBottom:'10px', textTransform:'uppercase', letterSpacing:'0.5px' }}>
+            TABLE {ti+1} · {tbl.method||'?'} · {tbl.col_count||'?'} cols · {(tbl.rows||[]).length} rows
+          </div>
+          <PaperBlock block={tbl} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function FormView({ blocks }) {
+  const kvBlocks = (blocks||[]).filter(b=>b.type==='key_value');
+  if (!kvBlocks.length) return <div style={S.emptyState}><div style={{ fontSize:'32px', opacity:0.3 }}>📋</div><div>No form fields detected</div></div>;
+  const allFields = kvBlocks.flatMap(b=>b.fields||[]).filter(f=>f.key||f.value);
+  return (
+    <div style={{ padding:'16px', display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))', gap:'8px', overflowY:'auto' }}>
+      {allFields.map((f,i) => (
+        <div key={i} style={{ background:'#fff', border:'1px solid #e2e8f0', borderRadius:'6px', padding:'12px', boxShadow:'0 1px 3px rgba(0,0,0,0.04)' }}>
+          {f.key && <div style={{ fontSize:'9px', color:'#64748b', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.5px', marginBottom:'4px' }}>{f.key}</div>}
+          <div style={{ fontSize:'13px', color:'#1e293b', fontWeight:500, fontFamily:"'Fira Code',monospace" }}>{f.value||'—'}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function FieldsView({ fields }) {
+  if (!fields||!Object.keys(fields).length) return <div style={S.emptyState}><div style={{ fontSize:'32px', opacity:0.3 }}>🔍</div><div>No structured fields extracted</div></div>;
+  return (
+    <div style={{ padding:'16px', overflowY:'auto' }}>
+      {Object.entries(fields).map(([key,val]) => (
+        <div key={key} style={{ marginBottom:'14px' }}>
+          <div style={{ fontWeight:700, fontSize:'10px', color:'#64748b', textTransform:'uppercase', letterSpacing:'0.5px', marginBottom:'6px' }}>{key.replace(/_/g,' ')}</div>
+          <div style={{ display:'flex', flexWrap:'wrap', gap:'6px' }}>
+            {(Array.isArray(val)?val:[val]).filter(v=>v).map((v,i) => (
+              <div key={i} style={{ background:'#f1f5f9', border:'1px solid #e2e8f0', borderRadius:'4px', padding:'4px 10px', fontSize:'12px', fontFamily:"'Fira Code',monospace" }}>{String(v)}</div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function RawOCRView({ rawText, cleanText }) {
+  const [mode, setMode] = useState('clean');
+  return (
+    <div style={{ padding:'16px', display:'flex', flexDirection:'column', gap:'8px', overflowY:'auto' }}>
+      <div style={{ display:'flex', gap:'6px' }}>
+        <button style={S.btn(mode==='clean')} onClick={()=>setMode('clean')}>Cleaned</button>
+        <button style={S.btn(mode==='raw')}   onClick={()=>setMode('raw')}>Raw OCR</button>
+      </div>
+      <pre style={{ fontFamily:"'Fira Code',monospace", fontSize:'11.5px', whiteSpace:'pre-wrap', color:'#374151', lineHeight:1.65, padding:'16px', background:'#f8fafc', borderRadius:'4px', border:'1px solid #e2e8f0', margin:0 }}>
+        {(mode==='clean'?cleanText:rawText)||'(empty)'}
+      </pre>
+    </div>
+  );
+}
+
+// ── Forensics View ─────────────────────────────────────────────────────────────
+function ForensicsView({ forensics }) {
+  const [sel, setSel] = useState(null);
+
+  if (!forensics || forensics.length === 0) {
+    return (
+      <div style={{ display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', height:'100%', gap:'10px', color:'#94a3b8' }}>
+        <div style={{ fontSize:'32px' }}>🧪</div>
+        <div style={{ fontSize:'13px' }}>No forensics data — run an extraction first</div>
+      </div>
+    );
+  }
+
+  const total    = forensics.length;
+  const rejected = forensics.filter(f => !f.has_real_text || f.rejection_reason).length;
+  const avgDensity = (forensics.reduce((s,f) => s + (f.text_density||0), 0) / total).toFixed(3);
+  const enginesSet = [...new Set(forensics.map(f => f.final_engine).filter(Boolean))];
+
+  const CHIP = (label, color, bg) => (
+    <span style={{ background: bg, color, border:`1px solid ${color}33`, borderRadius:'3px', padding:'1px 6px', fontSize:'10px', fontWeight:600, whiteSpace:'nowrap' }}>
+      {label}
+    </span>
+  );
+
+  return (
+    <div style={{ display:'flex', height:'100%', overflow:'hidden' }}>
+      {/* Region list */}
+      <div style={{ width:'220px', minWidth:'180px', borderRight:'1px solid #e2e8f0', overflowY:'auto', background:'#f8fafc' }}>
+        {/* Summary header */}
+        <div style={{ padding:'10px 12px', borderBottom:'1px solid #e2e8f0', background:'#fff' }}>
+          <div style={{ fontSize:'11px', fontWeight:700, color:'#1e293b', marginBottom:'4px' }}>🧪 OCR Forensics</div>
+          <div style={{ display:'flex', flexWrap:'wrap', gap:'4px' }}>
+            {CHIP(`${total} regions`, '#1d4ed8', '#eff6ff')}
+            {rejected > 0 && CHIP(`${rejected} skipped`, '#dc2626', '#fef2f2')}
+            {CHIP(`density ${avgDensity}`, '#059669', '#ecfdf5')}
+          </div>
+          <div style={{ fontSize:'10px', color:'#94a3b8', marginTop:'4px' }}>Engines: {enginesSet.join(', ') || 'none'}</div>
+        </div>
+
+        {forensics.map((fr, i) => {
+          const isSkipped = !fr.has_real_text || !!fr.rejection_reason;
+          const isSelected = sel === i;
+          return (
+            <div
+              key={i}
+              onClick={() => setSel(isSelected ? null : i)}
+              style={{
+                padding:'8px 12px', cursor:'pointer', borderBottom:'1px solid #f1f5f9',
+                background: isSelected ? '#eff6ff' : (isSkipped ? '#fff7ed' : '#fff'),
+                borderLeft: isSelected ? '3px solid #2563eb' : '3px solid transparent',
+                transition:'background 0.1s',
+              }}
+            >
+              <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+                <span style={{ fontSize:'11px', fontWeight:600, color: isSkipped ? '#92400e' : '#1e293b' }}>
+                  #{fr.reading_order ?? i} {fr.region_type}
+                </span>
+                <span style={{ fontSize:'10px', color: fr.final_conf > 0.5 ? '#059669' : '#dc2626' }}>
+                  {fr.final_conf > 0 ? (fr.final_conf * 100).toFixed(0) + '%' : '—'}
+                </span>
+              </div>
+              <div style={{ display:'flex', gap:'3px', marginTop:'3px', flexWrap:'wrap' }}>
+                {fr.table_lines_removed && CHIP('lines removed', '#7c3aed', '#f3e8ff')}
+                {fr.bleedthrough_suppressed && CHIP('bleed-fix', '#0891b2', '#ecfeff')}
+                {isSkipped && CHIP('skipped', '#dc2626', '#fef2f2')}
+                {fr.final_engine && fr.final_engine !== 'none' && fr.final_engine !== 'skipped' && CHIP(fr.final_engine, '#1d4ed8', '#eff6ff')}
+              </div>
+              {fr.final_text && (
+                <div style={{ fontSize:'10px', color:'#64748b', marginTop:'3px', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap', maxWidth:'170px' }}>
+                  {fr.final_text.slice(0, 40)}{fr.final_text.length > 40 ? '…' : ''}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Detail panel */}
+      <div style={{ flex:1, overflowY:'auto', padding:'16px', background:'#fff' }}>
+        {sel === null ? (
+          <div style={{ display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', height:'100%', color:'#94a3b8', gap:'8px' }}>
+            <div style={{ fontSize:'28px' }}>👈</div>
+            <div style={{ fontSize:'12px' }}>Select a region to inspect</div>
+          </div>
+        ) : (() => {
+          const fr = forensics[sel];
+          const hasRealText = fr.has_real_text;
+          return (
+            <div style={{ display:'flex', flexDirection:'column', gap:'16px' }}>
+
+              {/* Header */}
+              <div style={{ display:'flex', alignItems:'center', gap:'8px', flexWrap:'wrap' }}>
+                <span style={{ fontWeight:700, fontSize:'14px', color:'#1e293b' }}>
+                  Region #{fr.reading_order ?? sel} — {fr.region_type}
+                </span>
+                {CHIP(`density ${fr.text_density?.toFixed(3)}`, hasRealText ? '#059669' : '#dc2626', hasRealText ? '#ecfdf5' : '#fef2f2')}
+                {fr.table_lines_removed && CHIP('table lines removed', '#7c3aed', '#f3e8ff')}
+                {fr.bleedthrough_suppressed && CHIP('bleed-through fixed', '#0891b2', '#ecfeff')}
+                {fr.rejection_reason && CHIP(`❌ ${fr.rejection_reason}`, '#dc2626', '#fef2f2')}
+              </div>
+
+              {/* Crop images */}
+              <div>
+                <div style={{ fontSize:'11px', fontWeight:700, color:'#64748b', marginBottom:'8px', textTransform:'uppercase', letterSpacing:'0.05em' }}>Crop Variants</div>
+                <div style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}>
+                  {[['Raw Crop', fr.raw_crop_b64], ['Cleaned', fr.cleaned_crop_b64], ['Thresholded', fr.thresh_crop_b64]].map(([label, b64]) =>
+                    b64 ? (
+                      <div key={label} style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:'4px' }}>
+                        <img
+                          src={`data:image/jpeg;base64,${b64}`}
+                          alt={label}
+                          style={{ maxHeight:'120px', maxWidth:'200px', border:'1px solid #e2e8f0', borderRadius:'4px', boxShadow:'0 1px 4px rgba(0,0,0,0.08)' }}
+                        />
+                        <span style={{ fontSize:'10px', color:'#64748b', fontWeight:500 }}>{label}</span>
+                      </div>
+                    ) : null
+                  )}
+                </div>
+              </div>
+
+              {/* OCR variants table */}
+              {fr.variant_results && fr.variant_results.length > 0 && (
+                <div>
+                  <div style={{ fontSize:'11px', fontWeight:700, color:'#64748b', marginBottom:'8px', textTransform:'uppercase', letterSpacing:'0.05em' }}>OCR Variant Results</div>
+                  <table style={{ width:'100%', borderCollapse:'collapse', fontSize:'11px' }}>
+                    <thead>
+                      <tr style={{ background:'#f8fafc' }}>
+                        {['Variant','Text (60 chars)','Conf','Dev Ratio','Engine','Status'].map(h => (
+                          <th key={h} style={{ padding:'6px 8px', textAlign:'left', color:'#64748b', fontWeight:600, borderBottom:'1px solid #e2e8f0', whiteSpace:'nowrap' }}>{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {fr.variant_results.map((vr, vi) => {
+                        const isBest = vr.variant === fr.final_variant;
+                        const rejected = !!vr.rejection_reason;
+                        return (
+                          <tr key={vi} style={{ background: isBest ? '#f0fdf4' : rejected ? '#fff7ed' : '#fff', borderBottom:'1px solid #f1f5f9' }}>
+                            <td style={{ padding:'5px 8px', fontWeight: isBest ? 700 : 400, color:'#1e293b', fontFamily:"'Fira Code',monospace" }}>
+                              {isBest ? '✅ ' : ''}{vr.variant}
+                            </td>
+                            <td style={{ padding:'5px 8px', color:'#374151', fontFamily:"'Fira Code',monospace", maxWidth:'200px', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>
+                              {vr.text ? vr.text.slice(0,60) + (vr.text.length > 60 ? '…' : '') : <span style={{ color:'#94a3b8' }}>(empty)</span>}
+                            </td>
+                            <td style={{ padding:'5px 8px', color: vr.confidence > 0.5 ? '#059669' : '#dc2626', fontWeight:600 }}>
+                              {vr.confidence > 0 ? (vr.confidence * 100).toFixed(0) + '%' : '—'}
+                            </td>
+                            <td style={{ padding:'5px 8px', color: vr.devanagari_ratio > 0.6 ? '#059669' : '#64748b' }}>
+                              {vr.devanagari_ratio != null ? (vr.devanagari_ratio * 100).toFixed(0) + '%' : '—'}
+                            </td>
+                            <td style={{ padding:'5px 8px', color:'#64748b' }}>
+                              {vr.lang || '—'}
+                            </td>
+                            <td style={{ padding:'5px 8px' }}>
+                              {rejected
+                                ? <span style={{ color:'#dc2626', fontSize:'10px' }}>❌ {vr.rejection_reason}</span>
+                                : <span style={{ color:'#059669', fontSize:'10px' }}>✓ valid</span>}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* Final result */}
+              <div>
+                <div style={{ fontSize:'11px', fontWeight:700, color:'#64748b', marginBottom:'6px', textTransform:'uppercase', letterSpacing:'0.05em' }}>Final Result</div>
+                <div style={{ background:'#f8fafc', border:'1px solid #e2e8f0', borderRadius:'6px', padding:'12px', fontFamily:"'Fira Code',monospace", fontSize:'12px', whiteSpace:'pre-wrap', color:'#374151', lineHeight:1.65 }}>
+                  {fr.final_text || <span style={{ color:'#94a3b8' }}>(empty — {fr.rejection_reason || 'no text detected'})</span>}
+                </div>
+                <div style={{ display:'flex', gap:'8px', marginTop:'6px', flexWrap:'wrap' }}>
+                  {fr.script && CHIP(`script: ${fr.script}`, '#7c3aed', '#f3e8ff')}
+                  {fr.lang && CHIP(`lang: ${fr.lang}`, '#0891b2', '#ecfeff')}
+                  {fr.devanagari_ratio != null && CHIP(`dev ratio: ${(fr.devanagari_ratio*100).toFixed(0)}%`, fr.devanagari_ratio > 0.6 ? '#059669' : '#dc2626', fr.devanagari_ratio > 0.6 ? '#ecfdf5' : '#fef2f2')}
+                  {fr.final_variant && CHIP(`winner: ${fr.final_variant}`, '#1d4ed8', '#eff6ff')}
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+      </div>
+    </div>
+  );
+}
+
+// ── Main Component ─────────────────────────────────────────────────────────────
+export default function ExtractionStudio() {
+  const [file,        setFile]        = useState(null);
+  const [dragging,    setDragging]    = useState(false);
+  const [processing,  setProcessing]  = useState(false);
+  const [stages,      setStages]      = useState([]);
+  const [result,      setResult]      = useState(null);
+  const [error,       setError]       = useState('');
+  const [activeTab,   setActiveTab]   = useState('document');
+  const [mode,        setMode]        = useState('standard');
+  const [renderMode,  setRenderMode]  = useState('paper');
+  const [pageIndex,   setPageIndex]   = useState(0);
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [showOrder,   setShowOrder]   = useState(true);
+
+  // ── Extraction Profile Controls ───────────────────────────────────────────
+  const [profile,     setProfile]     = useState('auto');
+  const [safeMode,    setSafeMode]    = useState(true);   // Default ON — prevents hallucination
+  const [handwritten, setHandwritten] = useState(false);
+  const [langLock,    setLangLock]    = useState('auto');
+
+  const fileInputRef = useRef(null);
+
+  // Load fonts + styles
+  useEffect(() => {
+    injectStyles();
+    if (!document.getElementById('es-fonts')) {
+      const l = document.createElement('link');
+      l.id = 'es-fonts'; l.rel = 'stylesheet'; l.href = FONT_URL;
+      document.head.appendChild(l);
+    }
+  }, []);
+
+  const handleFile = useCallback((f) => {
+    if (!f) return;
+    setFile(f); setResult(null); setStages([]); setError(''); setPageIndex(0);
+  }, []);
+
+  const onDrop      = useCallback(e => { e.preventDefault(); setDragging(false); const f = e.dataTransfer.files[0]; if(f) handleFile(f); }, [handleFile]);
+  const onDragOver  = useCallback(e => { e.preventDefault(); setDragging(true); }, []);
+  const onDragLeave = useCallback(() => setDragging(false), []);
+
+  const pollStatus = useCallback(async (runId) => {
+    let tries = 0;
+    while (tries < 200) {
+      await sleep(1200);
+      try {
+        const sr = await fetch(`${API_BASE}/api/ocr/pipeline/status/${runId}`);
+        if (!sr.ok) break;
+        const status = await sr.json();
+        setStages(status.stages||[]);
+        if (status.overall_status === 'done' || status.overall_status === 'failed') {
+          const rr = await fetch(`${API_BASE}/api/ocr/pipeline/result/${runId}`);
+          if (rr.ok) { const d = await rr.json(); if (d.ready) { setResult(d.result || d); setActiveTab('document'); } }
+          if (status.overall_status === 'failed') setError(status.error || 'Extraction failed');
+          setProcessing(false); return;
+        }
+      } catch {}
+      tries++;
+    }
+    setError('Timeout'); setProcessing(false);
+  }, []);
+
+  const handleExtract = useCallback(async () => {
+    if (!file || processing) return;
+    setProcessing(true); setResult(null); setStages([]); setError('');
+    try {
+      const fd = new FormData();
+      fd.append('file', file);
+      fd.append('mode', mode);
+      fd.append('profile', profile);
+      fd.append('safe_mode', String(safeMode));
+      fd.append('handwritten', String(handwritten));
+      fd.append('lang_lock', langLock || 'auto');
+      const r = await fetch(`${API_BASE}/api/ocr/pipeline/start`, { method:'POST', body:fd });
+      if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail||`HTTP ${r.status}`); }
+      const { run_id } = await r.json();
+      pollStatus(run_id);
+    } catch(e) { setError(e.message||'Failed'); setProcessing(false); }
+  }, [file, processing, mode, profile, safeMode, handwritten, langLock, pollStatus]);
+
+
+  // Derived
+  const blocks      = result?.blocks || [];
+  const quality     = result?.quality || null;
+  const language    = result?.language || null;
+  const fields      = result?.fields || {};
+  const rawText     = result?.ocr?.raw_text || '';
+  const cleanText   = result?.ocr?.clean_text || '';
+  const dna         = result?.dna || {};
+  const dnaHints    = result?.dna_hints || {};
+  const pageImages  = result?.images?.pages || (result?.images?.original ? [result.images.original] : []);
+  const snapshots   = result?.snapshots || {};
+  const currentImg  = pageImages[pageIndex] || null;
+  const currentRegions = result?.region_debug?.page_analyses?.[pageIndex]?.regions || [];
+  const pageW       = result?.page_dims?.width || result?.page_dims_list?.[pageIndex]?.width || 0;
+  const pageH       = result?.page_dims?.height || result?.page_dims_list?.[pageIndex]?.height || 0;
+  const pageCount   = pageImages.length;
+  const twinBlocks  = result?.twin_blocks  || [];
+  const twinMeta    = result?.twin_metadata || {};
+  const forensics   = result?.forensics || [];
+
+  // Track run_id for export endpoints
+  const runIdRef = useRef(null);
+  useEffect(() => {
+    if (result?.run_id) runIdRef.current = result.run_id;
+  }, [result]);
+
+  const TABS = [
+    { id:'document',  label:'📄 Document' },
+    { id:'twin',      label:'🪞 Digital Twin' },
+    { id:'tables',    label:`⊞ Tables (${blocks.filter(b=>b.type==='table').length})` },
+    { id:'form',      label:'📋 Form' },
+    { id:'fields',    label:'🔍 Fields' },
+    { id:'raw',       label:'Raw OCR' },
+    { id:'forensics', label:`🧪 Forensics (${forensics.length})` },
+    { id:'dev',       label:'⚙ Developer' },
+  ];
+
+  const RENDER_MODES = [
+    { id:'paper',      label:'📃 Paper'    },
+    { id:'sidebyside', label:'↔ Side·Side' },
+    { id:'absolute',   label:'📐 Twin V2'  },
+  ];
+
+  return (
+    <div style={S.root}>
+      {/* ── Top Bar ─────────────────────────────────────────────────────────── */}
+      <div style={S.topBar}>
+        <div style={S.titleMark}>
+          <span style={S.title}>Extraction Studio</span>
+          <span style={S.badge('#dbeafe','#1d4ed8')}>v2</span>
+          {safeMode && <span style={S.badge('#fef9c3','#92400e')}>🛡 Safe Mode</span>}
+        </div>
+
+        <div style={{ flex:1 }} />
+
+        {/* ── Profile Dropdown ── */}
+        <div style={{ display:'flex', gap:'4px', alignItems:'center' }}>
+          <span style={{ fontSize:'10px', color:'#94a3b8', whiteSpace:'nowrap' }}>Profile</span>
+          <select
+            id="es-profile-select"
+            value={profile}
+            onChange={e => { if(!processing) setProfile(e.target.value); }}
+            disabled={processing}
+            style={{
+              padding:'4px 8px', borderRadius:'5px', border:'1px solid #cbd5e1',
+              background:'#fff', color:'#1e293b', fontSize:'12px', cursor:'pointer',
+              fontWeight:500, outline:'none', maxWidth:'160px',
+            }}
+          >
+            <option value="auto">🤖 Auto</option>
+            <option value="clean_pdf">📃 Clean PDF</option>
+            <option value="bank_statement">🏦 Bank Statement</option>
+            <option value="old_scan">📜 Old Scan</option>
+            <option value="handwritten">✏️ Handwritten</option>
+            <option value="marathi_document">🇮🇳 Marathi Document</option>
+            <option value="hindi_document">🇮🇳 Hindi Document</option>
+            <option value="government_form">🏛️ Government Form</option>
+            <option value="table_heavy">📊 Table Heavy</option>
+            <option value="mixed_language">🌐 Mixed Language</option>
+            <option value="low_quality_scan">🔍 Low Quality</option>
+          </select>
+        </div>
+
+        {/* ── Language Lock ── */}
+        <div style={{ display:'flex', gap:'4px', alignItems:'center' }}>
+          <span style={{ fontSize:'10px', color:'#94a3b8' }}>Lang</span>
+          <select
+            id="es-lang-select"
+            value={langLock}
+            onChange={e => { if(!processing) setLangLock(e.target.value); }}
+            disabled={processing}
+            style={{
+              padding:'4px 8px', borderRadius:'5px', border:'1px solid #cbd5e1',
+              background:'#fff', color:'#1e293b', fontSize:'12px', cursor:'pointer',
+              fontWeight:500, outline:'none', width:'80px',
+            }}
+          >
+            <option value="auto">Auto</option>
+            <option value="eng">English</option>
+            <option value="mar">Marathi</option>
+            <option value="hin">Hindi</option>
+            <option value="mar+hin">Mar+Hin</option>
+            <option value="ben">Bengali</option>
+          </select>
+        </div>
+
+        <div style={{ width:'1px', height:'18px', background:'#e2e8f0', margin:'0 2px' }} />
+
+        {/* ── Toggles ── */}
+        <div style={{ display:'flex', gap:'6px', alignItems:'center' }}>
+          {/* Safe Mode */}
+          <button
+            id="es-safe-mode-btn"
+            style={{
+              padding:'4px 10px', borderRadius:'5px', fontSize:'12px', cursor:'pointer',
+              border:`1px solid ${safeMode ? '#d97706' : '#cbd5e1'}`,
+              background: safeMode ? '#fef3c7' : '#fff',
+              color: safeMode ? '#92400e' : '#64748b',
+              fontWeight: safeMode ? 600 : 400,
+              transition:'all 0.15s',
+            }}
+            onClick={() => !processing && setSafeMode(v => !v)}
+            title="Safe Mode: disables semantic reconstruction, table hallucination, AI layers"
+          >
+            {safeMode ? '🛡 Safe ON' : '🛡 Safe'}
+          </button>
+
+          {/* Handwritten Mode */}
+          <button
+            id="es-handwritten-btn"
+            style={{
+              padding:'4px 10px', borderRadius:'5px', fontSize:'12px', cursor:'pointer',
+              border:`1px solid ${handwritten ? '#7c3aed' : '#cbd5e1'}`,
+              background: handwritten ? '#f3e8ff' : '#fff',
+              color: handwritten ? '#6d28d9' : '#64748b',
+              fontWeight: handwritten ? 600 : 400,
+              transition:'all 0.15s',
+            }}
+            onClick={() => !processing && setHandwritten(v => !v)}
+            title="Handwritten Mode: LSTM-only OCR, no table reconstruction"
+          >
+            {handwritten ? '✏️ HW ON' : '✏️ HW'}
+          </button>
+        </div>
+
+        <div style={{ width:'1px', height:'18px', background:'#e2e8f0', margin:'0 2px' }} />
+
+        {/* Render mode — only when viewing document */}
+        {result && activeTab === 'document' && (
+          <div style={{ display:'flex', gap:'4px', alignItems:'center' }}>
+            {RENDER_MODES.map(rm => (
+              <button key={rm.id} style={S.btn(renderMode===rm.id)} onClick={() => setRenderMode(rm.id)}>
+                {rm.label}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div style={{ width:'1px', height:'18px', background:'#e2e8f0', margin:'0 2px' }} />
+
+        {/* Extract mode */}
+        <div style={{ display:'flex', gap:'3px', alignItems:'center' }}>
+          <span style={{ fontSize:'10px', color:'#94a3b8' }}>Mode</span>
+          {['fast','standard','deep'].map(m => (
+            <button key={m} style={S.btn(mode===m)} onClick={() => !processing && setMode(m)}>
+              {m.charAt(0).toUpperCase()+m.slice(1)}
+            </button>
+          ))}
+        </div>
+
+        <button
+          id="es-extract-btn"
+          style={{ ...S.extractBtn, ...(!file||processing ? S.disabledBtn : {}) }}
+          onClick={handleExtract} disabled={!file||processing}
+        >
+          {processing ? <><span className="es-spinner" style={{ display:'inline-block' }}>⏳</span> Processing…</> : '▶ Extract'}
+        </button>
+      </div>
+
+      {/* ── Upload Bar ────────────────────────────────────────────────────── */}
+      <div
+        style={{ background: dragging?'#eff6ff':'#fff', border:`2px dashed ${dragging?'#3b82f6':'#cbd5e1'}`, borderRadius:'6px', padding:'12px 28px', margin:'8px 16px 0', textAlign:'center', cursor:'pointer', transition:'all 0.2s' }}
+        onClick={() => fileInputRef.current?.click()}
+        onDrop={onDrop} onDragOver={onDragOver} onDragLeave={onDragLeave}
+      >
+        <input ref={fileInputRef} type="file" accept=".pdf,.png,.jpg,.jpeg,.tiff,.bmp,.webp" style={{ display:'none' }} onChange={e=>handleFile(e.target.files[0])} />
+        {file
+          ? <div style={{ color:'#2563eb', fontWeight:600 }}>📄 {file.name} <span style={{ color:'#94a3b8', fontWeight:400 }}>({(file.size/1024).toFixed(0)} KB)</span></div>
+          : <div style={{ color:'#94a3b8', fontSize:'13px' }}>Drop PDF or image here, or click to browse · PDF · PNG · JPG · TIFF</div>
+        }
+      </div>
+
+      {error && <div style={{ background:'#fef2f2', border:'1px solid #fecaca', borderRadius:'5px', padding:'7px 16px', margin:'6px 16px 0', color:'#dc2626', fontSize:'12px' }}>⚠ {error}</div>}
+
+      {/* ── Workspace ──────────────────────────────────────────────────────── */}
+      <div style={{ ...S.workspace, marginTop:'8px' }}>
+
+        {/* LEFT: Preview + pipeline */}
+        <div style={S.leftPanel}>
+          <div style={S.panelHdr}>
+            <span>Preview</span>
+            <div style={{ display:'flex', gap:'5px', alignItems:'center' }}>
+              {currentRegions.length > 0 && (
+                <button style={S.btn(showOverlay, '#2563eb')} onClick={()=>setShowOverlay(v=>!v)} title="Toggle region overlay">
+                  {showOverlay ? '✓' : '○'} Overlay
+                </button>
+              )}
+              {showOverlay && currentRegions.length > 0 && (
+                <button style={S.btn(showOrder, '#7c3aed')} onClick={()=>setShowOrder(v=>!v)}>#{showOrder?'On':'Off'}</button>
+              )}
+              {pageCount > 1 && (
+                <div style={{ display:'flex', gap:'3px', alignItems:'center' }}>
+                  <button style={{ ...S.btn(false), padding:'1px 7px' }} onClick={()=>setPageIndex(Math.max(0,pageIndex-1))}>‹</button>
+                  <span style={{ fontSize:'10px', color:'#64748b' }}>{pageIndex+1}/{pageCount}</span>
+                  <button style={{ ...S.btn(false), padding:'1px 7px' }} onClick={()=>setPageIndex(Math.min(pageCount-1,pageIndex+1))}>›</button>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div style={S.imgViewer}>
+            {currentImg
+              ? (showOverlay && currentRegions.length > 0
+                  ? <RegionCanvas imageB64={currentImg} regions={currentRegions} showOrder={showOrder} />
+                  : <img src={`data:image/jpeg;base64,${currentImg}`} alt="Document" style={{ maxWidth:'100%', boxShadow:'0 4px 24px rgba(0,0,0,0.12)', borderRadius:'2px' }} />
+                )
+              : <div style={{ color:'#94a3b8', fontSize:'12px' }}>{processing ? '⏳ Processing…' : 'Preview will appear here'}</div>
+            }
+          </div>
+
+          {/* Region legend */}
+          {showOverlay && currentRegions.length > 0 && (
+            <div style={S.legendBar}>
+              {[...new Set(currentRegions.map(r=>r.type))].slice(0,8).map(type => {
+                const c = REGION_COLORS[type]||REGION_COLORS.paragraph;
+                return <div key={type} style={{ display:'flex', alignItems:'center', gap:'4px', fontSize:'9px', color:'#374151' }}><div style={S.legendDot(c.stroke)} />{type}</div>;
+              })}
+            </div>
+          )}
+
+          <PipelineView stages={stages} />
+        </div>
+
+        {/* RIGHT: Output */}
+        <div style={S.rightPanel}>
+          {quality && <QualityHUDV2 quality={quality} language={language} dna={dna} restoration={result?.restoration} />}
+
+          <div style={S.tabBar}>
+            {TABS.map(t => <button key={t.id} style={S.tab(activeTab===t.id)} onClick={()=>setActiveTab(t.id)}>{t.label}</button>)}
+          </div>
+
+          <div style={{ flex:1, overflow:'hidden', display:'flex', flexDirection:'column' }}>
+            {activeTab === 'document' && (() => {
+              if (!result && !processing) return <PaperView blocks={[]} />;
+              if (processing && !blocks.length) return <div style={S.emptyState}><div style={{ fontSize:'40px' }}>⏳</div><div>Reconstructing document…</div></div>;
+
+              if (renderMode === 'sidebyside') {
+                return <SideBySideView imageB64={currentImg} blocks={blocks} regions={currentRegions} showOverlay={showOverlay} showOrder={showOrder} />;
+              }
+              if (renderMode === 'absolute') {
+                // Use Digital Twin V3 if twin_blocks available, else fallback AbsoluteView stub
+                return <DigitalTwinV3 twinBlocks={twinBlocks.length ? twinBlocks : null} twinMeta={twinMeta} pageW={pageW} pageH={pageH} imageB64={currentImg} runId={runIdRef.current} />;
+              }
+              return <PaperView blocks={blocks} />;
+            })()}
+
+            {/* Phase 5: Full Digital Twin tab */}
+            {activeTab === 'twin' && (
+              <DigitalTwinV3
+                twinBlocks={twinBlocks}
+                twinMeta={twinMeta}
+                pageW={pageW}
+                pageH={pageH}
+                imageB64={currentImg}
+                runId={runIdRef.current}
+              />
+            )}
+
+            {activeTab === 'tables'    && <TableView  blocks={blocks} />}
+            {activeTab === 'form'      && <FormView   blocks={blocks} />}
+            {activeTab === 'fields'    && <FieldsView fields={fields} />}
+            {activeTab === 'raw'       && <RawOCRView rawText={rawText} cleanText={cleanText} />}
+            {activeTab === 'forensics' && <ForensicsView forensics={forensics} />}
+            {activeTab === 'dev'       && <DeveloperView stages={stages} result={result} snapshots={snapshots} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,1753 @@
+[
+  {
+    "line_id": 0,
+    "words": [
+      {
+        "text": "Page No12",
+        "x1": 745.0,
+        "y1": 127.0,
+        "x2": 866.0,
+        "y2": 151.0,
+        "cx": 805.5,
+        "cy": 139.0,
+        "width": 121.0,
+        "height": 24.0
+      }
+    ],
+    "text": "Page No12",
+    "x1": 745.0,
+    "y1": 127.0,
+    "x2": 866.0,
+    "y2": 151.0,
+    "cy": 139.0,
+    "visual_lines": [
+      {
+        "line_id": 0,
+        "words": [
+          {
+            "text": "Page No12",
+            "x1": 745.0,
+            "y1": 127.0,
+            "x2": 866.0,
+            "y2": 151.0,
+            "cx": 805.5,
+            "cy": 139.0,
+            "width": 121.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Page No12",
+        "x1": 745.0,
+        "y1": 127.0,
+        "x2": 866.0,
+        "y2": 151.0,
+        "cy": 139.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 1,
+    "words": [
+      {
+        "text": "HDFCBANK",
+        "x1": 155.0,
+        "y1": 180.0,
+        "x2": 428.0,
+        "y2": 212.0,
+        "cx": 291.5,
+        "cy": 196.0,
+        "width": 273.0,
+        "height": 32.0
+      }
+    ],
+    "text": "HDFCBANK",
+    "x1": 155.0,
+    "y1": 180.0,
+    "x2": 428.0,
+    "y2": 212.0,
+    "cy": 196.0,
+    "visual_lines": [
+      {
+        "line_id": 1,
+        "words": [
+          {
+            "text": "HDFCBANK",
+            "x1": 155.0,
+            "y1": 180.0,
+            "x2": 428.0,
+            "y2": 212.0,
+            "cx": 291.5,
+            "cy": 196.0,
+            "width": 273.0,
+            "height": 32.0
+          }
+        ],
+        "text": "HDFCBANK",
+        "x1": 155.0,
+        "y1": 180.0,
+        "x2": 428.0,
+        "y2": 212.0,
+        "cy": 196.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 2,
+    "words": [
+      {
+        "text": "We understand your world",
+        "x1": 71.0,
+        "y1": 224.0,
+        "x2": 450.0,
+        "y2": 256.0,
+        "cx": 260.5,
+        "cy": 240.0,
+        "width": 379.0,
+        "height": 32.0
+      },
+      {
+        "text": "Address",
+        "x1": 878.0,
+        "y1": 236.0,
+        "x2": 954.0,
+        "y2": 261.0,
+        "cx": 916.0,
+        "cy": 248.5,
+        "width": 76.0,
+        "height": 25.0
+      },
+      {
+        "text": "Account Branch:SANGLIMAHARASHIRA",
+        "x1": 881.0,
+        "y1": 212.0,
+        "x2": 1289.0,
+        "y2": 236.0,
+        "cx": 1085.0,
+        "cy": 224.0,
+        "width": 408.0,
+        "height": 24.0
+      },
+      {
+        "text": "HDFC BANK LIDCIS NO 522",
+        "x1": 1038.0,
+        "y1": 234.0,
+        "x2": 1333.0,
+        "y2": 258.0,
+        "cx": 1185.5,
+        "cy": 246.0,
+        "width": 295.0,
+        "height": 24.0
+      },
+      {
+        "text": "AND 522,1 EXTN OPP ZILLA PARISHAD",
+        "x1": 1038.0,
+        "y1": 253.0,
+        "x2": 1427.0,
+        "y2": 285.0,
+        "cx": 1232.5,
+        "cy": 269.0,
+        "width": 389.0,
+        "height": 32.0
+      },
+      {
+        "text": "ZP ROADSANGLI MAHARASHTRA",
+        "x1": 1035.0,
+        "y1": 273.0,
+        "x2": 1400.0,
+        "y2": 310.0,
+        "cx": 1217.5,
+        "cy": 291.5,
+        "width": 365.0,
+        "height": 37.0
+      }
+    ],
+    "text": "We understand your world Address Account Branch:SANGLIMAHARASHIRA HDFC BANK LIDCIS NO 522 AND 522,1 EXTN OPP ZILLA PARISHAD ZP ROADSANGLI MAHARASHTRA",
+    "x1": 71.0,
+    "y1": 212.0,
+    "x2": 1427.0,
+    "y2": 310.0,
+    "cy": 261.0,
+    "visual_lines": [
+      {
+        "line_id": 2,
+        "words": [
+          {
+            "text": "We understand your world",
+            "x1": 71.0,
+            "y1": 224.0,
+            "x2": 450.0,
+            "y2": 256.0,
+            "cx": 260.5,
+            "cy": 240.0,
+            "width": 379.0,
+            "height": 32.0
+          },
+          {
+            "text": "Address",
+            "x1": 878.0,
+            "y1": 236.0,
+            "x2": 954.0,
+            "y2": 261.0,
+            "cx": 916.0,
+            "cy": 248.5,
+            "width": 76.0,
+            "height": 25.0
+          },
+          {
+            "text": "Account Branch:SANGLIMAHARASHIRA",
+            "x1": 881.0,
+            "y1": 212.0,
+            "x2": 1289.0,
+            "y2": 236.0,
+            "cx": 1085.0,
+            "cy": 224.0,
+            "width": 408.0,
+            "height": 24.0
+          },
+          {
+            "text": "HDFC BANK LIDCIS NO 522",
+            "x1": 1038.0,
+            "y1": 234.0,
+            "x2": 1333.0,
+            "y2": 258.0,
+            "cx": 1185.5,
+            "cy": 246.0,
+            "width": 295.0,
+            "height": 24.0
+          }
+        ],
+        "text": "We understand your world Address Account Branch:SANGLIMAHARASHIRA HDFC BANK LIDCIS NO 522",
+        "x1": 71.0,
+        "y1": 212.0,
+        "x2": 1333.0,
+        "y2": 261.0,
+        "cy": 239.625,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 3,
+        "words": [
+          {
+            "text": "AND 522,1 EXTN OPP ZILLA PARISHAD",
+            "x1": 1038.0,
+            "y1": 253.0,
+            "x2": 1427.0,
+            "y2": 285.0,
+            "cx": 1232.5,
+            "cy": 269.0,
+            "width": 389.0,
+            "height": 32.0
+          }
+        ],
+        "text": "AND 522,1 EXTN OPP ZILLA PARISHAD",
+        "x1": 1038.0,
+        "y1": 253.0,
+        "x2": 1427.0,
+        "y2": 285.0,
+        "cy": 269.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 4,
+        "words": [
+          {
+            "text": "ZP ROADSANGLI MAHARASHTRA",
+            "x1": 1035.0,
+            "y1": 273.0,
+            "x2": 1400.0,
+            "y2": 310.0,
+            "cx": 1217.5,
+            "cy": 291.5,
+            "width": 365.0,
+            "height": 37.0
+          }
+        ],
+        "text": "ZP ROADSANGLI MAHARASHTRA",
+        "x1": 1035.0,
+        "y1": 273.0,
+        "x2": 1400.0,
+        "y2": 310.0,
+        "cy": 291.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 3,
+    "words": [
+      {
+        "text": "MR",
+        "x1": 84.0,
+        "y1": 309.0,
+        "x2": 130.0,
+        "y2": 336.0,
+        "cx": 107.0,
+        "cy": 322.5,
+        "width": 46.0,
+        "height": 27.0
+      },
+      {
+        "text": "UMESH VILAS PATIL",
+        "x1": 143.0,
+        "y1": 312.0,
+        "x2": 357.0,
+        "y2": 336.0,
+        "cx": 250.0,
+        "cy": 324.0,
+        "width": 214.0,
+        "height": 24.0
+      },
+      {
+        "text": "City",
+        "x1": 872.0,
+        "y1": 296.0,
+        "x2": 926.0,
+        "y2": 332.0,
+        "cx": 899.0,
+        "cy": 314.0,
+        "width": 54.0,
+        "height": 36.0
+      },
+      {
+        "text": "SANGLI416416",
+        "x1": 1038.0,
+        "y1": 302.0,
+        "x2": 1191.0,
+        "y2": 326.0,
+        "cx": 1114.5,
+        "cy": 314.0,
+        "width": 153.0,
+        "height": 24.0
+      }
+    ],
+    "text": "MR UMESH VILAS PATIL City SANGLI416416",
+    "x1": 84.0,
+    "y1": 296.0,
+    "x2": 1191.0,
+    "y2": 336.0,
+    "cy": 318.625,
+    "visual_lines": [
+      {
+        "line_id": 5,
+        "words": [
+          {
+            "text": "MR",
+            "x1": 84.0,
+            "y1": 309.0,
+            "x2": 130.0,
+            "y2": 336.0,
+            "cx": 107.0,
+            "cy": 322.5,
+            "width": 46.0,
+            "height": 27.0
+          },
+          {
+            "text": "UMESH VILAS PATIL",
+            "x1": 143.0,
+            "y1": 312.0,
+            "x2": 357.0,
+            "y2": 336.0,
+            "cx": 250.0,
+            "cy": 324.0,
+            "width": 214.0,
+            "height": 24.0
+          },
+          {
+            "text": "City",
+            "x1": 872.0,
+            "y1": 296.0,
+            "x2": 926.0,
+            "y2": 332.0,
+            "cx": 899.0,
+            "cy": 314.0,
+            "width": 54.0,
+            "height": 36.0
+          },
+          {
+            "text": "SANGLI416416",
+            "x1": 1038.0,
+            "y1": 302.0,
+            "x2": 1191.0,
+            "y2": 326.0,
+            "cx": 1114.5,
+            "cy": 314.0,
+            "width": 153.0,
+            "height": 24.0
+          }
+        ],
+        "text": "MR UMESH VILAS PATIL City SANGLI416416",
+        "x1": 84.0,
+        "y1": 296.0,
+        "x2": 1191.0,
+        "y2": 336.0,
+        "cy": 318.625,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 4,
+    "words": [
+      {
+        "text": "168-1 NAVIN STAND PARISAR BISUR",
+        "x1": 84.0,
+        "y1": 341.0,
+        "x2": 455.0,
+        "y2": 365.0,
+        "cx": 269.5,
+        "cy": 353.0,
+        "width": 371.0,
+        "height": 24.0
+      },
+      {
+        "text": "State",
+        "x1": 876.0,
+        "y1": 324.0,
+        "x2": 930.0,
+        "y2": 351.0,
+        "cx": 903.0,
+        "cy": 337.5,
+        "width": 54.0,
+        "height": 27.0
+      },
+      {
+        "text": "Phone no.",
+        "x1": 876.0,
+        "y1": 346.0,
+        "x2": 964.0,
+        "y2": 373.0,
+        "cx": 920.0,
+        "cy": 359.5,
+        "width": 88.0,
+        "height": 27.0
+      },
+      {
+        "text": "MAHARASHTRA",
+        "x1": 1036.0,
+        "y1": 324.0,
+        "x2": 1205.0,
+        "y2": 348.0,
+        "cx": 1120.5,
+        "cy": 336.0,
+        "width": 169.0,
+        "height": 24.0
+      },
+      {
+        "text": "18002600/18001600",
+        "x1": 1038.0,
+        "y1": 346.0,
+        "x2": 1218.0,
+        "y2": 370.0,
+        "cx": 1128.0,
+        "cy": 358.0,
+        "width": 180.0,
+        "height": 24.0
+      }
+    ],
+    "text": "168-1 NAVIN STAND PARISAR BISUR State Phone no. MAHARASHTRA 18002600/18001600",
+    "x1": 84.0,
+    "y1": 324.0,
+    "x2": 1218.0,
+    "y2": 373.0,
+    "cy": 348.8,
+    "visual_lines": [
+      {
+        "line_id": 6,
+        "words": [
+          {
+            "text": "168-1 NAVIN STAND PARISAR BISUR",
+            "x1": 84.0,
+            "y1": 341.0,
+            "x2": 455.0,
+            "y2": 365.0,
+            "cx": 269.5,
+            "cy": 353.0,
+            "width": 371.0,
+            "height": 24.0
+          },
+          {
+            "text": "State",
+            "x1": 876.0,
+            "y1": 324.0,
+            "x2": 930.0,
+            "y2": 351.0,
+            "cx": 903.0,
+            "cy": 337.5,
+            "width": 54.0,
+            "height": 27.0
+          },
+          {
+            "text": "Phone no.",
+            "x1": 876.0,
+            "y1": 346.0,
+            "x2": 964.0,
+            "y2": 373.0,
+            "cx": 920.0,
+            "cy": 359.5,
+            "width": 88.0,
+            "height": 27.0
+          },
+          {
+            "text": "MAHARASHTRA",
+            "x1": 1036.0,
+            "y1": 324.0,
+            "x2": 1205.0,
+            "y2": 348.0,
+            "cx": 1120.5,
+            "cy": 336.0,
+            "width": 169.0,
+            "height": 24.0
+          },
+          {
+            "text": "18002600/18001600",
+            "x1": 1038.0,
+            "y1": 346.0,
+            "x2": 1218.0,
+            "y2": 370.0,
+            "cx": 1128.0,
+            "cy": 358.0,
+            "width": 180.0,
+            "height": 24.0
+          }
+        ],
+        "text": "168-1 NAVIN STAND PARISAR BISUR State Phone no. MAHARASHTRA 18002600/18001600",
+        "x1": 84.0,
+        "y1": 324.0,
+        "x2": 1218.0,
+        "y2": 373.0,
+        "cy": 348.8,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 5,
+    "words": [
+      {
+        "text": "SANGLI",
+        "x1": 81.0,
+        "y1": 367.0,
+        "x2": 170.0,
+        "y2": 400.0,
+        "cx": 125.5,
+        "cy": 383.5,
+        "width": 89.0,
+        "height": 33.0
+      },
+      {
+        "text": "OD Limit",
+        "x1": 873.0,
+        "y1": 365.0,
+        "x2": 970.0,
+        "y2": 398.0,
+        "cx": 921.5,
+        "cy": 381.5,
+        "width": 97.0,
+        "height": 33.0
+      },
+      {
+        "text": "0.00",
+        "x1": 1033.0,
+        "y1": 368.0,
+        "x2": 1085.0,
+        "y2": 395.0,
+        "cx": 1059.0,
+        "cy": 381.5,
+        "width": 52.0,
+        "height": 27.0
+      },
+      {
+        "text": "Cunrency",
+        "x1": 875.0,
+        "y1": 389.0,
+        "x2": 962.0,
+        "y2": 422.0,
+        "cx": 918.5,
+        "cy": 405.5,
+        "width": 87.0,
+        "height": 33.0
+      },
+      {
+        "text": "INR",
+        "x1": 1023.0,
+        "y1": 390.0,
+        "x2": 1085.0,
+        "y2": 417.0,
+        "cx": 1054.0,
+        "cy": 403.5,
+        "width": 62.0,
+        "height": 27.0
+      }
+    ],
+    "text": "SANGLI OD Limit 0.00 Cunrency INR",
+    "x1": 81.0,
+    "y1": 365.0,
+    "x2": 1085.0,
+    "y2": 422.0,
+    "cy": 393.5,
+    "visual_lines": [
+      {
+        "line_id": 7,
+        "words": [
+          {
+            "text": "SANGLI",
+            "x1": 81.0,
+            "y1": 367.0,
+            "x2": 170.0,
+            "y2": 400.0,
+            "cx": 125.5,
+            "cy": 383.5,
+            "width": 89.0,
+            "height": 33.0
+          },
+          {
+            "text": "OD Limit",
+            "x1": 873.0,
+            "y1": 365.0,
+            "x2": 970.0,
+            "y2": 398.0,
+            "cx": 921.5,
+            "cy": 381.5,
+            "width": 97.0,
+            "height": 33.0
+          },
+          {
+            "text": "0.00",
+            "x1": 1033.0,
+            "y1": 368.0,
+            "x2": 1085.0,
+            "y2": 395.0,
+            "cx": 1059.0,
+            "cy": 381.5,
+            "width": 52.0,
+            "height": 27.0
+          }
+        ],
+        "text": "SANGLI OD Limit 0.00",
+        "x1": 81.0,
+        "y1": 365.0,
+        "x2": 1085.0,
+        "y2": 400.0,
+        "cy": 382.1666666666667,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 8,
+        "words": [
+          {
+            "text": "Cunrency",
+            "x1": 875.0,
+            "y1": 389.0,
+            "x2": 962.0,
+            "y2": 422.0,
+            "cx": 918.5,
+            "cy": 405.5,
+            "width": 87.0,
+            "height": 33.0
+          },
+          {
+            "text": "INR",
+            "x1": 1023.0,
+            "y1": 390.0,
+            "x2": 1085.0,
+            "y2": 417.0,
+            "cx": 1054.0,
+            "cy": 403.5,
+            "width": 62.0,
+            "height": 27.0
+          }
+        ],
+        "text": "Cunrency INR",
+        "x1": 875.0,
+        "y1": 389.0,
+        "x2": 1085.0,
+        "y2": 422.0,
+        "cy": 404.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 6,
+    "words": [
+      {
+        "text": "SANGLI416304",
+        "x1": 86.0,
+        "y1": 431.0,
+        "x2": 236.0,
+        "y2": 456.0,
+        "cx": 161.0,
+        "cy": 443.5,
+        "width": 150.0,
+        "height": 25.0
+      },
+      {
+        "text": "Email",
+        "x1": 878.0,
+        "y1": 414.0,
+        "x2": 940.0,
+        "y2": 441.0,
+        "cx": 909.0,
+        "cy": 427.5,
+        "width": 62.0,
+        "height": 27.0
+      },
+      {
+        "text": "UMESHPATIL33@GMAIL.COM",
+        "x1": 1036.0,
+        "y1": 412.0,
+        "x2": 1343.0,
+        "y2": 441.0,
+        "cx": 1189.5,
+        "cy": 426.5,
+        "width": 307.0,
+        "height": 29.0
+      },
+      {
+        "text": "Cust ID",
+        "x1": 876.0,
+        "y1": 439.0,
+        "x2": 952.0,
+        "y2": 463.0,
+        "cx": 914.0,
+        "cy": 451.0,
+        "width": 76.0,
+        "height": 24.0
+      },
+      {
+        "text": "182233924",
+        "x1": 1038.0,
+        "y1": 439.0,
+        "x2": 1141.0,
+        "y2": 463.0,
+        "cx": 1089.5,
+        "cy": 451.0,
+        "width": 103.0,
+        "height": 24.0
+      }
+    ],
+    "text": "SANGLI416304 Email UMESHPATIL33@GMAIL.COM Cust ID 182233924",
+    "x1": 86.0,
+    "y1": 412.0,
+    "x2": 1343.0,
+    "y2": 463.0,
+    "cy": 437.5,
+    "visual_lines": [
+      {
+        "line_id": 9,
+        "words": [
+          {
+            "text": "SANGLI416304",
+            "x1": 86.0,
+            "y1": 431.0,
+            "x2": 236.0,
+            "y2": 456.0,
+            "cx": 161.0,
+            "cy": 443.5,
+            "width": 150.0,
+            "height": 25.0
+          },
+          {
+            "text": "Email",
+            "x1": 878.0,
+            "y1": 414.0,
+            "x2": 940.0,
+            "y2": 441.0,
+            "cx": 909.0,
+            "cy": 427.5,
+            "width": 62.0,
+            "height": 27.0
+          },
+          {
+            "text": "UMESHPATIL33@GMAIL.COM",
+            "x1": 1036.0,
+            "y1": 412.0,
+            "x2": 1343.0,
+            "y2": 441.0,
+            "cx": 1189.5,
+            "cy": 426.5,
+            "width": 307.0,
+            "height": 29.0
+          }
+        ],
+        "text": "SANGLI416304 Email UMESHPATIL33@GMAIL.COM",
+        "x1": 86.0,
+        "y1": 412.0,
+        "x2": 1343.0,
+        "y2": 456.0,
+        "cy": 432.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 10,
+        "words": [
+          {
+            "text": "Cust ID",
+            "x1": 876.0,
+            "y1": 439.0,
+            "x2": 952.0,
+            "y2": 463.0,
+            "cx": 914.0,
+            "cy": 451.0,
+            "width": 76.0,
+            "height": 24.0
+          },
+          {
+            "text": "182233924",
+            "x1": 1038.0,
+            "y1": 439.0,
+            "x2": 1141.0,
+            "y2": 463.0,
+            "cx": 1089.5,
+            "cy": 451.0,
+            "width": 103.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Cust ID 182233924",
+        "x1": 876.0,
+        "y1": 439.0,
+        "x2": 1141.0,
+        "y2": 463.0,
+        "cy": 451.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 7,
+    "words": [
+      {
+        "text": "MAHARASHTRA INDIA",
+        "x1": 86.0,
+        "y1": 463.0,
+        "x2": 315.0,
+        "y2": 487.0,
+        "cx": 200.5,
+        "cy": 475.0,
+        "width": 229.0,
+        "height": 24.0
+      },
+      {
+        "text": "Account No",
+        "x1": 881.0,
+        "y1": 460.0,
+        "x2": 989.0,
+        "y2": 485.0,
+        "cx": 935.0,
+        "cy": 472.5,
+        "width": 108.0,
+        "height": 25.0
+      },
+      {
+        "text": "50100478383644OTHER",
+        "x1": 1041.0,
+        "y1": 460.0,
+        "x2": 1274.0,
+        "y2": 485.0,
+        "cx": 1157.5,
+        "cy": 472.5,
+        "width": 233.0,
+        "height": 25.0
+      },
+      {
+        "text": "AC Open Date",
+        "x1": 875.0,
+        "y1": 480.0,
+        "x2": 1014.0,
+        "y2": 509.0,
+        "cx": 944.5,
+        "cy": 494.5,
+        "width": 139.0,
+        "height": 29.0
+      },
+      {
+        "text": "09/02/2022",
+        "x1": 1041.0,
+        "y1": 482.0,
+        "x2": 1141.0,
+        "y2": 507.0,
+        "cx": 1091.0,
+        "cy": 494.5,
+        "width": 100.0,
+        "height": 25.0
+      }
+    ],
+    "text": "MAHARASHTRA INDIA Account No 50100478383644OTHER AC Open Date 09/02/2022",
+    "x1": 86.0,
+    "y1": 460.0,
+    "x2": 1274.0,
+    "y2": 509.0,
+    "cy": 484.5,
+    "visual_lines": [
+      {
+        "line_id": 11,
+        "words": [
+          {
+            "text": "MAHARASHTRA INDIA",
+            "x1": 86.0,
+            "y1": 463.0,
+            "x2": 315.0,
+            "y2": 487.0,
+            "cx": 200.5,
+            "cy": 475.0,
+            "width": 229.0,
+            "height": 24.0
+          },
+          {
+            "text": "Account No",
+            "x1": 881.0,
+            "y1": 460.0,
+            "x2": 989.0,
+            "y2": 485.0,
+            "cx": 935.0,
+            "cy": 472.5,
+            "width": 108.0,
+            "height": 25.0
+          },
+          {
+            "text": "50100478383644OTHER",
+            "x1": 1041.0,
+            "y1": 460.0,
+            "x2": 1274.0,
+            "y2": 485.0,
+            "cx": 1157.5,
+            "cy": 472.5,
+            "width": 233.0,
+            "height": 25.0
+          }
+        ],
+        "text": "MAHARASHTRA INDIA Account No 50100478383644OTHER",
+        "x1": 86.0,
+        "y1": 460.0,
+        "x2": 1274.0,
+        "y2": 487.0,
+        "cy": 473.3333333333333,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 12,
+        "words": [
+          {
+            "text": "AC Open Date",
+            "x1": 875.0,
+            "y1": 480.0,
+            "x2": 1014.0,
+            "y2": 509.0,
+            "cx": 944.5,
+            "cy": 494.5,
+            "width": 139.0,
+            "height": 29.0
+          },
+          {
+            "text": "09/02/2022",
+            "x1": 1041.0,
+            "y1": 482.0,
+            "x2": 1141.0,
+            "y2": 507.0,
+            "cx": 1091.0,
+            "cy": 494.5,
+            "width": 100.0,
+            "height": 25.0
+          }
+        ],
+        "text": "AC Open Date 09/02/2022",
+        "x1": 875.0,
+        "y1": 480.0,
+        "x2": 1141.0,
+        "y2": 509.0,
+        "cy": 494.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 8,
+    "words": [
+      {
+        "text": "JOINT HOLDERS",
+        "x1": 84.0,
+        "y1": 507.0,
+        "x2": 253.0,
+        "y2": 531.0,
+        "cx": 168.5,
+        "cy": 519.0,
+        "width": 169.0,
+        "height": 24.0
+      },
+      {
+        "text": "Account Status",
+        "x1": 875.0,
+        "y1": 502.0,
+        "x2": 1011.0,
+        "y2": 532.0,
+        "cx": 943.0,
+        "cy": 517.0,
+        "width": 136.0,
+        "height": 30.0
+      },
+      {
+        "text": "Regular",
+        "x1": 1038.0,
+        "y1": 504.0,
+        "x2": 1112.0,
+        "y2": 531.0,
+        "cx": 1075.0,
+        "cy": 517.5,
+        "width": 74.0,
+        "height": 27.0
+      },
+      {
+        "text": "RTGS/NEFI IFSC",
+        "x1": 881.0,
+        "y1": 531.0,
+        "x2": 1028.0,
+        "y2": 548.0,
+        "cx": 954.5,
+        "cy": 539.5,
+        "width": 147.0,
+        "height": 17.0
+      },
+      {
+        "text": "HDFC0000222",
+        "x1": 1038.0,
+        "y1": 526.0,
+        "x2": 1176.0,
+        "y2": 551.0,
+        "cx": 1107.0,
+        "cy": 538.5,
+        "width": 138.0,
+        "height": 25.0
+      },
+      {
+        "text": "MICR416240151",
+        "x1": 1225.0,
+        "y1": 526.0,
+        "x2": 1395.0,
+        "y2": 551.0,
+        "cx": 1310.0,
+        "cy": 538.5,
+        "width": 170.0,
+        "height": 25.0
+      },
+      {
+        "text": "Branch Code",
+        "x1": 878.0,
+        "y1": 551.0,
+        "x2": 999.0,
+        "y2": 577.0,
+        "cx": 938.5,
+        "cy": 564.0,
+        "width": 121.0,
+        "height": 26.0
+      },
+      {
+        "text": "222",
+        "x1": 1043.0,
+        "y1": 551.0,
+        "x2": 1077.0,
+        "y2": 570.0,
+        "cx": 1060.0,
+        "cy": 560.5,
+        "width": 34.0,
+        "height": 19.0
+      }
+    ],
+    "text": "JOINT HOLDERS Account Status Regular RTGS/NEFI IFSC HDFC0000222 MICR416240151 Branch Code 222",
+    "x1": 84.0,
+    "y1": 502.0,
+    "x2": 1395.0,
+    "y2": 577.0,
+    "cy": 539.5,
+    "visual_lines": [
+      {
+        "line_id": 13,
+        "words": [
+          {
+            "text": "JOINT HOLDERS",
+            "x1": 84.0,
+            "y1": 507.0,
+            "x2": 253.0,
+            "y2": 531.0,
+            "cx": 168.5,
+            "cy": 519.0,
+            "width": 169.0,
+            "height": 24.0
+          },
+          {
+            "text": "Account Status",
+            "x1": 875.0,
+            "y1": 502.0,
+            "x2": 1011.0,
+            "y2": 532.0,
+            "cx": 943.0,
+            "cy": 517.0,
+            "width": 136.0,
+            "height": 30.0
+          },
+          {
+            "text": "Regular",
+            "x1": 1038.0,
+            "y1": 504.0,
+            "x2": 1112.0,
+            "y2": 531.0,
+            "cx": 1075.0,
+            "cy": 517.5,
+            "width": 74.0,
+            "height": 27.0
+          }
+        ],
+        "text": "JOINT HOLDERS Account Status Regular",
+        "x1": 84.0,
+        "y1": 502.0,
+        "x2": 1112.0,
+        "y2": 532.0,
+        "cy": 517.8333333333334,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 14,
+        "words": [
+          {
+            "text": "RTGS/NEFI IFSC",
+            "x1": 881.0,
+            "y1": 531.0,
+            "x2": 1028.0,
+            "y2": 548.0,
+            "cx": 954.5,
+            "cy": 539.5,
+            "width": 147.0,
+            "height": 17.0
+          },
+          {
+            "text": "HDFC0000222",
+            "x1": 1038.0,
+            "y1": 526.0,
+            "x2": 1176.0,
+            "y2": 551.0,
+            "cx": 1107.0,
+            "cy": 538.5,
+            "width": 138.0,
+            "height": 25.0
+          },
+          {
+            "text": "MICR416240151",
+            "x1": 1225.0,
+            "y1": 526.0,
+            "x2": 1395.0,
+            "y2": 551.0,
+            "cx": 1310.0,
+            "cy": 538.5,
+            "width": 170.0,
+            "height": 25.0
+          }
+        ],
+        "text": "RTGS/NEFI IFSC HDFC0000222 MICR416240151",
+        "x1": 881.0,
+        "y1": 526.0,
+        "x2": 1395.0,
+        "y2": 551.0,
+        "cy": 538.8333333333334,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 15,
+        "words": [
+          {
+            "text": "Branch Code",
+            "x1": 878.0,
+            "y1": 551.0,
+            "x2": 999.0,
+            "y2": 577.0,
+            "cx": 938.5,
+            "cy": 564.0,
+            "width": 121.0,
+            "height": 26.0
+          },
+          {
+            "text": "222",
+            "x1": 1043.0,
+            "y1": 551.0,
+            "x2": 1077.0,
+            "y2": 570.0,
+            "cx": 1060.0,
+            "cy": 560.5,
+            "width": 34.0,
+            "height": 19.0
+          }
+        ],
+        "text": "Branch Code 222",
+        "x1": 878.0,
+        "y1": 551.0,
+        "x2": 1077.0,
+        "y2": 577.0,
+        "cy": 562.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 9,
+    "words": [
+      {
+        "text": "Nominaton: Registered",
+        "x1": 84.0,
+        "y1": 577.0,
+        "x2": 303.0,
+        "y2": 602.0,
+        "cx": 193.5,
+        "cy": 589.5,
+        "width": 219.0,
+        "height": 25.0
+      },
+      {
+        "text": "Account Type",
+        "x1": 876.0,
+        "y1": 575.0,
+        "x2": 1001.0,
+        "y2": 599.0,
+        "cx": 938.5,
+        "cy": 587.0,
+        "width": 125.0,
+        "height": 24.0
+      },
+      {
+        "text": "SAVINGS-RESIDENTS(105)",
+        "x1": 1033.0,
+        "y1": 573.0,
+        "x2": 1309.0,
+        "y2": 597.0,
+        "cx": 1171.0,
+        "cy": 585.0,
+        "width": 276.0,
+        "height": 24.0
+      }
+    ],
+    "text": "Nominaton: Registered Account Type SAVINGS-RESIDENTS(105)",
+    "x1": 84.0,
+    "y1": 573.0,
+    "x2": 1309.0,
+    "y2": 602.0,
+    "cy": 587.1666666666666,
+    "visual_lines": [
+      {
+        "line_id": 16,
+        "words": [
+          {
+            "text": "Nominaton: Registered",
+            "x1": 84.0,
+            "y1": 577.0,
+            "x2": 303.0,
+            "y2": 602.0,
+            "cx": 193.5,
+            "cy": 589.5,
+            "width": 219.0,
+            "height": 25.0
+          },
+          {
+            "text": "Account Type",
+            "x1": 876.0,
+            "y1": 575.0,
+            "x2": 1001.0,
+            "y2": 599.0,
+            "cx": 938.5,
+            "cy": 587.0,
+            "width": 125.0,
+            "height": 24.0
+          },
+          {
+            "text": "SAVINGS-RESIDENTS(105)",
+            "x1": 1033.0,
+            "y1": 573.0,
+            "x2": 1309.0,
+            "y2": 597.0,
+            "cx": 1171.0,
+            "cy": 585.0,
+            "width": 276.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Nominaton: Registered Account Type SAVINGS-RESIDENTS(105)",
+        "x1": 84.0,
+        "y1": 573.0,
+        "x2": 1309.0,
+        "y2": 602.0,
+        "cy": 587.1666666666666,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 10,
+    "words": [
+      {
+        "text": "From01/05/2025",
+        "x1": 84.0,
+        "y1": 633.0,
+        "x2": 256.0,
+        "y2": 660.0,
+        "cx": 170.0,
+        "cy": 646.5,
+        "width": 172.0,
+        "height": 27.0
+      },
+      {
+        "text": "To31/05/2025",
+        "x1": 396.0,
+        "y1": 633.0,
+        "x2": 546.0,
+        "y2": 658.0,
+        "cx": 471.0,
+        "cy": 645.5,
+        "width": 150.0,
+        "height": 25.0
+      },
+      {
+        "text": "Statement of account",
+        "x1": 878.0,
+        "y1": 629.0,
+        "x2": 1146.0,
+        "y2": 660.0,
+        "cx": 1012.0,
+        "cy": 644.5,
+        "width": 268.0,
+        "height": 31.0
+      }
+    ],
+    "text": "From01/05/2025 To31/05/2025 Statement of account",
+    "x1": 84.0,
+    "y1": 629.0,
+    "x2": 1146.0,
+    "y2": 660.0,
+    "cy": 645.5,
+    "visual_lines": [
+      {
+        "line_id": 17,
+        "words": [
+          {
+            "text": "From01/05/2025",
+            "x1": 84.0,
+            "y1": 633.0,
+            "x2": 256.0,
+            "y2": 660.0,
+            "cx": 170.0,
+            "cy": 646.5,
+            "width": 172.0,
+            "height": 27.0
+          },
+          {
+            "text": "To31/05/2025",
+            "x1": 396.0,
+            "y1": 633.0,
+            "x2": 546.0,
+            "y2": 658.0,
+            "cx": 471.0,
+            "cy": 645.5,
+            "width": 150.0,
+            "height": 25.0
+          },
+          {
+            "text": "Statement of account",
+            "x1": 878.0,
+            "y1": 629.0,
+            "x2": 1146.0,
+            "y2": 660.0,
+            "cx": 1012.0,
+            "cy": 644.5,
+            "width": 268.0,
+            "height": 31.0
+          }
+        ],
+        "text": "From01/05/2025 To31/05/2025 Statement of account",
+        "x1": 84.0,
+        "y1": 629.0,
+        "x2": 1146.0,
+        "y2": 660.0,
+        "cy": 645.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 11,
+    "words": [
+      {
+        "text": "This is a computer generated statement and does",
+        "x1": 1225.0,
+        "y1": 792.0,
+        "x2": 1638.0,
+        "y2": 826.0,
+        "cx": 1431.5,
+        "cy": 809.0,
+        "width": 413.0,
+        "height": 34.0
+      },
+      {
+        "text": "not require signature",
+        "x1": 1225.0,
+        "y1": 840.0,
+        "x2": 1405.0,
+        "y2": 870.0,
+        "cx": 1315.0,
+        "cy": 855.0,
+        "width": 180.0,
+        "height": 30.0
+      }
+    ],
+    "text": "This is a computer generated statement and does not require signature",
+    "x1": 1225.0,
+    "y1": 792.0,
+    "x2": 1638.0,
+    "y2": 870.0,
+    "cy": 831.0,
+    "visual_lines": [
+      {
+        "line_id": 18,
+        "words": [
+          {
+            "text": "This is a computer generated statement and does",
+            "x1": 1225.0,
+            "y1": 792.0,
+            "x2": 1638.0,
+            "y2": 826.0,
+            "cx": 1431.5,
+            "cy": 809.0,
+            "width": 413.0,
+            "height": 34.0
+          }
+        ],
+        "text": "This is a computer generated statement and does",
+        "x1": 1225.0,
+        "y1": 792.0,
+        "x2": 1638.0,
+        "y2": 826.0,
+        "cy": 809.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 19,
+        "words": [
+          {
+            "text": "not require signature",
+            "x1": 1225.0,
+            "y1": 840.0,
+            "x2": 1405.0,
+            "y2": 870.0,
+            "cx": 1315.0,
+            "cy": 855.0,
+            "width": 180.0,
+            "height": 30.0
+          }
+        ],
+        "text": "not require signature",
+        "x1": 1225.0,
+        "y1": 840.0,
+        "x2": 1405.0,
+        "y2": 870.0,
+        "cy": 855.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 12,
+    "words": [
+      {
+        "text": "HDFC BANK LIMITED",
+        "x1": 71.0,
+        "y1": 2110.0,
+        "x2": 327.0,
+        "y2": 2134.0,
+        "cx": 199.0,
+        "cy": 2122.0,
+        "width": 256.0,
+        "height": 24.0
+      }
+    ],
+    "text": "HDFC BANK LIMITED",
+    "x1": 71.0,
+    "y1": 2110.0,
+    "x2": 327.0,
+    "y2": 2134.0,
+    "cy": 2122.0,
+    "visual_lines": [
+      {
+        "line_id": 20,
+        "words": [
+          {
+            "text": "HDFC BANK LIMITED",
+            "x1": 71.0,
+            "y1": 2110.0,
+            "x2": 327.0,
+            "y2": 2134.0,
+            "cx": 199.0,
+            "cy": 2122.0,
+            "width": 256.0,
+            "height": 24.0
+          }
+        ],
+        "text": "HDFC BANK LIMITED",
+        "x1": 71.0,
+        "y1": 2110.0,
+        "x2": 327.0,
+        "y2": 2134.0,
+        "cy": 2122.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 13,
+    "words": [
+      {
+        "text": "*Clo sing balance includes funds earmarked for hold and uncleared funds",
+        "x1": 71.0,
+        "y1": 2132.0,
+        "x2": 681.0,
+        "y2": 2164.0,
+        "cx": 376.0,
+        "cy": 2148.0,
+        "width": 610.0,
+        "height": 32.0
+      }
+    ],
+    "text": "*Clo sing balance includes funds earmarked for hold and uncleared funds",
+    "x1": 71.0,
+    "y1": 2132.0,
+    "x2": 681.0,
+    "y2": 2164.0,
+    "cy": 2148.0,
+    "visual_lines": [
+      {
+        "line_id": 21,
+        "words": [
+          {
+            "text": "*Clo sing balance includes funds earmarked for hold and uncleared funds",
+            "x1": 71.0,
+            "y1": 2132.0,
+            "x2": 681.0,
+            "y2": 2164.0,
+            "cx": 376.0,
+            "cy": 2148.0,
+            "width": 610.0,
+            "height": 32.0
+          }
+        ],
+        "text": "*Clo sing balance includes funds earmarked for hold and uncleared funds",
+        "x1": 71.0,
+        "y1": 2132.0,
+        "x2": 681.0,
+        "y2": 2164.0,
+        "cy": 2148.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 14,
+    "words": [
+      {
+        "text": "State accoun",
+        "x1": 71.0,
+        "y1": 2192.0,
+        "x2": 170.0,
+        "y2": 2220.0,
+        "cx": 120.5,
+        "cy": 2206.0,
+        "width": 99.0,
+        "height": 28.0
+      },
+      {
+        "text": "nt branchGSTN27AAACH2702HZ0",
+        "x1": 162.0,
+        "y1": 2195.0,
+        "x2": 472.0,
+        "y2": 2220.0,
+        "cx": 317.0,
+        "cy": 2207.5,
+        "width": 310.0,
+        "height": 25.0
+      }
+    ],
+    "text": "State accoun nt branchGSTN27AAACH2702HZ0",
+    "x1": 71.0,
+    "y1": 2192.0,
+    "x2": 472.0,
+    "y2": 2220.0,
+    "cy": 2206.75,
+    "visual_lines": [
+      {
+        "line_id": 22,
+        "words": [
+          {
+            "text": "State accoun",
+            "x1": 71.0,
+            "y1": 2192.0,
+            "x2": 170.0,
+            "y2": 2220.0,
+            "cx": 120.5,
+            "cy": 2206.0,
+            "width": 99.0,
+            "height": 28.0
+          },
+          {
+            "text": "nt branchGSTN27AAACH2702HZ0",
+            "x1": 162.0,
+            "y1": 2195.0,
+            "x2": 472.0,
+            "y2": 2220.0,
+            "cx": 317.0,
+            "cy": 2207.5,
+            "width": 310.0,
+            "height": 25.0
+          }
+        ],
+        "text": "State accoun nt branchGSTN27AAACH2702HZ0",
+        "x1": 71.0,
+        "y1": 2192.0,
+        "x2": 472.0,
+        "y2": 2220.0,
+        "cy": 2206.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 15,
+    "words": [
+      {
+        "text": "HDFC Bank GSTIN mm",
+        "x1": 71.0,
+        "y1": 2215.0,
+        "x2": 261.0,
+        "y2": 2239.0,
+        "cx": 166.0,
+        "cy": 2227.0,
+        "width": 190.0,
+        "height": 24.0
+      }
+    ],
+    "text": "HDFC Bank GSTIN mm",
+    "x1": 71.0,
+    "y1": 2215.0,
+    "x2": 261.0,
+    "y2": 2239.0,
+    "cy": 2227.0,
+    "visual_lines": [
+      {
+        "line_id": 23,
+        "words": [
+          {
+            "text": "HDFC Bank GSTIN mm",
+            "x1": 71.0,
+            "y1": 2215.0,
+            "x2": 261.0,
+            "y2": 2239.0,
+            "cx": 166.0,
+            "cy": 2227.0,
+            "width": 190.0,
+            "height": 24.0
+          }
+        ],
+        "text": "HDFC Bank GSTIN mm",
+        "x1": 71.0,
+        "y1": 2215.0,
+        "x2": 261.0,
+        "y2": 2239.0,
+        "cy": 2227.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 16,
+    "words": [
+      {
+        "text": "Registered Office AddressHDFC Bank HouseSenapai Bapar Marg Lowe Parel,Mumbai 400013",
+        "x1": 71.0,
+        "y1": 2234.0,
+        "x2": 795.0,
+        "y2": 2259.0,
+        "cx": 433.0,
+        "cy": 2246.5,
+        "width": 724.0,
+        "height": 25.0
+      }
+    ],
+    "text": "Registered Office AddressHDFC Bank HouseSenapai Bapar Marg Lowe Parel,Mumbai 400013",
+    "x1": 71.0,
+    "y1": 2234.0,
+    "x2": 795.0,
+    "y2": 2259.0,
+    "cy": 2246.5,
+    "visual_lines": [
+      {
+        "line_id": 24,
+        "words": [
+          {
+            "text": "Registered Office AddressHDFC Bank HouseSenapai Bapar Marg Lowe Parel,Mumbai 400013",
+            "x1": 71.0,
+            "y1": 2234.0,
+            "x2": 795.0,
+            "y2": 2259.0,
+            "cx": 433.0,
+            "cy": 2246.5,
+            "width": 724.0,
+            "height": 25.0
+          }
+        ],
+        "text": "Registered Office AddressHDFC Bank HouseSenapai Bapar Marg Lowe Parel,Mumbai 400013",
+        "x1": 71.0,
+        "y1": 2234.0,
+        "x2": 795.0,
+        "y2": 2259.0,
+        "cy": 2246.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  }
+]

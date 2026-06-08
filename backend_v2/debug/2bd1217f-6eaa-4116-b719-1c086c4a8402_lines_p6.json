@@ -1,0 +1,4025 @@
+[
+  {
+    "line_id": 0,
+    "words": [
+      {
+        "text": "Page No1",
+        "x1": 755.0,
+        "y1": 127.0,
+        "x2": 866.0,
+        "y2": 151.0,
+        "cx": 810.5,
+        "cy": 139.0,
+        "width": 111.0,
+        "height": 24.0
+      }
+    ],
+    "text": "Page No1",
+    "x1": 755.0,
+    "y1": 127.0,
+    "x2": 866.0,
+    "y2": 151.0,
+    "cy": 139.0,
+    "visual_lines": [
+      {
+        "line_id": 0,
+        "words": [
+          {
+            "text": "Page No1",
+            "x1": 755.0,
+            "y1": 127.0,
+            "x2": 866.0,
+            "y2": 151.0,
+            "cx": 810.5,
+            "cy": 139.0,
+            "width": 111.0,
+            "height": 24.0
+          }
+        ],
+        "text": "Page No1",
+        "x1": 755.0,
+        "y1": 127.0,
+        "x2": 866.0,
+        "y2": 151.0,
+        "cy": 139.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 1,
+    "words": [
+      {
+        "text": "HDFC BANK",
+        "x1": 150.0,
+        "y1": 178.0,
+        "x2": 426.0,
+        "y2": 210.0,
+        "cx": 288.0,
+        "cy": 194.0,
+        "width": 276.0,
+        "height": 32.0
+      }
+    ],
+    "text": "HDFC BANK",
+    "x1": 150.0,
+    "y1": 178.0,
+    "x2": 426.0,
+    "y2": 210.0,
+    "cy": 194.0,
+    "visual_lines": [
+      {
+        "line_id": 1,
+        "words": [
+          {
+            "text": "HDFC BANK",
+            "x1": 150.0,
+            "y1": 178.0,
+            "x2": 426.0,
+            "y2": 210.0,
+            "cx": 288.0,
+            "cy": 194.0,
+            "width": 276.0,
+            "height": 32.0
+          }
+        ],
+        "text": "HDFC BANK",
+        "x1": 150.0,
+        "y1": 178.0,
+        "x2": 426.0,
+        "y2": 210.0,
+        "cy": 194.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 2,
+    "words": [
+      {
+        "text": "We understand your world",
+        "x1": 74.0,
+        "y1": 224.0,
+        "x2": 450.0,
+        "y2": 256.0,
+        "cx": 262.0,
+        "cy": 240.0,
+        "width": 376.0,
+        "height": 32.0
+      },
+      {
+        "text": "Address",
+        "x1": 878.0,
+        "y1": 236.0,
+        "x2": 954.0,
+        "y2": 261.0,
+        "cx": 916.0,
+        "cy": 248.5,
+        "width": 76.0,
+        "height": 25.0
+      },
+      {
+        "text": "Account Branch:SANGLIMAHARASHIRA",
+        "x1": 881.0,
+        "y1": 212.0,
+        "x2": 1289.0,
+        "y2": 236.0,
+        "cx": 1085.0,
+        "cy": 224.0,
+        "width": 408.0,
+        "height": 24.0
+      },
+      {
+        "text": "HDFC BANK LIDCIS NO 522",
+        "x1": 1038.0,
+        "y1": 234.0,
+        "x2": 1333.0,
+        "y2": 258.0,
+        "cx": 1185.5,
+        "cy": 246.0,
+        "width": 295.0,
+        "height": 24.0
+      },
+      {
+        "text": "AND 522,1 EXTN OPP ZILLA PARISHAD",
+        "x1": 1038.0,
+        "y1": 253.0,
+        "x2": 1427.0,
+        "y2": 285.0,
+        "cx": 1232.5,
+        "cy": 269.0,
+        "width": 389.0,
+        "height": 32.0
+      },
+      {
+        "text": "Z,P ROADSANGLI,MAHARASHTRA",
+        "x1": 1041.0,
+        "y1": 280.0,
+        "x2": 1397.0,
+        "y2": 305.0,
+        "cx": 1219.0,
+        "cy": 292.5,
+        "width": 356.0,
+        "height": 25.0
+      }
+    ],
+    "text": "We understand your world Address Account Branch:SANGLIMAHARASHIRA HDFC BANK LIDCIS NO 522 AND 522,1 EXTN OPP ZILLA PARISHAD Z,P ROADSANGLI,MAHARASHTRA",
+    "x1": 74.0,
+    "y1": 212.0,
+    "x2": 1427.0,
+    "y2": 305.0,
+    "cy": 258.5,
+    "visual_lines": [
+      {
+        "line_id": 2,
+        "words": [
+          {
+            "text": "We understand your world",
+            "x1": 74.0,
+            "y1": 224.0,
+            "x2": 450.0,
+            "y2": 256.0,
+            "cx": 262.0,
+            "cy": 240.0,
+            "width": 376.0,
+            "height": 32.0
+          },
+          {
+            "text": "Address",
+            "x1": 878.0,
+            "y1": 236.0,
+            "x2": 954.0,
+            "y2": 261.0,
+            "cx": 916.0,
+            "cy": 248.5,
+            "width": 76.0,
+            "height": 25.0
+          },
+          {
+            "text": "Account Branch:SANGLIMAHARASHIRA",
+            "x1": 881.0,
+            "y1": 212.0,
+            "x2": 1289.0,
+            "y2": 236.0,
+            "cx": 1085.0,
+            "cy": 224.0,
+            "width": 408.0,
+            "height": 24.0
+          },
+          {
+            "text": "HDFC BANK LIDCIS NO 522",
+            "x1": 1038.0,
+            "y1": 234.0,
+            "x2": 1333.0,
+            "y2": 258.0,
+            "cx": 1185.5,
+            "cy": 246.0,
+            "width": 295.0,
+            "height": 24.0
+          }
+        ],
+        "text": "We understand your world Address Account Branch:SANGLIMAHARASHIRA HDFC BANK LIDCIS NO 522",
+        "x1": 74.0,
+        "y1": 212.0,
+        "x2": 1333.0,
+        "y2": 261.0,
+        "cy": 239.625,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 3,
+        "words": [
+          {
+            "text": "AND 522,1 EXTN OPP ZILLA PARISHAD",
+            "x1": 1038.0,
+            "y1": 253.0,
+            "x2": 1427.0,
+            "y2": 285.0,
+            "cx": 1232.5,
+            "cy": 269.0,
+            "width": 389.0,
+            "height": 32.0
+          }
+        ],
+        "text": "AND 522,1 EXTN OPP ZILLA PARISHAD",
+        "x1": 1038.0,
+        "y1": 253.0,
+        "x2": 1427.0,
+        "y2": 285.0,
+        "cy": 269.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 4,
+        "words": [
+          {
+            "text": "Z,P ROADSANGLI,MAHARASHTRA",
+            "x1": 1041.0,
+            "y1": 280.0,
+            "x2": 1397.0,
+            "y2": 305.0,
+            "cx": 1219.0,
+            "cy": 292.5,
+            "width": 356.0,
+            "height": 25.0
+          }
+        ],
+        "text": "Z,P ROADSANGLI,MAHARASHTRA",
+        "x1": 1041.0,
+        "y1": 280.0,
+        "x2": 1397.0,
+        "y2": 305.0,
+        "cy": 292.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 3,
+    "words": [
+      {
+        "text": "MR",
+        "x1": 84.0,
+        "y1": 309.0,
+        "x2": 135.0,
+        "y2": 336.0,
+        "cx": 109.5,
+        "cy": 322.5,
+        "width": 51.0,
+        "height": 27.0
+      },
+      {
+        "text": "UMESH VILAS PATIL",
+        "x1": 138.0,
+        "y1": 312.0,
+        "x2": 357.0,
+        "y2": 336.0,
+        "cx": 247.5,
+        "cy": 324.0,
+        "width": 219.0,
+        "height": 24.0
+      },
+      {
+        "text": "City",
+        "x1": 876.0,
+        "y1": 300.0,
+        "x2": 925.0,
+        "y2": 329.0,
+        "cx": 900.5,
+        "cy": 314.5,
+        "width": 49.0,
+        "height": 29.0
+      },
+      {
+        "text": "SANGLI416416",
+        "x1": 1038.0,
+        "y1": 302.0,
+        "x2": 1191.0,
+        "y2": 326.0,
+        "cx": 1114.5,
+        "cy": 314.0,
+        "width": 153.0,
+        "height": 24.0
+      }
+    ],
+    "text": "MR UMESH VILAS PATIL City SANGLI416416",
+    "x1": 84.0,
+    "y1": 300.0,
+    "x2": 1191.0,
+    "y2": 336.0,
+    "cy": 318.75,
+    "visual_lines": [
+      {
+        "line_id": 5,
+        "words": [
+          {
+            "text": "MR",
+            "x1": 84.0,
+            "y1": 309.0,
+            "x2": 135.0,
+            "y2": 336.0,
+            "cx": 109.5,
+            "cy": 322.5,
+            "width": 51.0,
+            "height": 27.0
+          },
+          {
+            "text": "UMESH VILAS PATIL",
+            "x1": 138.0,
+            "y1": 312.0,
+            "x2": 357.0,
+            "y2": 336.0,
+            "cx": 247.5,
+            "cy": 324.0,
+            "width": 219.0,
+            "height": 24.0
+          },
+          {
+            "text": "City",
+            "x1": 876.0,
+            "y1": 300.0,
+            "x2": 925.0,
+            "y2": 329.0,
+            "cx": 900.5,
+            "cy": 314.5,
+            "width": 49.0,
+            "height": 29.0
+          },
+          {
+            "text": "SANGLI416416",
+            "x1": 1038.0,
+            "y1": 302.0,
+            "x2": 1191.0,
+            "y2": 326.0,
+            "cx": 1114.5,
+            "cy": 314.0,
+            "width": 153.0,
+            "height": 24.0
+          }
+        ],
+        "text": "MR UMESH VILAS PATIL City SANGLI416416",
+        "x1": 84.0,
+        "y1": 300.0,
+        "x2": 1191.0,
+        "y2": 336.0,
+        "cy": 318.75,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 4,
+    "words": [
+      {
+        "text": "168- NAVIN STAND PARISAR BISUR",
+        "x1": 84.0,
+        "y1": 341.0,
+        "x2": 455.0,
+        "y2": 365.0,
+        "cx": 269.5,
+        "cy": 353.0,
+        "width": 371.0,
+        "height": 24.0
+      },
+      {
+        "text": "State",
+        "x1": 876.0,
+        "y1": 324.0,
+        "x2": 930.0,
+        "y2": 351.0,
+        "cx": 903.0,
+        "cy": 337.5,
+        "width": 54.0,
+        "height": 27.0
+      },
+      {
+        "text": "Phone no.",
+        "x1": 876.0,
+        "y1": 346.0,
+        "x2": 967.0,
+        "y2": 373.0,
+        "cx": 921.5,
+        "cy": 359.5,
+        "width": 91.0,
+        "height": 27.0
+      },
+      {
+        "text": "MAHARASHTRA",
+        "x1": 1038.0,
+        "y1": 322.0,
+        "x2": 1208.0,
+        "y2": 346.0,
+        "cx": 1123.0,
+        "cy": 334.0,
+        "width": 170.0,
+        "height": 24.0
+      },
+      {
+        "text": "18002600/18001600",
+        "x1": 1038.0,
+        "y1": 348.0,
+        "x2": 1218.0,
+        "y2": 373.0,
+        "cx": 1128.0,
+        "cy": 360.5,
+        "width": 180.0,
+        "height": 25.0
+      }
+    ],
+    "text": "168- NAVIN STAND PARISAR BISUR State Phone no. MAHARASHTRA 18002600/18001600",
+    "x1": 84.0,
+    "y1": 322.0,
+    "x2": 1218.0,
+    "y2": 373.0,
+    "cy": 348.9,
+    "visual_lines": [
+      {
+        "line_id": 6,
+        "words": [
+          {
+            "text": "168- NAVIN STAND PARISAR BISUR",
+            "x1": 84.0,
+            "y1": 341.0,
+            "x2": 455.0,
+            "y2": 365.0,
+            "cx": 269.5,
+            "cy": 353.0,
+            "width": 371.0,
+            "height": 24.0
+          },
+          {
+            "text": "State",
+            "x1": 876.0,
+            "y1": 324.0,
+            "x2": 930.0,
+            "y2": 351.0,
+            "cx": 903.0,
+            "cy": 337.5,
+            "width": 54.0,
+            "height": 27.0
+          },
+          {
+            "text": "Phone no.",
+            "x1": 876.0,
+            "y1": 346.0,
+            "x2": 967.0,
+            "y2": 373.0,
+            "cx": 921.5,
+            "cy": 359.5,
+            "width": 91.0,
+            "height": 27.0
+          },
+          {
+            "text": "MAHARASHTRA",
+            "x1": 1038.0,
+            "y1": 322.0,
+            "x2": 1208.0,
+            "y2": 346.0,
+            "cx": 1123.0,
+            "cy": 334.0,
+            "width": 170.0,
+            "height": 24.0
+          },
+          {
+            "text": "18002600/18001600",
+            "x1": 1038.0,
+            "y1": 348.0,
+            "x2": 1218.0,
+            "y2": 373.0,
+            "cx": 1128.0,
+            "cy": 360.5,
+            "width": 180.0,
+            "height": 25.0
+          }
+        ],
+        "text": "168- NAVIN STAND PARISAR BISUR State Phone no. MAHARASHTRA 18002600/18001600",
+        "x1": 84.0,
+        "y1": 322.0,
+        "x2": 1218.0,
+        "y2": 373.0,
+        "cy": 348.9,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 5,
+    "words": [
+      {
+        "text": "SANGLI",
+        "x1": 84.0,
+        "y1": 370.0,
+        "x2": 170.0,
+        "y2": 397.0,
+        "cx": 127.0,
+        "cy": 383.5,
+        "width": 86.0,
+        "height": 27.0
+      },
+      {
+        "text": "OD Limit",
+        "x1": 873.0,
+        "y1": 365.0,
+        "x2": 967.0,
+        "y2": 400.0,
+        "cx": 920.0,
+        "cy": 382.5,
+        "width": 94.0,
+        "height": 35.0
+      },
+      {
+        "text": "0.00",
+        "x1": 1033.0,
+        "y1": 368.0,
+        "x2": 1087.0,
+        "y2": 395.0,
+        "cx": 1060.0,
+        "cy": 381.5,
+        "width": 54.0,
+        "height": 27.0
+      },
+      {
+        "text": "Currency",
+        "x1": 878.0,
+        "y1": 392.0,
+        "x2": 962.0,
+        "y2": 419.0,
+        "cx": 920.0,
+        "cy": 405.5,
+        "width": 84.0,
+        "height": 27.0
+      },
+      {
+        "text": "INR",
+        "x1": 1023.0,
+        "y1": 390.0,
+        "x2": 1085.0,
+        "y2": 417.0,
+        "cx": 1054.0,
+        "cy": 403.5,
+        "width": 62.0,
+        "height": 27.0
+      }
+    ],
+    "text": "SANGLI OD Limit 0.00 Currency INR",
+    "x1": 84.0,
+    "y1": 365.0,
+    "x2": 1087.0,
+    "y2": 419.0,
+    "cy": 392.0,
+    "visual_lines": [
+      {
+        "line_id": 7,
+        "words": [
+          {
+            "text": "SANGLI",
+            "x1": 84.0,
+            "y1": 370.0,
+            "x2": 170.0,
+            "y2": 397.0,
+            "cx": 127.0,
+            "cy": 383.5,
+            "width": 86.0,
+            "height": 27.0
+          },
+          {
+            "text": "OD Limit",
+            "x1": 873.0,
+            "y1": 365.0,
+            "x2": 967.0,
+            "y2": 400.0,
+            "cx": 920.0,
+            "cy": 382.5,
+            "width": 94.0,
+            "height": 35.0
+          },
+          {
+            "text": "0.00",
+            "x1": 1033.0,
+            "y1": 368.0,
+            "x2": 1087.0,
+            "y2": 395.0,
+            "cx": 1060.0,
+            "cy": 381.5,
+            "width": 54.0,
+            "height": 27.0
+          }
+        ],
+        "text": "SANGLI OD Limit 0.00",
+        "x1": 84.0,
+        "y1": 365.0,
+        "x2": 1087.0,
+        "y2": 400.0,
+        "cy": 382.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 8,
+        "words": [
+          {
+            "text": "Currency",
+            "x1": 878.0,
+            "y1": 392.0,
+            "x2": 962.0,
+            "y2": 419.0,
+            "cx": 920.0,
+            "cy": 405.5,
+            "width": 84.0,
+            "height": 27.0
+          },
+          {
+            "text": "INR",
+            "x1": 1023.0,
+            "y1": 390.0,
+            "x2": 1085.0,
+            "y2": 417.0,
+            "cx": 1054.0,
+            "cy": 403.5,
+            "width": 62.0,
+            "height": 27.0
+          }
+        ],
+        "text": "Currency INR",
+        "x1": 878.0,
+        "y1": 390.0,
+        "x2": 1085.0,
+        "y2": 419.0,
+        "cy": 404.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 6,
+    "words": [
+      {
+        "text": "SANGLI416304",
+        "x1": 86.0,
+        "y1": 431.0,
+        "x2": 236.0,
+        "y2": 456.0,
+        "cx": 161.0,
+        "cy": 443.5,
+        "width": 150.0,
+        "height": 25.0
+      },
+      {
+        "text": "Cust ID",
+        "x1": 876.0,
+        "y1": 436.0,
+        "x2": 952.0,
+        "y2": 463.0,
+        "cx": 914.0,
+        "cy": 449.5,
+        "width": 76.0,
+        "height": 27.0
+      },
+      {
+        "text": "Email",
+        "x1": 878.0,
+        "y1": 414.0,
+        "x2": 942.0,
+        "y2": 441.0,
+        "cx": 910.0,
+        "cy": 427.5,
+        "width": 64.0,
+        "height": 27.0
+      },
+      {
+        "text": "UMESH PATIL33@GMAIL.COM",
+        "x1": 1031.0,
+        "y1": 412.0,
+        "x2": 1343.0,
+        "y2": 441.0,
+        "cx": 1187.0,
+        "cy": 426.5,
+        "width": 312.0,
+        "height": 29.0
+      },
+      {
+        "text": "182233924",
+        "x1": 1038.0,
+        "y1": 436.0,
+        "x2": 1141.0,
+        "y2": 463.0,
+        "cx": 1089.5,
+        "cy": 449.5,
+        "width": 103.0,
+        "height": 27.0
+      }
+    ],
+    "text": "SANGLI416304 Cust ID Email UMESH PATIL33@GMAIL.COM 182233924",
+    "x1": 86.0,
+    "y1": 412.0,
+    "x2": 1343.0,
+    "y2": 463.0,
+    "cy": 439.3,
+    "visual_lines": [
+      {
+        "line_id": 9,
+        "words": [
+          {
+            "text": "SANGLI416304",
+            "x1": 86.0,
+            "y1": 431.0,
+            "x2": 236.0,
+            "y2": 456.0,
+            "cx": 161.0,
+            "cy": 443.5,
+            "width": 150.0,
+            "height": 25.0
+          },
+          {
+            "text": "Cust ID",
+            "x1": 876.0,
+            "y1": 436.0,
+            "x2": 952.0,
+            "y2": 463.0,
+            "cx": 914.0,
+            "cy": 449.5,
+            "width": 76.0,
+            "height": 27.0
+          },
+          {
+            "text": "Email",
+            "x1": 878.0,
+            "y1": 414.0,
+            "x2": 942.0,
+            "y2": 441.0,
+            "cx": 910.0,
+            "cy": 427.5,
+            "width": 64.0,
+            "height": 27.0
+          },
+          {
+            "text": "UMESH PATIL33@GMAIL.COM",
+            "x1": 1031.0,
+            "y1": 412.0,
+            "x2": 1343.0,
+            "y2": 441.0,
+            "cx": 1187.0,
+            "cy": 426.5,
+            "width": 312.0,
+            "height": 29.0
+          },
+          {
+            "text": "182233924",
+            "x1": 1038.0,
+            "y1": 436.0,
+            "x2": 1141.0,
+            "y2": 463.0,
+            "cx": 1089.5,
+            "cy": 449.5,
+            "width": 103.0,
+            "height": 27.0
+          }
+        ],
+        "text": "SANGLI416304 Cust ID Email UMESH PATIL33@GMAIL.COM 182233924",
+        "x1": 86.0,
+        "y1": 412.0,
+        "x2": 1343.0,
+        "y2": 463.0,
+        "cy": 439.3,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 7,
+    "words": [
+      {
+        "text": "MAHARASHTRA INDIA",
+        "x1": 86.0,
+        "y1": 463.0,
+        "x2": 315.0,
+        "y2": 487.0,
+        "cx": 200.5,
+        "cy": 475.0,
+        "width": 229.0,
+        "height": 24.0
+      },
+      {
+        "text": "Account No",
+        "x1": 878.0,
+        "y1": 460.0,
+        "x2": 989.0,
+        "y2": 485.0,
+        "cx": 933.5,
+        "cy": 472.5,
+        "width": 111.0,
+        "height": 25.0
+      },
+      {
+        "text": "50100478383644 OTHER",
+        "x1": 1038.0,
+        "y1": 456.0,
+        "x2": 1277.0,
+        "y2": 487.0,
+        "cx": 1157.5,
+        "cy": 471.5,
+        "width": 239.0,
+        "height": 31.0
+      },
+      {
+        "text": "AC Open Date",
+        "x1": 875.0,
+        "y1": 480.0,
+        "x2": 1014.0,
+        "y2": 509.0,
+        "cx": 944.5,
+        "cy": 494.5,
+        "width": 139.0,
+        "height": 29.0
+      },
+      {
+        "text": "09/02/2022",
+        "x1": 1041.0,
+        "y1": 482.0,
+        "x2": 1141.0,
+        "y2": 507.0,
+        "cx": 1091.0,
+        "cy": 494.5,
+        "width": 100.0,
+        "height": 25.0
+      }
+    ],
+    "text": "MAHARASHTRA INDIA Account No 50100478383644 OTHER AC Open Date 09/02/2022",
+    "x1": 86.0,
+    "y1": 456.0,
+    "x2": 1277.0,
+    "y2": 509.0,
+    "cy": 482.5,
+    "visual_lines": [
+      {
+        "line_id": 10,
+        "words": [
+          {
+            "text": "MAHARASHTRA INDIA",
+            "x1": 86.0,
+            "y1": 463.0,
+            "x2": 315.0,
+            "y2": 487.0,
+            "cx": 200.5,
+            "cy": 475.0,
+            "width": 229.0,
+            "height": 24.0
+          },
+          {
+            "text": "Account No",
+            "x1": 878.0,
+            "y1": 460.0,
+            "x2": 989.0,
+            "y2": 485.0,
+            "cx": 933.5,
+            "cy": 472.5,
+            "width": 111.0,
+            "height": 25.0
+          },
+          {
+            "text": "50100478383644 OTHER",
+            "x1": 1038.0,
+            "y1": 456.0,
+            "x2": 1277.0,
+            "y2": 487.0,
+            "cx": 1157.5,
+            "cy": 471.5,
+            "width": 239.0,
+            "height": 31.0
+          }
+        ],
+        "text": "MAHARASHTRA INDIA Account No 50100478383644 OTHER",
+        "x1": 86.0,
+        "y1": 456.0,
+        "x2": 1277.0,
+        "y2": 487.0,
+        "cy": 473.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 11,
+        "words": [
+          {
+            "text": "AC Open Date",
+            "x1": 875.0,
+            "y1": 480.0,
+            "x2": 1014.0,
+            "y2": 509.0,
+            "cx": 944.5,
+            "cy": 494.5,
+            "width": 139.0,
+            "height": 29.0
+          },
+          {
+            "text": "09/02/2022",
+            "x1": 1041.0,
+            "y1": 482.0,
+            "x2": 1141.0,
+            "y2": 507.0,
+            "cx": 1091.0,
+            "cy": 494.5,
+            "width": 100.0,
+            "height": 25.0
+          }
+        ],
+        "text": "AC Open Date 09/02/2022",
+        "x1": 875.0,
+        "y1": 480.0,
+        "x2": 1141.0,
+        "y2": 509.0,
+        "cy": 494.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 8,
+    "words": [
+      {
+        "text": "JOINT HOLDERS",
+        "x1": 84.0,
+        "y1": 507.0,
+        "x2": 253.0,
+        "y2": 531.0,
+        "cx": 168.5,
+        "cy": 519.0,
+        "width": 169.0,
+        "height": 24.0
+      },
+      {
+        "text": "Account Status",
+        "x1": 878.0,
+        "y1": 504.0,
+        "x2": 1013.0,
+        "y2": 529.0,
+        "cx": 945.5,
+        "cy": 516.5,
+        "width": 135.0,
+        "height": 25.0
+      },
+      {
+        "text": "Regular",
+        "x1": 1038.0,
+        "y1": 504.0,
+        "x2": 1112.0,
+        "y2": 531.0,
+        "cx": 1075.0,
+        "cy": 517.5,
+        "width": 74.0,
+        "height": 27.0
+      },
+      {
+        "text": "RIGS/NEFI IFSC",
+        "x1": 881.0,
+        "y1": 531.0,
+        "x2": 1028.0,
+        "y2": 548.0,
+        "cx": 954.5,
+        "cy": 539.5,
+        "width": 147.0,
+        "height": 17.0
+      },
+      {
+        "text": "HDFC0000222",
+        "x1": 1038.0,
+        "y1": 526.0,
+        "x2": 1176.0,
+        "y2": 551.0,
+        "cx": 1107.0,
+        "cy": 538.5,
+        "width": 138.0,
+        "height": 25.0
+      },
+      {
+        "text": "MICR416240151",
+        "x1": 1230.0,
+        "y1": 526.0,
+        "x2": 1397.0,
+        "y2": 551.0,
+        "cx": 1313.5,
+        "cy": 538.5,
+        "width": 167.0,
+        "height": 25.0
+      },
+      {
+        "text": "Branch Code",
+        "x1": 878.0,
+        "y1": 551.0,
+        "x2": 996.0,
+        "y2": 577.0,
+        "cx": 937.0,
+        "cy": 564.0,
+        "width": 118.0,
+        "height": 26.0
+      },
+      {
+        "text": "222",
+        "x1": 1043.0,
+        "y1": 551.0,
+        "x2": 1077.0,
+        "y2": 570.0,
+        "cx": 1060.0,
+        "cy": 560.5,
+        "width": 34.0,
+        "height": 19.0
+      }
+    ],
+    "text": "JOINT HOLDERS Account Status Regular RIGS/NEFI IFSC HDFC0000222 MICR416240151 Branch Code 222",
+    "x1": 84.0,
+    "y1": 504.0,
+    "x2": 1397.0,
+    "y2": 577.0,
+    "cy": 540.5,
+    "visual_lines": [
+      {
+        "line_id": 12,
+        "words": [
+          {
+            "text": "JOINT HOLDERS",
+            "x1": 84.0,
+            "y1": 507.0,
+            "x2": 253.0,
+            "y2": 531.0,
+            "cx": 168.5,
+            "cy": 519.0,
+            "width": 169.0,
+            "height": 24.0
+          },
+          {
+            "text": "Account Status",
+            "x1": 878.0,
+            "y1": 504.0,
+            "x2": 1013.0,
+            "y2": 529.0,
+            "cx": 945.5,
+            "cy": 516.5,
+            "width": 135.0,
+            "height": 25.0
+          },
+          {
+            "text": "Regular",
+            "x1": 1038.0,
+            "y1": 504.0,
+            "x2": 1112.0,
+            "y2": 531.0,
+            "cx": 1075.0,
+            "cy": 517.5,
+            "width": 74.0,
+            "height": 27.0
+          }
+        ],
+        "text": "JOINT HOLDERS Account Status Regular",
+        "x1": 84.0,
+        "y1": 504.0,
+        "x2": 1112.0,
+        "y2": 531.0,
+        "cy": 517.6666666666666,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 13,
+        "words": [
+          {
+            "text": "RIGS/NEFI IFSC",
+            "x1": 881.0,
+            "y1": 531.0,
+            "x2": 1028.0,
+            "y2": 548.0,
+            "cx": 954.5,
+            "cy": 539.5,
+            "width": 147.0,
+            "height": 17.0
+          },
+          {
+            "text": "HDFC0000222",
+            "x1": 1038.0,
+            "y1": 526.0,
+            "x2": 1176.0,
+            "y2": 551.0,
+            "cx": 1107.0,
+            "cy": 538.5,
+            "width": 138.0,
+            "height": 25.0
+          },
+          {
+            "text": "MICR416240151",
+            "x1": 1230.0,
+            "y1": 526.0,
+            "x2": 1397.0,
+            "y2": 551.0,
+            "cx": 1313.5,
+            "cy": 538.5,
+            "width": 167.0,
+            "height": 25.0
+          }
+        ],
+        "text": "RIGS/NEFI IFSC HDFC0000222 MICR416240151",
+        "x1": 881.0,
+        "y1": 526.0,
+        "x2": 1397.0,
+        "y2": 551.0,
+        "cy": 538.8333333333334,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 14,
+        "words": [
+          {
+            "text": "Branch Code",
+            "x1": 878.0,
+            "y1": 551.0,
+            "x2": 996.0,
+            "y2": 577.0,
+            "cx": 937.0,
+            "cy": 564.0,
+            "width": 118.0,
+            "height": 26.0
+          },
+          {
+            "text": "222",
+            "x1": 1043.0,
+            "y1": 551.0,
+            "x2": 1077.0,
+            "y2": 570.0,
+            "cx": 1060.0,
+            "cy": 560.5,
+            "width": 34.0,
+            "height": 19.0
+          }
+        ],
+        "text": "Branch Code 222",
+        "x1": 878.0,
+        "y1": 551.0,
+        "x2": 1077.0,
+        "y2": 577.0,
+        "cy": 562.25,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 9,
+    "words": [
+      {
+        "text": "NominatonRegistered",
+        "x1": 84.0,
+        "y1": 577.0,
+        "x2": 303.0,
+        "y2": 602.0,
+        "cx": 193.5,
+        "cy": 589.5,
+        "width": 219.0,
+        "height": 25.0
+      },
+      {
+        "text": "Account Type",
+        "x1": 875.0,
+        "y1": 570.0,
+        "x2": 1004.0,
+        "y2": 600.0,
+        "cx": 939.5,
+        "cy": 585.0,
+        "width": 129.0,
+        "height": 30.0
+      },
+      {
+        "text": "SAVINGS-RESIDENTS(105)",
+        "x1": 1038.0,
+        "y1": 573.0,
+        "x2": 1309.0,
+        "y2": 597.0,
+        "cx": 1173.5,
+        "cy": 585.0,
+        "width": 271.0,
+        "height": 24.0
+      }
+    ],
+    "text": "NominatonRegistered Account Type SAVINGS-RESIDENTS(105)",
+    "x1": 84.0,
+    "y1": 570.0,
+    "x2": 1309.0,
+    "y2": 602.0,
+    "cy": 586.5,
+    "visual_lines": [
+      {
+        "line_id": 15,
+        "words": [
+          {
+            "text": "NominatonRegistered",
+            "x1": 84.0,
+            "y1": 577.0,
+            "x2": 303.0,
+            "y2": 602.0,
+            "cx": 193.5,
+            "cy": 589.5,
+            "width": 219.0,
+            "height": 25.0
+          },
+          {
+            "text": "Account Type",
+            "x1": 875.0,
+            "y1": 570.0,
+            "x2": 1004.0,
+            "y2": 600.0,
+            "cx": 939.5,
+            "cy": 585.0,
+            "width": 129.0,
+            "height": 30.0
+          },
+          {
+            "text": "SAVINGS-RESIDENTS(105)",
+            "x1": 1038.0,
+            "y1": 573.0,
+            "x2": 1309.0,
+            "y2": 597.0,
+            "cx": 1173.5,
+            "cy": 585.0,
+            "width": 271.0,
+            "height": 24.0
+          }
+        ],
+        "text": "NominatonRegistered Account Type SAVINGS-RESIDENTS(105)",
+        "x1": 84.0,
+        "y1": 570.0,
+        "x2": 1309.0,
+        "y2": 602.0,
+        "cy": 586.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 10,
+    "words": [
+      {
+        "text": "From :01/05/2025",
+        "x1": 84.0,
+        "y1": 633.0,
+        "x2": 256.0,
+        "y2": 660.0,
+        "cx": 170.0,
+        "cy": 646.5,
+        "width": 172.0,
+        "height": 27.0
+      },
+      {
+        "text": "To31/05/2025",
+        "x1": 396.0,
+        "y1": 633.0,
+        "x2": 549.0,
+        "y2": 658.0,
+        "cx": 472.5,
+        "cy": 645.5,
+        "width": 153.0,
+        "height": 25.0
+      },
+      {
+        "text": "Statement of account",
+        "x1": 878.0,
+        "y1": 629.0,
+        "x2": 1149.0,
+        "y2": 660.0,
+        "cx": 1013.5,
+        "cy": 644.5,
+        "width": 271.0,
+        "height": 31.0
+      },
+      {
+        "text": "Date",
+        "x1": 98.0,
+        "y1": 680.0,
+        "x2": 150.0,
+        "y2": 709.0,
+        "cx": 124.0,
+        "cy": 694.5,
+        "width": 52.0,
+        "height": 29.0
+      },
+      {
+        "text": "Narration",
+        "x1": 368.0,
+        "y1": 677.0,
+        "x2": 468.0,
+        "y2": 712.0,
+        "cx": 418.0,
+        "cy": 694.5,
+        "width": 100.0,
+        "height": 35.0
+      },
+      {
+        "text": "Chq./Ref.No.",
+        "x1": 731.0,
+        "y1": 680.0,
+        "x2": 851.0,
+        "y2": 707.0,
+        "cx": 791.0,
+        "cy": 693.5,
+        "width": 120.0,
+        "height": 27.0
+      },
+      {
+        "text": "Value Dt",
+        "x1": 930.0,
+        "y1": 680.0,
+        "x2": 1021.0,
+        "y2": 707.0,
+        "cx": 975.5,
+        "cy": 693.5,
+        "width": 91.0,
+        "height": 27.0
+      },
+      {
+        "text": "Withdrawal Amt.",
+        "x1": 1043.0,
+        "y1": 677.0,
+        "x2": 1210.0,
+        "y2": 707.0,
+        "cx": 1126.5,
+        "cy": 692.0,
+        "width": 167.0,
+        "height": 30.0
+      },
+      {
+        "text": "Deposit Amt.",
+        "x1": 1269.0,
+        "y1": 682.0,
+        "x2": 1392.0,
+        "y2": 707.0,
+        "cx": 1330.5,
+        "cy": 694.5,
+        "width": 123.0,
+        "height": 25.0
+      },
+      {
+        "text": "Closing Balance",
+        "x1": 1459.0,
+        "y1": 680.0,
+        "x2": 1609.0,
+        "y2": 707.0,
+        "cx": 1534.0,
+        "cy": 693.5,
+        "width": 150.0,
+        "height": 27.0
+      }
+    ],
+    "text": "From :01/05/2025 To31/05/2025 Statement of account Date Narration Chq./Ref.No. Value Dt Withdrawal Amt. Deposit Amt. Closing Balance",
+    "x1": 84.0,
+    "y1": 629.0,
+    "x2": 1609.0,
+    "y2": 712.0,
+    "cy": 670.5,
+    "visual_lines": [
+      {
+        "line_id": 16,
+        "words": [
+          {
+            "text": "From :01/05/2025",
+            "x1": 84.0,
+            "y1": 633.0,
+            "x2": 256.0,
+            "y2": 660.0,
+            "cx": 170.0,
+            "cy": 646.5,
+            "width": 172.0,
+            "height": 27.0
+          },
+          {
+            "text": "To31/05/2025",
+            "x1": 396.0,
+            "y1": 633.0,
+            "x2": 549.0,
+            "y2": 658.0,
+            "cx": 472.5,
+            "cy": 645.5,
+            "width": 153.0,
+            "height": 25.0
+          },
+          {
+            "text": "Statement of account",
+            "x1": 878.0,
+            "y1": 629.0,
+            "x2": 1149.0,
+            "y2": 660.0,
+            "cx": 1013.5,
+            "cy": 644.5,
+            "width": 271.0,
+            "height": 31.0
+          }
+        ],
+        "text": "From :01/05/2025 To31/05/2025 Statement of account",
+        "x1": 84.0,
+        "y1": 629.0,
+        "x2": 1149.0,
+        "y2": 660.0,
+        "cy": 645.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 17,
+        "words": [
+          {
+            "text": "Date",
+            "x1": 98.0,
+            "y1": 680.0,
+            "x2": 150.0,
+            "y2": 709.0,
+            "cx": 124.0,
+            "cy": 694.5,
+            "width": 52.0,
+            "height": 29.0
+          },
+          {
+            "text": "Narration",
+            "x1": 368.0,
+            "y1": 677.0,
+            "x2": 468.0,
+            "y2": 712.0,
+            "cx": 418.0,
+            "cy": 694.5,
+            "width": 100.0,
+            "height": 35.0
+          },
+          {
+            "text": "Chq./Ref.No.",
+            "x1": 731.0,
+            "y1": 680.0,
+            "x2": 851.0,
+            "y2": 707.0,
+            "cx": 791.0,
+            "cy": 693.5,
+            "width": 120.0,
+            "height": 27.0
+          },
+          {
+            "text": "Value Dt",
+            "x1": 930.0,
+            "y1": 680.0,
+            "x2": 1021.0,
+            "y2": 707.0,
+            "cx": 975.5,
+            "cy": 693.5,
+            "width": 91.0,
+            "height": 27.0
+          },
+          {
+            "text": "Withdrawal Amt.",
+            "x1": 1043.0,
+            "y1": 677.0,
+            "x2": 1210.0,
+            "y2": 707.0,
+            "cx": 1126.5,
+            "cy": 692.0,
+            "width": 167.0,
+            "height": 30.0
+          },
+          {
+            "text": "Deposit Amt.",
+            "x1": 1269.0,
+            "y1": 682.0,
+            "x2": 1392.0,
+            "y2": 707.0,
+            "cx": 1330.5,
+            "cy": 694.5,
+            "width": 123.0,
+            "height": 25.0
+          },
+          {
+            "text": "Closing Balance",
+            "x1": 1459.0,
+            "y1": 680.0,
+            "x2": 1609.0,
+            "y2": 707.0,
+            "cx": 1534.0,
+            "cy": 693.5,
+            "width": 150.0,
+            "height": 27.0
+          }
+        ],
+        "text": "Date Narration Chq./Ref.No. Value Dt Withdrawal Amt. Deposit Amt. Closing Balance",
+        "x1": 98.0,
+        "y1": 677.0,
+        "x2": 1609.0,
+        "y2": 712.0,
+        "cy": 693.7142857142857,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 11,
+    "words": [
+      {
+        "text": "01/05/25",
+        "x1": 81.0,
+        "y1": 726.0,
+        "x2": 175.0,
+        "y2": 753.0,
+        "cx": 128.0,
+        "cy": 739.5,
+        "width": 94.0,
+        "height": 27.0
+      },
+      {
+        "text": "UPI-MR B H MOIDIN KUNHI-Q320749831@YBL",
+        "x1": 177.0,
+        "y1": 729.0,
+        "x2": 637.0,
+        "y2": 753.0,
+        "cx": 407.0,
+        "cy": 741.0,
+        "width": 460.0,
+        "height": 24.0
+      },
+      {
+        "text": "000004065604213001/05/25",
+        "x1": 743.0,
+        "y1": 724.0,
+        "x2": 1018.0,
+        "y2": 755.0,
+        "cx": 880.5,
+        "cy": 739.5,
+        "width": 275.0,
+        "height": 31.0
+      },
+      {
+        "text": "30.00",
+        "x1": 1168.0,
+        "y1": 726.0,
+        "x2": 1227.0,
+        "y2": 753.0,
+        "cx": 1197.5,
+        "cy": 739.5,
+        "width": 59.0,
+        "height": 27.0
+      },
+      {
+        "text": "775,733.61",
+        "x1": 1528.0,
+        "y1": 726.0,
+        "x2": 1626.0,
+        "y2": 753.0,
+        "cx": 1577.0,
+        "cy": 739.5,
+        "width": 98.0,
+        "height": 27.0
+      },
+      {
+        "text": "YESB0YBLUPI-040656042130-WATER BOITLE",
+        "x1": 180.0,
+        "y1": 767.0,
+        "x2": 622.0,
+        "y2": 797.0,
+        "cx": 401.0,
+        "cy": 782.0,
+        "width": 442.0,
+        "height": 30.0
+      }
+    ],
+    "text": "01/05/25 UPI-MR B H MOIDIN KUNHI-Q320749831@YBL 000004065604213001/05/25 30.00 775,733.61 YESB0YBLUPI-040656042130-WATER BOITLE",
+    "x1": 81.0,
+    "y1": 724.0,
+    "x2": 1626.0,
+    "y2": 797.0,
+    "cy": 760.5,
+    "visual_lines": [
+      {
+        "line_id": 18,
+        "words": [
+          {
+            "text": "01/05/25",
+            "x1": 81.0,
+            "y1": 726.0,
+            "x2": 175.0,
+            "y2": 753.0,
+            "cx": 128.0,
+            "cy": 739.5,
+            "width": 94.0,
+            "height": 27.0
+          },
+          {
+            "text": "UPI-MR B H MOIDIN KUNHI-Q320749831@YBL",
+            "x1": 177.0,
+            "y1": 729.0,
+            "x2": 637.0,
+            "y2": 753.0,
+            "cx": 407.0,
+            "cy": 741.0,
+            "width": 460.0,
+            "height": 24.0
+          },
+          {
+            "text": "000004065604213001/05/25",
+            "x1": 743.0,
+            "y1": 724.0,
+            "x2": 1018.0,
+            "y2": 755.0,
+            "cx": 880.5,
+            "cy": 739.5,
+            "width": 275.0,
+            "height": 31.0
+          },
+          {
+            "text": "30.00",
+            "x1": 1168.0,
+            "y1": 726.0,
+            "x2": 1227.0,
+            "y2": 753.0,
+            "cx": 1197.5,
+            "cy": 739.5,
+            "width": 59.0,
+            "height": 27.0
+          },
+          {
+            "text": "775,733.61",
+            "x1": 1528.0,
+            "y1": 726.0,
+            "x2": 1626.0,
+            "y2": 753.0,
+            "cx": 1577.0,
+            "cy": 739.5,
+            "width": 98.0,
+            "height": 27.0
+          }
+        ],
+        "text": "01/05/25 UPI-MR B H MOIDIN KUNHI-Q320749831@YBL 000004065604213001/05/25 30.00 775,733.61",
+        "x1": 81.0,
+        "y1": 724.0,
+        "x2": 1626.0,
+        "y2": 755.0,
+        "cy": 739.8,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 19,
+        "words": [
+          {
+            "text": "YESB0YBLUPI-040656042130-WATER BOITLE",
+            "x1": 180.0,
+            "y1": 767.0,
+            "x2": 622.0,
+            "y2": 797.0,
+            "cx": 401.0,
+            "cy": 782.0,
+            "width": 442.0,
+            "height": 30.0
+          }
+        ],
+        "text": "YESB0YBLUPI-040656042130-WATER BOITLE",
+        "x1": 180.0,
+        "y1": 767.0,
+        "x2": 622.0,
+        "y2": 797.0,
+        "cy": 782.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 12,
+    "words": [
+      {
+        "text": "01/05/25",
+        "x1": 84.0,
+        "y1": 814.0,
+        "x2": 167.0,
+        "y2": 841.0,
+        "cx": 125.5,
+        "cy": 827.5,
+        "width": 83.0,
+        "height": 27.0
+      },
+      {
+        "text": "UPI-AKASH-6398473381@IBL-HDFC0001838-994",
+        "x1": 177.0,
+        "y1": 809.0,
+        "x2": 637.0,
+        "y2": 843.0,
+        "cx": 407.0,
+        "cy": 826.0,
+        "width": 460.0,
+        "height": 34.0
+      },
+      {
+        "text": "000099475818837101/05/25",
+        "x1": 743.0,
+        "y1": 811.0,
+        "x2": 1018.0,
+        "y2": 843.0,
+        "cx": 880.5,
+        "cy": 827.0,
+        "width": 275.0,
+        "height": 32.0
+      },
+      {
+        "text": "50.00",
+        "x1": 1168.0,
+        "y1": 814.0,
+        "x2": 1225.0,
+        "y2": 841.0,
+        "cx": 1196.5,
+        "cy": 827.5,
+        "width": 57.0,
+        "height": 27.0
+      },
+      {
+        "text": "775,683.61",
+        "x1": 1528.0,
+        "y1": 814.0,
+        "x2": 1626.0,
+        "y2": 841.0,
+        "cx": 1577.0,
+        "cy": 827.5,
+        "width": 98.0,
+        "height": 27.0
+      },
+      {
+        "text": "758188371-BREKFAST",
+        "x1": 184.0,
+        "y1": 860.0,
+        "x2": 396.0,
+        "y2": 884.0,
+        "cx": 290.0,
+        "cy": 872.0,
+        "width": 212.0,
+        "height": 24.0
+      }
+    ],
+    "text": "01/05/25 UPI-AKASH-6398473381@IBL-HDFC0001838-994 000099475818837101/05/25 50.00 775,683.61 758188371-BREKFAST",
+    "x1": 84.0,
+    "y1": 809.0,
+    "x2": 1626.0,
+    "y2": 884.0,
+    "cy": 846.5,
+    "visual_lines": [
+      {
+        "line_id": 20,
+        "words": [
+          {
+            "text": "01/05/25",
+            "x1": 84.0,
+            "y1": 814.0,
+            "x2": 167.0,
+            "y2": 841.0,
+            "cx": 125.5,
+            "cy": 827.5,
+            "width": 83.0,
+            "height": 27.0
+          },
+          {
+            "text": "UPI-AKASH-6398473381@IBL-HDFC0001838-994",
+            "x1": 177.0,
+            "y1": 809.0,
+            "x2": 637.0,
+            "y2": 843.0,
+            "cx": 407.0,
+            "cy": 826.0,
+            "width": 460.0,
+            "height": 34.0
+          },
+          {
+            "text": "000099475818837101/05/25",
+            "x1": 743.0,
+            "y1": 811.0,
+            "x2": 1018.0,
+            "y2": 843.0,
+            "cx": 880.5,
+            "cy": 827.0,
+            "width": 275.0,
+            "height": 32.0
+          },
+          {
+            "text": "50.00",
+            "x1": 1168.0,
+            "y1": 814.0,
+            "x2": 1225.0,
+            "y2": 841.0,
+            "cx": 1196.5,
+            "cy": 827.5,
+            "width": 57.0,
+            "height": 27.0
+          },
+          {
+            "text": "775,683.61",
+            "x1": 1528.0,
+            "y1": 814.0,
+            "x2": 1626.0,
+            "y2": 841.0,
+            "cx": 1577.0,
+            "cy": 827.5,
+            "width": 98.0,
+            "height": 27.0
+          }
+        ],
+        "text": "01/05/25 UPI-AKASH-6398473381@IBL-HDFC0001838-994 000099475818837101/05/25 50.00 775,683.61",
+        "x1": 84.0,
+        "y1": 809.0,
+        "x2": 1626.0,
+        "y2": 843.0,
+        "cy": 827.1,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 21,
+        "words": [
+          {
+            "text": "758188371-BREKFAST",
+            "x1": 184.0,
+            "y1": 860.0,
+            "x2": 396.0,
+            "y2": 884.0,
+            "cx": 290.0,
+            "cy": 872.0,
+            "width": 212.0,
+            "height": 24.0
+          }
+        ],
+        "text": "758188371-BREKFAST",
+        "x1": 184.0,
+        "y1": 860.0,
+        "x2": 396.0,
+        "y2": 884.0,
+        "cy": 872.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 13,
+    "words": [
+      {
+        "text": "01/05/25",
+        "x1": 81.0,
+        "y1": 904.0,
+        "x2": 167.0,
+        "y2": 928.0,
+        "cx": 124.0,
+        "cy": 916.0,
+        "width": 86.0,
+        "height": 24.0
+      },
+      {
+        "text": "UPI-SHAHSIKANT GUNWANT",
+        "x1": 180.0,
+        "y1": 901.0,
+        "x2": 475.0,
+        "y2": 926.0,
+        "cx": 327.5,
+        "cy": 913.5,
+        "width": 295.0,
+        "height": 25.0
+      },
+      {
+        "text": "0000064336504307",
+        "x1": 745.0,
+        "y1": 904.0,
+        "x2": 920.0,
+        "y2": 928.0,
+        "cx": 832.5,
+        "cy": 916.0,
+        "width": 175.0,
+        "height": 24.0
+      },
+      {
+        "text": "01/05/25",
+        "x1": 935.0,
+        "y1": 904.0,
+        "x2": 1016.0,
+        "y2": 928.0,
+        "cx": 975.5,
+        "cy": 916.0,
+        "width": 81.0,
+        "height": 24.0
+      },
+      {
+        "text": "45.00",
+        "x1": 1168.0,
+        "y1": 901.0,
+        "x2": 1227.0,
+        "y2": 931.0,
+        "cx": 1197.5,
+        "cy": 916.0,
+        "width": 59.0,
+        "height": 30.0
+      },
+      {
+        "text": "775,638.61",
+        "x1": 1525.0,
+        "y1": 899.0,
+        "x2": 1626.0,
+        "y2": 931.0,
+        "cx": 1575.5,
+        "cy": 915.0,
+        "width": 101.0,
+        "height": 32.0
+      },
+      {
+        "text": "B-BHARATPE.9O0D0A",
+        "x1": 175.0,
+        "y1": 950.0,
+        "x2": 391.0,
+        "y2": 975.0,
+        "cx": 283.0,
+        "cy": 962.5,
+        "width": 216.0,
+        "height": 25.0
+      },
+      {
+        "text": "OL0R310946@UNITYPE-UNBA000BHPE-064336504",
+        "x1": 182.0,
+        "y1": 994.0,
+        "x2": 659.0,
+        "y2": 1018.0,
+        "cx": 420.5,
+        "cy": 1006.0,
+        "width": 477.0,
+        "height": 24.0
+      },
+      {
+        "text": "307-PAY TO BHARATPE ME",
+        "x1": 184.0,
+        "y1": 1040.0,
+        "x2": 453.0,
+        "y2": 1065.0,
+        "cx": 318.5,
+        "cy": 1052.5,
+        "width": 269.0,
+        "height": 25.0
+      }
+    ],
+    "text": "01/05/25 UPI-SHAHSIKANT GUNWANT 0000064336504307 01/05/25 45.00 775,638.61 B-BHARATPE.9O0D0A OL0R310946@UNITYPE-UNBA000BHPE-064336504 307-PAY TO BHARATPE ME",
+    "x1": 81.0,
+    "y1": 899.0,
+    "x2": 1626.0,
+    "y2": 1065.0,
+    "cy": 982.0,
+    "visual_lines": [
+      {
+        "line_id": 22,
+        "words": [
+          {
+            "text": "01/05/25",
+            "x1": 81.0,
+            "y1": 904.0,
+            "x2": 167.0,
+            "y2": 928.0,
+            "cx": 124.0,
+            "cy": 916.0,
+            "width": 86.0,
+            "height": 24.0
+          },
+          {
+            "text": "UPI-SHAHSIKANT GUNWANT",
+            "x1": 180.0,
+            "y1": 901.0,
+            "x2": 475.0,
+            "y2": 926.0,
+            "cx": 327.5,
+            "cy": 913.5,
+            "width": 295.0,
+            "height": 25.0
+          },
+          {
+            "text": "0000064336504307",
+            "x1": 745.0,
+            "y1": 904.0,
+            "x2": 920.0,
+            "y2": 928.0,
+            "cx": 832.5,
+            "cy": 916.0,
+            "width": 175.0,
+            "height": 24.0
+          },
+          {
+            "text": "01/05/25",
+            "x1": 935.0,
+            "y1": 904.0,
+            "x2": 1016.0,
+            "y2": 928.0,
+            "cx": 975.5,
+            "cy": 916.0,
+            "width": 81.0,
+            "height": 24.0
+          },
+          {
+            "text": "45.00",
+            "x1": 1168.0,
+            "y1": 901.0,
+            "x2": 1227.0,
+            "y2": 931.0,
+            "cx": 1197.5,
+            "cy": 916.0,
+            "width": 59.0,
+            "height": 30.0
+          },
+          {
+            "text": "775,638.61",
+            "x1": 1525.0,
+            "y1": 899.0,
+            "x2": 1626.0,
+            "y2": 931.0,
+            "cx": 1575.5,
+            "cy": 915.0,
+            "width": 101.0,
+            "height": 32.0
+          }
+        ],
+        "text": "01/05/25 UPI-SHAHSIKANT GUNWANT 0000064336504307 01/05/25 45.00 775,638.61",
+        "x1": 81.0,
+        "y1": 899.0,
+        "x2": 1626.0,
+        "y2": 931.0,
+        "cy": 915.4166666666666,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 23,
+        "words": [
+          {
+            "text": "B-BHARATPE.9O0D0A",
+            "x1": 175.0,
+            "y1": 950.0,
+            "x2": 391.0,
+            "y2": 975.0,
+            "cx": 283.0,
+            "cy": 962.5,
+            "width": 216.0,
+            "height": 25.0
+          }
+        ],
+        "text": "B-BHARATPE.9O0D0A",
+        "x1": 175.0,
+        "y1": 950.0,
+        "x2": 391.0,
+        "y2": 975.0,
+        "cy": 962.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 24,
+        "words": [
+          {
+            "text": "OL0R310946@UNITYPE-UNBA000BHPE-064336504",
+            "x1": 182.0,
+            "y1": 994.0,
+            "x2": 659.0,
+            "y2": 1018.0,
+            "cx": 420.5,
+            "cy": 1006.0,
+            "width": 477.0,
+            "height": 24.0
+          }
+        ],
+        "text": "OL0R310946@UNITYPE-UNBA000BHPE-064336504",
+        "x1": 182.0,
+        "y1": 994.0,
+        "x2": 659.0,
+        "y2": 1018.0,
+        "cy": 1006.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 25,
+        "words": [
+          {
+            "text": "307-PAY TO BHARATPE ME",
+            "x1": 184.0,
+            "y1": 1040.0,
+            "x2": 453.0,
+            "y2": 1065.0,
+            "cx": 318.5,
+            "cy": 1052.5,
+            "width": 269.0,
+            "height": 25.0
+          }
+        ],
+        "text": "307-PAY TO BHARATPE ME",
+        "x1": 184.0,
+        "y1": 1040.0,
+        "x2": 453.0,
+        "y2": 1065.0,
+        "cy": 1052.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 14,
+    "words": [
+      {
+        "text": "01/05/25",
+        "x1": 81.0,
+        "y1": 1079.0,
+        "x2": 168.0,
+        "y2": 1112.0,
+        "cx": 124.5,
+        "cy": 1095.5,
+        "width": 87.0,
+        "height": 33.0
+      },
+      {
+        "text": "UPI-ROHAN MOHAN",
+        "x1": 175.0,
+        "y1": 1079.0,
+        "x2": 389.0,
+        "y2": 1109.0,
+        "cx": 282.0,
+        "cy": 1094.0,
+        "width": 214.0,
+        "height": 30.0
+      },
+      {
+        "text": "000045815840307601/05/25",
+        "x1": 745.0,
+        "y1": 1079.0,
+        "x2": 1018.0,
+        "y2": 1111.0,
+        "cx": 881.5,
+        "cy": 1095.0,
+        "width": 273.0,
+        "height": 32.0
+      },
+      {
+        "text": "20.00",
+        "x1": 1168.0,
+        "y1": 1082.0,
+        "x2": 1225.0,
+        "y2": 1111.0,
+        "cx": 1196.5,
+        "cy": 1096.5,
+        "width": 57.0,
+        "height": 29.0
+      },
+      {
+        "text": "775,618.61",
+        "x1": 1528.0,
+        "y1": 1082.0,
+        "x2": 1626.0,
+        "y2": 1109.0,
+        "cx": 1577.0,
+        "cy": 1095.5,
+        "width": 98.0,
+        "height": 27.0
+      },
+      {
+        "text": "BHANDARI-Q109662303@YBL",
+        "x1": 170.0,
+        "y1": 1121.0,
+        "x2": 468.0,
+        "y2": 1158.0,
+        "cx": 319.0,
+        "cy": 1139.5,
+        "width": 298.0,
+        "height": 37.0
+      },
+      {
+        "text": "YESB0YBLUPI-458158403076-NIRA",
+        "x1": 177.0,
+        "y1": 1164.0,
+        "x2": 517.0,
+        "y2": 1201.0,
+        "cx": 347.0,
+        "cy": 1182.5,
+        "width": 340.0,
+        "height": 37.0
+      }
+    ],
+    "text": "01/05/25 UPI-ROHAN MOHAN 000045815840307601/05/25 20.00 775,618.61 BHANDARI-Q109662303@YBL YESB0YBLUPI-458158403076-NIRA",
+    "x1": 81.0,
+    "y1": 1079.0,
+    "x2": 1626.0,
+    "y2": 1201.0,
+    "cy": 1140.0,
+    "visual_lines": [
+      {
+        "line_id": 26,
+        "words": [
+          {
+            "text": "01/05/25",
+            "x1": 81.0,
+            "y1": 1079.0,
+            "x2": 168.0,
+            "y2": 1112.0,
+            "cx": 124.5,
+            "cy": 1095.5,
+            "width": 87.0,
+            "height": 33.0
+          },
+          {
+            "text": "UPI-ROHAN MOHAN",
+            "x1": 175.0,
+            "y1": 1079.0,
+            "x2": 389.0,
+            "y2": 1109.0,
+            "cx": 282.0,
+            "cy": 1094.0,
+            "width": 214.0,
+            "height": 30.0
+          },
+          {
+            "text": "000045815840307601/05/25",
+            "x1": 745.0,
+            "y1": 1079.0,
+            "x2": 1018.0,
+            "y2": 1111.0,
+            "cx": 881.5,
+            "cy": 1095.0,
+            "width": 273.0,
+            "height": 32.0
+          },
+          {
+            "text": "20.00",
+            "x1": 1168.0,
+            "y1": 1082.0,
+            "x2": 1225.0,
+            "y2": 1111.0,
+            "cx": 1196.5,
+            "cy": 1096.5,
+            "width": 57.0,
+            "height": 29.0
+          },
+          {
+            "text": "775,618.61",
+            "x1": 1528.0,
+            "y1": 1082.0,
+            "x2": 1626.0,
+            "y2": 1109.0,
+            "cx": 1577.0,
+            "cy": 1095.5,
+            "width": 98.0,
+            "height": 27.0
+          }
+        ],
+        "text": "01/05/25 UPI-ROHAN MOHAN 000045815840307601/05/25 20.00 775,618.61",
+        "x1": 81.0,
+        "y1": 1079.0,
+        "x2": 1626.0,
+        "y2": 1112.0,
+        "cy": 1095.3,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 27,
+        "words": [
+          {
+            "text": "BHANDARI-Q109662303@YBL",
+            "x1": 170.0,
+            "y1": 1121.0,
+            "x2": 468.0,
+            "y2": 1158.0,
+            "cx": 319.0,
+            "cy": 1139.5,
+            "width": 298.0,
+            "height": 37.0
+          }
+        ],
+        "text": "BHANDARI-Q109662303@YBL",
+        "x1": 170.0,
+        "y1": 1121.0,
+        "x2": 468.0,
+        "y2": 1158.0,
+        "cy": 1139.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 28,
+        "words": [
+          {
+            "text": "YESB0YBLUPI-458158403076-NIRA",
+            "x1": 177.0,
+            "y1": 1164.0,
+            "x2": 517.0,
+            "y2": 1201.0,
+            "cx": 347.0,
+            "cy": 1182.5,
+            "width": 340.0,
+            "height": 37.0
+          }
+        ],
+        "text": "YESB0YBLUPI-458158403076-NIRA",
+        "x1": 177.0,
+        "y1": 1164.0,
+        "x2": 517.0,
+        "y2": 1201.0,
+        "cy": 1182.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 15,
+    "words": [
+      {
+        "text": "01/05/25",
+        "x1": 81.0,
+        "y1": 1216.0,
+        "x2": 167.0,
+        "y2": 1240.0,
+        "cx": 124.0,
+        "cy": 1228.0,
+        "width": 86.0,
+        "height": 24.0
+      },
+      {
+        "text": "UPI-IRCTCAPP",
+        "x1": 177.0,
+        "y1": 1216.0,
+        "x2": 335.0,
+        "y2": 1240.0,
+        "cx": 256.0,
+        "cy": 1228.0,
+        "width": 158.0,
+        "height": 24.0
+      },
+      {
+        "text": "0000548705257055",
+        "x1": 745.0,
+        "y1": 1216.0,
+        "x2": 922.0,
+        "y2": 1240.0,
+        "cx": 833.5,
+        "cy": 1228.0,
+        "width": 177.0,
+        "height": 24.0
+      },
+      {
+        "text": "01/05/25",
+        "x1": 927.0,
+        "y1": 1210.0,
+        "x2": 1017.0,
+        "y2": 1243.0,
+        "cx": 972.0,
+        "cy": 1226.5,
+        "width": 90.0,
+        "height": 33.0
+      },
+      {
+        "text": "405.36",
+        "x1": 1360.0,
+        "y1": 1216.0,
+        "x2": 1427.0,
+        "y2": 1243.0,
+        "cx": 1393.5,
+        "cy": 1229.5,
+        "width": 67.0,
+        "height": 27.0
+      },
+      {
+        "text": "776,023.97",
+        "x1": 1525.0,
+        "y1": 1216.0,
+        "x2": 1626.0,
+        "y2": 1240.0,
+        "cx": 1575.5,
+        "cy": 1228.0,
+        "width": 101.0,
+        "height": 24.0
+      },
+      {
+        "text": "UPI-PAYIM-IRCTCAPP@PIYBL-Y",
+        "x1": 175.0,
+        "y1": 1262.0,
+        "x2": 504.0,
+        "y2": 1286.0,
+        "cx": 339.5,
+        "cy": 1274.0,
+        "width": 329.0,
+        "height": 24.0
+      },
+      {
+        "text": "ESB0PTMUPI-548705257055-COLLECT",
+        "x1": 182.0,
+        "y1": 1306.0,
+        "x2": 544.0,
+        "y2": 1330.0,
+        "cx": 363.0,
+        "cy": 1318.0,
+        "width": 362.0,
+        "height": 24.0
+      }
+    ],
+    "text": "01/05/25 UPI-IRCTCAPP 0000548705257055 01/05/25 405.36 776,023.97 UPI-PAYIM-IRCTCAPP@PIYBL-Y ESB0PTMUPI-548705257055-COLLECT",
+    "x1": 81.0,
+    "y1": 1210.0,
+    "x2": 1626.0,
+    "y2": 1330.0,
+    "cy": 1270.0,
+    "visual_lines": [
+      {
+        "line_id": 29,
+        "words": [
+          {
+            "text": "01/05/25",
+            "x1": 81.0,
+            "y1": 1216.0,
+            "x2": 167.0,
+            "y2": 1240.0,
+            "cx": 124.0,
+            "cy": 1228.0,
+            "width": 86.0,
+            "height": 24.0
+          },
+          {
+            "text": "UPI-IRCTCAPP",
+            "x1": 177.0,
+            "y1": 1216.0,
+            "x2": 335.0,
+            "y2": 1240.0,
+            "cx": 256.0,
+            "cy": 1228.0,
+            "width": 158.0,
+            "height": 24.0
+          },
+          {
+            "text": "0000548705257055",
+            "x1": 745.0,
+            "y1": 1216.0,
+            "x2": 922.0,
+            "y2": 1240.0,
+            "cx": 833.5,
+            "cy": 1228.0,
+            "width": 177.0,
+            "height": 24.0
+          },
+          {
+            "text": "01/05/25",
+            "x1": 927.0,
+            "y1": 1210.0,
+            "x2": 1017.0,
+            "y2": 1243.0,
+            "cx": 972.0,
+            "cy": 1226.5,
+            "width": 90.0,
+            "height": 33.0
+          },
+          {
+            "text": "405.36",
+            "x1": 1360.0,
+            "y1": 1216.0,
+            "x2": 1427.0,
+            "y2": 1243.0,
+            "cx": 1393.5,
+            "cy": 1229.5,
+            "width": 67.0,
+            "height": 27.0
+          },
+          {
+            "text": "776,023.97",
+            "x1": 1525.0,
+            "y1": 1216.0,
+            "x2": 1626.0,
+            "y2": 1240.0,
+            "cx": 1575.5,
+            "cy": 1228.0,
+            "width": 101.0,
+            "height": 24.0
+          }
+        ],
+        "text": "01/05/25 UPI-IRCTCAPP 0000548705257055 01/05/25 405.36 776,023.97",
+        "x1": 81.0,
+        "y1": 1210.0,
+        "x2": 1626.0,
+        "y2": 1243.0,
+        "cy": 1228.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 30,
+        "words": [
+          {
+            "text": "UPI-PAYIM-IRCTCAPP@PIYBL-Y",
+            "x1": 175.0,
+            "y1": 1262.0,
+            "x2": 504.0,
+            "y2": 1286.0,
+            "cx": 339.5,
+            "cy": 1274.0,
+            "width": 329.0,
+            "height": 24.0
+          }
+        ],
+        "text": "UPI-PAYIM-IRCTCAPP@PIYBL-Y",
+        "x1": 175.0,
+        "y1": 1262.0,
+        "x2": 504.0,
+        "y2": 1286.0,
+        "cy": 1274.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 31,
+        "words": [
+          {
+            "text": "ESB0PTMUPI-548705257055-COLLECT",
+            "x1": 182.0,
+            "y1": 1306.0,
+            "x2": 544.0,
+            "y2": 1330.0,
+            "cx": 363.0,
+            "cy": 1318.0,
+            "width": 362.0,
+            "height": 24.0
+          }
+        ],
+        "text": "ESB0PTMUPI-548705257055-COLLECT",
+        "x1": 182.0,
+        "y1": 1306.0,
+        "x2": 544.0,
+        "y2": 1330.0,
+        "cy": 1318.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 16,
+    "words": [
+      {
+        "text": "01/05/25",
+        "x1": 84.0,
+        "y1": 1350.0,
+        "x2": 165.0,
+        "y2": 1377.0,
+        "cx": 124.5,
+        "cy": 1363.5,
+        "width": 81.0,
+        "height": 27.0
+      },
+      {
+        "text": "UPI-MOHD AKRAM",
+        "x1": 180.0,
+        "y1": 1352.0,
+        "x2": 376.0,
+        "y2": 1377.0,
+        "cx": 278.0,
+        "cy": 1364.5,
+        "width": 196.0,
+        "height": 25.0
+      },
+      {
+        "text": "000003270017033601/05/25",
+        "x1": 748.0,
+        "y1": 1352.0,
+        "x2": 1016.0,
+        "y2": 1377.0,
+        "cx": 882.0,
+        "cy": 1364.5,
+        "width": 268.0,
+        "height": 25.0
+      },
+      {
+        "text": "107.00",
+        "x1": 1159.0,
+        "y1": 1350.0,
+        "x2": 1225.0,
+        "y2": 1377.0,
+        "cx": 1192.0,
+        "cy": 1363.5,
+        "width": 66.0,
+        "height": 27.0
+      },
+      {
+        "text": "775,916.97",
+        "x1": 1528.0,
+        "y1": 1350.0,
+        "x2": 1626.0,
+        "y2": 1377.0,
+        "cx": 1577.0,
+        "cy": 1363.5,
+        "width": 98.0,
+        "height": 27.0
+      },
+      {
+        "text": "ANSARI-9595989524@AXL-PUN",
+        "x1": 177.0,
+        "y1": 1396.0,
+        "x2": 477.0,
+        "y2": 1420.0,
+        "cx": 327.0,
+        "cy": 1408.0,
+        "width": 300.0,
+        "height": 24.0
+      },
+      {
+        "text": "B0112810-032700170336-AUTO",
+        "x1": 180.0,
+        "y1": 1435.0,
+        "x2": 475.0,
+        "y2": 1467.0,
+        "cx": 327.5,
+        "cy": 1451.0,
+        "width": 295.0,
+        "height": 32.0
+      }
+    ],
+    "text": "01/05/25 UPI-MOHD AKRAM 000003270017033601/05/25 107.00 775,916.97 ANSARI-9595989524@AXL-PUN B0112810-032700170336-AUTO",
+    "x1": 84.0,
+    "y1": 1350.0,
+    "x2": 1626.0,
+    "y2": 1467.0,
+    "cy": 1408.5,
+    "visual_lines": [
+      {
+        "line_id": 32,
+        "words": [
+          {
+            "text": "01/05/25",
+            "x1": 84.0,
+            "y1": 1350.0,
+            "x2": 165.0,
+            "y2": 1377.0,
+            "cx": 124.5,
+            "cy": 1363.5,
+            "width": 81.0,
+            "height": 27.0
+          },
+          {
+            "text": "UPI-MOHD AKRAM",
+            "x1": 180.0,
+            "y1": 1352.0,
+            "x2": 376.0,
+            "y2": 1377.0,
+            "cx": 278.0,
+            "cy": 1364.5,
+            "width": 196.0,
+            "height": 25.0
+          },
+          {
+            "text": "000003270017033601/05/25",
+            "x1": 748.0,
+            "y1": 1352.0,
+            "x2": 1016.0,
+            "y2": 1377.0,
+            "cx": 882.0,
+            "cy": 1364.5,
+            "width": 268.0,
+            "height": 25.0
+          },
+          {
+            "text": "107.00",
+            "x1": 1159.0,
+            "y1": 1350.0,
+            "x2": 1225.0,
+            "y2": 1377.0,
+            "cx": 1192.0,
+            "cy": 1363.5,
+            "width": 66.0,
+            "height": 27.0
+          },
+          {
+            "text": "775,916.97",
+            "x1": 1528.0,
+            "y1": 1350.0,
+            "x2": 1626.0,
+            "y2": 1377.0,
+            "cx": 1577.0,
+            "cy": 1363.5,
+            "width": 98.0,
+            "height": 27.0
+          }
+        ],
+        "text": "01/05/25 UPI-MOHD AKRAM 000003270017033601/05/25 107.00 775,916.97",
+        "x1": 84.0,
+        "y1": 1350.0,
+        "x2": 1626.0,
+        "y2": 1377.0,
+        "cy": 1363.9,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 33,
+        "words": [
+          {
+            "text": "ANSARI-9595989524@AXL-PUN",
+            "x1": 177.0,
+            "y1": 1396.0,
+            "x2": 477.0,
+            "y2": 1420.0,
+            "cx": 327.0,
+            "cy": 1408.0,
+            "width": 300.0,
+            "height": 24.0
+          }
+        ],
+        "text": "ANSARI-9595989524@AXL-PUN",
+        "x1": 177.0,
+        "y1": 1396.0,
+        "x2": 477.0,
+        "y2": 1420.0,
+        "cy": 1408.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 34,
+        "words": [
+          {
+            "text": "B0112810-032700170336-AUTO",
+            "x1": 180.0,
+            "y1": 1435.0,
+            "x2": 475.0,
+            "y2": 1467.0,
+            "cx": 327.5,
+            "cy": 1451.0,
+            "width": 295.0,
+            "height": 32.0
+          }
+        ],
+        "text": "B0112810-032700170336-AUTO",
+        "x1": 180.0,
+        "y1": 1435.0,
+        "x2": 475.0,
+        "y2": 1467.0,
+        "cy": 1451.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 17,
+    "words": [
+      {
+        "text": "02/05/25",
+        "x1": 84.0,
+        "y1": 1481.0,
+        "x2": 165.0,
+        "y2": 1508.0,
+        "cx": 124.5,
+        "cy": 1494.5,
+        "width": 81.0,
+        "height": 27.0
+      },
+      {
+        "text": "UPI-VIKRAM",
+        "x1": 177.0,
+        "y1": 1484.0,
+        "x2": 315.0,
+        "y2": 1508.0,
+        "cx": 246.0,
+        "cy": 1496.0,
+        "width": 138.0,
+        "height": 24.0
+      },
+      {
+        "text": "0000550564352408",
+        "x1": 743.0,
+        "y1": 1481.0,
+        "x2": 922.0,
+        "y2": 1506.0,
+        "cx": 832.5,
+        "cy": 1493.5,
+        "width": 179.0,
+        "height": 25.0
+      },
+      {
+        "text": "02/05/25",
+        "x1": 935.0,
+        "y1": 1484.0,
+        "x2": 1016.0,
+        "y2": 1508.0,
+        "cx": 975.5,
+        "cy": 1496.0,
+        "width": 81.0,
+        "height": 24.0
+      },
+      {
+        "text": "10.00",
+        "x1": 1165.0,
+        "y1": 1478.0,
+        "x2": 1226.0,
+        "y2": 1512.0,
+        "cx": 1195.5,
+        "cy": 1495.0,
+        "width": 61.0,
+        "height": 34.0
+      },
+      {
+        "text": "775,906.97",
+        "x1": 1528.0,
+        "y1": 1484.0,
+        "x2": 1626.0,
+        "y2": 1508.0,
+        "cx": 1577.0,
+        "cy": 1496.0,
+        "width": 98.0,
+        "height": 24.0
+      },
+      {
+        "text": "CATERERS BHARATPE90727958943@",
+        "x1": 172.0,
+        "y1": 1523.0,
+        "x2": 536.0,
+        "y2": 1557.0,
+        "cx": 354.0,
+        "cy": 1540.0,
+        "width": 364.0,
+        "height": 34.0
+      },
+      {
+        "text": "YESBANKLID-YESB0YESUPI-550564352408-PAY",
+        "x1": 182.0,
+        "y1": 1574.0,
+        "x2": 649.0,
+        "y2": 1598.0,
+        "cx": 415.5,
+        "cy": 1586.0,
+        "width": 467.0,
+        "height": 24.0
+      },
+      {
+        "text": "TOBHARATPE ME",
+        "x1": 182.0,
+        "y1": 1618.0,
+        "x2": 369.0,
+        "y2": 1642.0,
+        "cx": 275.5,
+        "cy": 1630.0,
+        "width": 187.0,
+        "height": 24.0
+      }
+    ],
+    "text": "02/05/25 UPI-VIKRAM 0000550564352408 02/05/25 10.00 775,906.97 CATERERS BHARATPE90727958943@ YESBANKLID-YESB0YESUPI-550564352408-PAY TOBHARATPE ME",
+    "x1": 84.0,
+    "y1": 1478.0,
+    "x2": 1626.0,
+    "y2": 1642.0,
+    "cy": 1560.0,
+    "visual_lines": [
+      {
+        "line_id": 35,
+        "words": [
+          {
+            "text": "02/05/25",
+            "x1": 84.0,
+            "y1": 1481.0,
+            "x2": 165.0,
+            "y2": 1508.0,
+            "cx": 124.5,
+            "cy": 1494.5,
+            "width": 81.0,
+            "height": 27.0
+          },
+          {
+            "text": "UPI-VIKRAM",
+            "x1": 177.0,
+            "y1": 1484.0,
+            "x2": 315.0,
+            "y2": 1508.0,
+            "cx": 246.0,
+            "cy": 1496.0,
+            "width": 138.0,
+            "height": 24.0
+          },
+          {
+            "text": "0000550564352408",
+            "x1": 743.0,
+            "y1": 1481.0,
+            "x2": 922.0,
+            "y2": 1506.0,
+            "cx": 832.5,
+            "cy": 1493.5,
+            "width": 179.0,
+            "height": 25.0
+          },
+          {
+            "text": "02/05/25",
+            "x1": 935.0,
+            "y1": 1484.0,
+            "x2": 1016.0,
+            "y2": 1508.0,
+            "cx": 975.5,
+            "cy": 1496.0,
+            "width": 81.0,
+            "height": 24.0
+          },
+          {
+            "text": "10.00",
+            "x1": 1165.0,
+            "y1": 1478.0,
+            "x2": 1226.0,
+            "y2": 1512.0,
+            "cx": 1195.5,
+            "cy": 1495.0,
+            "width": 61.0,
+            "height": 34.0
+          },
+          {
+            "text": "775,906.97",
+            "x1": 1528.0,
+            "y1": 1484.0,
+            "x2": 1626.0,
+            "y2": 1508.0,
+            "cx": 1577.0,
+            "cy": 1496.0,
+            "width": 98.0,
+            "height": 24.0
+          }
+        ],
+        "text": "02/05/25 UPI-VIKRAM 0000550564352408 02/05/25 10.00 775,906.97",
+        "x1": 84.0,
+        "y1": 1478.0,
+        "x2": 1626.0,
+        "y2": 1512.0,
+        "cy": 1495.1666666666667,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 36,
+        "words": [
+          {
+            "text": "CATERERS BHARATPE90727958943@",
+            "x1": 172.0,
+            "y1": 1523.0,
+            "x2": 536.0,
+            "y2": 1557.0,
+            "cx": 354.0,
+            "cy": 1540.0,
+            "width": 364.0,
+            "height": 34.0
+          }
+        ],
+        "text": "CATERERS BHARATPE90727958943@",
+        "x1": 172.0,
+        "y1": 1523.0,
+        "x2": 536.0,
+        "y2": 1557.0,
+        "cy": 1540.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 37,
+        "words": [
+          {
+            "text": "YESBANKLID-YESB0YESUPI-550564352408-PAY",
+            "x1": 182.0,
+            "y1": 1574.0,
+            "x2": 649.0,
+            "y2": 1598.0,
+            "cx": 415.5,
+            "cy": 1586.0,
+            "width": 467.0,
+            "height": 24.0
+          }
+        ],
+        "text": "YESBANKLID-YESB0YESUPI-550564352408-PAY",
+        "x1": 182.0,
+        "y1": 1574.0,
+        "x2": 649.0,
+        "y2": 1598.0,
+        "cy": 1586.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 38,
+        "words": [
+          {
+            "text": "TOBHARATPE ME",
+            "x1": 182.0,
+            "y1": 1618.0,
+            "x2": 369.0,
+            "y2": 1642.0,
+            "cx": 275.5,
+            "cy": 1630.0,
+            "width": 187.0,
+            "height": 24.0
+          }
+        ],
+        "text": "TOBHARATPE ME",
+        "x1": 182.0,
+        "y1": 1618.0,
+        "x2": 369.0,
+        "y2": 1642.0,
+        "cy": 1630.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 18,
+    "words": [
+      {
+        "text": "02/05/25",
+        "x1": 84.0,
+        "y1": 1664.0,
+        "x2": 167.0,
+        "y2": 1688.0,
+        "cx": 125.5,
+        "cy": 1676.0,
+        "width": 83.0,
+        "height": 24.0
+      },
+      {
+        "text": "UPI-MITHILESH",
+        "x1": 177.0,
+        "y1": 1662.0,
+        "x2": 339.0,
+        "y2": 1686.0,
+        "cx": 258.0,
+        "cy": 1674.0,
+        "width": 162.0,
+        "height": 24.0
+      },
+      {
+        "text": "0000059800798012",
+        "x1": 745.0,
+        "y1": 1664.0,
+        "x2": 920.0,
+        "y2": 1688.0,
+        "cx": 832.5,
+        "cy": 1676.0,
+        "width": 175.0,
+        "height": 24.0
+      },
+      {
+        "text": "02/05/25",
+        "x1": 935.0,
+        "y1": 1664.0,
+        "x2": 1016.0,
+        "y2": 1691.0,
+        "cx": 975.5,
+        "cy": 1677.5,
+        "width": 81.0,
+        "height": 27.0
+      },
+      {
+        "text": "20.00",
+        "x1": 1168.0,
+        "y1": 1662.0,
+        "x2": 1227.0,
+        "y2": 1691.0,
+        "cx": 1197.5,
+        "cy": 1676.5,
+        "width": 59.0,
+        "height": 29.0
+      },
+      {
+        "text": "775,886.97",
+        "x1": 1528.0,
+        "y1": 1662.0,
+        "x2": 1626.0,
+        "y2": 1688.0,
+        "cx": 1577.0,
+        "cy": 1675.0,
+        "width": 98.0,
+        "height": 26.0
+      },
+      {
+        "text": "KUMAR-MITHLESHMDPR2002@OK",
+        "x1": 175.0,
+        "y1": 1708.0,
+        "x2": 517.0,
+        "y2": 1732.0,
+        "cx": 346.0,
+        "cy": 1720.0,
+        "width": 342.0,
+        "height": 24.0
+      },
+      {
+        "text": "SBI-SBIN0008157-059800798012-PAYMENTFRO",
+        "x1": 184.0,
+        "y1": 1752.0,
+        "x2": 632.0,
+        "y2": 1776.0,
+        "cx": 408.0,
+        "cy": 1764.0,
+        "width": 448.0,
+        "height": 24.0
+      },
+      {
+        "text": "M PHONE",
+        "x1": 182.0,
+        "y1": 1793.0,
+        "x2": 283.0,
+        "y2": 1820.0,
+        "cx": 232.5,
+        "cy": 1806.5,
+        "width": 101.0,
+        "height": 27.0
+      }
+    ],
+    "text": "02/05/25 UPI-MITHILESH 0000059800798012 02/05/25 20.00 775,886.97 KUMAR-MITHLESHMDPR2002@OK SBI-SBIN0008157-059800798012-PAYMENTFRO M PHONE",
+    "x1": 84.0,
+    "y1": 1662.0,
+    "x2": 1626.0,
+    "y2": 1820.0,
+    "cy": 1741.0,
+    "visual_lines": [
+      {
+        "line_id": 39,
+        "words": [
+          {
+            "text": "02/05/25",
+            "x1": 84.0,
+            "y1": 1664.0,
+            "x2": 167.0,
+            "y2": 1688.0,
+            "cx": 125.5,
+            "cy": 1676.0,
+            "width": 83.0,
+            "height": 24.0
+          },
+          {
+            "text": "UPI-MITHILESH",
+            "x1": 177.0,
+            "y1": 1662.0,
+            "x2": 339.0,
+            "y2": 1686.0,
+            "cx": 258.0,
+            "cy": 1674.0,
+            "width": 162.0,
+            "height": 24.0
+          },
+          {
+            "text": "0000059800798012",
+            "x1": 745.0,
+            "y1": 1664.0,
+            "x2": 920.0,
+            "y2": 1688.0,
+            "cx": 832.5,
+            "cy": 1676.0,
+            "width": 175.0,
+            "height": 24.0
+          },
+          {
+            "text": "02/05/25",
+            "x1": 935.0,
+            "y1": 1664.0,
+            "x2": 1016.0,
+            "y2": 1691.0,
+            "cx": 975.5,
+            "cy": 1677.5,
+            "width": 81.0,
+            "height": 27.0
+          },
+          {
+            "text": "20.00",
+            "x1": 1168.0,
+            "y1": 1662.0,
+            "x2": 1227.0,
+            "y2": 1691.0,
+            "cx": 1197.5,
+            "cy": 1676.5,
+            "width": 59.0,
+            "height": 29.0
+          },
+          {
+            "text": "775,886.97",
+            "x1": 1528.0,
+            "y1": 1662.0,
+            "x2": 1626.0,
+            "y2": 1688.0,
+            "cx": 1577.0,
+            "cy": 1675.0,
+            "width": 98.0,
+            "height": 26.0
+          }
+        ],
+        "text": "02/05/25 UPI-MITHILESH 0000059800798012 02/05/25 20.00 775,886.97",
+        "x1": 84.0,
+        "y1": 1662.0,
+        "x2": 1626.0,
+        "y2": 1691.0,
+        "cy": 1675.8333333333333,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 40,
+        "words": [
+          {
+            "text": "KUMAR-MITHLESHMDPR2002@OK",
+            "x1": 175.0,
+            "y1": 1708.0,
+            "x2": 517.0,
+            "y2": 1732.0,
+            "cx": 346.0,
+            "cy": 1720.0,
+            "width": 342.0,
+            "height": 24.0
+          }
+        ],
+        "text": "KUMAR-MITHLESHMDPR2002@OK",
+        "x1": 175.0,
+        "y1": 1708.0,
+        "x2": 517.0,
+        "y2": 1732.0,
+        "cy": 1720.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 41,
+        "words": [
+          {
+            "text": "SBI-SBIN0008157-059800798012-PAYMENTFRO",
+            "x1": 184.0,
+            "y1": 1752.0,
+            "x2": 632.0,
+            "y2": 1776.0,
+            "cx": 408.0,
+            "cy": 1764.0,
+            "width": 448.0,
+            "height": 24.0
+          }
+        ],
+        "text": "SBI-SBIN0008157-059800798012-PAYMENTFRO",
+        "x1": 184.0,
+        "y1": 1752.0,
+        "x2": 632.0,
+        "y2": 1776.0,
+        "cy": 1764.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 42,
+        "words": [
+          {
+            "text": "M PHONE",
+            "x1": 182.0,
+            "y1": 1793.0,
+            "x2": 283.0,
+            "y2": 1820.0,
+            "cx": 232.5,
+            "cy": 1806.5,
+            "width": 101.0,
+            "height": 27.0
+          }
+        ],
+        "text": "M PHONE",
+        "x1": 182.0,
+        "y1": 1793.0,
+        "x2": 283.0,
+        "y2": 1820.0,
+        "cy": 1806.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 19,
+    "words": [
+      {
+        "text": "02/05/25",
+        "x1": 81.0,
+        "y1": 1840.0,
+        "x2": 165.0,
+        "y2": 1864.0,
+        "cx": 123.0,
+        "cy": 1852.0,
+        "width": 84.0,
+        "height": 24.0
+      },
+      {
+        "text": "UPI-NEHERUL",
+        "x1": 174.0,
+        "y1": 1834.0,
+        "x2": 325.0,
+        "y2": 1867.0,
+        "cx": 249.5,
+        "cy": 1850.5,
+        "width": 151.0,
+        "height": 33.0
+      },
+      {
+        "text": "0000128727092963",
+        "x1": 743.0,
+        "y1": 1837.0,
+        "x2": 920.0,
+        "y2": 1866.0,
+        "cx": 831.5,
+        "cy": 1851.5,
+        "width": 177.0,
+        "height": 29.0
+      },
+      {
+        "text": "02/05/25",
+        "x1": 935.0,
+        "y1": 1840.0,
+        "x2": 1016.0,
+        "y2": 1866.0,
+        "cx": 975.5,
+        "cy": 1853.0,
+        "width": 81.0,
+        "height": 26.0
+      },
+      {
+        "text": "200.00",
+        "x1": 1156.0,
+        "y1": 1840.0,
+        "x2": 1225.0,
+        "y2": 1866.0,
+        "cx": 1190.5,
+        "cy": 1853.0,
+        "width": 69.0,
+        "height": 26.0
+      },
+      {
+        "text": "775,686.97",
+        "x1": 1528.0,
+        "y1": 1840.0,
+        "x2": 1626.0,
+        "y2": 1866.0,
+        "cx": 1577.0,
+        "cy": 1853.0,
+        "width": 98.0,
+        "height": 26.0
+      },
+      {
+        "text": "ALAM-PAYTMQR5D6VAR@PIYS-YESH",
+        "x1": 175.0,
+        "y1": 1886.0,
+        "x2": 553.0,
+        "y2": 1910.0,
+        "cx": 364.0,
+        "cy": 1898.0,
+        "width": 378.0,
+        "height": 24.0
+      },
+      {
+        "text": "OPTMUPI-128727092963-PAYMENTFROM PHONE",
+        "x1": 182.0,
+        "y1": 1930.0,
+        "x2": 652.0,
+        "y2": 1954.0,
+        "cx": 417.0,
+        "cy": 1942.0,
+        "width": 470.0,
+        "height": 24.0
+      }
+    ],
+    "text": "02/05/25 UPI-NEHERUL 0000128727092963 02/05/25 200.00 775,686.97 ALAM-PAYTMQR5D6VAR@PIYS-YESH OPTMUPI-128727092963-PAYMENTFROM PHONE",
+    "x1": 81.0,
+    "y1": 1834.0,
+    "x2": 1626.0,
+    "y2": 1954.0,
+    "cy": 1894.0,
+    "visual_lines": [
+      {
+        "line_id": 43,
+        "words": [
+          {
+            "text": "02/05/25",
+            "x1": 81.0,
+            "y1": 1840.0,
+            "x2": 165.0,
+            "y2": 1864.0,
+            "cx": 123.0,
+            "cy": 1852.0,
+            "width": 84.0,
+            "height": 24.0
+          },
+          {
+            "text": "UPI-NEHERUL",
+            "x1": 174.0,
+            "y1": 1834.0,
+            "x2": 325.0,
+            "y2": 1867.0,
+            "cx": 249.5,
+            "cy": 1850.5,
+            "width": 151.0,
+            "height": 33.0
+          },
+          {
+            "text": "0000128727092963",
+            "x1": 743.0,
+            "y1": 1837.0,
+            "x2": 920.0,
+            "y2": 1866.0,
+            "cx": 831.5,
+            "cy": 1851.5,
+            "width": 177.0,
+            "height": 29.0
+          },
+          {
+            "text": "02/05/25",
+            "x1": 935.0,
+            "y1": 1840.0,
+            "x2": 1016.0,
+            "y2": 1866.0,
+            "cx": 975.5,
+            "cy": 1853.0,
+            "width": 81.0,
+            "height": 26.0
+          },
+          {
+            "text": "200.00",
+            "x1": 1156.0,
+            "y1": 1840.0,
+            "x2": 1225.0,
+            "y2": 1866.0,
+            "cx": 1190.5,
+            "cy": 1853.0,
+            "width": 69.0,
+            "height": 26.0
+          },
+          {
+            "text": "775,686.97",
+            "x1": 1528.0,
+            "y1": 1840.0,
+            "x2": 1626.0,
+            "y2": 1866.0,
+            "cx": 1577.0,
+            "cy": 1853.0,
+            "width": 98.0,
+            "height": 26.0
+          }
+        ],
+        "text": "02/05/25 UPI-NEHERUL 0000128727092963 02/05/25 200.00 775,686.97",
+        "x1": 81.0,
+        "y1": 1834.0,
+        "x2": 1626.0,
+        "y2": 1867.0,
+        "cy": 1852.1666666666667,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 44,
+        "words": [
+          {
+            "text": "ALAM-PAYTMQR5D6VAR@PIYS-YESH",
+            "x1": 175.0,
+            "y1": 1886.0,
+            "x2": 553.0,
+            "y2": 1910.0,
+            "cx": 364.0,
+            "cy": 1898.0,
+            "width": 378.0,
+            "height": 24.0
+          }
+        ],
+        "text": "ALAM-PAYTMQR5D6VAR@PIYS-YESH",
+        "x1": 175.0,
+        "y1": 1886.0,
+        "x2": 553.0,
+        "y2": 1910.0,
+        "cy": 1898.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 45,
+        "words": [
+          {
+            "text": "OPTMUPI-128727092963-PAYMENTFROM PHONE",
+            "x1": 182.0,
+            "y1": 1930.0,
+            "x2": 652.0,
+            "y2": 1954.0,
+            "cx": 417.0,
+            "cy": 1942.0,
+            "width": 470.0,
+            "height": 24.0
+          }
+        ],
+        "text": "OPTMUPI-128727092963-PAYMENTFROM PHONE",
+        "x1": 182.0,
+        "y1": 1930.0,
+        "x2": 652.0,
+        "y2": 1954.0,
+        "cy": 1942.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 20,
+    "words": [
+      {
+        "text": "02/05/25",
+        "x1": 84.0,
+        "y1": 1976.0,
+        "x2": 165.0,
+        "y2": 2000.0,
+        "cx": 124.5,
+        "cy": 1988.0,
+        "width": 81.0,
+        "height": 24.0
+      },
+      {
+        "text": "UPI-SHUBHAM TATYASO",
+        "x1": 177.0,
+        "y1": 1976.0,
+        "x2": 430.0,
+        "y2": 2000.0,
+        "cx": 303.5,
+        "cy": 1988.0,
+        "width": 253.0,
+        "height": 24.0
+      },
+      {
+        "text": "0000255329493174",
+        "x1": 748.0,
+        "y1": 1976.0,
+        "x2": 940.0,
+        "y2": 2000.0,
+        "cx": 844.0,
+        "cy": 1988.0,
+        "width": 192.0,
+        "height": 24.0
+      },
+      {
+        "text": "02/05/25",
+        "x1": 930.0,
+        "y1": 1976.0,
+        "x2": 1016.0,
+        "y2": 2000.0,
+        "cx": 973.0,
+        "cy": 1988.0,
+        "width": 86.0,
+        "height": 24.0
+      },
+      {
+        "text": "100.00",
+        "x1": 1155.0,
+        "y1": 1968.0,
+        "x2": 1226.0,
+        "y2": 2004.0,
+        "cx": 1190.5,
+        "cy": 1986.0,
+        "width": 71.0,
+        "height": 36.0
+      },
+      {
+        "text": "775,586.97",
+        "x1": 1528.0,
+        "y1": 1974.0,
+        "x2": 1626.0,
+        "y2": 2000.0,
+        "cx": 1577.0,
+        "cy": 1987.0,
+        "width": 98.0,
+        "height": 26.0
+      },
+      {
+        "text": "PATI-PATILSHUBHAM753",
+        "x1": 172.0,
+        "y1": 2015.0,
+        "x2": 426.0,
+        "y2": 2044.0,
+        "cx": 299.0,
+        "cy": 2029.5,
+        "width": 254.0,
+        "height": 29.0
+      }
+    ],
+    "text": "02/05/25 UPI-SHUBHAM TATYASO 0000255329493174 02/05/25 100.00 775,586.97 PATI-PATILSHUBHAM753",
+    "x1": 84.0,
+    "y1": 1968.0,
+    "x2": 1626.0,
+    "y2": 2044.0,
+    "cy": 2006.0,
+    "visual_lines": [
+      {
+        "line_id": 46,
+        "words": [
+          {
+            "text": "02/05/25",
+            "x1": 84.0,
+            "y1": 1976.0,
+            "x2": 165.0,
+            "y2": 2000.0,
+            "cx": 124.5,
+            "cy": 1988.0,
+            "width": 81.0,
+            "height": 24.0
+          },
+          {
+            "text": "UPI-SHUBHAM TATYASO",
+            "x1": 177.0,
+            "y1": 1976.0,
+            "x2": 430.0,
+            "y2": 2000.0,
+            "cx": 303.5,
+            "cy": 1988.0,
+            "width": 253.0,
+            "height": 24.0
+          },
+          {
+            "text": "0000255329493174",
+            "x1": 748.0,
+            "y1": 1976.0,
+            "x2": 940.0,
+            "y2": 2000.0,
+            "cx": 844.0,
+            "cy": 1988.0,
+            "width": 192.0,
+            "height": 24.0
+          },
+          {
+            "text": "02/05/25",
+            "x1": 930.0,
+            "y1": 1976.0,
+            "x2": 1016.0,
+            "y2": 2000.0,
+            "cx": 973.0,
+            "cy": 1988.0,
+            "width": 86.0,
+            "height": 24.0
+          },
+          {
+            "text": "100.00",
+            "x1": 1155.0,
+            "y1": 1968.0,
+            "x2": 1226.0,
+            "y2": 2004.0,
+            "cx": 1190.5,
+            "cy": 1986.0,
+            "width": 71.0,
+            "height": 36.0
+          },
+          {
+            "text": "775,586.97",
+            "x1": 1528.0,
+            "y1": 1974.0,
+            "x2": 1626.0,
+            "y2": 2000.0,
+            "cx": 1577.0,
+            "cy": 1987.0,
+            "width": 98.0,
+            "height": 26.0
+          }
+        ],
+        "text": "02/05/25 UPI-SHUBHAM TATYASO 0000255329493174 02/05/25 100.00 775,586.97",
+        "x1": 84.0,
+        "y1": 1968.0,
+        "x2": 1626.0,
+        "y2": 2004.0,
+        "cy": 1987.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      },
+      {
+        "line_id": 47,
+        "words": [
+          {
+            "text": "PATI-PATILSHUBHAM753",
+            "x1": 172.0,
+            "y1": 2015.0,
+            "x2": 426.0,
+            "y2": 2044.0,
+            "cx": 299.0,
+            "cy": 2029.5,
+            "width": 254.0,
+            "height": 29.0
+          }
+        ],
+        "text": "PATI-PATILSHUBHAM753",
+        "x1": 172.0,
+        "y1": 2015.0,
+        "x2": 426.0,
+        "y2": 2044.0,
+        "cy": 2029.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 21,
+    "words": [
+      {
+        "text": "HDFC BANK LIMITED",
+        "x1": 71.0,
+        "y1": 2110.0,
+        "x2": 327.0,
+        "y2": 2134.0,
+        "cx": 199.0,
+        "cy": 2122.0,
+        "width": 256.0,
+        "height": 24.0
+      }
+    ],
+    "text": "HDFC BANK LIMITED",
+    "x1": 71.0,
+    "y1": 2110.0,
+    "x2": 327.0,
+    "y2": 2134.0,
+    "cy": 2122.0,
+    "visual_lines": [
+      {
+        "line_id": 48,
+        "words": [
+          {
+            "text": "HDFC BANK LIMITED",
+            "x1": 71.0,
+            "y1": 2110.0,
+            "x2": 327.0,
+            "y2": 2134.0,
+            "cx": 199.0,
+            "cy": 2122.0,
+            "width": 256.0,
+            "height": 24.0
+          }
+        ],
+        "text": "HDFC BANK LIMITED",
+        "x1": 71.0,
+        "y1": 2110.0,
+        "x2": 327.0,
+        "y2": 2134.0,
+        "cy": 2122.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 22,
+    "words": [
+      {
+        "text": "*Closing balance includes funds earmarked for hold and uncleared funds",
+        "x1": 71.0,
+        "y1": 2132.0,
+        "x2": 676.0,
+        "y2": 2164.0,
+        "cx": 373.5,
+        "cy": 2148.0,
+        "width": 605.0,
+        "height": 32.0
+      }
+    ],
+    "text": "*Closing balance includes funds earmarked for hold and uncleared funds",
+    "x1": 71.0,
+    "y1": 2132.0,
+    "x2": 676.0,
+    "y2": 2164.0,
+    "cy": 2148.0,
+    "visual_lines": [
+      {
+        "line_id": 49,
+        "words": [
+          {
+            "text": "*Closing balance includes funds earmarked for hold and uncleared funds",
+            "x1": 71.0,
+            "y1": 2132.0,
+            "x2": 676.0,
+            "y2": 2164.0,
+            "cx": 373.5,
+            "cy": 2148.0,
+            "width": 605.0,
+            "height": 32.0
+          }
+        ],
+        "text": "*Closing balance includes funds earmarked for hold and uncleared funds",
+        "x1": 71.0,
+        "y1": 2132.0,
+        "x2": 676.0,
+        "y2": 2164.0,
+        "cy": 2148.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 23,
+    "words": [
+      {
+        "text": "State account branch GSTN27AAACH2702HZ0",
+        "x1": 69.0,
+        "y1": 2193.0,
+        "x2": 472.0,
+        "y2": 2222.0,
+        "cx": 270.5,
+        "cy": 2207.5,
+        "width": 403.0,
+        "height": 29.0
+      },
+      {
+        "text": "hus starement",
+        "x1": 76.0,
+        "y1": 2183.0,
+        "x2": 175.0,
+        "y2": 2200.0,
+        "cx": 125.5,
+        "cy": 2191.5,
+        "width": 99.0,
+        "height": 17.0
+      }
+    ],
+    "text": "State account branch GSTN27AAACH2702HZ0 hus starement",
+    "x1": 69.0,
+    "y1": 2183.0,
+    "x2": 472.0,
+    "y2": 2222.0,
+    "cy": 2199.5,
+    "visual_lines": [
+      {
+        "line_id": 50,
+        "words": [
+          {
+            "text": "State account branch GSTN27AAACH2702HZ0",
+            "x1": 69.0,
+            "y1": 2193.0,
+            "x2": 472.0,
+            "y2": 2222.0,
+            "cx": 270.5,
+            "cy": 2207.5,
+            "width": 403.0,
+            "height": 29.0
+          },
+          {
+            "text": "hus starement",
+            "x1": 76.0,
+            "y1": 2183.0,
+            "x2": 175.0,
+            "y2": 2200.0,
+            "cx": 125.5,
+            "cy": 2191.5,
+            "width": 99.0,
+            "height": 17.0
+          }
+        ],
+        "text": "State account branch GSTN27AAACH2702HZ0 hus starement",
+        "x1": 69.0,
+        "y1": 2183.0,
+        "x2": 472.0,
+        "y2": 2222.0,
+        "cy": 2199.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 24,
+    "words": [
+      {
+        "text": "HDFC Bank GSTIN mm",
+        "x1": 71.0,
+        "y1": 2215.0,
+        "x2": 261.0,
+        "y2": 2239.0,
+        "cx": 166.0,
+        "cy": 2227.0,
+        "width": 190.0,
+        "height": 24.0
+      }
+    ],
+    "text": "HDFC Bank GSTIN mm",
+    "x1": 71.0,
+    "y1": 2215.0,
+    "x2": 261.0,
+    "y2": 2239.0,
+    "cy": 2227.0,
+    "visual_lines": [
+      {
+        "line_id": 51,
+        "words": [
+          {
+            "text": "HDFC Bank GSTIN mm",
+            "x1": 71.0,
+            "y1": 2215.0,
+            "x2": 261.0,
+            "y2": 2239.0,
+            "cx": 166.0,
+            "cy": 2227.0,
+            "width": 190.0,
+            "height": 24.0
+          }
+        ],
+        "text": "HDFC Bank GSTIN mm",
+        "x1": 71.0,
+        "y1": 2215.0,
+        "x2": 261.0,
+        "y2": 2239.0,
+        "cy": 2227.0,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  },
+  {
+    "line_id": 25,
+    "words": [
+      {
+        "text": "Registered Office AddressHDFC Bank HouseSenapai Bapar Marg Lowe Parel,Mumbai 400013",
+        "x1": 71.0,
+        "y1": 2234.0,
+        "x2": 795.0,
+        "y2": 2259.0,
+        "cx": 433.0,
+        "cy": 2246.5,
+        "width": 724.0,
+        "height": 25.0
+      }
+    ],
+    "text": "Registered Office AddressHDFC Bank HouseSenapai Bapar Marg Lowe Parel,Mumbai 400013",
+    "x1": 71.0,
+    "y1": 2234.0,
+    "x2": 795.0,
+    "y2": 2259.0,
+    "cy": 2246.5,
+    "visual_lines": [
+      {
+        "line_id": 52,
+        "words": [
+          {
+            "text": "Registered Office AddressHDFC Bank HouseSenapai Bapar Marg Lowe Parel,Mumbai 400013",
+            "x1": 71.0,
+            "y1": 2234.0,
+            "x2": 795.0,
+            "y2": 2259.0,
+            "cx": 433.0,
+            "cy": 2246.5,
+            "width": 724.0,
+            "height": 25.0
+          }
+        ],
+        "text": "Registered Office AddressHDFC Bank HouseSenapai Bapar Marg Lowe Parel,Mumbai 400013",
+        "x1": 71.0,
+        "y1": 2234.0,
+        "x2": 795.0,
+        "y2": 2259.0,
+        "cy": 2246.5,
+        "visual_lines": [],
+        "region_type": "paragraph"
+      }
+    ],
+    "region_type": "paragraph"
+  }
+]
